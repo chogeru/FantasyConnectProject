@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/\u30B7\u30FC\u30F3/Title.unity"
+    guid: b72364481d921bd4b94472c43a2e1bfa
+  - enabled: 1
+    path: "Assets/\u30B7\u30FC\u30F3/MyHouse.unity"
+    guid: 3854cd482132de742ad3c41147e897c7
+  - enabled: 1
+    path: "Assets/\u30B7\u30FC\u30F3/FirstCity.unity"
+    guid: 77571fbd1cc6524479cd5a34d33a1b09
+  - enabled: 1
+    path: "Assets/\u30B7\u30FC\u30F3/GrassIandArea1.unity"
+    guid: 936f3d3ce1512f640a6a4a932f7f92c6
+  m_configObjects: {}
