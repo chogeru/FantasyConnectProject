@@ -1,0 +1,1860 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5370d308d4153494f98fc006d63673dc, type: 3}
+  m_Name: MightyCoreData
+  m_EditorClassIdentifier: 
+  MappableTypesInfo:
+  - TypeName: MightyLandmarks.LandmarksData+Landmark+Root
+    Name: Landmarks
+    IsActive: 1
+  sceneIndex: 2
+  projectIndex: 0
+  scenes:
+  - name: Project
+    miniMap:
+      map: {fileID: 0}
+      mapPath: 
+      cachePos: {x: 0, y: 0, z: 0}
+      widthCache: 0
+      heightCache: 0
+      orthSizeCache: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0}
+      orthSize: 200
+      pixelWidth: 0
+      pixelHeight: 0
+      topleft: {x: 0, y: 0, z: 0}
+      topright: {x: 0, y: 0, z: 0}
+      botleft: {x: 0, y: 0, z: 0}
+      botright: {x: 0, y: 0, z: 0}
+    scenePath: 
+    runID: 0
+    selectedRun: 
+    runIDList: []
+    runPlaybackCursor: 0
+    runPlaybackCount: 0
+    runPlaybackMax: 0
+    runPlaybackMin: 0
+    runPlaybackRange: {x: 0, y: 0}
+    deleteMe: 0
+    CollectedData: []
+    currentIndex: 0
+    isCollecting: 0
+    totalPolyCount: 0
+    meshFilterCount: 0
+  - name: mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+    miniMap:
+      map: {fileID: 0}
+      mapPath: map_mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+      cachePos: {x: 365.1051, y: 198.81332, z: 527.28107}
+      widthCache: 670
+      heightCache: 600
+      orthSizeCache: 444.83838
+      position: {x: 365.1051, y: 198.81332, z: 527.28107}
+      rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+      orthSize: 444.83838
+      pixelWidth: 655
+      pixelHeight: 327
+      topleft: {x: -525.9321, y: 198.81305, z: 972.1194}
+      topright: {x: 1256.1423, y: 198.81305, z: 972.1194}
+      botleft: {x: -525.9321, y: 198.81317, z: 82.44273}
+      botright: {x: 1256.1423, y: 198.81317, z: 82.44273}
+    scenePath: Assets/MightyDevOps/Scenes/mighty_rivers.unity
+    runID: 0
+    selectedRun: 
+    runIDList: []
+    runPlaybackCursor: 0
+    runPlaybackCount: 0
+    runPlaybackMax: 0
+    runPlaybackMin: 0
+    runPlaybackRange: {x: 0, y: 0}
+    deleteMe: 0
+    CollectedData:
+    - Name: Bilbo
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (449.79, 77.55, 402.71)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+    - Name: Plane
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (489.00, 6.65, 570.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (128.00, 1.00, 128.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MeshFilter
+        Properties:
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Plane
+      - TypeName: MeshRenderer
+        Properties:
+        - Key: m_CastShadows
+          Type: Enum
+          Value: On
+        - Key: m_ReceiveShadows
+          Type: Boolean
+          Value: True
+        - Key: m_DynamicOccludee
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_MotionVectors
+          Type: Enum
+          Value: Per Object Motion
+        - Key: m_LightProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_RayTracingMode
+          Type: Integer
+          Value: 2
+        - Key: m_RayTraceProcedural
+          Type: Boolean
+          Value: False
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_RendererPriority
+          Type: Integer
+          Value: 0
+        - Key: m_Materials
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ProbeAnchor
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightProbeVolumeOverride
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: null
+      - TypeName: MeshCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_IsTrigger
+          Type: Boolean
+          Value: False
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_Convex
+          Type: Boolean
+          Value: False
+        - Key: m_CookingOptions
+          Type: Integer
+          Value: 30
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Plane
+    - Name: Main Camera
+      Tag: MainCamera
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 1.00, -10.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Camera
+        Properties:
+        - Key: m_ClearFlags
+          Type: Enum
+          Value: Skybox
+        - Key: m_BackGroundColor
+          Type: Color
+          Value: RGBA(0.192, 0.302, 0.475, 0.000)
+        - Key: m_projectionMatrixMode
+          Type: Integer
+          Value: 1
+        - Key: m_GateFitMode
+          Type: Integer
+          Value: 2
+        - Key: m_FOVAxisMode
+          Type: Integer
+          Value: 0
+        - Key: m_Iso
+          Type: Integer
+          Value: 200
+        - Key: m_ShutterSpeed
+          Type: Float
+          Value: 0.005
+        - Key: m_Aperture
+          Type: Float
+          Value: 16
+        - Key: m_FocusDistance
+          Type: Float
+          Value: 10
+        - Key: m_FocalLength
+          Type: Float
+          Value: 50
+        - Key: m_BladeCount
+          Type: Integer
+          Value: 5
+        - Key: m_Curvature
+          Type: Vector2
+          Value: (2.00, 11.00)
+        - Key: m_BarrelClipping
+          Type: Float
+          Value: 0.25
+        - Key: m_Anamorphism
+          Type: Float
+          Value: 0
+        - Key: m_SensorSize
+          Type: Vector2
+          Value: (36.00, 24.00)
+        - Key: m_LensShift
+          Type: Vector2
+          Value: (0.00, 0.00)
+        - Key: m_NormalizedViewPortRect
+          Type: Rect
+          Value: UnityEditor.SerializedProperty
+        - Key: near clip plane
+          Type: Float
+          Value: 0.3
+        - Key: far clip plane
+          Type: Float
+          Value: 1000
+        - Key: field of view
+          Type: Float
+          Value: 60
+        - Key: orthographic
+          Type: Boolean
+          Value: False
+        - Key: orthographic size
+          Type: Float
+          Value: 5
+        - Key: m_Depth
+          Type: Float
+          Value: -1
+        - Key: m_CullingMask
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_RenderingPath
+          Type: Enum
+          Value: Use Graphics Settings
+        - Key: m_TargetTexture
+          Type: ObjectReference
+          Value: null
+        - Key: m_TargetDisplay
+          Type: Integer
+          Value: 0
+        - Key: m_TargetEye
+          Type: Integer
+          Value: 3
+        - Key: m_HDR
+          Type: Boolean
+          Value: True
+        - Key: m_AllowMSAA
+          Type: Boolean
+          Value: True
+        - Key: m_AllowDynamicResolution
+          Type: Boolean
+          Value: False
+        - Key: m_ForceIntoRT
+          Type: Boolean
+          Value: False
+        - Key: m_OcclusionCulling
+          Type: Boolean
+          Value: True
+        - Key: m_StereoConvergence
+          Type: Float
+          Value: 10
+        - Key: m_StereoSeparation
+          Type: Float
+          Value: 0.022
+      - TypeName: AudioListener
+        Properties: []
+    - Name: MightySceneAnchor
+      Tag: EditorOnly
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MightySceneAnchor
+        Properties:
+        - Key: m_Script
+          Type: ObjectReference
+          Value: MightySceneAnchor
+        - Key: _dataSetName
+          Type: String
+          Value: mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+    - Name: Terrain
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 1
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Terrain
+        Properties:
+        - Key: m_TerrainData
+          Type: ObjectReference
+          Value: New Terrain 1
+        - Key: m_TreeDistance
+          Type: Float
+          Value: 5000
+        - Key: m_TreeBillboardDistance
+          Type: Float
+          Value: 50
+        - Key: m_TreeCrossFadeLength
+          Type: Float
+          Value: 5
+        - Key: m_TreeMaximumFullLODCount
+          Type: Integer
+          Value: 50
+        - Key: m_DetailObjectDistance
+          Type: Float
+          Value: 80
+        - Key: m_DetailObjectDensity
+          Type: Float
+          Value: 1
+        - Key: m_HeightmapPixelError
+          Type: Float
+          Value: 5
+        - Key: m_SplatMapDistance
+          Type: Float
+          Value: 1000
+        - Key: m_HeightmapMaximumLOD
+          Type: Integer
+          Value: 0
+        - Key: m_ShadowCastingMode
+          Type: Integer
+          Value: 2
+        - Key: m_DrawHeightmap
+          Type: Boolean
+          Value: True
+        - Key: m_DrawInstanced
+          Type: Boolean
+          Value: False
+        - Key: m_DrawTreesAndFoliage
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_IgnoreQualitySettings
+          Type: Boolean
+          Value: False
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_MaterialTemplate
+          Type: ObjectReference
+          Value: MightyTerrain
+        - Key: m_BakeLightProbesForTrees
+          Type: Boolean
+          Value: True
+        - Key: m_PreserveTreePrototypeLayers
+          Type: Boolean
+          Value: False
+        - Key: m_DeringLightProbesForTrees
+          Type: Boolean
+          Value: True
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: Default-VeryLowResolution
+        - Key: m_GroupingID
+          Type: Integer
+          Value: 0
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_AllowAutoConnect
+          Type: Boolean
+          Value: True
+        - Key: m_EnableHeightmapRayTracing
+          Type: Boolean
+          Value: True
+        - Key: m_EnableTreesAndDetailsRayTracing
+          Type: Boolean
+          Value: False
+      - TypeName: TerrainCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_TerrainData
+          Type: ObjectReference
+          Value: New Terrain 1
+        - Key: m_EnableTreeColliders
+          Type: Boolean
+          Value: True
+    - Name: Directional Light
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 3.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Light
+        Properties:
+        - Key: m_Type
+          Type: Enum
+          Value: Directional
+        - Key: m_Shape
+          Type: Enum
+          Value: Cone
+        - Key: m_Color
+          Type: Color
+          Value: RGBA(1.000, 0.957, 0.839, 1.000)
+        - Key: m_Intensity
+          Type: Float
+          Value: 1
+        - Key: m_Range
+          Type: Float
+          Value: 10
+        - Key: m_SpotAngle
+          Type: Float
+          Value: 30
+        - Key: m_InnerSpotAngle
+          Type: Float
+          Value: 21.80208
+        - Key: m_CookieSize
+          Type: Float
+          Value: 10
+        - Key: m_Shadows
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_Cookie
+          Type: ObjectReference
+          Value: null
+        - Key: m_DrawHalo
+          Type: Boolean
+          Value: False
+        - Key: m_BakingOutput
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_Flare
+          Type: ObjectReference
+          Value: null
+        - Key: m_RenderMode
+          Type: Enum
+          Value: Auto
+        - Key: m_CullingMask
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_Lightmapping
+          Type: Enum
+          Value: Realtime
+        - Key: m_LightShadowCasterMode
+          Type: Integer
+          Value: 0
+        - Key: m_AreaSize
+          Type: Vector2
+          Value: (1.00, 1.00)
+        - Key: m_BounceIntensity
+          Type: Float
+          Value: 1
+        - Key: m_ColorTemperature
+          Type: Float
+          Value: 6570
+        - Key: m_UseColorTemperature
+          Type: Boolean
+          Value: False
+        - Key: m_BoundingSphereOverride
+          Type: Vector4
+          Value: UnityEditor.SerializedProperty
+        - Key: m_UseBoundingSphereOverride
+          Type: Boolean
+          Value: False
+        - Key: m_UseViewFrustumForShadowCasterCull
+          Type: Boolean
+          Value: True
+        - Key: m_ShadowRadius
+          Type: Float
+          Value: 0
+        - Key: m_ShadowAngle
+          Type: Float
+          Value: 0
+    - Name: Plane
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (489.00, 9.31, 570.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (128.00, 1.00, 128.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MeshFilter
+        Properties:
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Plane
+      - TypeName: MeshRenderer
+        Properties:
+        - Key: m_CastShadows
+          Type: Enum
+          Value: On
+        - Key: m_ReceiveShadows
+          Type: Boolean
+          Value: True
+        - Key: m_DynamicOccludee
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_MotionVectors
+          Type: Enum
+          Value: Per Object Motion
+        - Key: m_LightProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_RayTracingMode
+          Type: Integer
+          Value: 2
+        - Key: m_RayTraceProcedural
+          Type: Boolean
+          Value: False
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_RendererPriority
+          Type: Integer
+          Value: 0
+        - Key: m_Materials
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ProbeAnchor
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightProbeVolumeOverride
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: null
+      - TypeName: MeshCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_IsTrigger
+          Type: Boolean
+          Value: False
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_Convex
+          Type: Boolean
+          Value: False
+        - Key: m_CookingOptions
+          Type: Integer
+          Value: 30
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Plane
+    - Name: Main Camera
+      Tag: MainCamera
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 1.00, -10.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Camera
+        Properties:
+        - Key: m_ClearFlags
+          Type: Enum
+          Value: Skybox
+        - Key: m_BackGroundColor
+          Type: Color
+          Value: RGBA(0.192, 0.302, 0.475, 0.000)
+        - Key: m_projectionMatrixMode
+          Type: Integer
+          Value: 1
+        - Key: m_GateFitMode
+          Type: Integer
+          Value: 2
+        - Key: m_FOVAxisMode
+          Type: Integer
+          Value: 0
+        - Key: m_Iso
+          Type: Integer
+          Value: 200
+        - Key: m_ShutterSpeed
+          Type: Float
+          Value: 0.005
+        - Key: m_Aperture
+          Type: Float
+          Value: 16
+        - Key: m_FocusDistance
+          Type: Float
+          Value: 10
+        - Key: m_FocalLength
+          Type: Float
+          Value: 50
+        - Key: m_BladeCount
+          Type: Integer
+          Value: 5
+        - Key: m_Curvature
+          Type: Vector2
+          Value: (2.00, 11.00)
+        - Key: m_BarrelClipping
+          Type: Float
+          Value: 0.25
+        - Key: m_Anamorphism
+          Type: Float
+          Value: 0
+        - Key: m_SensorSize
+          Type: Vector2
+          Value: (36.00, 24.00)
+        - Key: m_LensShift
+          Type: Vector2
+          Value: (0.00, 0.00)
+        - Key: m_NormalizedViewPortRect
+          Type: Rect
+          Value: UnityEditor.SerializedProperty
+        - Key: near clip plane
+          Type: Float
+          Value: 0.3
+        - Key: far clip plane
+          Type: Float
+          Value: 1000
+        - Key: field of view
+          Type: Float
+          Value: 60
+        - Key: orthographic
+          Type: Boolean
+          Value: False
+        - Key: orthographic size
+          Type: Float
+          Value: 5
+        - Key: m_Depth
+          Type: Float
+          Value: -1
+        - Key: m_CullingMask
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_RenderingPath
+          Type: Enum
+          Value: Use Graphics Settings
+        - Key: m_TargetTexture
+          Type: ObjectReference
+          Value: null
+        - Key: m_TargetDisplay
+          Type: Integer
+          Value: 0
+        - Key: m_TargetEye
+          Type: Integer
+          Value: 3
+        - Key: m_HDR
+          Type: Boolean
+          Value: True
+        - Key: m_AllowMSAA
+          Type: Boolean
+          Value: True
+        - Key: m_AllowDynamicResolution
+          Type: Boolean
+          Value: False
+        - Key: m_ForceIntoRT
+          Type: Boolean
+          Value: False
+        - Key: m_OcclusionCulling
+          Type: Boolean
+          Value: True
+        - Key: m_StereoConvergence
+          Type: Float
+          Value: 10
+        - Key: m_StereoSeparation
+          Type: Float
+          Value: 0.022
+      - TypeName: AudioListener
+        Properties: []
+    - Name: Cube
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (786.30, -86.35, 393.93)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MeshFilter
+        Properties:
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Cube
+      - TypeName: MeshRenderer
+        Properties:
+        - Key: m_CastShadows
+          Type: Enum
+          Value: On
+        - Key: m_ReceiveShadows
+          Type: Boolean
+          Value: True
+        - Key: m_DynamicOccludee
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_MotionVectors
+          Type: Enum
+          Value: Per Object Motion
+        - Key: m_LightProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_RayTracingMode
+          Type: Integer
+          Value: 2
+        - Key: m_RayTraceProcedural
+          Type: Boolean
+          Value: False
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_RendererPriority
+          Type: Integer
+          Value: 0
+        - Key: m_Materials
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ProbeAnchor
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightProbeVolumeOverride
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: null
+      - TypeName: BoxCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_IsTrigger
+          Type: Boolean
+          Value: False
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_Size
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_Center
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+    - Name: Frodo
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (449.79, 77.55, 402.71)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+    - Name: Terrain
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 1
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Terrain
+        Properties:
+        - Key: m_TerrainData
+          Type: ObjectReference
+          Value: New Terrain 2
+        - Key: m_TreeDistance
+          Type: Float
+          Value: 5000
+        - Key: m_TreeBillboardDistance
+          Type: Float
+          Value: 50
+        - Key: m_TreeCrossFadeLength
+          Type: Float
+          Value: 5
+        - Key: m_TreeMaximumFullLODCount
+          Type: Integer
+          Value: 50
+        - Key: m_DetailObjectDistance
+          Type: Float
+          Value: 80
+        - Key: m_DetailObjectDensity
+          Type: Float
+          Value: 1
+        - Key: m_HeightmapPixelError
+          Type: Float
+          Value: 5
+        - Key: m_SplatMapDistance
+          Type: Float
+          Value: 1000
+        - Key: m_HeightmapMaximumLOD
+          Type: Integer
+          Value: 0
+        - Key: m_ShadowCastingMode
+          Type: Integer
+          Value: 2
+        - Key: m_DrawHeightmap
+          Type: Boolean
+          Value: True
+        - Key: m_DrawInstanced
+          Type: Boolean
+          Value: False
+        - Key: m_DrawTreesAndFoliage
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_IgnoreQualitySettings
+          Type: Boolean
+          Value: False
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_MaterialTemplate
+          Type: ObjectReference
+          Value: Default-Terrain-Standard
+        - Key: m_BakeLightProbesForTrees
+          Type: Boolean
+          Value: True
+        - Key: m_PreserveTreePrototypeLayers
+          Type: Boolean
+          Value: False
+        - Key: m_DeringLightProbesForTrees
+          Type: Boolean
+          Value: True
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: Default-VeryLowResolution
+        - Key: m_GroupingID
+          Type: Integer
+          Value: 0
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_AllowAutoConnect
+          Type: Boolean
+          Value: True
+        - Key: m_EnableHeightmapRayTracing
+          Type: Boolean
+          Value: True
+        - Key: m_EnableTreesAndDetailsRayTracing
+          Type: Boolean
+          Value: False
+      - TypeName: TerrainCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_TerrainData
+          Type: ObjectReference
+          Value: New Terrain 2
+        - Key: m_EnableTreeColliders
+          Type: Boolean
+          Value: True
+    - Name: MightySceneAnchor
+      Tag: EditorOnly
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MightySceneAnchor
+        Properties:
+        - Key: m_Script
+          Type: ObjectReference
+          Value: MightySceneAnchor
+        - Key: _dataSetName
+          Type: String
+          Value: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+    - Name: Directional Light
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 3.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Light
+        Properties:
+        - Key: m_Type
+          Type: Enum
+          Value: Directional
+        - Key: m_Shape
+          Type: Enum
+          Value: Cone
+        - Key: m_Color
+          Type: Color
+          Value: RGBA(1.000, 0.957, 0.839, 1.000)
+        - Key: m_Intensity
+          Type: Float
+          Value: 1
+        - Key: m_Range
+          Type: Float
+          Value: 10
+        - Key: m_SpotAngle
+          Type: Float
+          Value: 30
+        - Key: m_InnerSpotAngle
+          Type: Float
+          Value: 21.80208
+        - Key: m_CookieSize
+          Type: Float
+          Value: 10
+        - Key: m_Shadows
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_Cookie
+          Type: ObjectReference
+          Value: null
+        - Key: m_DrawHalo
+          Type: Boolean
+          Value: False
+        - Key: m_BakingOutput
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_Flare
+          Type: ObjectReference
+          Value: null
+        - Key: m_RenderMode
+          Type: Enum
+          Value: Auto
+        - Key: m_CullingMask
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_Lightmapping
+          Type: Enum
+          Value: Realtime
+        - Key: m_LightShadowCasterMode
+          Type: Integer
+          Value: 0
+        - Key: m_AreaSize
+          Type: Vector2
+          Value: (1.00, 1.00)
+        - Key: m_BounceIntensity
+          Type: Float
+          Value: 1
+        - Key: m_ColorTemperature
+          Type: Float
+          Value: 6570
+        - Key: m_UseColorTemperature
+          Type: Boolean
+          Value: False
+        - Key: m_BoundingSphereOverride
+          Type: Vector4
+          Value: UnityEditor.SerializedProperty
+        - Key: m_UseBoundingSphereOverride
+          Type: Boolean
+          Value: False
+        - Key: m_UseViewFrustumForShadowCasterCull
+          Type: Boolean
+          Value: True
+        - Key: m_ShadowRadius
+          Type: Float
+          Value: 0
+        - Key: m_ShadowAngle
+          Type: Float
+          Value: 0
+    currentIndex: 13
+    isCollecting: 0
+    totalPolyCount: 1212
+    meshFilterCount: 7
+  - name: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+    miniMap:
+      map: {fileID: 0}
+      mapPath: map_mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+      cachePos: {x: 489.79153, y: 112.053535, z: 357.51205}
+      widthCache: 670
+      heightCache: 600
+      orthSizeCache: 296.59598
+      position: {x: 489.79153, y: 112.053535, z: 357.51205}
+      rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+      orthSize: 296.59598
+      pixelWidth: 655
+      pixelHeight: 327
+      topleft: {x: -104.307465, y: 112.05322, z: 654.10803}
+      topright: {x: 1083.8905, y: 112.05322, z: 654.10803}
+      botleft: {x: -104.307465, y: 112.053345, z: 60.916122}
+      botright: {x: 1083.8905, y: 112.053345, z: 60.916122}
+    scenePath: Assets/MightyDevOps/Scenes/mighty_island.unity
+    runID: 0
+    selectedRun: 
+    runIDList: []
+    runPlaybackCursor: 0
+    runPlaybackCount: 0
+    runPlaybackMax: 0
+    runPlaybackMin: 0
+    runPlaybackRange: {x: 0, y: 0}
+    deleteMe: 0
+    CollectedData:
+    - Name: Plane
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (489.00, 9.31, 570.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (128.00, 1.00, 128.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MeshFilter
+        Properties:
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Plane
+      - TypeName: MeshRenderer
+        Properties:
+        - Key: m_CastShadows
+          Type: Enum
+          Value: On
+        - Key: m_ReceiveShadows
+          Type: Boolean
+          Value: True
+        - Key: m_DynamicOccludee
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_MotionVectors
+          Type: Enum
+          Value: Per Object Motion
+        - Key: m_LightProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_RayTracingMode
+          Type: Integer
+          Value: 2
+        - Key: m_RayTraceProcedural
+          Type: Boolean
+          Value: False
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_RendererPriority
+          Type: Integer
+          Value: 0
+        - Key: m_Materials
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ProbeAnchor
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightProbeVolumeOverride
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: null
+      - TypeName: MeshCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_IsTrigger
+          Type: Boolean
+          Value: False
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_Convex
+          Type: Boolean
+          Value: False
+        - Key: m_CookingOptions
+          Type: Integer
+          Value: 30
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Plane
+    - Name: Main Camera
+      Tag: MainCamera
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 1.00, -10.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Camera
+        Properties:
+        - Key: m_ClearFlags
+          Type: Enum
+          Value: Skybox
+        - Key: m_BackGroundColor
+          Type: Color
+          Value: RGBA(0.192, 0.302, 0.475, 0.000)
+        - Key: m_projectionMatrixMode
+          Type: Integer
+          Value: 1
+        - Key: m_GateFitMode
+          Type: Integer
+          Value: 2
+        - Key: m_FOVAxisMode
+          Type: Integer
+          Value: 0
+        - Key: m_Iso
+          Type: Integer
+          Value: 200
+        - Key: m_ShutterSpeed
+          Type: Float
+          Value: 0.005
+        - Key: m_Aperture
+          Type: Float
+          Value: 16
+        - Key: m_FocusDistance
+          Type: Float
+          Value: 10
+        - Key: m_FocalLength
+          Type: Float
+          Value: 50
+        - Key: m_BladeCount
+          Type: Integer
+          Value: 5
+        - Key: m_Curvature
+          Type: Vector2
+          Value: (2.00, 11.00)
+        - Key: m_BarrelClipping
+          Type: Float
+          Value: 0.25
+        - Key: m_Anamorphism
+          Type: Float
+          Value: 0
+        - Key: m_SensorSize
+          Type: Vector2
+          Value: (36.00, 24.00)
+        - Key: m_LensShift
+          Type: Vector2
+          Value: (0.00, 0.00)
+        - Key: m_NormalizedViewPortRect
+          Type: Rect
+          Value: UnityEditor.SerializedProperty
+        - Key: near clip plane
+          Type: Float
+          Value: 0.3
+        - Key: far clip plane
+          Type: Float
+          Value: 1000
+        - Key: field of view
+          Type: Float
+          Value: 60
+        - Key: orthographic
+          Type: Boolean
+          Value: False
+        - Key: orthographic size
+          Type: Float
+          Value: 5
+        - Key: m_Depth
+          Type: Float
+          Value: -1
+        - Key: m_CullingMask
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_RenderingPath
+          Type: Enum
+          Value: Use Graphics Settings
+        - Key: m_TargetTexture
+          Type: ObjectReference
+          Value: null
+        - Key: m_TargetDisplay
+          Type: Integer
+          Value: 0
+        - Key: m_TargetEye
+          Type: Integer
+          Value: 3
+        - Key: m_HDR
+          Type: Boolean
+          Value: True
+        - Key: m_AllowMSAA
+          Type: Boolean
+          Value: True
+        - Key: m_AllowDynamicResolution
+          Type: Boolean
+          Value: False
+        - Key: m_ForceIntoRT
+          Type: Boolean
+          Value: False
+        - Key: m_OcclusionCulling
+          Type: Boolean
+          Value: True
+        - Key: m_StereoConvergence
+          Type: Float
+          Value: 10
+        - Key: m_StereoSeparation
+          Type: Float
+          Value: 0.022
+      - TypeName: AudioListener
+        Properties: []
+    - Name: Cube
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (786.30, -86.35, 393.93)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MeshFilter
+        Properties:
+        - Key: m_Mesh
+          Type: ObjectReference
+          Value: Cube
+      - TypeName: MeshRenderer
+        Properties:
+        - Key: m_CastShadows
+          Type: Enum
+          Value: On
+        - Key: m_ReceiveShadows
+          Type: Boolean
+          Value: True
+        - Key: m_DynamicOccludee
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_MotionVectors
+          Type: Enum
+          Value: Per Object Motion
+        - Key: m_LightProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_RayTracingMode
+          Type: Integer
+          Value: 2
+        - Key: m_RayTraceProcedural
+          Type: Boolean
+          Value: False
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_RendererPriority
+          Type: Integer
+          Value: 0
+        - Key: m_Materials
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ProbeAnchor
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightProbeVolumeOverride
+          Type: ObjectReference
+          Value: null
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: null
+      - TypeName: BoxCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_IsTrigger
+          Type: Boolean
+          Value: False
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_Size
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_Center
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+    - Name: Frodo
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (449.79, 77.55, 402.71)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+    - Name: Terrain
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 1
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Terrain
+        Properties:
+        - Key: m_TerrainData
+          Type: ObjectReference
+          Value: New Terrain 2
+        - Key: m_TreeDistance
+          Type: Float
+          Value: 5000
+        - Key: m_TreeBillboardDistance
+          Type: Float
+          Value: 50
+        - Key: m_TreeCrossFadeLength
+          Type: Float
+          Value: 5
+        - Key: m_TreeMaximumFullLODCount
+          Type: Integer
+          Value: 50
+        - Key: m_DetailObjectDistance
+          Type: Float
+          Value: 80
+        - Key: m_DetailObjectDensity
+          Type: Float
+          Value: 1
+        - Key: m_HeightmapPixelError
+          Type: Float
+          Value: 5
+        - Key: m_SplatMapDistance
+          Type: Float
+          Value: 1000
+        - Key: m_HeightmapMaximumLOD
+          Type: Integer
+          Value: 0
+        - Key: m_ShadowCastingMode
+          Type: Integer
+          Value: 2
+        - Key: m_DrawHeightmap
+          Type: Boolean
+          Value: True
+        - Key: m_DrawInstanced
+          Type: Boolean
+          Value: False
+        - Key: m_DrawTreesAndFoliage
+          Type: Boolean
+          Value: True
+        - Key: m_StaticShadowCaster
+          Type: Boolean
+          Value: False
+        - Key: m_IgnoreQualitySettings
+          Type: Boolean
+          Value: False
+        - Key: m_ReflectionProbeUsage
+          Type: Integer
+          Value: 1
+        - Key: m_MaterialTemplate
+          Type: ObjectReference
+          Value: Default-Terrain-Standard
+        - Key: m_BakeLightProbesForTrees
+          Type: Boolean
+          Value: True
+        - Key: m_PreserveTreePrototypeLayers
+          Type: Boolean
+          Value: False
+        - Key: m_DeringLightProbesForTrees
+          Type: Boolean
+          Value: True
+        - Key: m_LightmapParameters
+          Type: ObjectReference
+          Value: Default-VeryLowResolution
+        - Key: m_GroupingID
+          Type: Integer
+          Value: 0
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_AllowAutoConnect
+          Type: Boolean
+          Value: True
+        - Key: m_EnableHeightmapRayTracing
+          Type: Boolean
+          Value: True
+        - Key: m_EnableTreesAndDetailsRayTracing
+          Type: Boolean
+          Value: False
+      - TypeName: TerrainCollider
+        Properties:
+        - Key: m_Material
+          Type: ObjectReference
+          Value: null
+        - Key: m_IncludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_ExcludeLayers
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LayerOverridePriority
+          Type: Integer
+          Value: 0
+        - Key: m_ProvidesContacts
+          Type: Boolean
+          Value: False
+        - Key: m_TerrainData
+          Type: ObjectReference
+          Value: New Terrain 2
+        - Key: m_EnableTreeColliders
+          Type: Boolean
+          Value: True
+    - Name: MightySceneAnchor
+      Tag: EditorOnly
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 0.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: MightySceneAnchor
+        Properties:
+        - Key: m_Script
+          Type: ObjectReference
+          Value: MightySceneAnchor
+        - Key: _dataSetName
+          Type: String
+          Value: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+    - Name: Directional Light
+      Tag: Untagged
+      Layer: Default
+      IsPrefab: 0
+      IsStatic: 0
+      IsActive: 1
+      Components:
+      - TypeName: Transform
+        Properties:
+        - Key: m_LocalRotation
+          Type: Quaternion
+          Value: UnityEditor.SerializedProperty
+        - Key: m_LocalPosition
+          Type: Vector3
+          Value: (0.00, 3.00, 0.00)
+        - Key: m_LocalScale
+          Type: Vector3
+          Value: (1.00, 1.00, 1.00)
+        - Key: m_ConstrainProportionsScale
+          Type: Boolean
+          Value: False
+      - TypeName: Light
+        Properties:
+        - Key: m_Type
+          Type: Enum
+          Value: Directional
+        - Key: m_Shape
+          Type: Enum
+          Value: Cone
+        - Key: m_Color
+          Type: Color
+          Value: RGBA(1.000, 0.957, 0.839, 1.000)
+        - Key: m_Intensity
+          Type: Float
+          Value: 1
+        - Key: m_Range
+          Type: Float
+          Value: 10
+        - Key: m_SpotAngle
+          Type: Float
+          Value: 30
+        - Key: m_InnerSpotAngle
+          Type: Float
+          Value: 21.80208
+        - Key: m_CookieSize
+          Type: Float
+          Value: 10
+        - Key: m_Shadows
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_Cookie
+          Type: ObjectReference
+          Value: null
+        - Key: m_DrawHalo
+          Type: Boolean
+          Value: False
+        - Key: m_BakingOutput
+          Type: Generic
+          Value: UnityEditor.SerializedProperty
+        - Key: m_Flare
+          Type: ObjectReference
+          Value: null
+        - Key: m_RenderMode
+          Type: Enum
+          Value: Auto
+        - Key: m_CullingMask
+          Type: LayerMask
+          Value: UnityEditor.SerializedProperty
+        - Key: m_RenderingLayerMask
+          Type: Integer
+          Value: 1
+        - Key: m_Lightmapping
+          Type: Enum
+          Value: Realtime
+        - Key: m_LightShadowCasterMode
+          Type: Integer
+          Value: 0
+        - Key: m_AreaSize
+          Type: Vector2
+          Value: (1.00, 1.00)
+        - Key: m_BounceIntensity
+          Type: Float
+          Value: 1
+        - Key: m_ColorTemperature
+          Type: Float
+          Value: 6570
+        - Key: m_UseColorTemperature
+          Type: Boolean
+          Value: False
+        - Key: m_BoundingSphereOverride
+          Type: Vector4
+          Value: UnityEditor.SerializedProperty
+        - Key: m_UseBoundingSphereOverride
+          Type: Boolean
+          Value: False
+        - Key: m_UseViewFrustumForShadowCasterCull
+          Type: Boolean
+          Value: True
+        - Key: m_ShadowRadius
+          Type: Float
+          Value: 0
+        - Key: m_ShadowAngle
+          Type: Float
+          Value: 0
+    currentIndex: 0
+    isCollecting: 0
+    totalPolyCount: 848
+    meshFilterCount: 8
+  svPos: {x: 422.8774, y: 100.53644, z: 113.08821}
+  _svPos: {x: 422.8774, y: 100.53644, z: 113.08821}
+  svRot: {x: -0.13914084, y: -0.38293418, z: 0.05845536, w: -0.91136396}
+  _svRot: {x: -0.13914084, y: -0.38293418, z: 0.05845536, w: -0.91136396}
+  landmarkMaxId: 0
+  selectedID: 0

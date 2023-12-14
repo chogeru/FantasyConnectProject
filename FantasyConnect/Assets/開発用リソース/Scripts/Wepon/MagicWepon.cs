@@ -19,8 +19,15 @@ public class MagicWepon : MonoBehaviour
     [SerializeField]
     private GameObject m_MagicBullet;
     [SerializeField]
+    private GameObject m_RangeMagic;
+    [SerializeField]
     private GameObject m_RangeAttckCol;
-
+    [SerializeField,Header("çUåÇîÕàÕ")]
+    private float m_AttckRange = 10f;
+    [SerializeField]
+    private Transform bulletSpawnPoint;
+    [SerializeField]
+    private float bulletForce;
 
     void Update()
     {
@@ -61,9 +68,36 @@ public class MagicWepon : MonoBehaviour
         m_PlayerAnimator.SetBool("MagicAttck", true);
         if (isAttck)
         {
-            Instantiate(m_MagicBullet, transform.position, Quaternion.identity);
-            m_AttackCoolTime = 0;
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_AttckRange);
 
+            float closestDistance = Mathf.Infinity;
+            Transform closestEnemy = null;
+
+            foreach (var collider in hitColliders)
+            {
+                if (collider.CompareTag("Enemy"))
+                {
+                    float distance = Vector3.Distance(transform.position, collider.transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        closestEnemy = collider.transform;
+                    }
+                }
+            }
+
+            if (closestEnemy != null)
+            {
+                Vector3 direction = closestEnemy.position - bulletSpawnPoint.position; // íeÇÃî≠éÀå˚Ç©ÇÁÇÃï˚å¸ÇéÊìæ
+                GameObject bullet = Instantiate(m_MagicBullet, bulletSpawnPoint.position, Quaternion.LookRotation(direction));
+                Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+
+                if (bulletRigidbody != null)
+                {
+                    bulletRigidbody.AddForce(direction.normalized * bulletForce, ForceMode.Impulse);
+                }
+                m_AttackCoolTime = 0;
+            }
         }
     }
     private void MagicRangeAttack()
@@ -73,7 +107,7 @@ public class MagicWepon : MonoBehaviour
         if (isAttck)
         {
             m_RangeAttckCol.SetActive(true);
-            Instantiate(m_MagicBullet, transform.position, Quaternion.identity);
+            Instantiate(m_RangeMagic, transform.position, Quaternion.identity);
             m_AttackCoolTime = 0;
 
         }

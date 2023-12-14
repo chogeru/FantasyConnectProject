@@ -701,7 +701,6 @@ GameObject:
   - component: {fileID: 3654440082198554029}
   - component: {fileID: 122123926823439470}
   - component: {fileID: 122123926823439457}
-  - component: {fileID: 122123926823439466}
   - component: {fileID: 122123926823439456}
   m_Layer: 7
   m_Name: GolemIce_Legacy
@@ -777,19 +776,6 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 2.43, z: 0}
---- !u!65 &122123926823439466
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3654440082208036393}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &122123926823439456
 MonoBehaviour:
   m_ObjectHideFlags: 0

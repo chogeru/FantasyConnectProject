@@ -1,0 +1,434 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5cc9371831913a40b111da91d471612, type: 3}
+  m_Name: LandmarksData
+  m_EditorClassIdentifier: 
+  scenes:
+  - name: mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+    landmarks:
+    - name: Snake River
+      description: Winding and raging
+      anchorTo: mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+      mapLocation:
+        worldPosition: {x: 476.73923, y: 54.71404, z: 337.34015}
+        top: 125.86076
+        left: 122.065704
+        rect:
+          serializedVersion: 2
+          x: 122.065704
+          y: 125.86076
+          width: 96
+          height: 96
+        worldRotation: {x: 0.13445404, y: 0.71115047, z: -0.14156267, w: 0.6753868}
+      createdAt: 638376481485249447
+      lastModified: 638376481485249447
+      lastQueried: 638376481485249447
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 0
+      parentId: 0
+      active: 0
+      front: 1
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376481485249447.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+    - name: Rock Creek
+      description: Watch your step, slippery when wet!
+      anchorTo: mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+      mapLocation:
+        worldPosition: {x: 648.627, y: 38.186924, z: 297.35208}
+        top: 154.93196
+        left: 247.02762
+        rect:
+          serializedVersion: 2
+          x: 247.02762
+          y: 154.93196
+          width: 96
+          height: 96
+        worldRotation: {x: 0.12117463, y: 0.48575452, z: -0.06819881, w: 0.8629648}
+      createdAt: 638376481929414530
+      lastModified: 638376481929414530
+      lastQueried: 638376481929414530
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 1
+      parentId: 0
+      active: 0
+      front: 1
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376481929414530.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+    - name: Top of the World
+      description: I can see my house from here
+      anchorTo: mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+      mapLocation:
+        worldPosition: {x: 893.0276, y: 232.66656, z: 661.67145}
+        top: -88.927124
+        left: 388.70615
+        rect:
+          serializedVersion: 2
+          x: 388.70615
+          y: -88.927124
+          width: 96
+          height: 96
+        worldRotation: {x: 0.046498463, y: -0.9148304, z: 0.11031288, w: 0.38568702}
+      createdAt: 638376482394673586
+      lastModified: 638376482394673586
+      lastQueried: 638376482394673586
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 2
+      parentId: 0
+      active: 0
+      front: 1
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376482394673586.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+    - name: The Cliffs of Insanity
+      description: Inconceivable!
+      anchorTo: mighty_rivers___Assets_MightyDevOps_Scenes_mighty_rivers
+      mapLocation:
+        worldPosition: {x: 934.34235, y: 143.0748, z: 509.90402}
+        top: -23.592686
+        left: 415.74176
+        rect:
+          serializedVersion: 2
+          x: 415.74176
+          y: -23.592686
+          width: 96
+          height: 96
+        worldRotation: {x: 0.1214374, y: -0.7276748, z: 0.13354827, w: 0.66174555}
+      createdAt: 638376482694334375
+      lastModified: 638376482694334375
+      lastQueried: 638376482694334375
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 3
+      parentId: 0
+      active: 0
+      front: 1
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376482694334375.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+  - name: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+    landmarks:
+    - name: South shore
+      description: the enemy will land here
+      anchorTo: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+      mapLocation:
+        worldPosition: {x: 975.837, y: 62.723442, z: 168.33846}
+        top: 572.3448
+        left: 715.6238
+        rect:
+          serializedVersion: 2
+          x: 715.6238
+          y: 572.3448
+          width: 96
+          height: 96
+        worldRotation: {x: 0.02454502, y: -0.9528525, z: 0.080231, w: 0.29160368}
+      createdAt: 638376489608245073
+      lastModified: 638376489608245073
+      lastQueried: 638376489608245073
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 0
+      parentId: 0
+      active: 0
+      front: 0
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376489608245073.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+    - name: Guard Tower
+      description: put a guard tower here
+      anchorTo: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+      mapLocation:
+        worldPosition: {x: 880.8222, y: 132.16429, z: 62.18166}
+        top: 550.7199
+        left: 682.51855
+        rect:
+          serializedVersion: 2
+          x: 682.51855
+          y: 550.7199
+          width: 96
+          height: 96
+        worldRotation: {x: 0.069065675, y: -0.9134033, z: 0.17472187, w: 0.36110488}
+      createdAt: 638376489853601009
+      lastModified: 638376489853601009
+      lastQueried: 638376489853601009
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 1
+      parentId: 0
+      active: 0
+      front: 0
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376489853601009.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+    - name: Central Base
+      description: Flat and hidden, the perfect spot
+      anchorTo: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+      mapLocation:
+        worldPosition: {x: 359.84845, y: 82.50731, z: 401.0658}
+        top: 207.94641
+        left: 155.56555
+        rect:
+          serializedVersion: 2
+          x: 155.56555
+          y: 207.94641
+          width: 96
+          height: 96
+        worldRotation: {x: 0.05691668, y: 0.043101937, z: -0.0024509414, w: 0.9974451}
+      createdAt: 638376490146566517
+      lastModified: 638376490146566517
+      lastQueried: 638376490146566517
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 2
+      parentId: 0
+      active: 0
+      front: 0
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376490146566517.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+    - name: The Lookout
+      description: Build a tower here
+      anchorTo: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+      mapLocation:
+        worldPosition: {x: 522.16583, y: 214.76216, z: 319.7383}
+        top: 290.20728
+        left: 319.74585
+        rect:
+          serializedVersion: 2
+          x: 319.74585
+          y: 290.20728
+          width: 96
+          height: 96
+        worldRotation: {x: 0.1749528, y: 0.20881604, z: -0.037989736, w: 0.9614283}
+      createdAt: 638376490563489526
+      lastModified: 638376490563489526
+      lastQueried: 638376490563489526
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 3
+      parentId: 0
+      active: 0
+      front: 0
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376490563489526.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0
+    - name: Cluster Example
+      description: Notice how these two landmarks go green when zoomed out?  Click
+        them and it'll auto zoom in.
+      anchorTo: mighty_island___Assets_MightyDevOps_Scenes_mighty_island
+      mapLocation:
+        worldPosition: {x: 499.9894, y: 189.28339, z: 303.75916}
+        top: 306.36984
+        left: 297.3149
+        rect:
+          serializedVersion: 2
+          x: 297.3149
+          y: 306.36984
+          width: 96
+          height: 96
+        worldRotation: {x: 0.061814934, y: 0.2828427, z: -0.018260155, w: 0.9569982}
+      createdAt: 638376490812902539
+      lastModified: 638376490812902539
+      lastQueried: 638376490812902539
+      status: active
+      label:
+        fade: 1
+        show: 1
+        offset: {x: 0, y: 0, z: 0}
+        fadeMax: 1000
+        fadeMin: 100
+      id: 4
+      parentId: 0
+      active: 0
+      front: 0
+      dirty: 1
+      hasVisualContent: 0
+      viewUI:
+        maxWidth: 192
+        maxHeight: 192
+      offset: {x: 0, y: 0, z: 0}
+      mapAttributes:
+        textMainColor: {r: 1, g: 1, b: 1, a: 1}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+        textAccentColor: {r: 0, g: 1, b: 1, a: 1}
+        backgroundAccentColor: {r: 0, g: 1, b: 1, a: 1}
+      pic:
+        path: 
+        filename: lm_638376490812902539.jpg
+        width: 1024
+        height: 1024
+        format: jpeg
+        rotateWithMappable: 0

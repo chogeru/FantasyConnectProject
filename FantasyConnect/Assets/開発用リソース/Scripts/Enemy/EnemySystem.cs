@@ -120,8 +120,10 @@ public class EnemySystem : MonoBehaviour
             float rayAngle = -m_Angle / 2 + angleStep * i;
             Vector3 rayDirection = Quaternion.Euler(0, rayAngle, 0) * transform.forward;
             rayDirection.y = 0;
+            Vector3 raycastOrigin = transform.position + Vector3.up * 1f; // オブジェクトの底部からレイを出す
+
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, rayDirection, out hit, m_RaycastDistance))
+            if (Physics.Raycast(raycastOrigin, rayDirection, out hit, m_RaycastDistance))
             {
                 // ターゲットに当たった場合
                 if (hit.collider.CompareTag(m_TargetTag))
@@ -141,12 +143,12 @@ public class EnemySystem : MonoBehaviour
                 }
 
                 //ヒットしてたら赤に
-                Debug.DrawRay(transform.position, rayDirection * hit.distance, Color.red);
+                Debug.DrawRay(raycastOrigin, rayDirection * hit.distance, Color.red);
             }
             else
             {
                 //ヒットしてなければ青色にする
-                Debug.DrawRay(transform.position, rayDirection * m_RaycastDistance, Color.blue);
+                Debug.DrawRay(raycastOrigin, rayDirection * m_RaycastDistance, Color.blue);
             }
         }
     }
