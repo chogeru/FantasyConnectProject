@@ -31,6 +31,9 @@ public class MagicWepon : MonoBehaviour
     [SerializeField]
     private float bulletForce;
 
+    [SerializeField,Header("攻撃ボイス")]
+    private List<AudioClip> m_ATVoices; [SerializeField,Header("ボイス")]
+    private AudioSource m_Voice;
     void Update()
     {
         ATCoolTime();
@@ -79,6 +82,7 @@ public class MagicWepon : MonoBehaviour
             {
                 if (collider.CompareTag("Enemy"))
                 {
+                    AttckSound();
                     float distance = Vector3.Distance(transform.position, collider.transform.position);
                     if (distance < closestDistance)
                     {
@@ -108,6 +112,7 @@ public class MagicWepon : MonoBehaviour
         m_PlayerAnimator.SetBool("MagicAttck", true);
         if (isAttck)
         {
+            AttckSound();
             m_RangeAttckCol.SetActive(true);
             Instantiate(m_RangeMagic, transform.position, Quaternion.identity);
             m_AttackCoolTime = 0;
@@ -146,5 +151,16 @@ public class MagicWepon : MonoBehaviour
         m_PlayerAnimator.SetBool("Idle", false);
         m_PlayerAnimator.SetBool("Walk", false);
         m_PlayerAnimator.SetBool("Run", false);
+    }
+    private void AttckSound()
+    {
+        if (m_ATVoices != null && m_ATVoices.Count > 0)
+        {
+            int randomIndex = Random.Range(0, m_ATVoices.Count); // ランダムなインデックスを取得
+            AudioClip selectedVoice = m_ATVoices[randomIndex]; // ランダムに選択された攻撃ボイスを取得
+
+            m_Voice.clip = selectedVoice;
+            m_Voice.Play();
+        }
     }
 }

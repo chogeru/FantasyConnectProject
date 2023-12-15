@@ -50,6 +50,20 @@ public class PlayerSystem : MonoBehaviour
     private bool isMoving;
     private bool isAttck = false;
     public bool isDie = false;
+
+    [SerializeField, Header("被弾ボイス")]
+    private AudioClip m_HitVoice;
+    [SerializeField, Header("死亡ボイス")]
+    private AudioClip m_DieVoice;
+    [SerializeField, Header("被弾SE")]
+    private AudioClip m_HitSEClip;
+    [SerializeField, Header("死亡SE")]
+    private AudioClip m_DieSEClip;
+    [SerializeField, Header("オーディオボイス")]
+    private AudioSource m_Voice;
+    [SerializeField, Header("SE")]
+    private AudioSource m_SE;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -180,12 +194,14 @@ public class PlayerSystem : MonoBehaviour
         {
             m_CurrentHp -= damage;
             HpUpdate();
+            HitSound();
         }
     }
     private void Die()
     {
         if (m_CurrentHp <= 0)
         {
+            DieSound();
             m_PlayerAnimator.SetBool("Die", true);
             isDie = true;
         }
@@ -202,5 +218,20 @@ public class PlayerSystem : MonoBehaviour
         isGrounded = true;
         m_MaxSpeed = m_WalkSpeed;
         m_PlayerAnimator.SetBool("Jump", false);
+    }
+    private void HitSound()
+    {
+        m_Voice.clip = m_HitVoice;
+        m_Voice.Play();
+
+        m_SE.clip = m_HitSEClip;
+        m_SE.Play();
+    }
+    private void DieSound()
+    {
+        m_Voice.clip=m_DieVoice;
+        m_Voice.Play();
+        m_SE.clip=m_DieSEClip;
+        m_SE.Play();
     }
 }

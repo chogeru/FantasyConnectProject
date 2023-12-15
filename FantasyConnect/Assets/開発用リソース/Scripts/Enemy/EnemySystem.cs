@@ -29,7 +29,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("レイキャスト角度")]
     private float m_Angle = 90f;
     [SerializeField, Header("レイの数")]
-    private int rayCount=180;
+    private int rayCount = 180;
     #endregion
     #region 行動パラメーター
     [SerializeField, Header("追跡対象のタグ")]
@@ -37,7 +37,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("最大速度")]
     private float m_MaxSpeed = 5f;
     [SerializeField, Header("現在の速度")]
-    private float m_CurrentSpeed=5f;
+    private float m_CurrentSpeed = 5f;
     [SerializeField, Header("加速値")]
     private float m_Acceleration = 2f;
     [SerializeField, Header("攻撃距離")]
@@ -71,7 +71,7 @@ public class EnemySystem : MonoBehaviour
 
     [SerializeField, Header("死亡時エフェクト")]
     private GameObject m_DieEffect;
-    
+
     [SerializeField]
     private GameObject m_HpBer;
     [SerializeField, Header("Hpバーの位置")]
@@ -79,9 +79,23 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("Hpバーのサイズ")]
     private Vector3 m_HpBerscale;
     private Vector3 currentVelocity;
+    public LayerMask obstacleMask;
     EnemyStatus enemyStatus;
-    private bool isHit=false;
-    
+
+    [SerializeField, Header("ヒットボイスクリップ")]
+    private AudioClip m_HitVoiceClip;
+    [SerializeField, Header("死亡時ボイスクリップ")]
+    private AudioClip m_DieVoiceClip;
+    [SerializeField,Header("被弾SE")]
+    private AudioClip m_HitSEClip;
+    [SerializeField, Header("死亡SE")]
+    private AudioClip m_DieSEClip;
+    [SerializeField,Header("ボイス")]
+    private AudioSource m_ViceSE;
+    [SerializeField, Header("SE")]
+    private AudioSource m_SE;
+    private bool isHit = false;
+
     void Start()
     {
         m_CurrentSpeed = m_MaxSpeed;
@@ -122,46 +136,47 @@ public class EnemySystem : MonoBehaviour
     #region プレイヤー追跡処理
     void Search()
     {
-        // レイキャストの発射とターゲットの検知
-        float angleStep = m_Angle / (rayCount - 1);
-
-        for (int i = 0; i < rayCount; i++)
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        if (distanceToPlayer <= 10f)
         {
-            float rayAngle = -m_Angle / 2 + angleStep * i;
-            Vector3 rayDirection = Quaternion.Euler(0, rayAngle, 0) * transform.forward;
-            rayDirection.y = 0;
-            Vector3 raycastOrigin = transform.position + Vector3.up * 0.5f; 
-
-            RaycastHit hit;
-            if (Physics.Raycast(raycastOrigin, rayDirection, out hit, m_RaycastDistance))
+            Vector3 directionToPlayer = player.position - transform.position;
+            float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
+            Vector3 raycastOrigin = transform.position + Vector3.up * 0.5f;
+            if (angleToPlayer <= 90f)
             {
-                // ターゲットに当たった場合
-                if (hit.collider.CompareTag(m_TargetTag))
+                
+                RaycastHit hit;
+                if (Physics.Raycast(raycastOrigin, directionToPlayer, out hit, m_RaycastDistance,obstacleMask))
                 {
-                    PlayerTracking();
-                    if (myType == EnemyType.Enemy)
+                    // ターゲットに当たった場合
+                    if (hit.collider.CompareTag(m_TargetTag))
                     {
-                        if (myButtleType == ButtleType.Melee)
+                        PlayerTracking();
+                        if (myType == EnemyType.Enemy)
                         {
-                            PlayerAttckDictance();
-                        }
-                        else if (myButtleType == ButtleType.Magic)
-                        {
-                            PlayerMagicAttack();
+                            if (myButtleType == ButtleType.Melee)
+                            {
+                                PlayerAttckDictance();
+                            }
+                            else if (myButtleType == ButtleType.Magic)
+                            {
+                                PlayerMagicAttack();
+                            }
                         }
                     }
-                }
 
-                //ヒットしてたら赤に
-                Debug.DrawRay(raycastOrigin, rayDirection * hit.distance, Color.red);
-            }
-            else
-            {
-                //ヒットしてなければ青色にする
-                Debug.DrawRay(raycastOrigin, rayDirection * m_RaycastDistance, Color.blue);
+                    //ヒットしてたら赤に
+                    Debug.DrawRay(raycastOrigin, directionToPlayer * hit.distance, Color.red);
+                }
+                else
+                {
+                    //ヒットしてなければ青色にする
+                    Debug.DrawRay(raycastOrigin, directionToPlayer * m_RaycastDistance, Color.blue);
+                }
             }
         }
     }
+
 
     void PlayerTracking()
     {
@@ -283,6 +298,10 @@ public class EnemySystem : MonoBehaviour
             m_Animator.SetBool("Hit",true);
             m_MaxSpeed = 0;
             isHit = true;
+            m_ViceSE.clip = m_HitVoiceClip;
+            m_ViceSE.Play();
+            m_SE.clip = m_HitSEClip;
+            m_SE.Play();
         }
     }
     private void EndHit()
@@ -296,6 +315,10 @@ public class EnemySystem : MonoBehaviour
         if (m_CurrentHp <= 0)
         {
             m_Animator.SetBool("Die", true);
+            m_ViceSE.clip = m_DieVoiceClip;
+            m_ViceSE.Play();
+            m_SE.clip = m_DieSEClip;
+            m_SE.Play();
             m_MaxSpeed = 0;
             isDie = true;
         }
