@@ -37,7 +37,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField, Header("最小速度")]
     private float m_MinSpeed = 2f;
     [SerializeField, Header("最大速度")]
-    private float m_MaxSpeed = 5f;
+    public float m_MaxSpeed = 5f;
     [SerializeField, Header("通常歩く速度")]
     private float m_WalkSpeed = 5;
     [SerializeField, Header("走る速度")]

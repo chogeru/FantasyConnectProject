@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class TeleportBehindEnemy : MonoBehaviour
 {
-    public float moveSpeed = 10f; // 移動速度
-    public float maxDistance = 10f; // ワープ可能な最大距離
-    private Transform targetEnemy; // 最も近い敵のTransform
+    [SerializeField]
+    private float m_MoveSpeed = 10f; 
+    [SerializeField,Header("ワープ最大距離")]
+    private float m_MaxDistance = 10f; 
+    [SerializeField,Header("ワープエフェクト")]
+    private GameObject m_MoveEffect;
+    private Transform targetEnemy;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            FindNearestEnemy(); // 最も近い敵を探す
+            FindNearestEnemy();
             if (targetEnemy != null)
             {
                 float distanceToEnemy = Vector3.Distance(transform.position, targetEnemy.position);
-                if (distanceToEnemy <= maxDistance)
+                if (distanceToEnemy <= m_MaxDistance)
                 {
+                    Instantiate(m_MoveEffect, transform.position, Quaternion.identity);
                     MoveBehindEnemy(); // 敵の後ろに移動
                 }
                 else
@@ -52,12 +57,14 @@ public class TeleportBehindEnemy : MonoBehaviour
 
     void MoveBehindEnemy()
     {
-        Vector3 direction = -(targetEnemy.forward); // 敵の後ろに向かう方向
+        // 敵の後ろに向かう方向
+        Vector3 direction = -(targetEnemy.forward);
 
         // 敵の位置から少し離れた位置にプレイヤーを配置
         Vector3 newPosition = targetEnemy.position + (direction * 3f);
 
         // プレイヤーを新しい位置に瞬時に移動させる
         transform.position = newPosition;
+        Instantiate(m_MoveEffect, transform.position, Quaternion.identity);
     }
 }

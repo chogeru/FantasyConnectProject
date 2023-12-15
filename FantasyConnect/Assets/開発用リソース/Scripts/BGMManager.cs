@@ -53,16 +53,19 @@ public class BGMManager : MonoBehaviour
             case "Title":
                 m_FirstCityBGM.Stop();
                 m_MyHouseBGM.Stop();
+                m_GrassIandAreaBGM.Stop();
                 m_TitleBGM.Play();
                 break;
             case "MyHouse":
                 m_FirstCityBGM.Stop();
                 m_TitleBGM.Stop();
+                m_GrassIandAreaBGM.Stop();
                 m_MyHouseBGM.Play();
                 break;
             case "FirstCity":
                 m_FirstCityBGM.Play();
                 m_TitleBGM.Stop();
+                m_GrassIandAreaBGM.Stop();
                 m_MyHouseBGM.Stop();
                 break;
             case "GrassIandArea1":

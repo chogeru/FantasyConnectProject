@@ -34,6 +34,8 @@ public class EnemySystem : MonoBehaviour
     private string m_TargetTag = "Player";
     [SerializeField, Header("最大速度")]
     private float m_MaxSpeed = 5f;
+    [SerializeField, Header("現在の速度")]
+    private float m_CurrentSpeed=5f;
     [SerializeField, Header("加速値")]
     private float m_Acceleration = 2f;
     [SerializeField, Header("攻撃距離")]
@@ -67,6 +69,8 @@ public class EnemySystem : MonoBehaviour
 
     [SerializeField, Header("死亡時エフェクト")]
     private GameObject m_DieEffect;
+    [SerializeField, Header("被弾エフェクト")]
+    private GameObject m_HitEffect;
     [SerializeField]
     private GameObject m_HpBer;
     [SerializeField, Header("Hpバーの位置")]
@@ -75,8 +79,11 @@ public class EnemySystem : MonoBehaviour
     private Vector3 m_HpBerscale;
     private Vector3 currentVelocity;
     EnemyStatus enemyStatus;
+    private bool isHit=false;
+    
     void Start()
     {
+        m_CurrentSpeed = m_MaxSpeed;
         // プレイヤーオブジェクトのTransformを取得
         player = GameObject.FindGameObjectWithTag(m_TargetTag).transform;
         rb = GetComponent<Rigidbody>();
@@ -93,8 +100,11 @@ public class EnemySystem : MonoBehaviour
 
     void Update()
     {
+        if (isHit)
+            return;
         if (isDie)
             return;
+        m_MaxSpeed = m_CurrentSpeed;
         Search();
         UpdateAnimation();
 
@@ -120,7 +130,7 @@ public class EnemySystem : MonoBehaviour
             float rayAngle = -m_Angle / 2 + angleStep * i;
             Vector3 rayDirection = Quaternion.Euler(0, rayAngle, 0) * transform.forward;
             rayDirection.y = 0;
-            Vector3 raycastOrigin = transform.position + Vector3.up * 1f; // オブジェクトの底部からレイを出す
+            Vector3 raycastOrigin = transform.position + Vector3.up * 1f; 
 
             RaycastHit hit;
             if (Physics.Raycast(raycastOrigin, rayDirection, out hit, m_RaycastDistance))
@@ -270,7 +280,16 @@ public class EnemySystem : MonoBehaviour
         if (m_CurrentHp > 0)
         {
             m_CurrentHp -= damage;
+            m_Animator.SetBool("Hit",true);
+            m_MaxSpeed = 0;
+            isHit = true;
         }
+    }
+    private void EndHit()
+    {
+        m_Animator.SetBool("Hit", false);
+        m_MaxSpeed = m_CurrentSpeed;
+        isHit=false;
     }
     void Die()
     {

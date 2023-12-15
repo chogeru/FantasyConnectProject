@@ -6,6 +6,8 @@ public class PlayerBullet : MonoBehaviour
 {
     [SerializeField]
     private int Damage = 10;
+    [SerializeField, Header("着弾エフェクト")]
+    private GameObject m_HitEffect;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -16,6 +18,7 @@ public class PlayerBullet : MonoBehaviour
                 enemySystem.TakeDamage(Damage);
             }
         }
+        Instantiate(m_HitEffect,transform.position,Quaternion.identity);
         Destroy(gameObject);
 
     }

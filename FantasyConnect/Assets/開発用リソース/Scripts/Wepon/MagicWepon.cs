@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class MagicWepon : MonoBehaviour
 {
     enum eAttckType
@@ -16,12 +15,14 @@ public class MagicWepon : MonoBehaviour
     [SerializeField]
     private Animator m_PlayerAnimator;
     private bool isAttck=false;
-    [SerializeField]
+    [SerializeField,Header("魔法弾攻撃")]
     private GameObject m_MagicBullet;
-    [SerializeField]
+    [SerializeField,Header("範囲攻撃魔法")]
     private GameObject m_RangeMagic;
-    [SerializeField]
+    [SerializeField,Header("範囲攻撃用コライダー")]
     private GameObject m_RangeAttckCol;
+    [SerializeField,Header("魔法攻撃時のエフェクト")]
+    private GameObject m_AtckEffect;
     [SerializeField,Header("攻撃範囲")]
     private float m_AttckRange = 10f;
     [SerializeField]
@@ -59,13 +60,18 @@ public class MagicWepon : MonoBehaviour
         else
         {
             m_PlayerAnimator.SetBool("MagicAttck", false);
+            m_PlayerAnimator.SetBool("MagicBulletAttck", false);
             m_RangeAttckCol.SetActive(false);
+            m_AtckEffect.SetActive(false);
         }
     }
     private void MagicBulletAttack()
     {
+        PlayerSystem playerSystem =GetComponentInParent<PlayerSystem>();
+        playerSystem.m_MaxSpeed = 0; 
         StopMoveAnime();
-        m_PlayerAnimator.SetBool("MagicAttck", true);
+        m_PlayerAnimator.SetBool("MagicBulletAttck", true);
+        m_AtckEffect.SetActive(true);
         if (isAttck)
         {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_AttckRange);
@@ -88,7 +94,7 @@ public class MagicWepon : MonoBehaviour
 
             if (closestEnemy != null)
             {
-                Vector3 direction = closestEnemy.position - bulletSpawnPoint.position; // 弾の発射口からの方向を取得
+                Vector3 direction = closestEnemy.position+Vector3.up*1f - bulletSpawnPoint.position; // 弾の発射口からの方向を取得
                 GameObject bullet = Instantiate(m_MagicBullet, bulletSpawnPoint.position, Quaternion.LookRotation(direction));
                 Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
 

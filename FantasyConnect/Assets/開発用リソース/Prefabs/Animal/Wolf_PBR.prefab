@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_Animator: {fileID: 1368394625215557425}
   isAttacking: 0
   m_DieEffect: {fileID: 0}
-  m_HpBer: {fileID: 0}
+  m_HpBer: {fileID: 6600094929985450706, guid: 718196e9aa6603d4f988ebb0cd8ff017, type: 3}
   m_HpBerPos: {x: 0, y: 0, z: 0}
   m_HpBerscale: {x: 0, y: 0, z: 0}
 --- !u!1 &1368394625208261877
