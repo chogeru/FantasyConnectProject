@@ -2791,7 +2791,6 @@ MonoBehaviour:
   m_RaycastDistance: 20
   m_Angle: 180
   rayCount: 180
-  raycastOrigin: {x: 0, y: 0.2, z: 0}
   m_TargetTag: Player
   m_MaxSpeed: 4
   m_CurrentSpeed: 5
@@ -2805,7 +2804,6 @@ MonoBehaviour:
   m_Animator: {fileID: 6420927823857255880}
   isAttacking: 0
   m_DieEffect: {fileID: 8332960207733953594, guid: 33fb02de3f07d9d47b4bd4c54d0498a7, type: 3}
-  m_HitEffect: {fileID: 0}
   m_HpBer: {fileID: 6600094929985450706, guid: 718196e9aa6603d4f988ebb0cd8ff017, type: 3}
   m_HpBerPos: {x: 0, y: 2.2, z: 0}
   m_HpBerscale: {x: -1, y: 1, z: 1}
