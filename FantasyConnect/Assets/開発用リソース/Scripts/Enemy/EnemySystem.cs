@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
-
+using VInspector;
 public class EnemySystem : MonoBehaviour
 {
+    public VInspectorData VInspectorData;
     #region タイプ
     enum EnemyType
     {
@@ -23,6 +21,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("タイプ")]
     private EnemyType myType;
     #endregion
+    [Foldout("レイキャスト"),Tab("レイキャスト")]
     #region レイキャスト
     [SerializeField, Header("レイキャスト距離")]
     private float m_RaycastDistance = 10f;
@@ -31,6 +30,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("レイの数")]
     private int rayCount = 180;
     #endregion
+    [Foldout("パラメータ"),Tab("パラメータ")]
     #region 行動パラメーター
     [SerializeField, Header("追跡対象のタグ")]
     private string m_TargetTag = "Player";
@@ -48,19 +48,20 @@ public class EnemySystem : MonoBehaviour
     public float m_MagicAttckCoolTime;
     [SerializeField, Header("近接アタッククールタイム")]
     private float m_MeleeCoolTime;
-    #endregion
-
-    private Transform player;
-
     [SerializeField]
     public int m_MaxHp;
     [SerializeField]
     public int m_CurrentHp;
+    #endregion
 
+    private Transform player;
+
+    [Foldout("コンポーネント")]
     #region 所得コンポーネント
     [SerializeField, Header("アニメ-ター")]
     private Animator m_Animator;
     private Rigidbody rb;
+    [EndFoldout]
     #endregion
     #region 各種トリガー
     private bool inAttackRange = false;
@@ -81,7 +82,8 @@ public class EnemySystem : MonoBehaviour
     private Vector3 currentVelocity;
     public LayerMask obstacleMask;
     EnemyStatus enemyStatus;
-
+    #region サウンド
+    [Foldout("音声クリップ"), Tab("音声クリップ")]
     [SerializeField, Header("ヒットボイスクリップ")]
     private AudioClip m_HitVoiceClip;
     [SerializeField, Header("死亡時ボイスクリップ")]
@@ -90,10 +92,13 @@ public class EnemySystem : MonoBehaviour
     private AudioClip m_HitSEClip;
     [SerializeField, Header("死亡SE")]
     private AudioClip m_DieSEClip;
+    [Foldout("オーディオソース")]
     [SerializeField,Header("ボイス")]
     private AudioSource m_ViceSE;
     [SerializeField, Header("SE")]
     private AudioSource m_SE;
+#endregion
+    [EndFoldout]
     private bool isHit = false;
 
     void Start()

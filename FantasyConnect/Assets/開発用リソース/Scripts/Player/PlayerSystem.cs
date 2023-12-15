@@ -1,8 +1,10 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using VInspector;
 public class PlayerSystem : MonoBehaviour
 {
+    public VInspectorData vInspector;
     enum eState
     {
         Idle,
@@ -12,19 +14,20 @@ public class PlayerSystem : MonoBehaviour
         Die,
     }
     private eState e_CurrentState;
+    [Foldout("GetCommponent")]
     [SerializeField]
     public Rigidbody rb;
     [SerializeField]
     private Animator m_PlayerAnimator;
     [SerializeField]
     private Camera mainCamera;
-
+    [Foldout("HPCanvas")]
     [SerializeField,Header("HP表示用スライダー")]
     private Slider m_HpSlider;
     [SerializeField, Header("HP表示用テキスト")]
     private TextMeshProUGUI m_HpText;
-
-
+    #region パラメータ
+    [Foldout("パラメータ"), Tab("パラメータ")]
     [SerializeField, Header("最大Hp")]
     public int m_MaxHp;
     [SerializeField, Header("現在のHp")]
@@ -33,7 +36,6 @@ public class PlayerSystem : MonoBehaviour
     private int m_MeleeAttack;
     [SerializeField, Header("魔法攻撃力")]
     private int m_MagicAttack;
-
     [SerializeField, Header("最小速度")]
     private float m_MinSpeed = 2f;
     [SerializeField, Header("最大速度")]
@@ -46,11 +48,16 @@ public class PlayerSystem : MonoBehaviour
     private float m_JumpForce = 10f;
     [SerializeField, Header("重力")]
     private float m_Gravity = 9.81f;
+    #endregion
+    #region　トリガー
+    [Foldout("トリガー")]
     private bool isGrounded = true;
     private bool isMoving;
     private bool isAttck = false;
     public bool isDie = false;
-
+    #endregion
+    #region サウンド
+    [Foldout("Clip"),Tab("Clip")]
     [SerializeField, Header("被弾ボイス")]
     private AudioClip m_HitVoice;
     [SerializeField, Header("死亡ボイス")]
@@ -59,11 +66,12 @@ public class PlayerSystem : MonoBehaviour
     private AudioClip m_HitSEClip;
     [SerializeField, Header("死亡SE")]
     private AudioClip m_DieSEClip;
+    [Foldout("オーディオソース")]
     [SerializeField, Header("オーディオボイス")]
     private AudioSource m_Voice;
     [SerializeField, Header("SE")]
     private AudioSource m_SE;
-
+    #endregion
     void Start()
     {
         rb = GetComponent<Rigidbody>();
