@@ -47,7 +47,7 @@ public class SceneController : MonoBehaviour
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("GrassIandArea2", LoadSceneMode.Single);
+                    SceneManager.LoadScene("GrassIandBossArea", LoadSceneMode.Single);
                 }
                 break;
             default:

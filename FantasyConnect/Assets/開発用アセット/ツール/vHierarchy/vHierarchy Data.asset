@@ -23,6 +23,7 @@ MonoBehaviour:
     - 3854cd482132de742ad3c41147e897c7
     - 77571fbd1cc6524479cd5a34d33a1b09
     - 936f3d3ce1512f640a6a4a932f7f92c6
+    - a1baa7c758bf70b46a015e1f967c014f
     values:
     - goDatasByGlobalId:
         keys:
@@ -206,6 +207,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-936f3d3ce1512f640a6a4a932f7f92c6-1089055459-0
         - GlobalObjectId_V1-2-936f3d3ce1512f640a6a4a932f7f92c6-1897165504-0
         - GlobalObjectId_V1-2-936f3d3ce1512f640a6a4a932f7f92c6-1383769832-0
+        - GlobalObjectId_V1-2-936f3d3ce1512f640a6a4a932f7f92c6-582785179-0
         values:
         - iColor: 0
           icon: PreMatCube
@@ -225,8 +227,10 @@ MonoBehaviour:
           icon: TrailRenderer Icon
         - iColor: 0
           icon: PreMatCube
+        - iColor: 0
+          icon: 
       goDatasByInstanceId:
-        keys: 3cbd00004eb3000074be00002ec9000004ca00001acd00004cc100005acb0000c454faff
+        keys: 12be000070b3000052bf0000c8ca0000accb00000acf000064c2000028cd000034c600005ebb00003c4effffdc1c1400301214001c1e140092291400762a1400d02d14002e211400f02b1400fe2414002a1a1400cca3f9ff
         values:
         - iColor: 0
           icon: PreMatCube
@@ -246,3 +250,65 @@ MonoBehaviour:
           icon: TrailRenderer Icon
         - iColor: 0
           icon: PreMatCube
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: TrailRenderer Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: AvatarMask On Icon
+    - goDatasByGlobalId:
+        keys:
+        - GlobalObjectId_V1-2-a1baa7c758bf70b46a015e1f967c014f-474771601-0
+        - GlobalObjectId_V1-2-a1baa7c758bf70b46a015e1f967c014f-1380991755-0
+        - GlobalObjectId_V1-2-a1baa7c758bf70b46a015e1f967c014f-1127399259-0
+        - GlobalObjectId_V1-2-a1baa7c758bf70b46a015e1f967c014f-1498543877-0
+        - GlobalObjectId_V1-2-a1baa7c758bf70b46a015e1f967c014f-1609682803-0
+        - GlobalObjectId_V1-2-a1baa7c758bf70b46a015e1f967c014f-8775794892995199873-1540288410
+        values:
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+      goDatasByInstanceId:
+        keys: b07616009ecef8ffdc03f7ffc2761600bad0f5ffce1df7ff
+        values:
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: AvatarMask On Icon

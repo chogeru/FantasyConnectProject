@@ -10,8 +10,10 @@ public class BGMManager : MonoBehaviour
     private AudioSource m_MyHouseBGM;
     [SerializeField, Header("FirstCityÉVÅ[ÉìÇÃBGM")]
     private AudioSource m_FirstCityBGM;
-    [SerializeField, Header("GrassIandArea")]
+    [SerializeField, Header("GrassIandAreaÇÃBGM")]
     private AudioSource m_GrassIandAreaBGM;
+    [SerializeField, Header("GrassIandBossAreaÇÃBGM")]
+    private AudioSource m_GrassIandBossAreaBGM;
     private void Awake()
     {
         if(BGMm_instance == null)
@@ -54,18 +56,21 @@ public class BGMManager : MonoBehaviour
                 m_FirstCityBGM.Stop();
                 m_MyHouseBGM.Stop();
                 m_GrassIandAreaBGM.Stop();
+                m_GrassIandBossAreaBGM.Stop();
                 m_TitleBGM.Play();
                 break;
             case "MyHouse":
                 m_FirstCityBGM.Stop();
                 m_TitleBGM.Stop();
                 m_GrassIandAreaBGM.Stop();
+                m_GrassIandBossAreaBGM.Stop();
                 m_MyHouseBGM.Play();
                 break;
             case "FirstCity":
                 m_FirstCityBGM.Play();
                 m_TitleBGM.Stop();
                 m_GrassIandAreaBGM.Stop();
+                m_GrassIandBossAreaBGM.Stop();
                 m_MyHouseBGM.Stop();
                 break;
             case "GrassIandArea1":
@@ -73,6 +78,14 @@ public class BGMManager : MonoBehaviour
                 m_TitleBGM.Stop();
                 m_MyHouseBGM.Stop();
                 m_GrassIandAreaBGM.Play();
+                m_GrassIandBossAreaBGM.Stop();
+                break;
+            case "GrassIandBossArea":
+                m_FirstCityBGM.Stop();
+                m_TitleBGM.Stop();
+                m_MyHouseBGM.Stop();
+                m_GrassIandAreaBGM.Stop();
+                m_GrassIandBossAreaBGM.Play();
                 break;
             default:
                 break;

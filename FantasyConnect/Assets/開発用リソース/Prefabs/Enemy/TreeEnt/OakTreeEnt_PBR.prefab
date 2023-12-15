@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7859339793092493562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.637, y: 0, z: -0}
+  m_LocalPosition: {x: 0.41, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,8 +167,10 @@ MonoBehaviour:
   myType: 0
   m_RaycastDistance: 20
   m_Angle: 180
+  rayCount: 180
   m_TargetTag: Player
   m_MaxSpeed: 4
+  m_CurrentSpeed: 5
   m_Acceleration: 2
   attackDistance: 3
   m_RotationSpeed: 5
@@ -179,6 +181,7 @@ MonoBehaviour:
   m_Animator: {fileID: 8395176225402001929}
   isAttacking: 0
   m_DieEffect: {fileID: 380284327063089880, guid: c4785daaed5578e40b1201a3147e56cf, type: 3}
+  m_HitEffect: {fileID: 0}
   m_HpBer: {fileID: 6600094929985450706, guid: 718196e9aa6603d4f988ebb0cd8ff017, type: 3}
   m_HpBerPos: {x: 0, y: 7, z: 1}
   m_HpBerscale: {x: -3, y: 3, z: 3}

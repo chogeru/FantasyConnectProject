@@ -28,6 +28,8 @@ public class EnemySystem : MonoBehaviour
     private float m_RaycastDistance = 10f;
     [SerializeField, Header("レイキャスト角度")]
     private float m_Angle = 90f;
+    [SerializeField, Header("レイの数")]
+    private int rayCount=180;
     #endregion
     #region 行動パラメーター
     [SerializeField, Header("追跡対象のタグ")]
@@ -69,8 +71,7 @@ public class EnemySystem : MonoBehaviour
 
     [SerializeField, Header("死亡時エフェクト")]
     private GameObject m_DieEffect;
-    [SerializeField, Header("被弾エフェクト")]
-    private GameObject m_HitEffect;
+    
     [SerializeField]
     private GameObject m_HpBer;
     [SerializeField, Header("Hpバーの位置")]
@@ -122,7 +123,6 @@ public class EnemySystem : MonoBehaviour
     void Search()
     {
         // レイキャストの発射とターゲットの検知
-        int rayCount = 180;
         float angleStep = m_Angle / (rayCount - 1);
 
         for (int i = 0; i < rayCount; i++)
@@ -130,7 +130,7 @@ public class EnemySystem : MonoBehaviour
             float rayAngle = -m_Angle / 2 + angleStep * i;
             Vector3 rayDirection = Quaternion.Euler(0, rayAngle, 0) * transform.forward;
             rayDirection.y = 0;
-            Vector3 raycastOrigin = transform.position + Vector3.up * 1f; 
+            Vector3 raycastOrigin = transform.position + Vector3.up * 0.5f; 
 
             RaycastHit hit;
             if (Physics.Raycast(raycastOrigin, rayDirection, out hit, m_RaycastDistance))

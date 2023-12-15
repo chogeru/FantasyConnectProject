@@ -15,6 +15,7 @@ public class MagicWepon : MonoBehaviour
     [SerializeField]
     private Animator m_PlayerAnimator;
     private bool isAttck=false;
+    private bool isWeponChange = true;
     [SerializeField,Header("–‚–@’eUŒ‚")]
     private GameObject m_MagicBullet;
     [SerializeField,Header("”ÍˆÍUŒ‚–‚–@")]
@@ -32,18 +33,11 @@ public class MagicWepon : MonoBehaviour
 
     void Update()
     {
-        m_AttackCoolTime += Time.deltaTime;
-        if(m_AttackCoolTime>1)
-        {
-            isAttck = true;
-            m_AttackCoolTime = 0;
-        }
-        else
-        {
-            isAttck=false;
-        }
+        ATCoolTime();
+      WeponTypeChange();
         if(Input.GetMouseButton(0))
         {
+            isWeponChange = false;
             switch(attckType)
             {
                 case eAttckType.Bullet:
@@ -59,6 +53,8 @@ public class MagicWepon : MonoBehaviour
         }
         else
         {
+
+            isWeponChange=true;
             m_PlayerAnimator.SetBool("MagicAttck", false);
             m_PlayerAnimator.SetBool("MagicBulletAttck", false);
             m_RangeAttckCol.SetActive(false);
@@ -118,8 +114,33 @@ public class MagicWepon : MonoBehaviour
 
         }
     }
-
-
+    private void ATCoolTime()
+    {
+        m_AttackCoolTime += Time.deltaTime;
+        if (m_AttackCoolTime > 1)
+        {
+            isAttck = true;
+            m_AttackCoolTime = 0;
+        }
+        else
+        {
+            isAttck = false;
+        }
+    }
+    private void WeponTypeChange()
+    {
+        if (isWeponChange)
+        {
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                attckType = eAttckType.Bullet;
+            }
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                attckType = eAttckType.RangeAttack;
+            }
+        }
+    }
     private void StopMoveAnime()
     {
         m_PlayerAnimator.SetBool("Idle", false);
