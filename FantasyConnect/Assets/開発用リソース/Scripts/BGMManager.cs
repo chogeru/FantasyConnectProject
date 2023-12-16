@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using VInspector;
+
 public class BGMManager : MonoBehaviour
 {
     //シングルトンパターン
     public static BGMManager BGMm_instance;
+    #region　オーディオソース
+    [Foldout("オーディオソース")]
     [SerializeField,Header("TitleシーンのBGM")]
     private AudioSource m_TitleBGM;
     [SerializeField,Header("MyHouseシーンのBGM")]
@@ -14,12 +18,14 @@ public class BGMManager : MonoBehaviour
     private AudioSource m_GrassIandAreaBGM;
     [SerializeField, Header("GrassIandBossAreaのBGM")]
     private AudioSource m_GrassIandBossAreaBGM;
+    [SerializeField, Header("AutumnAreaのBGM")]
+    private AudioSource m_AutumnAreaBGM;
+    #endregion
     private void Awake()
     {
         if(BGMm_instance == null)
         {
             BGMm_instance = this;
-            //オブジェクトを残すように
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -34,7 +40,6 @@ public class BGMManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        // イベントリスナーを登録し、シーンがロードされたときに呼ばれる処理を定義する
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
     private void OnDisable()
@@ -58,6 +63,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Stop();
                 m_TitleBGM.Play();
+                m_AutumnAreaBGM.Stop();
                 break;
             case "MyHouse":
                 m_FirstCityBGM.Stop();
@@ -65,6 +71,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Stop();
                 m_MyHouseBGM.Play();
+                m_AutumnAreaBGM.Stop();
                 break;
             case "FirstCity":
                 m_FirstCityBGM.Play();
@@ -72,6 +79,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Stop();
                 m_MyHouseBGM.Stop();
+                m_AutumnAreaBGM.Stop();
                 break;
             case "GrassIandArea1":
                 m_FirstCityBGM.Stop();
@@ -79,6 +87,7 @@ public class BGMManager : MonoBehaviour
                 m_MyHouseBGM.Stop();
                 m_GrassIandAreaBGM.Play();
                 m_GrassIandBossAreaBGM.Stop();
+                m_AutumnAreaBGM.Stop();
                 break;
             case "GrassIandBossArea":
                 m_FirstCityBGM.Stop();
@@ -86,6 +95,15 @@ public class BGMManager : MonoBehaviour
                 m_MyHouseBGM.Stop();
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Play();
+                m_AutumnAreaBGM.Stop();
+                break;
+            case "AutumnArea1":
+                m_FirstCityBGM.Stop();
+                m_TitleBGM.Stop();
+                m_MyHouseBGM.Stop();
+                m_GrassIandAreaBGM.Stop();
+                m_GrassIandBossAreaBGM.Stop();
+                m_AutumnAreaBGM.Play();
                 break;
             default:
                 break;

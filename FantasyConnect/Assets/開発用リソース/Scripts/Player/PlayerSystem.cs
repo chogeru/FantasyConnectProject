@@ -82,12 +82,13 @@ public class PlayerSystem : MonoBehaviour
 
     void Update()
     {
-        if(isDie)
+
+        if (isDie)
         return;
         MovePlayer();
         ApplyGravity();
         Die();
-       
+      
     }
     void SetHp()
     {
@@ -201,6 +202,12 @@ public class PlayerSystem : MonoBehaviour
         if (m_CurrentHp > 0)
         {
             m_CurrentHp -= damage;
+
+            if (m_CurrentHp < 0)
+            {
+                m_CurrentHp = 0;
+            }
+
             HpUpdate();
             HitSound();
         }

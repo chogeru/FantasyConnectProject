@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using VInspector;
+using TMPro;
 public class EnemySystem : MonoBehaviour
 {
     public VInspectorData VInspectorData;
@@ -29,6 +30,7 @@ public class EnemySystem : MonoBehaviour
     private float m_Angle = 90f;
     [SerializeField, Header("レイの数")]
     private int rayCount = 180;
+    
     #endregion
     [Foldout("パラメータ"),Tab("パラメータ")]
     #region 行動パラメーター
@@ -72,7 +74,10 @@ public class EnemySystem : MonoBehaviour
 
     [SerializeField, Header("死亡時エフェクト")]
     private GameObject m_DieEffect;
+    [SerializeField,Header("攻撃トレイル")]
+    private GameObject m_AttackEffect;
 
+    
     [SerializeField]
     private GameObject m_HpBer;
     [SerializeField, Header("Hpバーの位置")]
@@ -104,6 +109,10 @@ public class EnemySystem : MonoBehaviour
     void Start()
     {
         m_CurrentSpeed = m_MaxSpeed;
+        if (m_AttackEffect != null)
+        {
+            m_AttackEffect.SetActive(false);
+        }
         // プレイヤーオブジェクトのTransformを取得
         player = GameObject.FindGameObjectWithTag(m_TargetTag).transform;
         rb = GetComponent<Rigidbody>();
@@ -142,7 +151,7 @@ public class EnemySystem : MonoBehaviour
     void Search()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer <= 10f)
+        if (distanceToPlayer <= m_RaycastDistance)
         {
             Vector3 directionToPlayer = player.position - transform.position;
             float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
@@ -279,13 +288,20 @@ public class EnemySystem : MonoBehaviour
         enemyAttckCol.isAttack = true;
         // 攻撃アニメーションを再生
         m_Animator.SetBool("Attack", true);
-
+        if (m_AttackEffect != null)
+        {
+            m_AttackEffect.SetActive(true);
+        }
         // 攻撃後、一定の時間待つ
         yield return new WaitForSeconds(m_MeleeCoolTime);
 
         // 攻撃が終了したことを示すフラグをリセット
         isAttacking = false;
         m_Animator.SetBool("Attack", false);
+        if (m_AttackEffect != null)
+        {
+            m_AttackEffect.SetActive(false);
+        }
         enemyAttckCol.isAttack = false;
 
     }
@@ -307,6 +323,14 @@ public class EnemySystem : MonoBehaviour
             m_ViceSE.Play();
             m_SE.clip = m_HitSEClip;
             m_SE.Play();
+            
+            // 攻撃を受けたらプレイヤーの方向を向く
+            Vector3 lookDirection = player.position - transform.position;
+            lookDirection.y = 0f; // y軸方向は無視して水平に向くようにする
+            Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+            transform.rotation = targetRotation;
+
+            
         }
     }
     private void EndHit()
@@ -332,6 +356,25 @@ public class EnemySystem : MonoBehaviour
     {
         Instantiate(m_DieEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player")&&myType==EnemyType.Animal)
+        {
+            isHit = true;
+            m_MaxSpeed = 0;
+            isMoving = false;
+        UpdateAnimation();
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player")&&myType==EnemyType.Animal)
+        {
+            isHit = false;
+            m_MaxSpeed=m_CurrentSpeed;
+            UpdateAnimation();
+        }
     }
 }
 

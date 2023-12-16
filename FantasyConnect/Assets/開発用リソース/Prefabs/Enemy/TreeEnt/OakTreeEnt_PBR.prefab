@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 100
   isAttack: 0
+  m_HitEffect: {fileID: 879681129677348344, guid: bb7c04ee23d5c584c99ac06601febe0c, type: 3}
 --- !u!135 &1792036618772492647
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -421,9 +422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f79f988306fb2429d75bd66d3b8c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VInspectorData: {fileID: 0}
   myButtleType: 0
   myType: 0
-  m_RaycastDistance: 20
+  m_RaycastDistance: 50
   m_Angle: 180
   rayCount: 180
   m_TargetTag: Player
@@ -439,6 +441,7 @@ MonoBehaviour:
   m_Animator: {fileID: 8395176225402001929}
   isAttacking: 0
   m_DieEffect: {fileID: 380284327063089880, guid: c4785daaed5578e40b1201a3147e56cf, type: 3}
+  m_AttackEffect: {fileID: 0}
   m_HpBer: {fileID: 6600094929985450706, guid: 718196e9aa6603d4f988ebb0cd8ff017, type: 3}
   m_HpBerPos: {x: 0, y: 7, z: 1}
   m_HpBerscale: {x: -3, y: 3, z: 3}
