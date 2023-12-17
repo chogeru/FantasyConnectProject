@@ -22,6 +22,8 @@ public class BGMManager : MonoBehaviour
     private AudioSource m_AutumnAreaBGM;
     [SerializeField, Header("AutumnBossArea‚ÌBGM")]
     private AudioSource m_AutumnBossAreaBGM;
+    [SerializeField, Header("SnowArea1‚ÌBGM")]
+    private AudioSource m_SnowArea1BGM;
     #endregion
     private void Awake()
     {
@@ -67,6 +69,7 @@ public class BGMManager : MonoBehaviour
                 m_TitleBGM.Play();
                 m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
+                m_SnowArea1BGM.Stop();
                 break;
             case "MyHouse":
                 m_FirstCityBGM.Stop();
@@ -76,6 +79,7 @@ public class BGMManager : MonoBehaviour
                 m_MyHouseBGM.Play();
                 m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
+                m_SnowArea1BGM.Stop();
                 break;
             case "FirstCity":
                 m_FirstCityBGM.Play();
@@ -85,6 +89,7 @@ public class BGMManager : MonoBehaviour
                 m_AutumnBossAreaBGM.Stop();
                 m_MyHouseBGM.Stop();
                 m_AutumnAreaBGM.Stop();
+                m_SnowArea1BGM.Stop();
                 break;
             case "GrassIandArea1":
                 m_FirstCityBGM.Stop();
@@ -94,6 +99,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandBossAreaBGM.Stop();
                 m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
+                m_SnowArea1BGM.Stop();
                 break;
             case "GrassIandBossArea":
                 m_FirstCityBGM.Stop();
@@ -103,6 +109,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandBossAreaBGM.Play();
                 m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
+                m_SnowArea1BGM.Stop();
                 break;
             case "AutumnArea1":
                 m_FirstCityBGM.Stop();
@@ -112,6 +119,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandBossAreaBGM.Stop();
                 m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Play();
+                m_SnowArea1BGM.Stop();
                 break;
             case "AutumnBossArea":
                 m_FirstCityBGM.Stop();
@@ -121,6 +129,17 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
                 m_AutumnBossAreaBGM.Play();
+                m_SnowArea1BGM.Stop();
+                break;
+            case "SnowArea1":
+                m_FirstCityBGM.Stop();
+                m_TitleBGM.Stop();
+                m_MyHouseBGM.Stop();
+                m_GrassIandAreaBGM.Stop();
+                m_GrassIandBossAreaBGM.Stop();
+                m_AutumnAreaBGM.Stop();
+                m_AutumnBossAreaBGM.Stop();
+                m_SnowArea1BGM.Play();
                 break;
             default:
                 break;

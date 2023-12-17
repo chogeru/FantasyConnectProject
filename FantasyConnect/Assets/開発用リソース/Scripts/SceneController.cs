@@ -64,6 +64,13 @@ public class SceneController : MonoBehaviour
                     SceneManager.LoadScene("AutumnBossArea", LoadSceneMode.Single);
                 }
                 break;
+            case "AutumnBossArea":
+                if (isHitCol)
+                {
+                    isHitCol = false;
+                    SceneManager.LoadScene("SnowArea1", LoadSceneMode.Single);
+                }
+                break;
             default:
                 break;
         }
