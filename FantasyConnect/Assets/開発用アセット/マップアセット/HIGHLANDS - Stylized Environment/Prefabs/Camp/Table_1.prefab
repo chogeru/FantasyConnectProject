@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2205626116780746472}
   - component: {fileID: 4143032439278309922}
   - component: {fileID: 3368296337134672597}
-  - component: {fileID: 736532373}
+  - component: {fileID: 9119765307616711309}
   m_Layer: 0
   m_Name: Table_1
   m_TagString: Untagged
@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6800185153721102115}
   m_Father: {fileID: 0}
@@ -54,6 +55,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -107,8 +109,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4891299325175914517}
   m_Enabled: 1
---- !u!64 &736532373
-MeshCollider:
+--- !u!65 &9119765307616711309
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,10 +119,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -695622203438981541, guid: 8723b2a91444f1a46a8555efd84b9bfa, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.63038, y: 0.93316114, z: 0.80851316}
+  m_Center: {x: 0, y: 0.4646212, z: 0.00022476912}
 --- !u!1 &8465286067425424169
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +150,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0000048828124, y: 0.0000000011920929, z: 0.0000000023841857}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2969049530198485325}
   m_RootOrder: 0
@@ -172,6 +174,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

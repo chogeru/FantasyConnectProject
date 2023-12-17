@@ -437,15 +437,25 @@ MonoBehaviour:
         keys:
         - GlobalObjectId_V1-2-3b2145d0c8e9a5248843622d4cad45e8-2034162359-0
         - GlobalObjectId_V1-2-3b2145d0c8e9a5248843622d4cad45e8-736308204-0
+        - GlobalObjectId_V1-2-3b2145d0c8e9a5248843622d4cad45e8-250484453-0
+        - GlobalObjectId_V1-2-3b2145d0c8e9a5248843622d4cad45e8-8775794892995199873-822327488
         values:
         - iColor: 0
           icon: Terrain Icon
         - iColor: 0
           icon: Light Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
       goDatasByInstanceId:
-        keys: 003df3ffd8530900
+        keys: 003df3ffd85309002ef1efff74bcf2ff
         values:
         - iColor: 0
           icon: Terrain Icon
         - iColor: 0
           icon: Light Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: AvatarMask On Icon

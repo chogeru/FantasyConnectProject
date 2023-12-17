@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.0000000011920929, z: 0.0000000023841857}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8560439926720573105}
   m_RootOrder: 0
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -93,7 +95,7 @@ GameObject:
   - component: {fileID: 4711628702118519060}
   - component: {fileID: 7388126733290952158}
   - component: {fileID: 8162338640890719948}
-  - component: {fileID: 1981726898}
+  - component: {fileID: 1212192844343082607}
   m_Layer: 0
   m_Name: Bonfire
   m_TagString: Untagged
@@ -111,6 +113,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1131126784750245148}
   m_Father: {fileID: 0}
@@ -135,6 +138,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -188,8 +192,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8782379334338943322}
   m_Enabled: 1
---- !u!64 &1981726898
-MeshCollider:
+--- !u!65 &1212192844343082607
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -198,7 +202,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6145445897182334913, guid: fe226adaf4f479d4a839fc017aca1713, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.8011779, y: 0.28176457, z: 0.7626667}
+  m_Center: {x: 0.011449784, y: 0.07952441, z: -0.019336388}

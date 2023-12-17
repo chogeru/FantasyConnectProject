@@ -20,6 +20,8 @@ public class BGMManager : MonoBehaviour
     private AudioSource m_GrassIandBossAreaBGM;
     [SerializeField, Header("AutumnArea‚ÌBGM")]
     private AudioSource m_AutumnAreaBGM;
+    [SerializeField, Header("AutumnBossArea‚ÌBGM")]
+    private AudioSource m_AutumnBossAreaBGM;
     #endregion
     private void Awake()
     {
@@ -63,6 +65,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Stop();
                 m_TitleBGM.Play();
+                m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
                 break;
             case "MyHouse":
@@ -71,6 +74,7 @@ public class BGMManager : MonoBehaviour
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Stop();
                 m_MyHouseBGM.Play();
+                m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
                 break;
             case "FirstCity":
@@ -78,6 +82,7 @@ public class BGMManager : MonoBehaviour
                 m_TitleBGM.Stop();
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Stop();
+                m_AutumnBossAreaBGM.Stop();
                 m_MyHouseBGM.Stop();
                 m_AutumnAreaBGM.Stop();
                 break;
@@ -87,6 +92,7 @@ public class BGMManager : MonoBehaviour
                 m_MyHouseBGM.Stop();
                 m_GrassIandAreaBGM.Play();
                 m_GrassIandBossAreaBGM.Stop();
+                m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
                 break;
             case "GrassIandBossArea":
@@ -95,6 +101,7 @@ public class BGMManager : MonoBehaviour
                 m_MyHouseBGM.Stop();
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Play();
+                m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Stop();
                 break;
             case "AutumnArea1":
@@ -103,7 +110,17 @@ public class BGMManager : MonoBehaviour
                 m_MyHouseBGM.Stop();
                 m_GrassIandAreaBGM.Stop();
                 m_GrassIandBossAreaBGM.Stop();
+                m_AutumnBossAreaBGM.Stop();
                 m_AutumnAreaBGM.Play();
+                break;
+            case "AutumnBossArea":
+                m_FirstCityBGM.Stop();
+                m_TitleBGM.Stop();
+                m_MyHouseBGM.Stop();
+                m_GrassIandAreaBGM.Stop();
+                m_GrassIandBossAreaBGM.Stop();
+                m_AutumnAreaBGM.Stop();
+                m_AutumnBossAreaBGM.Play();
                 break;
             default:
                 break;
