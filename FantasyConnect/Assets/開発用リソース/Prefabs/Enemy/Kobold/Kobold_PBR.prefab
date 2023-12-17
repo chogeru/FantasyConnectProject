@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6639256930d308d4e8723f38516fc704, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
@@ -171,7 +171,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 194e8b908a1197a4ea948a64a0d9982e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
@@ -2716,7 +2716,7 @@ MonoBehaviour:
   m_RotationSpeed: 5
   m_MagicAttckCoolTime: 0
   m_MeleeCoolTime: 1
-  m_MaxHp: 50
+  m_MaxHp: 350
   m_CurrentHp: 50
   m_Animator: {fileID: 2730412527616541545}
   isAttacking: 0
