@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a27dfbbbeaf8814e834d71261372248, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  enemyStatusesList: []
+  enemyStatusesList:
+  - m_EnemyName: 
+    m_MaxHp: 0
+    m_MaxAttck: 0
+    m_MinAttack: 0
+    m_Defens: 0
+    m_Exp: 0
+    animator: {fileID: 0}
+    m_AttackAnime: 
+    m_WalkAnime: 
+    m_IdleAnime: 
+    m_DieAnime: 
+    m_isGetHit: 
+    m_CurrentButtleType: 0
+    m_CurrentState: 0
