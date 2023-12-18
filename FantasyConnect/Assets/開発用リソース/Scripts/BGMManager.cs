@@ -7,23 +7,27 @@ public class BGMManager : MonoBehaviour
     //シングルトンパターン
     public static BGMManager BGMm_instance;
     #region　オーディオソース
-    [Foldout("オーディオソース")]
+    [SerializeField,Header("オーディオソース")]
+    private AudioSource m_AudioSouce;
+    [Foldout("オーディオクリップ")]
     [SerializeField,Header("TitleシーンのBGM")]
-    private AudioSource m_TitleBGM;
+    private AudioClip m_TitleBGM;
     [SerializeField,Header("MyHouseシーンのBGM")]
-    private AudioSource m_MyHouseBGM;
+    private AudioClip m_MyHouseBGM;
     [SerializeField, Header("FirstCityシーンのBGM")]
-    private AudioSource m_FirstCityBGM;
+    private AudioClip m_FirstCityBGM;
     [SerializeField, Header("GrassIandAreaのBGM")]
-    private AudioSource m_GrassIandAreaBGM;
+    private AudioClip m_GrassIandAreaBGM;
     [SerializeField, Header("GrassIandBossAreaのBGM")]
-    private AudioSource m_GrassIandBossAreaBGM;
+    private AudioClip m_GrassIandBossAreaBGM;
     [SerializeField, Header("AutumnAreaのBGM")]
-    private AudioSource m_AutumnAreaBGM;
+    private AudioClip m_AutumnAreaBGM;
     [SerializeField, Header("AutumnBossAreaのBGM")]
-    private AudioSource m_AutumnBossAreaBGM;
+    private AudioClip m_AutumnBossAreaBGM;
     [SerializeField, Header("SnowArea1のBGM")]
-    private AudioSource m_SnowArea1BGM;
+    private AudioClip m_SnowArea1BGM;
+    [SerializeField, Header("SnowBossAreaのBGM")]
+    private AudioClip m_SnowBossAreaBGM;
     #endregion
     private void Awake()
     {
@@ -62,84 +66,40 @@ public class BGMManager : MonoBehaviour
         switch (sceneName)
         {
             case "Title":
-                m_FirstCityBGM.Stop();
-                m_MyHouseBGM.Stop();
-                m_GrassIandAreaBGM.Stop();
-                m_GrassIandBossAreaBGM.Stop();
-                m_TitleBGM.Play();
-                m_AutumnBossAreaBGM.Stop();
-                m_AutumnAreaBGM.Stop();
-                m_SnowArea1BGM.Stop();
+                m_AudioSouce.clip = m_TitleBGM;
+                m_AudioSouce.Play();
                 break;
             case "MyHouse":
-                m_FirstCityBGM.Stop();
-                m_TitleBGM.Stop();
-                m_GrassIandAreaBGM.Stop();
-                m_GrassIandBossAreaBGM.Stop();
-                m_MyHouseBGM.Play();
-                m_AutumnBossAreaBGM.Stop();
-                m_AutumnAreaBGM.Stop();
-                m_SnowArea1BGM.Stop();
+                m_AudioSouce.clip = m_MyHouseBGM;
+                m_AudioSouce.Play();
                 break;
             case "FirstCity":
-                m_FirstCityBGM.Play();
-                m_TitleBGM.Stop();
-                m_GrassIandAreaBGM.Stop();
-                m_GrassIandBossAreaBGM.Stop();
-                m_AutumnBossAreaBGM.Stop();
-                m_MyHouseBGM.Stop();
-                m_AutumnAreaBGM.Stop();
-                m_SnowArea1BGM.Stop();
+                m_AudioSouce.clip = m_FirstCityBGM;
+                m_AudioSouce.Play();
                 break;
             case "GrassIandArea1":
-                m_FirstCityBGM.Stop();
-                m_TitleBGM.Stop();
-                m_MyHouseBGM.Stop();
-                m_GrassIandAreaBGM.Play();
-                m_GrassIandBossAreaBGM.Stop();
-                m_AutumnBossAreaBGM.Stop();
-                m_AutumnAreaBGM.Stop();
-                m_SnowArea1BGM.Stop();
+                m_AudioSouce.clip = m_GrassIandAreaBGM;
+                m_AudioSouce.Play();
                 break;
             case "GrassIandBossArea":
-                m_FirstCityBGM.Stop();
-                m_TitleBGM.Stop();
-                m_MyHouseBGM.Stop();
-                m_GrassIandAreaBGM.Stop();
-                m_GrassIandBossAreaBGM.Play();
-                m_AutumnBossAreaBGM.Stop();
-                m_AutumnAreaBGM.Stop();
-                m_SnowArea1BGM.Stop();
+                m_AudioSouce.clip = m_GrassIandBossAreaBGM;
+                m_AudioSouce.Play();
                 break;
             case "AutumnArea1":
-                m_FirstCityBGM.Stop();
-                m_TitleBGM.Stop();
-                m_MyHouseBGM.Stop();
-                m_GrassIandAreaBGM.Stop();
-                m_GrassIandBossAreaBGM.Stop();
-                m_AutumnBossAreaBGM.Stop();
-                m_AutumnAreaBGM.Play();
-                m_SnowArea1BGM.Stop();
+                m_AudioSouce.clip = m_AutumnAreaBGM;
+                m_AudioSouce.Play();
                 break;
             case "AutumnBossArea":
-                m_FirstCityBGM.Stop();
-                m_TitleBGM.Stop();
-                m_MyHouseBGM.Stop();
-                m_GrassIandAreaBGM.Stop();
-                m_GrassIandBossAreaBGM.Stop();
-                m_AutumnAreaBGM.Stop();
-                m_AutumnBossAreaBGM.Play();
-                m_SnowArea1BGM.Stop();
+                m_AudioSouce.clip = m_AutumnBossAreaBGM;
+                m_AudioSouce.Play();
                 break;
             case "SnowArea1":
-                m_FirstCityBGM.Stop();
-                m_TitleBGM.Stop();
-                m_MyHouseBGM.Stop();
-                m_GrassIandAreaBGM.Stop();
-                m_GrassIandBossAreaBGM.Stop();
-                m_AutumnAreaBGM.Stop();
-                m_AutumnBossAreaBGM.Stop();
-                m_SnowArea1BGM.Play();
+                m_AudioSouce.clip = m_SnowArea1BGM;
+                m_AudioSouce.Play();
+                break;
+            case "SnowBossArea":
+                m_AudioSouce.clip = m_SnowBossAreaBGM;
+                m_AudioSouce.Play();
                 break;
             default:
                 break;

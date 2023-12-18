@@ -48,6 +48,7 @@ public class PlayerSystem : MonoBehaviour
     private float m_JumpForce = 10f;
     [SerializeField, Header("重力")]
     private float m_Gravity = 9.81f;
+    [EndFoldout]
     #endregion
     #region　トリガー
     [Foldout("トリガー")]
@@ -55,6 +56,7 @@ public class PlayerSystem : MonoBehaviour
     private bool isMoving;
     private bool isAttck = false;
     public bool isDie = false;
+    [EndFoldout]
     #endregion
     #region サウンド
     [Foldout("Clip"),Tab("Clip")]
@@ -71,6 +73,7 @@ public class PlayerSystem : MonoBehaviour
     private AudioSource m_Voice;
     [SerializeField, Header("SE")]
     private AudioSource m_SE;
+    [EndFoldout]
     #endregion
     void Start()
     {
