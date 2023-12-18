@@ -3,8 +3,9 @@
 --- !u!121 &12100000
 Flare:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Candle Flare
   m_FlareTexture: {fileID: 2800000, guid: 51dc82ef9d11c594d000e7c9e39e7c39, type: 3}
   m_TextureLayout: 0

@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: fi_village_doors
   m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _NORMALMAP
@@ -19,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 00adb01fd7e756749b7c9b4cb9a33ebd, type: 3}
+        m_Texture: {fileID: 2800000, guid: c50cdada71a33fd428b906ce683b28b6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -39,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ed4e35a854369ff42aaad0da7985347f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b8140949bce27f48a584a15cf889824, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 7b677002ea9a0c04091aa575b4bb6303, type: 3}
+        m_Texture: {fileID: 2800000, guid: 94db747a7efd4b049bf9f82ad5c5f791, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:

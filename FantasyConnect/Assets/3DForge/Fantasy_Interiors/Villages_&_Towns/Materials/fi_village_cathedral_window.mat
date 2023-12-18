@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: fi_village_cathedral_window
   m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _NORMALMAP
@@ -19,7 +20,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 79cc11a3ed0c72043a7487f61444e782, type: 3}
+        m_Texture: {fileID: 2800000, guid: 60624d547d0ec064e91d692fe0cc820f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -39,11 +44,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0de9a3e8987bc7945b7b94bfcba5dca1, type: 3}
+        m_Texture: {fileID: 2800000, guid: ff89454606842d1468e448a1ae234a4d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 2934ef1acc86ab64cb64e8283bd82166, type: 3}
+        m_Texture: {fileID: 2800000, guid: 47b34d3b59e9cc94299a6537b09151ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
