@@ -10,14 +10,18 @@ Material:
   m_Name: fi_village_kitchen
   m_Shader: {fileID: 4800000, guid: d92832bd0edea6c4d87948601146ec0c, type: 3}
   m_ValidKeywords:
+  - L_F_GLO_ON
   - L_F_O_ON
   - L_F_RELGI_ON
+  - L_F_RL_ON
+  - L_F_SL_ON
+  - L_F_SON_ON
   - L_F_SS_ON
   m_InvalidKeywords:
   - _EMISSION
   - _NORMALMAP
   m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -117,7 +121,7 @@ Material:
     - _CustomLightDirectionIntensity: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DirectionalLightIntensity: 0
+    - _DirectionalLightIntensity: 1
     - _DoubleSided: 2
     - _DoubleSidedOutline: 1
     - _DstBlend: 0
@@ -128,7 +132,7 @@ Material:
     - _FarDistanceMaxWidth: 10
     - _GlossColorPower: 10
     - _GlossMapScale: 1
-    - _GlossSoftness: 0
+    - _GlossSoftness: 1
     - _GlossTextureFollowLight: 0
     - _GlossTextureFollowObjectRotation: 0
     - _GlossTextureSoftness: 0
@@ -137,25 +141,25 @@ Material:
     - _HighlightColorPower: 1
     - _L_F_CLD: 0
     - _L_F_FR: 0
-    - _L_F_GLO: 0
+    - _L_F_GLO: 1
     - _L_F_GLOT: 0
     - _L_F_HPSS: 0
     - _L_F_MC: 0
     - _L_F_NM: 0
     - _L_F_O: 1
     - _L_F_PT: 0
-    - _L_F_RL: 0
+    - _L_F_RL: 1
     - _L_F_SCT: 0
-    - _L_F_SL: 0
-    - _L_F_SON: 0
+    - _L_F_SL: 1
+    - _L_F_SON: 1
     - _L_F_SS: 1
     - _L_F_ST: 0
     - _L_F_UOAL: 0
-    - _LightAffectOutlineColor: 0
+    - _LightAffectOutlineColor: 1
     - _LightAffectRimLightColor: 0
     - _LightFalloffAffectShadowT: 0
-    - _LightFalloffSoftness: 1
-    - _MCIALO: 0
+    - _LightFalloffSoftness: 0.5
+    - _MCIALO: 1
     - _MCapIntensity: 1
     - _MVCOL: 0
     - _MixMainTexToOutline: 0
@@ -164,7 +168,7 @@ Material:
     - _OcclusionStrength: 1
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
-    - _OutlineWidth: 0.5
+    - _OutlineWidth: 1
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _OverallShadowColorPower: 1
@@ -183,8 +187,8 @@ Material:
     - _SPECMODE: 0
     - _STIL: 0
     - _SelfLitHighContrast: 1
-    - _SelfLitIntensity: 0
-    - _SelfLitPower: 2
+    - _SelfLitIntensity: 0.5
+    - _SelfLitPower: 1
     - _SelfShadowHardness: 1
     - _SelfShadowRealTimeShadowColorPower: 1
     - _SelfShadowShadowTAtViewDirection: 0
@@ -214,9 +218,9 @@ Material:
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
-    - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OverallShadowColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelfLitColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelfShadowRealTimeShadowColor: {r: 1, g: 1, b: 1, a: 1}
