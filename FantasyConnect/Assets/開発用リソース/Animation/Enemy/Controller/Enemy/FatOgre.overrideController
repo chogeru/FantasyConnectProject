@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FatOgre
+  m_Controller: {fileID: 9100000, guid: ba8f275e6bbbffb4eafeb2041663a097, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d0afea2be338c504e81a036abcf4aeeb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6b5e201a6a4432d4180d70e7d9d9d93e, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 465c39217bbe29644a58ab4e39d7bd07, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 950067766357002429f0616dae6b2207, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: ab6d317b3bcecdd408fa64fdf04c2ba0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 30d757544e6888b41876d9aa13a84d23, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 0ad9df3c08c215f4d9bc6c33a4743674, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cba958d46f5cf124dbfaf42745b87d8f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 254c63a5780433b48a5674a0fa408223, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 10048b9c549bdff43942dd488284bbe5, type: 2}

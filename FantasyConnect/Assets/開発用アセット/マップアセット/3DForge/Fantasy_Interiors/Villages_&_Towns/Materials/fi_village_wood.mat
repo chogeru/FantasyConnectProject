@@ -10,7 +10,6 @@ Material:
   m_Name: fi_village_wood
   m_Shader: {fileID: 4800000, guid: d92832bd0edea6c4d87948601146ec0c, type: 3}
   m_ValidKeywords:
-  - L_F_GLO_ON
   - L_F_O_ON
   - L_F_RELGI_ON
   - L_F_RL_ON
@@ -141,7 +140,7 @@ Material:
     - _HighlightColorPower: 1
     - _L_F_CLD: 0
     - _L_F_FR: 0
-    - _L_F_GLO: 1
+    - _L_F_GLO: 0
     - _L_F_GLOT: 0
     - _L_F_HPSS: 0
     - _L_F_MC: 0

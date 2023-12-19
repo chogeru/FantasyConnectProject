@@ -350,6 +350,10 @@ public class EnemySystem : MonoBehaviour
             m_SE.Play();
             m_MaxSpeed = 0;
             isDie = true;
+            if(myButtleType==ButtleType.Magic)
+            {
+                rb.useGravity = true;
+            }
         }
     }
     void DieEnd()

@@ -3363,6 +3363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trail
       objectReference: {fileID: 0}
+    - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
 --- !u!1 &4657268080016743090 stripped
