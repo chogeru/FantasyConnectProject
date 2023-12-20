@@ -100,7 +100,7 @@ public class PlayerSystem : MonoBehaviour
 
     void Update()
     {
-
+        
         if (isDie)
         return;
         MovePlayer();

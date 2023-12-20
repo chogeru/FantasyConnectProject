@@ -5,6 +5,7 @@ using UnityEngine;
 public class TextTrigger : MonoBehaviour
 {
     public string[] textsToDisplay;
+    [SerializeField]
     private int currentIndex = 0;
     public void TriggerTextDisplay()
     {
@@ -20,22 +21,24 @@ public class TextTrigger : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("No more texts to display.");
+                    Debug.Log("テキストがない");
+                    TextManager.Instance.HideText();
 
                 }
             }
             else
             {
-                Debug.LogError("Text array is empty!");
+                Debug.LogError("テキストの要素がない");
+                TextManager.Instance.HideText(); 
             }
         }
         else
         {
             Debug.LogError("テキストがない!!");
         }
-        if (currentIndex >= textsToDisplay.Length)
+        if (currentIndex > textsToDisplay.Length)
         {
-            TextManager.Instance.HideText(); // テキスト非表示の処理を実行
+            TextManager.Instance.HideText(); 
         }
     }
 
