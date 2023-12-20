@@ -13,6 +13,14 @@ public class PlayerSystem : MonoBehaviour
         Attck,
         Die,
     }
+    public enum PlayerType
+    {
+        Magic,
+        Bow
+    }
+    [SerializeField]
+    private PlayerType playerType; 
+
     private eState e_CurrentState;
     [Foldout("GetCommponent")]
     [SerializeField]
@@ -74,12 +82,19 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField, Header("SE")]
     private AudioSource m_SE;
     [EndFoldout]
+    [Foldout("アニメーションコントローラー"),Tab("アニメーションコントローラー")]
+    [SerializeField] 
+    private RuntimeAnimatorController bowAnimatorController;
+    [SerializeField] 
+    private RuntimeAnimatorController magicAnimatorController;
+
     #endregion
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
         SetHp();
+        SwitchAnimator();
     }
 
 
@@ -101,6 +116,21 @@ public class PlayerSystem : MonoBehaviour
         m_CurrentHp = m_MaxHp;
         // m_HpText の初期化
         m_HpText.text = m_CurrentHp + "/" + m_MaxHp;
+    }
+  
+    private void SwitchAnimator()
+    {
+        switch (playerType)
+        {
+            case PlayerType.Bow:
+                m_PlayerAnimator.runtimeAnimatorController = bowAnimatorController;
+                break;
+            case PlayerType.Magic:
+                m_PlayerAnimator.runtimeAnimatorController = magicAnimatorController;
+                break;
+            default:
+                break;
+        }
     }
     void MovePlayer()
     {

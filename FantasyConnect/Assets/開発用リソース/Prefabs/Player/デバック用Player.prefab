@@ -6921,6 +6921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vInspector: {fileID: 0}
+  playerType: 1
   rb: {fileID: 9126141871417367007}
   m_PlayerAnimator: {fileID: 9126141871417367003}
   mainCamera: {fileID: 0}
@@ -6943,6 +6944,8 @@ MonoBehaviour:
   m_DieSEClip: {fileID: 8300000, guid: 9c737a7f8daae6c47bcc99bc2a44a020, type: 3}
   m_Voice: {fileID: 2004300511}
   m_SE: {fileID: 413687937}
+  bowAnimatorController: {fileID: 22100000, guid: a9f500ab83ee1854c85896879ebee489, type: 2}
+  magicAnimatorController: {fileID: 9100000, guid: 22e3e8851bb700245b93552e2f67ca76, type: 2}
 --- !u!114 &320772077
 MonoBehaviour:
   m_ObjectHideFlags: 0
