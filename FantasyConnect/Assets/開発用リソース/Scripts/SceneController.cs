@@ -85,6 +85,7 @@ public class SceneController : MonoBehaviour
                     SceneManager.LoadScene("WastelandArea1", LoadSceneMode.Single);
                 }
                 break;
+                
             default:
                 break;
         }

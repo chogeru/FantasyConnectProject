@@ -66,4 +66,10 @@ public class MapSelect : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("MyHouse", LoadSceneMode.Single);
     }
+    public void LoadSecondCity()
+    {
+        SceneManager.LoadScene("SecondCity",LoadSceneMode.Single);
+    }
+
+
 }
