@@ -6969,6 +6969,7 @@ MonoBehaviour:
   m_RunSpeed: 10
   m_JumpForce: 8000
   m_Gravity: 45
+  isStop: 0
   isDie: 0
   m_HitVoice: {fileID: 8300000, guid: 8af770ca07f71c24d8120c4e39270647, type: 3}
   m_DieVoice: {fileID: 8300000, guid: 66a869b47cc126944b5016048d50e864, type: 3}
@@ -8129,6 +8130,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 65
+  isStop: 0
 --- !u!114 &9126141871003576018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8590,6 +8592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attckType: 0
+  playerSystem: {fileID: 9126141871417367006}
   m_AttackCoolTime: 1
   m_PlayerAnimator: {fileID: 9126141871417367003}
   m_MagicBullet: {fileID: 3998282939349492992, guid: 4067b4cf00a63d2429a58ba51510a305, type: 3}

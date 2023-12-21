@@ -10,6 +10,8 @@ public class MagicWepon : MonoBehaviour
     }
     [SerializeField]
     private eAttckType attckType;
+    [SerializeField]
+    PlayerSystem playerSystem;
     [SerializeField, Header("攻撃クールタイム")]
     private float m_AttackCoolTime;
     [SerializeField]
@@ -36,6 +38,8 @@ public class MagicWepon : MonoBehaviour
     private AudioSource m_Voice;
     void Update()
     {
+        if (playerSystem.isStop) 
+            return;
         ATCoolTime();
       WeponTypeChange();
         if(Input.GetMouseButton(0))

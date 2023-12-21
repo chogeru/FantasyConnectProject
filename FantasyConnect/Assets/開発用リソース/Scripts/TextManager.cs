@@ -10,11 +10,16 @@ public class TextManager : MonoBehaviour
     private GameObject textWindowUI; 
 
     [SerializeField]
-    private TextMeshProUGUI textMeshPro; 
+    private TextMeshProUGUI textMeshPro;
 
+    private GameObject player;
+    PlayerSystem playerSystem;
     private void Awake()
     {
-        if(instance!=null&&instance!=this)
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerSystem = player.GetComponent<PlayerSystem>();
+
+        if (instance!=null&&instance!=this)
         {
             Destroy(this.gameObject);
         }
@@ -29,7 +34,7 @@ public class TextManager : MonoBehaviour
         if (textWindowUI != null)
         {
             textWindowUI.SetActive(true); 
-
+            playerSystem.isStop = true;
             if (textMeshPro != null)
             {
  
@@ -49,6 +54,7 @@ public class TextManager : MonoBehaviour
     {
         if (textWindowUI != null)
         {
+            playerSystem.isStop = false;
             textWindowUI.SetActive(false);
         }
     }

@@ -30,6 +30,8 @@ public class BGMManager : MonoBehaviour
     private AudioClip m_SnowBossAreaBGM;
     [SerializeField, Header("WastelandArea1‚ÌBGM")]
     private AudioClip m_WastelandArea1BGM;
+    [SerializeField, Header("WastelandBossArea‚ÌBGM")]
+    private AudioClip m_WastelandBossAreaBGM;
     [SerializeField, Header("SecondCity‚ÌBGM")]
     private AudioClip m_SecondCityBGM;
     #endregion
@@ -109,8 +111,12 @@ public class BGMManager : MonoBehaviour
                 m_AudioSouce.clip = m_WastelandArea1BGM;
                 m_AudioSouce.Play();
                 break;
+            case "WastelandBossArea":
+                m_AudioSouce.clip= m_WastelandBossAreaBGM;
+                m_AudioSouce.Play();
+                break;
             case "SecondCity":
-                m_AudioSouce.clip = m_SnowBossAreaBGM;
+                m_AudioSouce.clip = m_SecondCityBGM;
                 m_AudioSouce.Play();
                 break;
             default:

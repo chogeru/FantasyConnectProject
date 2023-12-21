@@ -42,5 +42,6 @@ public class NPCSpeakSystem : MonoBehaviour
             m_SpeakUI.SetActive(false);
             textTrigger.ResetTextIndex(); // プレイヤーが離れたらテキストのインデックスをリセット
         }
+    
     }
 }

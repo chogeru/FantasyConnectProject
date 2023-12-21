@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ColSceneChange : MonoBehaviour
 {
-  SceneController sceneController;
+    SceneController sceneController;
     private GameObject m_SceneManager;
     private void Start()
     {
@@ -13,7 +11,7 @@ public class ColSceneChange : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             sceneController.isHitCol = true;
         }

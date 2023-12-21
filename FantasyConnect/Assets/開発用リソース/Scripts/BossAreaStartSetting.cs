@@ -10,6 +10,7 @@ public class BossAreaStartSetting : MonoBehaviour
     private GameObject m_TimelineObj;
     [SerializeField]
     private GameObject m_AnimationEnemy;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

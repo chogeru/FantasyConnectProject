@@ -10,6 +10,7 @@ public class PlayerCameraController : MonoBehaviour
     public LayerMask obstacleMask; // 障害物として扱うレイヤー
 
     private Vector3 offset;
+    public bool isStop=false;
 
     void Start()
     {
@@ -19,30 +20,33 @@ public class PlayerCameraController : MonoBehaviour
 
     void Update()
     {
-        Cursor.visible = false;
-
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity; // マウスのX軸の移動量
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity; // マウスのY軸の移動量
-
-        // プレイヤーを中心にカメラを回転させる
-        offset = Quaternion.AngleAxis(mouseX, Vector3.up) * Quaternion.AngleAxis(-mouseY, transform.right) * offset;
-        transform.position = player.position + offset;
-
-        // カメラの垂直方向の回転制限
-        Vector3 cameraDirection = transform.position - player.position;
-        float angleX = Vector3.Angle(cameraDirection, player.up);
-        if ((angleX + mouseY) < 90f && (angleX + mouseY) > 10f)
+        if (!isStop) // 当たり判定中でなければカメラを動かす
         {
-            transform.RotateAround(player.position, transform.right, -mouseY);
-        }
+            Cursor.visible = false;
 
-        // カメラが壁や障害物に衝突しないようにする
-        RaycastHit hit;
-        if (Physics.Raycast(player.position, offset, out hit, offset.magnitude, obstacleMask))
-        {
-            transform.position = hit.point - offset.normalized * minDistance;
-        }
+            float mouseX = Input.GetAxis("Mouse X") * sensitivity; // マウスのX軸の移動量
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivity; // マウスのY軸の移動量
 
-        transform.LookAt(player.position); // プレイヤーを見るようにカメラの向きを設定
+            // プレイヤーを中心にカメラを回転させる
+            offset = Quaternion.AngleAxis(mouseX, Vector3.up) * Quaternion.AngleAxis(-mouseY, transform.right) * offset;
+            transform.position = player.position + offset;
+
+            // カメラの垂直方向の回転制限
+            Vector3 cameraDirection = transform.position - player.position;
+            float angleX = Vector3.Angle(cameraDirection, player.up);
+            if ((angleX + mouseY) < 90f && (angleX + mouseY) > 10f)
+            {
+                transform.RotateAround(player.position, transform.right, -mouseY);
+            }
+
+            // カメラが壁や障害物に衝突しないようにする
+            RaycastHit hit;
+            if (Physics.Raycast(player.position, offset, out hit, offset.magnitude, obstacleMask))
+            {
+                transform.position = hit.point - offset.normalized * minDistance;
+            }
+
+            transform.LookAt(player.position); // プレイヤーを見るようにカメラの向きを設定
+        }
     }
 }

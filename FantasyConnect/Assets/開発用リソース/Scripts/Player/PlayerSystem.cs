@@ -63,6 +63,7 @@ public class PlayerSystem : MonoBehaviour
     private bool isGrounded = true;
     private bool isMoving;
     private bool isAttck = false;
+    public bool isStop = false;
     public bool isDie = false;
     [EndFoldout]
     #endregion
@@ -100,9 +101,23 @@ public class PlayerSystem : MonoBehaviour
 
     void Update()
     {
-        
+        if(isStop)
+        {
+            m_PlayerAnimator.SetBool("Idle", true);
+            m_PlayerAnimator.SetBool("Walk", false);
+            m_PlayerAnimator.SetBool("Run", false);
+            rb.velocity = Vector3.zero;
+
+            return;
+        }
+        else
+        {
+            m_PlayerAnimator.SetBool("Idle", false);
+        }
         if (isDie)
-        return;
+        {
+            return;
+        }
         MovePlayer();
         ApplyGravity();
         Die();

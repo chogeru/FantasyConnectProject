@@ -85,7 +85,14 @@ public class SceneController : MonoBehaviour
                     SceneManager.LoadScene("WastelandArea1", LoadSceneMode.Single);
                 }
                 break;
-                
+            case "WastelandArea1":
+                if (isHitCol)
+                {
+                    isHitCol = false;
+                    SceneManager.LoadScene("WastelandBossArea", LoadSceneMode.Single);
+                }
+                break;
+
             default:
                 break;
         }
