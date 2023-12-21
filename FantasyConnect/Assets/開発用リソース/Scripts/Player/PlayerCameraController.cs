@@ -19,6 +19,8 @@ public class PlayerCameraController : MonoBehaviour
 
     void Update()
     {
+        Cursor.visible = false;
+
         float mouseX = Input.GetAxis("Mouse X") * sensitivity; // マウスのX軸の移動量
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity; // マウスのY軸の移動量
 

@@ -4270,7 +4270,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 268061096}
+  - {fileID: 245867214}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4370,7 +4370,7 @@ MonoBehaviour:
   renderPriority: 1
   manualPositionAndScale: 0
   styledSpace0: 0
-  overrideMaterial: {fileID: 914367584}
+  overrideMaterial: {fileID: 1416556790}
   overrideCamToVolumeDistance: 1
   overrideVolumeDistanceFade: 0
   version: 0
@@ -9242,6 +9242,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 244873011}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &245867214
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Height Fog Global
+  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3001
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _AdvancedCat: 1
+    - _Banner: 1
+    - _DirectionalCat: 1
+    - _FogCat: 1
+    - _HeightFogGlobal: 1
+    - _IsHeightFogShader: 1
+    - _NoiseCat: 1
+    - _SkyboxCat: 1
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1001 &252085940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10010,38 +10042,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 265846266}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &268061096
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Height Fog Global
-  m_Shader: {fileID: 4800000, guid: 3a7ef1b66bafb7a448a880ef76d2e6e6, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3001
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _AdvancedCat: 1
-    - _Banner: 1
-    - _DirectionalCat: 1
-    - _FogCat: 1
-    - _HeightFogGlobal: 1
-    - _IsHeightFogShader: 1
-    - _NoiseCat: 1
-    - _SkyboxCat: 1
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &269304589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11129,90 +11129,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 285748846}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &287034056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b7ac12dedcd467992b1d9eb3139ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons: []
-  rootTab:
-    name: 
-    selectedSubtabIndex: 0
-    subtabs:
-    - rid: 6834703250840617168
-    - rid: 6834703250840617169
-    - rid: 6834703250840617170
-    subtabsDrawn: 1
-  rootFoldout:
-    name: 
-    expanded: 1
-    subfoldouts:
-    - rid: 6834703250840617171
-    - rid: 6834703250840617172
-    - rid: 6834703250840617173
-    - rid: 6834703250840617174
-    - rid: 6834703250840617175
-  references:
-    version: 2
-    RefIds:
-    - rid: 6834703250840617168
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30EC\u30A4\u30AD\u30E3\u30B9\u30C8"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617169
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617170
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u97F3\u58F0\u30AF\u30EA\u30C3\u30D7"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617171
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30EC\u30A4\u30AD\u30E3\u30B9\u30C8"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617172
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617173
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30B3\u30F3\u30DD\u30FC\u30CD\u30F3\u30C8"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617174
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u97F3\u58F0\u30AF\u30EA\u30C3\u30D7"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617175
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30AA\u30FC\u30C7\u30A3\u30AA\u30BD\u30FC\u30B9"
-        expanded: 0
-        subfoldouts: []
 --- !u!1001 &288397940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11291,90 +11207,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 288397940}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &292957562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b7ac12dedcd467992b1d9eb3139ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons: []
-  rootTab:
-    name: 
-    selectedSubtabIndex: 0
-    subtabs:
-    - rid: 6834703250840617176
-    - rid: 6834703250840617177
-    - rid: 6834703250840617178
-    subtabsDrawn: 1
-  rootFoldout:
-    name: 
-    expanded: 1
-    subfoldouts:
-    - rid: 6834703250840617179
-    - rid: 6834703250840617180
-    - rid: 6834703250840617181
-    - rid: 6834703250840617182
-    - rid: 6834703250840617183
-  references:
-    version: 2
-    RefIds:
-    - rid: 6834703250840617176
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30EC\u30A4\u30AD\u30E3\u30B9\u30C8"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617177
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617178
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u97F3\u58F0\u30AF\u30EA\u30C3\u30D7"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617179
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30EC\u30A4\u30AD\u30E3\u30B9\u30C8"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617180
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617181
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30B3\u30F3\u30DD\u30FC\u30CD\u30F3\u30C8"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617182
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u97F3\u58F0\u30AF\u30EA\u30C3\u30D7"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617183
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30AA\u30FC\u30C7\u30A3\u30AA\u30BD\u30FC\u30B9"
-        expanded: 0
-        subfoldouts: []
 --- !u!1001 &296307899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29357,89 +29189,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 691562084}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &691773093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b7ac12dedcd467992b1d9eb3139ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons: []
-  rootTab:
-    name: 
-    selectedSubtabIndex: 0
-    subtabs:
-    - rid: 6834703250840617272
-    - rid: 6834703250840617273
-    subtabsDrawn: 1
-  rootFoldout:
-    name: 
-    expanded: 1
-    subfoldouts:
-    - rid: 6834703250840617274
-    - rid: 6834703250840617275
-    - rid: 6834703250840617276
-    - rid: 6834703250840617277
-    - rid: 6834703250840617278
-    - rid: 6834703250840617279
-  references:
-    version: 2
-    RefIds:
-    - rid: 6834703250840617272
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617273
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: Clip
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617274
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: GetCommponent
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617275
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: HPCanvas
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617276
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617277
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30C8\u30EA\u30AC\u30FC"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617278
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: Clip
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617279
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30AA\u30FC\u30C7\u30A3\u30AA\u30BD\u30FC\u30B9"
-        expanded: 0
-        subfoldouts: []
 --- !u!1001 &693957057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32528,6 +32277,104 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 776289889}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &782739573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b7ac12dedcd467992b1d9eb3139ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: []
+  rootTab:
+    name: 
+    selectedSubtabIndex: 0
+    subtabs:
+    - rid: 6834703275554504714
+    - rid: 6834703275554504715
+    - rid: 6834703275554504716
+    subtabsDrawn: 1
+  rootFoldout:
+    name: 
+    expanded: 1
+    subfoldouts:
+    - rid: 6834703275554504717
+    - rid: 6834703275554504718
+    - rid: 6834703275554504719
+    - rid: 6834703275554504720
+    - rid: 6834703275554504721
+    - rid: 6834703275554504722
+    - rid: 6834703275554504723
+  references:
+    version: 2
+    RefIds:
+    - rid: 6834703275554504714
+      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
+      data:
+        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
+        selectedSubtabIndex: 0
+        subtabs: []
+        subtabsDrawn: 0
+    - rid: 6834703275554504715
+      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
+      data:
+        name: Clip
+        selectedSubtabIndex: 0
+        subtabs: []
+        subtabsDrawn: 0
+    - rid: 6834703275554504716
+      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
+      data:
+        name: "\u30A2\u30CB\u30E1\u30FC\u30B7\u30E7\u30F3\u30B3\u30F3\u30C8\u30ED\u30FC\u30E9\u30FC"
+        selectedSubtabIndex: 0
+        subtabs: []
+        subtabsDrawn: 0
+    - rid: 6834703275554504717
+      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
+      data:
+        name: GetCommponent
+        expanded: 0
+        subfoldouts: []
+    - rid: 6834703275554504718
+      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
+      data:
+        name: HPCanvas
+        expanded: 0
+        subfoldouts: []
+    - rid: 6834703275554504719
+      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
+      data:
+        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
+        expanded: 0
+        subfoldouts: []
+    - rid: 6834703275554504720
+      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
+      data:
+        name: "\u30C8\u30EA\u30AC\u30FC"
+        expanded: 0
+        subfoldouts: []
+    - rid: 6834703275554504721
+      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
+      data:
+        name: Clip
+        expanded: 0
+        subfoldouts: []
+    - rid: 6834703275554504722
+      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
+      data:
+        name: "\u30AA\u30FC\u30C7\u30A3\u30AA\u30BD\u30FC\u30B9"
+        expanded: 0
+        subfoldouts: []
+    - rid: 6834703275554504723
+      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
+      data:
+        name: "\u30A2\u30CB\u30E1\u30FC\u30B7\u30E7\u30F3\u30B3\u30F3\u30C8\u30ED\u30FC\u30E9\u30FC"
+        expanded: 0
+        subfoldouts: []
 --- !u!1001 &783894428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37870,72 +37717,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 356178134188693072, guid: 28dd120257fd96545b85d6ca5f858854, type: 3}
   m_PrefabInstance: {fileID: 914048007}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &914367584
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Override
-  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Ints: []
-    m_Floats:
-    - _AdvancedCat: 1
-    - _Banner: 1
-    - _DirectionalCat: 1
-    - _DirectionalFalloff: 2
-    - _DirectionalIntensity: 1
-    - _FarDistanceHeight: 0
-    - _FarDistanceOffset: 0
-    - _FogAxisMode: 1
-    - _FogCameraMode: 0
-    - _FogCat: 1
-    - _FogColorDuo: 1
-    - _FogDistanceEnd: 100
-    - _FogDistanceFalloff: 2
-    - _FogDistanceStart: 0
-    - _FogHeightEnd: 100
-    - _FogHeightFalloff: 2
-    - _FogHeightStart: 0
-    - _FogIntensity: 1
-    - _FogLayersMode: 0
-    - _IsHeightFogPreset: 1
-    - _IsHeightFogShader: 1
-    - _JitterIntensity: 1
-    - _NoiseCat: 1
-    - _NoiseDistanceEnd: 50
-    - _NoiseIntensity: 1
-    - _NoiseMax: 1
-    - _NoiseMin: 0
-    - _NoiseModeBlend: 1
-    - _NoiseScale: 30
-    - _SkyboxCat: 1
-    - _SkyboxFogBottom: 0
-    - _SkyboxFogFalloff: 1
-    - _SkyboxFogFill: 1
-    - _SkyboxFogHeight: 1
-    - _SkyboxFogIntensity: 1
-    - _SkyboxFogOffset: 0
-    m_Colors:
-    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
-    - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
-    - _FogAxisOption: {r: 0, g: 0, b: 0, a: 0}
-    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
-    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
-  m_BuildTextureStacks: []
 --- !u!1001 &916108508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58006,6 +57787,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 1416361107}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1416556790
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Override
+  m_Shader: {fileID: 4800000, guid: a3a3bc8785681554d9558e2ea68f100e, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _AdvancedCat: 1
+    - _Banner: 1
+    - _DirectionalCat: 1
+    - _DirectionalFalloff: 2
+    - _DirectionalIntensity: 1
+    - _FarDistanceHeight: 0
+    - _FarDistanceOffset: 0
+    - _FogAxisMode: 1
+    - _FogCameraMode: 0
+    - _FogCat: 1
+    - _FogColorDuo: 1
+    - _FogDistanceEnd: 100
+    - _FogDistanceFalloff: 2
+    - _FogDistanceStart: 0
+    - _FogHeightEnd: 100
+    - _FogHeightFalloff: 2
+    - _FogHeightStart: 0
+    - _FogIntensity: 1
+    - _FogLayersMode: 0
+    - _IsHeightFogPreset: 1
+    - _IsHeightFogShader: 1
+    - _JitterIntensity: 1
+    - _NoiseCat: 1
+    - _NoiseDistanceEnd: 50
+    - _NoiseIntensity: 1
+    - _NoiseMax: 1
+    - _NoiseMin: 0
+    - _NoiseModeBlend: 1
+    - _NoiseScale: 30
+    - _SkyboxCat: 1
+    - _SkyboxFogBottom: 0
+    - _SkyboxFogFalloff: 1
+    - _SkyboxFogFill: 1
+    - _SkyboxFogHeight: 1
+    - _SkyboxFogIntensity: 1
+    - _SkyboxFogOffset: 0
+    m_Colors:
+    - _DirectionalColor: {r: 1, g: 0.7793103, b: 0.5, a: 1}
+    - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
+    - _FogAxisOption: {r: 0, g: 0, b: 0, a: 0}
+    - _FogColorEnd: {r: 0.8862745, g: 1.443137, b: 2, a: 1}
+    - _FogColorStart: {r: 0.4411765, g: 0.722515, b: 1, a: 1}
+    - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
+  m_BuildTextureStacks: []
 --- !u!1001 &1416858755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63465,6 +63312,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1782649152332568082, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659491868272515762, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8251212825534060859, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -63513,6 +63368,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u30C7\u30D0\u30C3\u30AF\u7528Player"
       objectReference: {fileID: 0}
+    - target: {fileID: 9126141871417367006, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
+      propertyPath: playerType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126141871417367006, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
+      propertyPath: vInspector
+      value: 
+      objectReference: {fileID: 782739573}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
 --- !u!20 &1551843080 stripped
@@ -70886,90 +70749,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1101056107816918480, guid: 70d85f2761381d34fbaf914d02eec9d3, type: 3}
   m_PrefabInstance: {fileID: 1743725899}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1745066349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b7ac12dedcd467992b1d9eb3139ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons: []
-  rootTab:
-    name: 
-    selectedSubtabIndex: 0
-    subtabs:
-    - rid: 6834703250840617184
-    - rid: 6834703250840617185
-    - rid: 6834703250840617186
-    subtabsDrawn: 1
-  rootFoldout:
-    name: 
-    expanded: 1
-    subfoldouts:
-    - rid: 6834703250840617187
-    - rid: 6834703250840617188
-    - rid: 6834703250840617189
-    - rid: 6834703250840617190
-    - rid: 6834703250840617191
-  references:
-    version: 2
-    RefIds:
-    - rid: 6834703250840617184
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30EC\u30A4\u30AD\u30E3\u30B9\u30C8"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617185
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617186
-      type: {class: VInspectorData/Tab, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u97F3\u58F0\u30AF\u30EA\u30C3\u30D7"
-        selectedSubtabIndex: 0
-        subtabs: []
-        subtabsDrawn: 0
-    - rid: 6834703250840617187
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30EC\u30A4\u30AD\u30E3\u30B9\u30C8"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617188
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30D1\u30E9\u30E1\u30FC\u30BF"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617189
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30B3\u30F3\u30DD\u30FC\u30CD\u30F3\u30C8"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617190
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u97F3\u58F0\u30AF\u30EA\u30C3\u30D7"
-        expanded: 0
-        subfoldouts: []
-    - rid: 6834703250840617191
-      type: {class: VInspectorData/Foldout, ns: VInspector, asm: VInspector}
-      data:
-        name: "\u30AA\u30FC\u30C7\u30A3\u30AA\u30BD\u30FC\u30B9"
-        expanded: 0
-        subfoldouts: []
 --- !u!1001 &1748718158
 PrefabInstance:
   m_ObjectHideFlags: 0

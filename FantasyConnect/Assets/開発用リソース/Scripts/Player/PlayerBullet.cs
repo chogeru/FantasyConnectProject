@@ -8,9 +8,17 @@ public class PlayerBullet : MonoBehaviour
     private int Damage = 10;
     [SerializeField, Header("着弾エフェクト")]
     private GameObject m_HitEffect;
-    /*
+
+    // プレイヤーレイヤーのマスク
+    public LayerMask playerLayerMask;
     private void OnCollisionEnter(Collision collision)
     {
+        // プレイヤーレイヤーに属するオブジェクトを無視する
+        if ((playerLayerMask.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
             EnemySystem enemySystem = collision.gameObject.GetComponent<EnemySystem>();
@@ -19,12 +27,17 @@ public class PlayerBullet : MonoBehaviour
                 enemySystem.TakeDamage(Damage);
             }
         }
-        Instantiate(m_HitEffect,transform.position,Quaternion.identity);
+        Instantiate(m_HitEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
-
-    }*/
+    }
     private void OnTriggerEnter(Collider other)
     {
+        // プレイヤーレイヤーに属するオブジェクトを無視する
+        if ((playerLayerMask.value & 1 << other.gameObject.layer) == 1 << other.gameObject.layer)
+        {
+            return;
+        }
+
         if (other.gameObject.CompareTag("Enemy"))
         {
             EnemySystem enemySystem = other.gameObject.GetComponent<EnemySystem>();
@@ -35,6 +48,5 @@ public class PlayerBullet : MonoBehaviour
         }
         Instantiate(m_HitEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
-
     }
 }

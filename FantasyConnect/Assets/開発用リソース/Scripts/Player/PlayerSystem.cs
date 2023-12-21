@@ -138,7 +138,7 @@ public class PlayerSystem : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         m_PlayerAnimator.SetFloat("ç∂âE", Input.GetAxis("Horizontal"));
         m_PlayerAnimator.SetFloat("ëOå„", Input.GetAxis("Vertical"));
-        if (m_PlayerAnimator.GetBool("MagicAttck"))
+        if (m_PlayerAnimator.GetBool("StrongAttack"))
         {
             m_MaxSpeed = 0;
         }

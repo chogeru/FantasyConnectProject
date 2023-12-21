@@ -41,7 +41,11 @@ public class MagicWepon : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             isWeponChange = false;
-            switch(attckType)
+            PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
+
+            playerSystem.m_MaxSpeed = 0;
+
+            switch (attckType)
             {
                 case eAttckType.Bullet:
                     MagicBulletAttack();
@@ -58,8 +62,8 @@ public class MagicWepon : MonoBehaviour
         {
 
             isWeponChange=true;
-            m_PlayerAnimator.SetBool("MagicAttck", false);
-            m_PlayerAnimator.SetBool("MagicBulletAttck", false);
+            m_PlayerAnimator.SetBool("StrongAttack", false);
+            m_PlayerAnimator.SetBool("NormalAttack", false);
             m_RangeAttckCol.SetActive(false);
             m_AtckEffect.SetActive(false);
         }
@@ -69,7 +73,7 @@ public class MagicWepon : MonoBehaviour
         PlayerSystem playerSystem =GetComponentInParent<PlayerSystem>();
         playerSystem.m_MaxSpeed = 0; 
         StopMoveAnime();
-        m_PlayerAnimator.SetBool("MagicBulletAttck", true);
+        m_PlayerAnimator.SetBool("NormalAttack", true);
         m_AtckEffect.SetActive(true);
         if (isAttck)
         {
@@ -109,7 +113,7 @@ public class MagicWepon : MonoBehaviour
     private void MagicRangeAttack()
     {
         StopMoveAnime();
-        m_PlayerAnimator.SetBool("MagicAttck", true);
+        m_PlayerAnimator.SetBool("StrongAttack", true);
         if (isAttck)
         {
             AttckSound();

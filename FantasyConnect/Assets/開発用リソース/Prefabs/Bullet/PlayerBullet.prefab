@@ -79,6 +79,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 50
   m_HitEffect: {fileID: 2730053630047889979, guid: d088cef704d3e33409f2417ab70e48c6, type: 3}
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &8157587276894410644
 GameObject:
   m_ObjectHideFlags: 0
