@@ -9,6 +9,7 @@ public class BowWepon : MonoBehaviour
         NomalAttck,
         StrongAttack,
     }
+    
     private eAttckType attckType;
     [SerializeField]
     private Animator m_PlayerAnimator;
@@ -28,7 +29,7 @@ public class BowWepon : MonoBehaviour
     private float bulletForce;
     private bool isAttck = false;
     private bool isWeponChange = true;
-
+    
     [SerializeField, Header("攻撃ボイス")]
     private List<AudioClip> m_ATVoices; [SerializeField, Header("ボイス")]
     private AudioSource m_Voice;
