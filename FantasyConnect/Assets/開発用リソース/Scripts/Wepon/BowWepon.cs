@@ -46,9 +46,10 @@ public class BowWepon : MonoBehaviour
             switch (attckType)
             {
                 case eAttckType.NomalAttck:
-                    NormalArrowAttack();
+                    ArrowAttack();
                     break;
                 case eAttckType.StrongAttack:
+
                     break;
                 default:
 
@@ -64,7 +65,7 @@ public class BowWepon : MonoBehaviour
        
         }
     }
-    private void NormalArrowAttack()
+    private void ArrowAttack()
     {
         PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
         playerSystem.m_MaxSpeed = 0;
@@ -110,7 +111,7 @@ public class BowWepon : MonoBehaviour
             }
         }
     }
-   
+
     private void ATCoolTime()
     {
         m_AttckCoolTime += Time.deltaTime;

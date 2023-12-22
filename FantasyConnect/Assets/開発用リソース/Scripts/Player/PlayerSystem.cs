@@ -119,6 +119,7 @@ public class PlayerSystem : MonoBehaviour
         }
         if (isDie)
         {
+            rb.velocity = Vector3.zero;
             return;
         }
         MovePlayer();
