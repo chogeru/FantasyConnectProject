@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using VInspector;
 public class PlayerSystem : MonoBehaviour
@@ -29,6 +30,8 @@ public class PlayerSystem : MonoBehaviour
     private Animator m_PlayerAnimator;
     [SerializeField]
     private Camera mainCamera;
+    [SerializeField]
+    PlayerIconAnime playerIconAnime;
     [Foldout("HPCanvas")]
     [SerializeField,Header("HP表示用スライダー")]
     private Slider m_HpSlider;
@@ -121,7 +124,10 @@ public class PlayerSystem : MonoBehaviour
         MovePlayer();
         ApplyGravity();
         Die();
-      
+      if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            SceneController.SceneConinstance.isHitCol = true;
+        }
     }
     void SetHp()
     {
@@ -250,7 +256,7 @@ public class PlayerSystem : MonoBehaviour
         if (m_CurrentHp > 0)
         {
             m_CurrentHp -= damage;
-
+            playerIconAnime.isHit = true;
             if (m_CurrentHp < 0)
             {
                 m_CurrentHp = 0;
