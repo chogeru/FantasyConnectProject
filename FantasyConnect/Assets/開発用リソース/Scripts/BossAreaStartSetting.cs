@@ -10,6 +10,8 @@ public class BossAreaStartSetting : MonoBehaviour
     private GameObject m_TimelineObj;
     [SerializeField]
     private GameObject m_AnimationEnemy;
+    [SerializeField]
+    private GameObject m_BossCountUI;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class BossAreaStartSetting : MonoBehaviour
     {
         player.SetActive(false);
         m_AnimationEnemy.SetActive(true);
+        m_BossCountUI.SetActive(false);
     }
 
     public void EndBossAnime()
@@ -27,5 +30,6 @@ public class BossAreaStartSetting : MonoBehaviour
         player.SetActive(true);
         m_TimelineObj.SetActive(false);
         m_AnimationEnemy.SetActive(false);
+        m_BossCountUI.SetActive(true);
     }
 }
