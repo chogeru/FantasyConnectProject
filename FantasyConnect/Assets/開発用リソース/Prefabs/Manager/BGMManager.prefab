@@ -150,3 +150,7 @@ MonoBehaviour:
   m_AutumnAreaBGM: {fileID: 8300000, guid: 364fa35c0b023fd46a4d43428f4e2520, type: 3}
   m_AutumnBossAreaBGM: {fileID: 8300000, guid: 6bb9bf11df3f18a4094809fc199989c0, type: 3}
   m_SnowArea1BGM: {fileID: 8300000, guid: 01624c9d22865ed468df059706ab77b1, type: 3}
+  m_SnowBossAreaBGM: {fileID: 8300000, guid: 25c3ca443c543744c8ff74517ee61eb0, type: 3}
+  m_WastelandArea1BGM: {fileID: 8300000, guid: d197f7533b7e32c47a9b10944c4944f1, type: 3}
+  m_WastelandBossAreaBGM: {fileID: 8300000, guid: b99bc62132819324e8ec37afa8f0773a, type: 3}
+  m_SecondCityBGM: {fileID: 8300000, guid: ddca9c614a62d9348b0d51a91fa780f1, type: 3}
