@@ -449,7 +449,10 @@ MonoBehaviour:
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
-  uvOverlapAssetList: 00000000ffffffff
+  - "Assets/\u958B\u767A\u7528\u30A2\u30BB\u30C3\u30C8/NPC/NPC.fbx"
+  - "Assets/\u958B\u767A\u7528\u30A2\u30BB\u30C3\u30C8/NPC/NPC\u3061\u3083\u3093.fbx"
+  - "Assets/\u958B\u767A\u7528\u30A2\u30BB\u30C3\u30C8/NPC/NPC\u3061\u3083\u30932\u30E2\u30C7\u30EB.fbx"
+  uvOverlapAssetList: 00000000ffffffff000000000000000000000000
   xatlasWarningShown: 0
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce RTX 4060 Laptop GPU
