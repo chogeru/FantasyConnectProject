@@ -4458,7 +4458,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5665279380311869036}
-  - {fileID: 1438598097790782632}
   m_Father: {fileID: 1581627051805547548}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4587,6 +4586,38 @@ Transform:
   - {fileID: 750271231380467967}
   m_Father: {fileID: 6818354898863335932}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4516608334725410436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1299206988863601232}
+  m_Layer: 8
+  m_Name: "\u6B66\u5668\u88C5\u5099\u30DD\u30A4\u30F3\u30C8"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1299206988863601232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516608334725410436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1438598097790782632}
+  m_Father: {fileID: 4097746649274732580}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4542295070885552582
 GameObject:
@@ -6473,6 +6504,7 @@ Transform:
   - {fileID: 2368940023004400784}
   - {fileID: 6052271665202546426}
   - {fileID: 4339031654507988437}
+  - {fileID: 1299206988863601232}
   m_Father: {fileID: 6002133404443353589}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7179,7 +7211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vInspector: {fileID: 0}
-  playerType: 0
+  playerType: 1
   rb: {fileID: 9126141871417367007}
   m_PlayerAnimator: {fileID: 9126141871417367003}
   mainCamera: {fileID: 0}
@@ -8602,7 +8634,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 6039803408966654811}
+    m_TransformParent: {fileID: 1299206988863601232}
     m_Modifications:
     - target: {fileID: 269584333181307365, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8610,7 +8642,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a5ddb0105fe4c1144968b52a304f3945, type: 2}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalScale.x
@@ -8626,31 +8658,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0409
+      value: -0.064
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0157
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.007
+      value: -0.004
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9794926
+      value: 0.07009719
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.06967444
+      value: 0.14703132
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.13570733
+      value: 0.040654596
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.13161798
+      value: -0.98580694
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8662,7 +8694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -16.151
+      value: -172.71
       objectReference: {fileID: 0}
     - target: {fileID: 1438598099585446538, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -8674,7 +8706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1782649153858824240, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 997d892bc536dd64ca661374c0ae2429, type: 3}
@@ -8701,7 +8733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerAnimator: {fileID: 9126141871417367003}
-  m_AttckCoolTime: 0.5
+  m_AttckCoolTime: 0
   m_ArrowShotTime: 0
   m_NomalArrow: {fileID: 4955932664348266057, guid: 1ee718b3a2598fa45a77fdf39830c5a0, type: 3}
   m_StrongArrow: {fileID: 4955932664348266057, guid: 1ee718b3a2598fa45a77fdf39830c5a0, type: 3}
@@ -8742,7 +8774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1632359418346936, guid: ed54e3407dd4c6c49ad7bfa0af535d03, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1925822542446848, guid: ed54e3407dd4c6c49ad7bfa0af535d03, type: 3}
       propertyPath: m_Layer
