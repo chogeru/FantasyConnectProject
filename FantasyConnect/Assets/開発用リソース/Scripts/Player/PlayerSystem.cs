@@ -106,12 +106,16 @@ public class PlayerSystem : MonoBehaviour
     private RuntimeAnimatorController bowAnimatorController;
     [SerializeField] 
     private RuntimeAnimatorController magicAnimatorController;
+    [SerializeField]
+    private RuntimeAnimatorController meleeAnimatorController;
 
     [Foldout("ïêäÌ"), Tab("ïêäÌ")]
     [SerializeField]
     private GameObject m_MagicWepon;
     [SerializeField]
     private GameObject m_BowWepon;
+    [SerializeField]
+    private GameObject m_MeleeWepon;
 
     #endregion
     void Start()
@@ -188,16 +192,19 @@ public class PlayerSystem : MonoBehaviour
             {
                 case PlayerType.Magic:
                     playerType = PlayerType.Bow;
+                    m_MeleeWepon.SetActive(false);
                     m_BowWepon.SetActive(true);
                     m_MagicWepon.SetActive(false);
                     break;
                 case PlayerType.Bow:
                     playerType = PlayerType.Melee;
+                    m_MeleeWepon.SetActive(true);
                     m_BowWepon.SetActive(false);
                     m_MagicWepon.SetActive(false);
                     break;
                 case PlayerType.Melee:
                     playerType = PlayerType.Magic;
+                    m_MeleeWepon.SetActive(false);
                     m_BowWepon.SetActive(false);
                     m_MagicWepon.SetActive(true);
                     break;
@@ -226,6 +233,9 @@ public class PlayerSystem : MonoBehaviour
                 break;
             case PlayerType.Magic:
                 m_PlayerAnimator.runtimeAnimatorController = magicAnimatorController;
+                break;
+                case PlayerType.Melee:
+                    m_PlayerAnimator.runtimeAnimatorController= meleeAnimatorController;
                 break;
             default:
                 break;
