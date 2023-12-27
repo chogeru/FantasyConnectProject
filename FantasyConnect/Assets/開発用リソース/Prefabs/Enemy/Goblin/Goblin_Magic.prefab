@@ -2825,8 +2825,8 @@ GameObject:
   - component: {fileID: 6420927823866358354}
   - component: {fileID: 6420927823857255880}
   - component: {fileID: 1681258337801209103}
-  - component: {fileID: 1681258337801209088}
   - component: {fileID: 1681258337801209102}
+  - component: {fileID: 7696061033440743041}
   m_Layer: 7
   m_Name: Goblin_Magic
   m_TagString: Enemy
@@ -2891,19 +2891,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &1681258337801209088
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6420927823866656690}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.47, z: 0}
 --- !u!114 &1681258337801209102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,6 +2903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42f79f988306fb2429d75bd66d3b8c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VInspectorData: {fileID: 0}
   myButtleType: 1
   myType: 0
   m_RaycastDistance: 20
@@ -2934,6 +2922,7 @@ MonoBehaviour:
   m_Animator: {fileID: 6420927823857255880}
   isAttacking: 0
   m_DieEffect: {fileID: 8332960207733953594, guid: 33fb02de3f07d9d47b4bd4c54d0498a7, type: 3}
+  m_AttackEffect: {fileID: 0}
   m_HpBer: {fileID: 6600094929985450706, guid: 718196e9aa6603d4f988ebb0cd8ff017, type: 3}
   m_HpBerPos: {x: 0, y: 2.2, z: 0}
   m_HpBerscale: {x: -1, y: 1, z: 1}
@@ -2946,6 +2935,20 @@ MonoBehaviour:
   m_DieSEClip: {fileID: 8300000, guid: 9c737a7f8daae6c47bcc99bc2a44a020, type: 3}
   m_ViceSE: {fileID: 6689327345896483948}
   m_SE: {fileID: 7010896372721164357}
+--- !u!136 &7696061033440743041
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420927823866656690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &6420927823866656694
 GameObject:
   m_ObjectHideFlags: 0

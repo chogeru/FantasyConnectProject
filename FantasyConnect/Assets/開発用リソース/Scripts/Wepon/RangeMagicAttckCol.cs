@@ -12,7 +12,7 @@ public class RangeMagicAttckCol : MonoBehaviour
     private void Update()
     {
         m_CoolTime += Time.deltaTime;
-        if(m_CoolTime>1)
+        if(m_CoolTime>0.5f)
         {
             isAttck = true;
         }

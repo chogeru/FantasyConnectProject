@@ -1,4 +1,6 @@
 using TMPro;
+using Unity.Jobs;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,12 +19,23 @@ public class PlayerSystem : MonoBehaviour
     public enum PlayerType
     {
         Magic,
-        Bow
+        Bow,
+        Melee,
     }
+    enum eAttckType
+    {
+        NomalAttck,
+        StrongAttack,
+    }
+    private eAttckType attckType;
+
     [SerializeField]
     private PlayerType playerType; 
 
     private eState e_CurrentState;
+
+    [SerializeField]
+    private ParticleSystem m_TypeChangeEffect;
     [Foldout("GetCommponent")]
     [SerializeField]
     public Rigidbody rb;
@@ -65,7 +78,9 @@ public class PlayerSystem : MonoBehaviour
     [Foldout("ÉgÉäÉKÅ[")]
     private bool isGrounded = true;
     private bool isMoving;
-    private bool isAttck = false;
+    public bool isAttck = false;
+    public bool isStrongAttck = false;
+    public bool isWeponChange = true;
     public bool isStop = false;
     public bool isDie = false;
     [EndFoldout]
@@ -91,6 +106,12 @@ public class PlayerSystem : MonoBehaviour
     private RuntimeAnimatorController bowAnimatorController;
     [SerializeField] 
     private RuntimeAnimatorController magicAnimatorController;
+
+    [Foldout("ïêäÌ"), Tab("ïêäÌ")]
+    [SerializeField]
+    private GameObject m_MagicWepon;
+    [SerializeField]
+    private GameObject m_BowWepon;
 
     #endregion
     void Start()
@@ -124,10 +145,29 @@ public class PlayerSystem : MonoBehaviour
         }
         MovePlayer();
         ApplyGravity();
+        WeponTypeChange();
+        PlayerTypeChange();
         Die();
       if(Input.GetKeyDown(KeyCode.Tab))
         {
             SceneController.SceneConinstance.isHitCol = true;
+        }
+      if(Input.GetMouseButton(0))
+        {
+            m_MaxSpeed = 0;
+            isWeponChange = false;
+            switch (attckType)
+            {
+                case eAttckType.NomalAttck:
+                    m_PlayerAnimator.SetBool("NormalAttack", true);
+                    break;
+                case eAttckType.StrongAttack:
+                    m_PlayerAnimator.SetBool("StrongAttack", true);
+                    break;
+                default:
+
+                    break;
+            }
         }
     }
     void SetHp()
@@ -139,13 +179,50 @@ public class PlayerSystem : MonoBehaviour
         // m_HpText ÇÃèâä˙âª
         m_HpText.text = m_CurrentHp + "/" + m_MaxHp;
     }
-  
+    void PlayerTypeChange()
+    {
+        if(Input.GetKeyDown (KeyCode.T))
+        {
+            m_TypeChangeEffect.Play();
+            switch (playerType)
+            {
+                case PlayerType.Magic:
+                    playerType = PlayerType.Bow;
+                    m_BowWepon.SetActive(true);
+                    m_MagicWepon.SetActive(false);
+                    break;
+                case PlayerType.Bow:
+                    playerType = PlayerType.Melee;
+                    m_BowWepon.SetActive(false);
+                    m_MagicWepon.SetActive(false);
+                    break;
+                case PlayerType.Melee:
+                    playerType = PlayerType.Magic;
+                    m_BowWepon.SetActive(false);
+                    m_MagicWepon.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
+            SwitchAnimator();
+        }
+    }
+
+    void NomalAttck()
+    {
+        isAttck = true;
+    }
+    void StrongAttack()
+    {
+        isStrongAttck = true;
+    }
     private void SwitchAnimator()
     {
         switch (playerType)
         {
             case PlayerType.Bow:
                 m_PlayerAnimator.runtimeAnimatorController = bowAnimatorController;
+
                 break;
             case PlayerType.Magic:
                 m_PlayerAnimator.runtimeAnimatorController = magicAnimatorController;
@@ -198,6 +275,20 @@ public class PlayerSystem : MonoBehaviour
         }
     }
 
+    private void WeponTypeChange()
+    {
+        if (isWeponChange)
+        {
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                attckType = eAttckType.NomalAttck;
+            }
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                attckType = eAttckType.StrongAttack;
+            }
+        }
+    }
     void RotatePlayerWithCamera()
     {
         if (mainCamera != null)

@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class BowWepon : MonoBehaviour
 {
-    enum eAttckType
-    {
-        NomalAttck,
-        StrongAttack,
-    }
-    
-    private eAttckType attckType;
     [SerializeField]
     private Animator m_PlayerAnimator;
     [SerializeField, Header("UŒ‚ƒN[ƒ‹ƒ^ƒCƒ€")]
@@ -19,127 +12,99 @@ public class BowWepon : MonoBehaviour
     private float m_ArrowShotTime;
     [SerializeField, Header("’ÊíUŒ‚—p–î")]
     private GameObject m_NomalArrow;
-    [SerializeField,Header("‹­UŒ‚–î")]
+    [SerializeField, Header("‹­UŒ‚–î")]
     private GameObject m_StrongArrow;
     [SerializeField, Header("UŒ‚”ÍˆÍ")]
-    private float m_AttckRange=10;
+    private float m_AttckRange = 10;
     [SerializeField]
-    private Transform bulletSpawnPoint;
+    private Transform m_NomalBulletSpawnPoint;
+    [SerializeField]
+    private Transform m_StrongBulletSpawnPoint;
     [SerializeField]
     private float bulletForce;
     private bool isAttck = false;
-    private bool isWeponChange = true;
-    
+
+
     [SerializeField, Header("UŒ‚ƒ{ƒCƒX")]
     private List<AudioClip> m_ATVoices; [SerializeField, Header("ƒ{ƒCƒX")]
     private AudioSource m_Voice;
+    [SerializeField]
+    private AudioSource m_ShotSE;
     void Update()
     {
-        ATCoolTime();
-        WeponTypeChange();
-        if (Input.GetMouseButton(0))
+        PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
+        if (playerSystem.isAttck)
         {
-            isWeponChange = false;
-            PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
-            playerSystem.m_MaxSpeed = 0;
-
-            switch (attckType)
-            {
-                case eAttckType.NomalAttck:
-                    ArrowAttack();
-                    break;
-                case eAttckType.StrongAttack:
-
-                    break;
-                default:
-
-                    break;
-            }
+            ArrowAttack();
         }
-        else
+        if (playerSystem.isStrongAttck)
         {
-
-            isWeponChange = true;
+            StrongAttack();
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            playerSystem.isWeponChange = true;
             m_PlayerAnimator.SetBool("StrongAttack", false);
             m_PlayerAnimator.SetBool("NormalAttack", false);
-       
         }
     }
-    private void ArrowAttack()
+    void ArrowAttack()
     {
+        m_ShotSE.Play();
+        AttckSound();
         PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
-        playerSystem.m_MaxSpeed = 0;
+        playerSystem.isAttck = false;
+        playerSystem.isStrongAttck = false;
         StopMoveAnime();
-        if (isAttck)
+        Vector3 direction = m_NomalBulletSpawnPoint.forward; // eŒû‚ÌŒü‚«‚ğæ“¾‚·‚é
+
+        // –î‚ÌŒü‚«‚ğeŒû‚ÌŒü‚«‚É‡‚í‚¹‚é
+        Quaternion rotation = Quaternion.LookRotation(direction);
+
+        // ˆê’UAã•ûŒü‚ğeŒû‚Ìã•ûŒü‚Éİ’è
+        Vector3 correctedUpDirection = m_NomalBulletSpawnPoint.up;
+
+        // –î‚Ì‰ñ“]‚ğ’²®‚µ‚Ä‰¡Œü‚«‚É‚·‚é
+        rotation = Quaternion.LookRotation(direction, correctedUpDirection);
+
+        GameObject bullet = Instantiate(m_NomalArrow, m_NomalBulletSpawnPoint.position, rotation);
+        Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+
+        if (bulletRigidbody != null)
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_AttckRange);
-
-            float closestDistance = Mathf.Infinity;
-            Transform closestEnemy = null;
-
-            foreach (var collider in hitColliders)
-            {
-                if (collider.CompareTag("Enemy"))
-                {
-                    m_PlayerAnimator.SetBool("NormalAttack", true);
-
-                    AttckSound();
-                    float distance = Vector3.Distance(transform.position, collider.transform.position);
-                    if (distance < closestDistance)
-                    {
-                        closestDistance = distance;
-                        closestEnemy = collider.transform;
-                    }
-                }
-            }
-
-            if (closestEnemy != null)
-            {
-
-                Vector3 enemyFeetPosition = closestEnemy.position + Vector3.up; // “G‚Ì‘«Œ³‚ÌˆÊ’u‚ğæ“¾
-                Vector3 direction = enemyFeetPosition - bulletSpawnPoint.position; // ’e‚Ì”­ËŒû‚©‚ç“G‚Ì‘«Œ³‚Ö‚Ì•ûŒü‚ğæ“¾
-
-                GameObject bullet = Instantiate(m_NomalArrow, bulletSpawnPoint.position, Quaternion.LookRotation(direction));
-                Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
-
-                if (bulletRigidbody != null)
-                {
-                    bulletRigidbody.AddForce(direction.normalized * bulletForce, ForceMode.Impulse);
-                }
-                m_AttckCoolTime = 0;
-
-            }
+            bulletRigidbody.AddForce(direction * bulletForce, ForceMode.Impulse);
         }
+
     }
 
-    private void ATCoolTime()
+    void StrongAttack()
     {
-        m_AttckCoolTime += Time.deltaTime;
-        if (m_AttckCoolTime > 1)
+        m_ShotSE.Play();
+        AttckSound();
+        PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
+        playerSystem.isAttck = false;
+        playerSystem.isStrongAttck = false;
+        StopMoveAnime();
+
+        Vector3 direction = m_StrongBulletSpawnPoint.forward; // ‘O•ûŒü‚ğæ“¾
+
+        for (int i = 0; i < 3; i++)
         {
-            isAttck = true;
-            m_AttckCoolTime = 0;
-        }
-        else
-        {
-            isAttck = false;
+            Quaternion rotation = Quaternion.LookRotation(direction); // ‘O•ûŒü‚Ö‚Ì‰ñ“]‚ğæ“¾
+
+            GameObject bullet = Instantiate(m_StrongArrow, m_StrongBulletSpawnPoint.position, rotation);
+            Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+
+            if (bulletRigidbody != null)
+            {
+                // …•½‚É”­Ë‚·‚é‚½‚ß‚Ì•ûŒüC³i–î‚ğ…•½‚ÉL‚°‚éj
+                Vector3 horizontalDirection = Quaternion.AngleAxis(-15f + (i * 15f), Vector3.up) * direction;
+                bulletRigidbody.AddForce(horizontalDirection * bulletForce, ForceMode.Impulse);
+            }
         }
     }
-    private void WeponTypeChange()
-    {
-        if (isWeponChange)
-        {
-            if (Input.GetKey(KeyCode.Alpha1))
-            {
-                attckType = eAttckType.NomalAttck;
-            }
-            if (Input.GetKey(KeyCode.Alpha2))
-            {
-                attckType = eAttckType.StrongAttack;
-            }
-        }
-    }
-    private void StopMoveAnime()
+
+        private void StopMoveAnime()
     {
         m_PlayerAnimator.SetBool("Idle", false);
         m_PlayerAnimator.SetBool("Walk", false);
