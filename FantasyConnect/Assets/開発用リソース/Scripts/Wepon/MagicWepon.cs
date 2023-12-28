@@ -42,7 +42,7 @@ public class MagicWepon : MonoBehaviour
         {
             MagicRangeAttack();
         }
-        else
+        if(Input.GetMouseButtonUp(0))
         {
 
             playerSystem.isWeponChange = true;

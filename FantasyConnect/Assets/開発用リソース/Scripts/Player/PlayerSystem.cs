@@ -151,6 +151,7 @@ public class PlayerSystem : MonoBehaviour
         ApplyGravity();
         WeponTypeChange();
         PlayerTypeChange();
+        ContinuousAttack();
         Die();
       if(Input.GetKeyDown(KeyCode.Tab))
         {
@@ -171,6 +172,23 @@ public class PlayerSystem : MonoBehaviour
                 default:
 
                     break;
+            }
+        }
+    }
+    void ContinuousAttack()
+    {
+        if (m_PlayerAnimator.GetBool("NormalAttack"))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                m_PlayerAnimator.SetBool("SecondNomalAttck", true);
+            }
+        }
+        if (m_PlayerAnimator.GetBool("SecondNomalAttck"))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                m_PlayerAnimator.SetBool("ThirdNomalAttck", true);
             }
         }
     }

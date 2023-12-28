@@ -6,10 +6,11 @@ public class BGMManager : MonoBehaviour
 {
     //シングルトンパターン
     public static BGMManager BGMm_instance;
+    [Tab("オーディオソース")]
     #region　オーディオソース
     [SerializeField,Header("オーディオソース")]
     private AudioSource m_AudioSouce;
-    [Foldout("オーディオクリップ")]
+    [Foldout("オーディオクリップ"),Tab("オーディオクリップ")]
     [SerializeField,Header("TitleシーンのBGM")]
     private AudioClip m_TitleBGM;
     [SerializeField,Header("MyHouseシーンのBGM")]

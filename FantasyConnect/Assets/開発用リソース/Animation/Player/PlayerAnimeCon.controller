@@ -236,7 +236,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NormalAttack
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7432198245150923694}
@@ -273,9 +273,9 @@ AnimatorState:
   - {fileID: 4184112788043252848}
   - {fileID: 237544397553515692}
   - {fileID: 5906652315046383047}
+  - {fileID: -8742683259824794936}
   - {fileID: 978899337445983471}
   - {fileID: 2983368629149323724}
-  - {fileID: -8742683259824794936}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -1787,7 +1787,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SecondNomalAttck
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1074907521144580127}
