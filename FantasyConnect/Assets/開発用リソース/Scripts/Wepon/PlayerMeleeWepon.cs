@@ -28,11 +28,6 @@ public class PlayerMeleeWepon : MonoBehaviour
                 playerSystem.isAttck = false;
                 playerSystem.isStrongAttck = false;
             }
-            if (playerSystem.isAttck==false||playerSystem.isStrongAttck==false)
-            {
-                MeleeAttckEnd();
-            }
-
         }
       
     }
