@@ -27,10 +27,12 @@ public class PlayerSystem : MonoBehaviour
         NomalAttck,
         StrongAttack,
     }
+
+
     private eAttckType attckType;
 
     [SerializeField]
-    private PlayerType playerType; 
+    private PlayerType playerType;
 
     private eState e_CurrentState;
 
@@ -46,7 +48,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField]
     PlayerIconAnime playerIconAnime;
     [Foldout("HPCanvas")]
-    [SerializeField,Header("HP表示用スライダー")]
+    [SerializeField, Header("HP表示用スライダー")]
     private Slider m_HpSlider;
     [SerializeField, Header("HP表示用テキスト")]
     private TextMeshProUGUI m_HpText;
@@ -72,6 +74,7 @@ public class PlayerSystem : MonoBehaviour
     private float m_JumpForce = 10f;
     [SerializeField, Header("重力")]
     private float m_Gravity = 9.81f;
+    private int m_AttackCount = 0;
     [EndFoldout]
     #endregion
     #region　トリガー
@@ -81,12 +84,13 @@ public class PlayerSystem : MonoBehaviour
     public bool isAttck = false;
     public bool isStrongAttck = false;
     public bool isWeponChange = true;
+    public bool isEndAttck = false;
     public bool isStop = false;
     public bool isDie = false;
     [EndFoldout]
     #endregion
     #region サウンド
-    [Foldout("Clip"),Tab("Clip")]
+    [Foldout("Clip"), Tab("Clip")]
     [SerializeField, Header("被弾ボイス")]
     private AudioClip m_HitVoice;
     [SerializeField, Header("死亡ボイス")]
@@ -101,10 +105,10 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField, Header("SE")]
     private AudioSource m_SE;
     [EndFoldout]
-    [Foldout("アニメーションコントローラー"),Tab("アニメーションコントローラー")]
-    [SerializeField] 
+    [Foldout("アニメーションコントローラー"), Tab("アニメーションコントローラー")]
+    [SerializeField]
     private RuntimeAnimatorController bowAnimatorController;
-    [SerializeField] 
+    [SerializeField]
     private RuntimeAnimatorController magicAnimatorController;
     [SerializeField]
     private RuntimeAnimatorController meleeAnimatorController;
@@ -129,7 +133,7 @@ public class PlayerSystem : MonoBehaviour
 
     void Update()
     {
-        if(isStop)
+        if (isStop)
         {
             m_PlayerAnimator.SetBool("Idle", true);
             m_PlayerAnimator.SetBool("Walk", false);
@@ -151,20 +155,21 @@ public class PlayerSystem : MonoBehaviour
         ApplyGravity();
         WeponTypeChange();
         PlayerTypeChange();
-        ContinuousAttack();
         Die();
-      if(Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             SceneController.SceneConinstance.isHitCol = true;
         }
-      if(Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
             m_MaxSpeed = 0;
             isWeponChange = false;
             switch (attckType)
             {
                 case eAttckType.NomalAttck:
+
                     m_PlayerAnimator.SetBool("NormalAttack", true);
+
                     break;
                 case eAttckType.StrongAttack:
                     m_PlayerAnimator.SetBool("StrongAttack", true);
@@ -172,23 +177,6 @@ public class PlayerSystem : MonoBehaviour
                 default:
 
                     break;
-            }
-        }
-    }
-    void ContinuousAttack()
-    {
-        if (m_PlayerAnimator.GetBool("NormalAttack"))
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                m_PlayerAnimator.SetBool("SecondNomalAttck", true);
-            }
-        }
-        if (m_PlayerAnimator.GetBool("SecondNomalAttck"))
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                m_PlayerAnimator.SetBool("ThirdNomalAttck", true);
             }
         }
     }
@@ -203,7 +191,7 @@ public class PlayerSystem : MonoBehaviour
     }
     void PlayerTypeChange()
     {
-        if(Input.GetKeyDown (KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             m_TypeChangeEffect.Play();
             switch (playerType)
@@ -241,6 +229,11 @@ public class PlayerSystem : MonoBehaviour
     {
         isStrongAttck = true;
     }
+    void EndAttck()
+    {
+        isEndAttck = true;
+    }
+
     private void SwitchAnimator()
     {
         switch (playerType)
@@ -252,8 +245,8 @@ public class PlayerSystem : MonoBehaviour
             case PlayerType.Magic:
                 m_PlayerAnimator.runtimeAnimatorController = magicAnimatorController;
                 break;
-                case PlayerType.Melee:
-                    m_PlayerAnimator.runtimeAnimatorController= meleeAnimatorController;
+            case PlayerType.Melee:
+                m_PlayerAnimator.runtimeAnimatorController = meleeAnimatorController;
                 break;
             default:
                 break;
@@ -418,9 +411,9 @@ public class PlayerSystem : MonoBehaviour
     }
     private void DieSound()
     {
-        m_Voice.clip=m_DieVoice;
+        m_Voice.clip = m_DieVoice;
         m_Voice.Play();
-        m_SE.clip=m_DieSEClip;
+        m_SE.clip = m_DieSEClip;
         m_SE.Play();
     }
 }

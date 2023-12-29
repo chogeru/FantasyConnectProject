@@ -12,24 +12,23 @@ public class PlayerMeleeWepon : MonoBehaviour
 
     private void Update()
     {
-        PlayerSystem playerSystem =GetComponent<PlayerSystem>();
-        if(playerSystem != null)
+        PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
+
+        if (playerSystem.isAttck)
         {
-            if(playerSystem.isAttck)
-            {
-                MelleAttck();
-            }
-            if(playerSystem.isStrongAttck)
-            {
-                MelleAttck();
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                playerSystem.isAttck = false;
-                playerSystem.isStrongAttck = false;
-            }
+            MelleAttck();
         }
-      
+        if (playerSystem.isStrongAttck)
+        {
+            MelleAttck();
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            MeleeAttckEnd();
+            playerSystem.isAttck = false;
+            playerSystem.isStrongAttck = false;
+        }
     }
     private void MelleAttck()
     {
@@ -40,7 +39,7 @@ public class PlayerMeleeWepon : MonoBehaviour
     {
         m_AttckCol.SetActive(false);
         EndAttckAnimation();
-        
+
     }
     private void EndAttckAnimation()
     {

@@ -817,6 +817,65 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &720148580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720148581}
+  - component: {fileID: 720148583}
+  - component: {fileID: 720148582}
+  m_Layer: 0
+  m_Name: Col
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &720148581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720148580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 941863104}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &720148583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720148580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 1.1987951, z: 0.11785467}
+  m_Center: {x: -0.000000057742, y: -0.38854167, z: 0.013854811}
+--- !u!114 &720148582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720148580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406c8c8e9b4c55642ac4bf4058fc8b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 20
 --- !u!1 &732120934
 GameObject:
   m_ObjectHideFlags: 0
@@ -7381,7 +7440,7 @@ Animator:
   m_GameObject: {fileID: 8775794892995199873}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: efc7b3be2d8d02a4b82113218d82049a, type: 3}
-  m_Controller: {fileID: 9100000, guid: 22e3e8851bb700245b93552e2f67ca76, type: 2}
+  m_Controller: {fileID: 22100000, guid: 7fc5b33c1622ee249966f41713d52979, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7425,6 +7484,7 @@ MonoBehaviour:
   isAttck: 0
   isStrongAttck: 0
   isWeponChange: 1
+  isEndAttck: 0
   isStop: 0
   isDie: 0
   m_HitVoice: {fileID: 8300000, guid: 8af770ca07f71c24d8120c4e39270647, type: 3}
@@ -8908,7 +8968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1d407a6008b748b4f9fec2ed72ffde73, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d407a6008b748b4f9fec2ed72ffde73, type: 3}
       propertyPath: m_RootOrder
@@ -8966,6 +9026,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1d407a6008b748b4f9fec2ed72ffde73, type: 3}
   m_PrefabInstance: {fileID: 941992512}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &324669012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941894880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82cac1f52daa294da0a11401200bdc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AttckCol: {fileID: 720148580}
+  m_PlayerAnimator: {fileID: 9126141871417367003}
 --- !u!1001 &1129298965
 PrefabInstance:
   m_ObjectHideFlags: 0
