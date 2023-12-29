@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 720148581}
   - component: {fileID: 720148583}
   - component: {fileID: 720148582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,6 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 40
+  m_HitEffect: {fileID: 31835927839385643, guid: 90eee45acf8dad24199ef6d84438df01, type: 3}
   m_AttackSEClip:
   - {fileID: 8300000, guid: f290051f770c7eb4480b94e38f2a93fb, type: 3}
   - {fileID: 8300000, guid: 1599ba654291cd74f844b3ac80ba6c7b, type: 3}
@@ -1713,7 +1714,7 @@ GameObject:
   - component: {fileID: 1377820166}
   - component: {fileID: 1377820168}
   - component: {fileID: 1377820167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PWATCol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,6 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 250
+  m_HitEffect: {fileID: 8649103730900180663, guid: d170123f1eae05a42b7a908a3bc4cc32, type: 3}
   m_AttackSEClip:
   - {fileID: 8300000, guid: a24defea471c9bb42aa74bacc194092f, type: 3}
   - {fileID: 8300000, guid: 54d1af8ac52afc448abbe911ffb8e6a6, type: 3}
@@ -9093,6 +9095,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5236374731659530583, guid: a92ebdf897fa283428c50a41fe4411a5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6848496200994664002, guid: a92ebdf897fa283428c50a41fe4411a5, type: 3}
       propertyPath: lengthInSec
       value: 3
@@ -9164,6 +9170,10 @@ PrefabInstance:
     - target: {fileID: 8099074118825668027, guid: a92ebdf897fa283428c50a41fe4411a5, type: 3}
       propertyPath: m_Name
       value: VFX_Trail_Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099074118825668027, guid: a92ebdf897fa283428c50a41fe4411a5, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8099074118825668027, guid: a92ebdf897fa283428c50a41fe4411a5, type: 3}
       propertyPath: m_IsActive
@@ -9295,8 +9305,12 @@ PrefabInstance:
       value: SM_Katana01
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1d407a6008b748b4f9fec2ed72ffde73, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d407a6008b748b4f9fec2ed72ffde73, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d407a6008b748b4f9fec2ed72ffde73, type: 3}
       propertyPath: m_RootOrder

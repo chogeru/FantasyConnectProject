@@ -8,8 +8,18 @@ public class TextTrigger : MonoBehaviour
     public string[] textsToDisplay;
     [SerializeField]
     private int currentIndex = 0;
-   
-
+    [SerializeField]
+    private AudioSource m_SE;
+    [SerializeField]
+    private AudioClip m_SEClip;
+    private void Start()
+    {
+        // AudioSourceがアタッチされていない場合、このスクリプトがアタッチされたオブジェクトにAudioSourceを追加する
+        if (!m_SE)
+        {
+            m_SE = gameObject.AddComponent<AudioSource>();
+        }
+    }
     public void TriggerTextDisplay()
     {
         if (TextManager.Instance != null)
@@ -21,6 +31,7 @@ public class TextTrigger : MonoBehaviour
                     TextManager.Instance.ShowText(textsToDisplay[currentIndex]);
                     Debug.Log(textsToDisplay[currentIndex]);
                     currentIndex++;
+                    PlaySE();
                 }
                 else
                 {
@@ -48,5 +59,13 @@ public class TextTrigger : MonoBehaviour
     public void ResetTextIndex()
     {
         currentIndex = 0;
+    }
+    private void PlaySE()
+    {
+        if (m_SE)
+        {
+            m_SE.clip = m_SEClip;
+            m_SE.Play();
+        }
     }
 }

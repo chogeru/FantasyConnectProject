@@ -33,9 +33,13 @@ public class EnemyCanvasLooKAt : MonoBehaviour
     }
     public void HpUpdate()
     {
-        //HPバーの更新
+        // HPが0以下にならないように制御する
+        enemySystem.m_CurrentHp = Mathf.Max(0, enemySystem.m_CurrentHp);
+
+        // HPバーの更新
         m_HpSlider.value = (float)enemySystem.m_CurrentHp / (float)enemySystem.m_MaxHp;
-        //HPテキストの更新
+
+        // HPテキストの更新
         m_HpText.text = enemySystem.m_CurrentHp + "/" + enemySystem.m_MaxHp;
     }
 }

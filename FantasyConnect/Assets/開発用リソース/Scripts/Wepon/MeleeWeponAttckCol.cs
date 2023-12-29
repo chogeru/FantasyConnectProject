@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MeleeWeponAttckCol : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField,Header("攻撃力")]
     private int Damage = 80;
+    [SerializeField,Header("攻撃ヒット時のエフェクト")]
+    private GameObject m_HitEffect;
     [SerializeField, Header("攻撃SE")]
     private List<AudioClip> m_AttackSEClip;
     [SerializeField]
@@ -15,6 +17,7 @@ public class MeleeWeponAttckCol : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             EnemySystem enemySystem = other.GetComponent<EnemySystem>();
+            Instantiate(m_HitEffect, transform.position, Quaternion.identity);
             AttckSE();
             enemySystem.TakeDamage(Damage);
 

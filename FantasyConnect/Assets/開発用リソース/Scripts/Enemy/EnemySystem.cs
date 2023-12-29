@@ -135,7 +135,7 @@ public class EnemySystem : MonoBehaviour
             return;
         m_MaxSpeed = m_CurrentSpeed;
         Search();
-        UpdateAnimation();
+        UpdateAnimation();        
 
         if (rb.velocity.magnitude > 0.1f)
         {
@@ -313,6 +313,7 @@ public class EnemySystem : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        
         if (m_CurrentHp > 0)
         {
             m_CurrentHp -= damage;
@@ -343,6 +344,7 @@ public class EnemySystem : MonoBehaviour
     {
         if (m_CurrentHp <= 0)
         {
+
             m_Animator.SetBool("Die", true);
             m_ViceSE.clip = m_DieVoiceClip;
             m_ViceSE.Play();
