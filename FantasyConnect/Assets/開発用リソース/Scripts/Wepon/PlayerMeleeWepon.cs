@@ -9,7 +9,8 @@ public class PlayerMeleeWepon : MonoBehaviour
     private GameObject m_AttckCol;
     [SerializeField, Header("プレイヤーのアニメーター")]
     private Animator m_PlayerAnimator;
-
+    [SerializeField, Header("トレイル")]
+    private GameObject m_AttackTrail;
     private void Update()
     {
         PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
@@ -33,11 +34,13 @@ public class PlayerMeleeWepon : MonoBehaviour
     private void MelleAttck()
     {
         m_AttckCol.SetActive(true);
+        m_AttackTrail.SetActive(true);
     }
 
     private void MeleeAttckEnd()
     {
         m_AttckCol.SetActive(false);
+        m_AttackTrail.SetActive(false);
         EndAttckAnimation();
 
     }
