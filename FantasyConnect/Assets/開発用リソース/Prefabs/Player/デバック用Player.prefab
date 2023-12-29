@@ -7597,7 +7597,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8775794892995199873}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ea9d93644928afc47988ba3832c30330, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.2
@@ -7654,7 +7654,7 @@ MonoBehaviour:
   m_WalkSpeed: 5
   m_RunSpeed: 10
   m_JumpForce: 8000
-  m_Gravity: 45
+  m_Gravity: 110
   isAttck: 0
   isStrongAttck: 0
   isWeponChange: 1

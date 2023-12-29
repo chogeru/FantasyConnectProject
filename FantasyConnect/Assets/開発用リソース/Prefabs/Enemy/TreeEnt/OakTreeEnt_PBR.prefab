@@ -454,6 +454,9 @@ MonoBehaviour:
   m_DieSEClip: {fileID: 8300000, guid: 483ccad5cff6e9448b1a002236a4229f, type: 3}
   m_ViceSE: {fileID: 2849816398312322037}
   m_SE: {fileID: 9119308599534816753}
+  dropItemsInfo:
+  - itemPrefab: {fileID: 2796556744000761754, guid: c781aec5c38e24749b714c8664e2e6ba, type: 3}
+    dropChance: 50
 --- !u!54 &9179392671835360835
 Rigidbody:
   m_ObjectHideFlags: 0

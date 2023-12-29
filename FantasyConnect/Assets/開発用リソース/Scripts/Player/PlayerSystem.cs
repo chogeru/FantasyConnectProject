@@ -379,6 +379,12 @@ public class PlayerSystem : MonoBehaviour
             HitSound();
         }
     }
+    public void Recovery(int recovery)
+    {
+        m_CurrentHp += recovery;
+        m_CurrentHp = Mathf.Min(m_CurrentHp, m_MaxHp);
+        HpUpdate();
+    }
     private void Die()
     {
         if (m_CurrentHp <= 0)

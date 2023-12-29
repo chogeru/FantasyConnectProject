@@ -294,7 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TimelineObj: {fileID: 919459581027210200}
-  m_AnimationEnemy: {fileID: 0}
+  m_AnimationEnemy: {fileID: 4898312546520874751}
+  m_BossCountUI: {fileID: 0}
 --- !u!1 &919459581402580843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,7 +1620,7 @@ GameObject:
   - component: {fileID: 4898312546528152765}
   m_Layer: 0
   m_Name: Manticora_PBR
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

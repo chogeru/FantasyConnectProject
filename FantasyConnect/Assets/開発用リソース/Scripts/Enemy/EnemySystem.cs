@@ -2,6 +2,15 @@ using System.Collections;
 using UnityEngine;
 using VInspector;
 using TMPro;
+using System.Collections.Generic;
+
+[System.Serializable]
+public class DropItemInfo
+    //アイテムの情報を所持
+{
+    public GameObject itemPrefab;
+    public float dropChance;
+}
 public class EnemySystem : MonoBehaviour
 {
     public VInspectorData VInspectorData;
@@ -105,6 +114,11 @@ public class EnemySystem : MonoBehaviour
 #endregion
     [EndFoldout]
     private bool isHit = false;
+
+    [Tab("ドロップアイテム")]
+    [SerializeField, Header("ドロップアイテムリスト")]
+    private List<DropItemInfo> dropItemsInfo = new List<DropItemInfo>();
+
 
     void Start()
     {
@@ -311,6 +325,22 @@ public class EnemySystem : MonoBehaviour
         // isMoving の状態に基づいてアニメーションを変更
         m_Animator.SetBool("IsMoving", isMoving);
     }
+    private void DropItems()
+    {
+        foreach (var itemInfo in dropItemsInfo)
+        {
+            if (Random.value <= itemInfo.dropChance)
+            {
+                // アイテムをドロップする回数を決定（ここでは最大3回まで）
+                int dropCount = Random.Range(0, 6);
+
+                for (int i = 0; i < dropCount; i++)
+                {
+                    Instantiate(itemInfo.itemPrefab, transform.position + Random.insideUnitSphere, Quaternion.identity);
+                }
+            }
+        }
+    }
     public void TakeDamage(int damage)
     {
         
@@ -360,6 +390,8 @@ public class EnemySystem : MonoBehaviour
     }
     void DieEnd()
     {
+        // アイテムをドロップ
+        DropItems();
         Instantiate(m_DieEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
