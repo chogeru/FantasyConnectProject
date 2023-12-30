@@ -42,6 +42,10 @@ public class PlayerMeleeWepon : MonoBehaviour
             playerSystem.isWeponChange = true;
 
         }
+        if (!m_PlayerAnimator.GetBool("StrongAttack") && !m_PlayerAnimator.GetBool("NormalAttack"))
+        {
+            MeleeAttckEnd();
+        }
     }
     private void MelleAttck()
     {

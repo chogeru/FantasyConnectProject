@@ -32,7 +32,7 @@ public class PlayerSystem : MonoBehaviour
     private eAttckType attckType;
 
     [SerializeField]
-    private PlayerType playerType;
+    public PlayerType playerType;
 
     private eState e_CurrentState;
 
@@ -194,6 +194,11 @@ public class PlayerSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             m_TypeChangeEffect.Play();
+            MagicWepon magicWepon =GetComponentInChildren<MagicWepon>();
+            if (magicWepon != null)
+            {
+                magicWepon.AttackEnd();
+            }
             switch (playerType)
             {
                 case PlayerType.Magic:

@@ -51,7 +51,12 @@ public class MagicWepon : MonoBehaviour
             m_RangeAttckCol.SetActive(false);
             m_AtckEffect.SetActive(false);
         }
-        if(isRangeAttck)
+        if (!m_PlayerAnimator.GetBool("StrongAttack") && !m_PlayerAnimator.GetBool("NormalAttack"))
+        {
+            m_RangeAttckCol.SetActive(false);
+            m_AtckEffect.SetActive(false);
+        }
+        if (isRangeAttck)
         {
             Invoke("EndMagicRangeAttck", 1.5f);
         }
@@ -118,6 +123,11 @@ public class MagicWepon : MonoBehaviour
         }
     }
 
+    public void AttackEnd()
+    {
+        m_RangeAttckCol.SetActive(false);
+        m_AtckEffect.SetActive(false);
+    }
     private void EndMagicRangeAttck()
     {
         playerSystem.isAttck = false;
