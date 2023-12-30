@@ -22,14 +22,14 @@ public class PlayerSystem : MonoBehaviour
         Bow,
         Melee,
     }
-    enum eAttckType
+     public enum eAttckType
     {
         NomalAttck,
         StrongAttack,
     }
 
 
-    private eAttckType attckType;
+    public eAttckType attckType;
 
     [SerializeField]
     public PlayerType playerType;
