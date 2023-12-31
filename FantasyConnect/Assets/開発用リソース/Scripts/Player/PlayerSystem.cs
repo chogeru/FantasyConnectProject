@@ -99,6 +99,8 @@ public class PlayerSystem : MonoBehaviour
     private AudioClip m_HitSEClip;
     [SerializeField, Header("死亡SE")]
     private AudioClip m_DieSEClip;
+    [SerializeField,Header("武器チェンジSE")]
+    private AudioClip m_AttackChangeSE;
     [Foldout("オーディオソース")]
     [SerializeField, Header("オーディオボイス")]
     private AudioSource m_Voice;
@@ -194,6 +196,8 @@ public class PlayerSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             m_TypeChangeEffect.Play();
+            m_SE.clip = m_AttackChangeSE;
+            m_SE.Play();
             MagicWepon magicWepon =GetComponentInChildren<MagicWepon>();
             if (magicWepon != null)
             {
