@@ -7,7 +7,7 @@ public class TextTrigger : MonoBehaviour
 {
     public string[] textsToDisplay;
     [SerializeField]
-    private int currentIndex = 0;
+    public int currentIndex = 0;
     [SerializeField]
     private AudioSource m_SE;
     [SerializeField]

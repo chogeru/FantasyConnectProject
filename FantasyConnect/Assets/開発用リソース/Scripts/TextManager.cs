@@ -14,6 +14,7 @@ public class TextManager : MonoBehaviour
 
     private GameObject player;
     PlayerSystem playerSystem;
+    public bool isTextEnd=false;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -33,6 +34,7 @@ public class TextManager : MonoBehaviour
     {
         if (textWindowUI != null)
         {
+            isTextEnd = false;
             textWindowUI.SetActive(true); 
             playerSystem.isStop = true;
             if (textMeshPro != null)
@@ -54,6 +56,7 @@ public class TextManager : MonoBehaviour
     {
         if (textWindowUI != null)
         {
+            isTextEnd=true;
             playerSystem.isStop = false;
             textWindowUI.SetActive(false);
         }

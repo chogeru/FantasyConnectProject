@@ -5,17 +5,25 @@ using UnityEngine;
 
 public class NPCSpeakSystem : MonoBehaviour
 {
+    public enum NPCType
+    {
+        NPC,
+        ShopNPC
+    }
+    public NPCType npcType;
+    [SerializeField]
+    private GameObject m_ShopCanvas;
     private Transform player;
-    [SerializeField,Header("UI表示用の距離")]
+    [SerializeField, Header("UI表示用の距離")]
     public float m_TriggerDistance = 10f;
-    [SerializeField,Header("表示するUI")]
-    public GameObject m_SpeakUI; 
+    [SerializeField, Header("表示するUI")]
+    public GameObject m_SpeakUI;
     [SerializeField]
     public TextTrigger textTrigger;
 
     private void Start()
     {
-        textTrigger=this.GetComponent<TextTrigger>();
+        textTrigger = this.GetComponent<TextTrigger>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     private void Update()
@@ -33,8 +41,16 @@ public class NPCSpeakSystem : MonoBehaviour
             {
                 // Tキーが押されたらTextTriggerのメソッドを呼び出してテキストを表示する
                 textTrigger.TriggerTextDisplay();
+
             }
-          
+            if (npcType == NPCType.ShopNPC && TextManager.Instance.isTextEnd)
+            {
+                m_ShopCanvas.SetActive(true);
+            }
+            else
+            {
+                m_ShopCanvas.SetActive(false);
+            }
         }
         else
         {
@@ -42,6 +58,6 @@ public class NPCSpeakSystem : MonoBehaviour
             m_SpeakUI.SetActive(false);
             textTrigger.ResetTextIndex(); // プレイヤーが離れたらテキストのインデックスをリセット
         }
-    
+
     }
 }
