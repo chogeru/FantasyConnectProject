@@ -12,10 +12,17 @@ public class ShopItemUI : MonoBehaviour
     private TextMeshProUGUI m_MPItemCountText;
     [SerializeField]
     private TextMeshProUGUI m_ArrowItemCountText;
-
+    [SerializeField]
+    private TextMeshProUGUI m_currencyText;
+    CurrencySystem currencySystem;
+    private void Start()
+    {
+        currencySystem = FindObjectOfType<CurrencySystem>();
+    }
     private void Update()
     {
         GetPlayerItemCount();
+        GetMoney();
     }
     private void GetPlayerItemCount()
     {
@@ -34,5 +41,9 @@ public class ShopItemUI : MonoBehaviour
             int arrowItemCount = InventorySystem.inventorySystem.GetItemCount("Arrow");
             m_ArrowItemCountText.text = arrowItemCount.ToString();
         }
+    }
+    private void GetMoney()
+    {
+        m_currencyText.text=currencySystem.m_currencyAmount.ToString();
     }
 }

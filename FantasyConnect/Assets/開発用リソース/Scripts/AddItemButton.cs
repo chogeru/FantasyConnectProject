@@ -4,29 +4,31 @@ using UnityEngine;
 using UnityEngine.UIElements.Experimental;
 
 public class AddItemButton : MonoBehaviour
-{ 
+{
     public void OnHealingAddButtonClick()
     {
         if (InventorySystem.inventorySystem != null)
         {
-            // アイテムを追加する関数を呼び出す
-            InventorySystem.inventorySystem.AddItem("Healing", ItemType.Healing, 1);
+            // 必要なお金の量を指定して新しいメソッドを使用する
+            InventorySystem.inventorySystem.AddItemWithCurrencyCheck("Healing", ItemType.Healing, 1,500);
         }
     }
+
     public void OnMPAddButtonClick()
     {
         if (InventorySystem.inventorySystem != null)
         {
-            // アイテムを追加する関数を呼び出す
-            InventorySystem.inventorySystem.AddItem("MP", ItemType.MP, 1);
+            // 必要なお金の量を指定して新しいメソッドを使用する
+            InventorySystem.inventorySystem.AddItemWithCurrencyCheck("MP", ItemType.MP, 1, 500);
         }
     }
+
     public void OnArrowAddButtonClick()
     {
         if (InventorySystem.inventorySystem != null)
         {
-            // アイテムを追加する関数を呼び出す
-            InventorySystem.inventorySystem.AddItem("Arrow", ItemType.Arrow, 1);
+            // 必要なお金の量を指定して新しいメソッドを使用する
+            InventorySystem.inventorySystem.AddItemWithCurrencyCheck("Arrow", ItemType.Arrow, 1, 250);
         }
     }
 }

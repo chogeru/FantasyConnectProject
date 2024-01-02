@@ -29,6 +29,7 @@ public class InventorySystem : MonoBehaviour
     public TextMeshProUGUI m_ArrowItemCountText;
     private Dictionary<string, Item> inventory = new Dictionary<string, Item>();
     public static InventorySystem inventorySystem;
+    public CurrencySystem currencySystem; // お金のシステムへの参照
 
     private void Awake()
     {
@@ -36,18 +37,30 @@ public class InventorySystem : MonoBehaviour
         inventorySystem = this;
     }
     // アイテムを追加するメソッド
-    public void AddItem(string itemName, ItemType itemType, int quantity)
+    public void AddItemWithCurrencyCheck(string itemName, ItemType itemType, int quantity, int requiredCurrency)
     {
-        if (inventory.ContainsKey(itemName))
+        if (currencySystem.CheckCurrency(requiredCurrency))
         {
-            inventory[itemName].amount += quantity; // アイテムが既に存在する場合、数量を追加
+            // アイテムを追加する前に必要なお金を減らす
+            currencySystem.DeductCurrency(requiredCurrency);
+
+            // 以前と同じようにアイテムを追加
+            if (inventory.ContainsKey(itemName))
+            {
+                inventory[itemName].amount += quantity;
+            }
+            else
+            {
+                inventory.Add(itemName, new Item(itemType, quantity));
+            }
+
+            UpdateUI(itemType);
+            currencySystem.UpdateCurrencyText();
         }
         else
         {
-            inventory.Add(itemName, new Item(itemType, quantity)); // アイテムが存在しない場合、新しく追加
+            Debug.Log(itemName + " を購入するのに十分なお金がありません");
         }
-        UpdateUI(itemType);
-
     }
 
     // アイテムを使用するメソッド
