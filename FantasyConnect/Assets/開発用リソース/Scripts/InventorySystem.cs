@@ -100,6 +100,14 @@ public class InventorySystem : MonoBehaviour
         }
 
     }
+    public int GetItemCount(string itemName)
+    {
+        if (inventory.ContainsKey(itemName))
+        {
+            return inventory[itemName].amount;
+        }
+        return 0;
+    }
     private void UpdateUI(ItemType itemType)
     {
         switch (itemType)

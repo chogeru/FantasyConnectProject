@@ -18,14 +18,20 @@ public class NPCSpeakSystem : MonoBehaviour
     public float m_TriggerDistance = 10f;
     [SerializeField, Header("表示するUI")]
     public GameObject m_SpeakUI;
+    private GameObject playerCam;
+
     [SerializeField]
     public TextTrigger textTrigger;
     private PlayerSystem playerSystem;
+    [SerializeField]
+    PlayerCameraController playerCameraController;
     private void Start()
     {
         textTrigger = this.GetComponent<TextTrigger>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerSystem=player.GetComponent<PlayerSystem>();
+        playerCam = GameObject.FindGameObjectWithTag("MainCamera");
+        playerCameraController = playerCam.GetComponent<PlayerCameraController>();
+        playerSystem = player.GetComponent<PlayerSystem>();
     }
     private void Update()
     {
@@ -46,12 +52,10 @@ public class NPCSpeakSystem : MonoBehaviour
             }
             if (npcType == NPCType.ShopNPC && TextManager.Instance.isTextEnd)
             {
+                Cursor.visible = true;
+                playerCameraController.isStop = true;
                 playerSystem.isStop = true;
                 m_ShopCanvas.SetActive(true);
-            }
-            else
-            {
-                m_ShopCanvas.SetActive(false);
             }
         }
         else
@@ -60,6 +64,15 @@ public class NPCSpeakSystem : MonoBehaviour
             m_SpeakUI.SetActive(false);
             textTrigger.ResetTextIndex(); // プレイヤーが離れたらテキストのインデックスをリセット
         }
+
+    }
+    public void CanvasClose()
+    {
+        Cursor.visible = false;
+        playerCameraController.isStop = false;
+        playerSystem.isStop = false;
+        m_ShopCanvas.SetActive(false);
+        TextManager.Instance.isTextEnd = false;
 
     }
 }
