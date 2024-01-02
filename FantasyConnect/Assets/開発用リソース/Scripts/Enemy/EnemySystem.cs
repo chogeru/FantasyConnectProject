@@ -63,6 +63,8 @@ public class EnemySystem : MonoBehaviour
     public int m_MaxHp;
     [SerializeField]
     public int m_CurrentHp;
+    [SerializeField,Header("ドロップする金額")]
+    private int m_DropMony=500;
     #endregion
 
     private Transform player;
@@ -119,6 +121,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("ドロップアイテムリスト")]
     private List<DropItemInfo> dropItemsInfo = new List<DropItemInfo>();
 
+    private CurrencySystem currencySystem;
 
     void Start()
     {
@@ -127,6 +130,7 @@ public class EnemySystem : MonoBehaviour
         {
             m_AttackEffect.SetActive(false);
         }
+        currencySystem = FindObjectOfType<CurrencySystem>();
         // プレイヤーオブジェクトのTransformを取得
         player = GameObject.FindGameObjectWithTag(m_TargetTag).transform;
         rb = GetComponent<Rigidbody>();
@@ -390,6 +394,8 @@ public class EnemySystem : MonoBehaviour
     }
     void DieEnd()
     {
+        currencySystem.m_currencyAmount+=m_DropMony;
+        currencySystem.UpdateCurrencyText();
         // アイテムをドロップ
         DropItems();
         Instantiate(m_DieEffect, transform.position, Quaternion.identity);

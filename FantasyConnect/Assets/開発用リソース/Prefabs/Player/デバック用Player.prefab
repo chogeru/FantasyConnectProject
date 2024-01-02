@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9648957, b: 0, a: 0.20392157}
+  m_Color: {r: 1, g: 0.9647059, b: 0, a: 0.69803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2034,7 +2034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9648957, b: 0, a: 0.20392157}
+  m_Color: {r: 1, g: 0.9647059, b: 0, a: 0.69803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3447,7 +3447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9648957, b: 0, a: 0.20392157}
+  m_Color: {r: 1, g: 0.9648957, b: 0, a: 0.69803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4267,6 +4267,7 @@ MonoBehaviour:
   m_MpItemCountText: {fileID: 1267314505}
   m_ArrowItemCountText: {fileID: 947920026}
   currencySystem: {fileID: 1285231558}
+  playerSystem: {fileID: 9126141871417367006}
 --- !u!114 &1285231558
 MonoBehaviour:
   m_ObjectHideFlags: 0

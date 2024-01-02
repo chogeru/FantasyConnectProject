@@ -24,12 +24,17 @@ public class Item
 
 public class InventorySystem : MonoBehaviour
 {
-    public TextMeshProUGUI m_HealingItemCountText; // Healingアイテムの個数を表示するTMPProテキスト
-    public TextMeshProUGUI m_MpItemCountText;
-    public TextMeshProUGUI m_ArrowItemCountText;
+    [SerializeField]
+    private TextMeshProUGUI m_HealingItemCountText;
+    [SerializeField]
+    private TextMeshProUGUI m_MpItemCountText;
+    [SerializeField]
+    private TextMeshProUGUI m_ArrowItemCountText;
     private Dictionary<string, Item> inventory = new Dictionary<string, Item>();
     public static InventorySystem inventorySystem;
     public CurrencySystem currencySystem; // お金のシステムへの参照
+    [SerializeField]
+    private PlayerSystem playerSystem;
 
     private void Awake()
     {
@@ -73,9 +78,7 @@ public class InventorySystem : MonoBehaviour
             switch (item.type)
             {
                 case ItemType.Healing:
-                    // ここに回復アイテムの処理を記述する
-                    // 例えば、体力を回復する処理
-                    // この例では単に個数を減らすだけになります
+                    playerSystem.Recovery(500);
                     Debug.Log("HPを回復します");
                     UpdateUI(inventory[itemName].type);
 
@@ -99,7 +102,7 @@ public class InventorySystem : MonoBehaviour
             }
 
             item.amount--;
-
+            UpdateUI(inventory[itemName].type);
             // もし個数が0になったら、アイテムをインベントリから削除する
             if (item.amount <= 0)
             {
