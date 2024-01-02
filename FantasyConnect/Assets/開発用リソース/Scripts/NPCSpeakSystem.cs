@@ -20,11 +20,12 @@ public class NPCSpeakSystem : MonoBehaviour
     public GameObject m_SpeakUI;
     [SerializeField]
     public TextTrigger textTrigger;
-
+    private PlayerSystem playerSystem;
     private void Start()
     {
         textTrigger = this.GetComponent<TextTrigger>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerSystem=player.GetComponent<PlayerSystem>();
     }
     private void Update()
     {
@@ -45,6 +46,7 @@ public class NPCSpeakSystem : MonoBehaviour
             }
             if (npcType == NPCType.ShopNPC && TextManager.Instance.isTextEnd)
             {
+                playerSystem.isStop = true;
                 m_ShopCanvas.SetActive(true);
             }
             else

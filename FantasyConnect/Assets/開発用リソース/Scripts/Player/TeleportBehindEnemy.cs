@@ -60,8 +60,8 @@ public class TeleportBehindEnemy : MonoBehaviour
         // 敵の後ろに向かう方向
         Vector3 direction = -(targetEnemy.forward);
 
-        // 敵の位置から少し離れた位置にプレイヤーを配置
-        Vector3 newPosition = targetEnemy.position + (direction * 3f);
+        // 敵の位置から少し離れた位置にプレイヤーを配置//3f
+        Vector3 newPosition = targetEnemy.position + (direction * 1.2f);
 
         // プレイヤーを新しい位置に瞬時に移動させる
         transform.position = newPosition;
