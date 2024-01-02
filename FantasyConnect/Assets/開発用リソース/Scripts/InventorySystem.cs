@@ -28,8 +28,13 @@ public class InventorySystem : MonoBehaviour
     public TextMeshProUGUI m_MpItemCountText;
     public TextMeshProUGUI m_ArrowItemCountText;
     private Dictionary<string, Item> inventory = new Dictionary<string, Item>();
+    public static InventorySystem inventorySystem;
 
-
+    private void Awake()
+    {
+        // inventorySystem インスタンスを初期化する
+        inventorySystem = this;
+    }
     // アイテムを追加するメソッド
     public void AddItem(string itemName, ItemType itemType, int quantity)
     {
