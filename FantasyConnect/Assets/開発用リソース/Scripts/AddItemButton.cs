@@ -5,11 +5,12 @@ using UnityEngine.UIElements.Experimental;
 
 public class AddItemButton : MonoBehaviour
 {
+    
     public void OnHealingAddButtonClick()
     {
         if (InventorySystem.inventorySystem != null)
         {
-            // 必要なお金の量を指定して新しいメソッドを使用する
+            // 必要なお金の量を指定して新しいメソッドを使用する      //名前//タイプ//個数//金額
             InventorySystem.inventorySystem.AddItemWithCurrencyCheck("Healing", ItemType.Healing, 1,500);
         }
     }
@@ -28,7 +29,7 @@ public class AddItemButton : MonoBehaviour
         if (InventorySystem.inventorySystem != null)
         {
             // 必要なお金の量を指定して新しいメソッドを使用する
-            InventorySystem.inventorySystem.AddItemWithCurrencyCheck("Arrow", ItemType.Arrow, 1, 250);
+            InventorySystem.inventorySystem.AddItemWithCurrencyCheck("Arrow", ItemType.Arrow, 5, 350);
         }
     }
 }

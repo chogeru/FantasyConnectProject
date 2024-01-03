@@ -42,7 +42,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField]
     public Rigidbody rb;
     [SerializeField]
-    private Animator m_PlayerAnimator;
+    public Animator m_PlayerAnimator;
     [SerializeField]
     private Camera mainCamera;
     [SerializeField]

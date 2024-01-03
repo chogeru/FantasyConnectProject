@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 [System.Serializable]
 public class DropItemInfo
-    //アイテムの情報を所持
+//アイテムの情報を所持
 {
     public GameObject itemPrefab;
     public float dropChance;
@@ -31,7 +31,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("タイプ")]
     private EnemyType myType;
     #endregion
-    [Foldout("レイキャスト"),Tab("レイキャスト")]
+    [Foldout("レイキャスト"), Tab("レイキャスト")]
     #region レイキャスト
     [SerializeField, Header("レイキャスト距離")]
     private float m_RaycastDistance = 10f;
@@ -39,9 +39,9 @@ public class EnemySystem : MonoBehaviour
     private float m_Angle = 90f;
     [SerializeField, Header("レイの数")]
     private int rayCount = 180;
-    
+
     #endregion
-    [Foldout("パラメータ"),Tab("パラメータ")]
+    [Foldout("パラメータ"), Tab("パラメータ")]
     #region 行動パラメーター
     [SerializeField, Header("追跡対象のタグ")]
     private string m_TargetTag = "Player";
@@ -63,8 +63,8 @@ public class EnemySystem : MonoBehaviour
     public int m_MaxHp;
     [SerializeField]
     public int m_CurrentHp;
-    [SerializeField,Header("ドロップする金額")]
-    private int m_DropMony=500;
+    [SerializeField, Header("ドロップする金額")]
+    private int m_DropMony = 500;
     #endregion
 
     private Transform player;
@@ -85,10 +85,10 @@ public class EnemySystem : MonoBehaviour
 
     [SerializeField, Header("死亡時エフェクト")]
     private GameObject m_DieEffect;
-    [SerializeField,Header("攻撃トレイル")]
+    [SerializeField, Header("攻撃トレイル")]
     private GameObject m_AttackEffect;
 
-    
+
     [SerializeField]
     private GameObject m_HpBer;
     [SerializeField, Header("Hpバーの位置")]
@@ -104,24 +104,25 @@ public class EnemySystem : MonoBehaviour
     private AudioClip m_HitVoiceClip;
     [SerializeField, Header("死亡時ボイスクリップ")]
     private AudioClip m_DieVoiceClip;
-    [SerializeField,Header("被弾SE")]
+    [SerializeField, Header("被弾SE")]
     private AudioClip m_HitSEClip;
     [SerializeField, Header("死亡SE")]
     private AudioClip m_DieSEClip;
     [Foldout("オーディオソース")]
-    [SerializeField,Header("ボイス")]
+    [SerializeField, Header("ボイス")]
     private AudioSource m_ViceSE;
     [SerializeField, Header("SE")]
     private AudioSource m_SE;
-#endregion
+    #endregion
     [EndFoldout]
     private bool isHit = false;
-
+    private bool isRide = false;
     [Tab("ドロップアイテム")]
     [SerializeField, Header("ドロップアイテムリスト")]
     private List<DropItemInfo> dropItemsInfo = new List<DropItemInfo>();
 
     private CurrencySystem currencySystem;
+    private Camera mainCamera;
 
     void Start()
     {
@@ -129,6 +130,10 @@ public class EnemySystem : MonoBehaviour
         if (m_AttackEffect != null)
         {
             m_AttackEffect.SetActive(false);
+        }
+        if (myType == EnemyType.Animal)
+        {
+            mainCamera = Camera.main;
         }
         currencySystem = FindObjectOfType<CurrencySystem>();
         // プレイヤーオブジェクトのTransformを取得
@@ -147,24 +152,82 @@ public class EnemySystem : MonoBehaviour
 
     void Update()
     {
-        if (isHit)
-            return;
-        if (isDie)
-            return;
-        m_MaxSpeed = m_CurrentSpeed;
-        Search();
-        UpdateAnimation();        
-
-        if (rb.velocity.magnitude > 0.1f)
+        if (isRide)
         {
-            isMoving = true;
+            HandleWASDMovement();
         }
         else
         {
-            isMoving = false;
+
+            if (isHit)
+                return;
+            if (isDie)
+                return;
+            m_MaxSpeed = m_CurrentSpeed;
+            Search();
+            UpdateAnimation();
+
+            if (rb.velocity.magnitude > 0.1f)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+            Die();
         }
-        Die();
     }
+    /// <summary>
+    /// ライド中の処理
+    /// </summary>
+    private void HandleWASDMovement()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        m_Animator.SetFloat("左右", Input.GetAxis("Horizontal"));
+        m_Animator.SetFloat("前後", Input.GetAxis("Vertical"));
+        Vector3 moveDirection = transform.forward * verticalInput + transform.right * horizontalInput;
+        moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
+        isMoving = Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f;
+
+        // 速度を最小値から最大値の範囲内に制限
+        Vector3 moveVelocity = moveDirection * Mathf.Lerp(0, 15, Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
+        m_Animator.SetBool("Ride", true);
+        // プレイヤーをローカル座標で移動
+        rb.velocity = moveVelocity;
+        if (isMoving)
+        {
+            // カメラの方向を取得してプレイヤーオブジェクトを回転させる
+            RotatePlayerWithCamera();
+        }
+        else
+        {
+            m_Animator.SetBool("Ride", false);
+        }
+    
+    }
+    void RotatePlayerWithCamera()
+    {
+        if (mainCamera != null)
+        {
+            Vector3 cameraForward = mainCamera.transform.forward;
+            cameraForward.y = 0f;
+
+            if (cameraForward != Vector3.zero)
+            {
+                Quaternion newRotation = Quaternion.LookRotation(cameraForward);
+                rb.MoveRotation(newRotation);
+            }
+        }
+    }
+    public void SetIsRide(bool value)
+    {
+        isRide = value;
+    }
+    /// <summary>
+    /// ライド中の処理終了
+    /// </summary>
     #region プレイヤー追跡処理
     void Search()
     {
@@ -176,9 +239,9 @@ public class EnemySystem : MonoBehaviour
             Vector3 raycastOrigin = transform.position + Vector3.up * 0.5f;
             if (angleToPlayer <= 90f)
             {
-                
+
                 RaycastHit hit;
-                if (Physics.Raycast(raycastOrigin, directionToPlayer, out hit, m_RaycastDistance,obstacleMask))
+                if (Physics.Raycast(raycastOrigin, directionToPlayer, out hit, m_RaycastDistance, obstacleMask))
                 {
                     // ターゲットに当たった場合
                     if (hit.collider.CompareTag(m_TargetTag))
@@ -208,7 +271,6 @@ public class EnemySystem : MonoBehaviour
             }
         }
     }
-
 
     void PlayerTracking()
     {
@@ -347,32 +409,32 @@ public class EnemySystem : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        
+
         if (m_CurrentHp > 0)
         {
             m_CurrentHp -= damage;
-            m_Animator.SetBool("Hit",true);
+            m_Animator.SetBool("Hit", true);
             m_MaxSpeed = 0;
             isHit = true;
             m_ViceSE.clip = m_HitVoiceClip;
             m_ViceSE.Play();
             m_SE.clip = m_HitSEClip;
             m_SE.Play();
-            
+
             // 攻撃を受けたらプレイヤーの方向を向く
             Vector3 lookDirection = player.position - transform.position;
             lookDirection.y = 0f; // y軸方向は無視して水平に向くようにする
             Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
             transform.rotation = targetRotation;
 
-            
+
         }
     }
     private void EndHit()
     {
         m_Animator.SetBool("Hit", false);
         m_MaxSpeed = m_CurrentSpeed;
-        isHit=false;
+        isHit = false;
     }
     void Die()
     {
@@ -386,7 +448,7 @@ public class EnemySystem : MonoBehaviour
             m_SE.Play();
             m_MaxSpeed = 0;
             isDie = true;
-            if(myButtleType==ButtleType.Magic)
+            if (myButtleType == ButtleType.Magic)
             {
                 rb.useGravity = true;
             }
@@ -394,7 +456,7 @@ public class EnemySystem : MonoBehaviour
     }
     void DieEnd()
     {
-        currencySystem.m_currencyAmount+=m_DropMony;
+        currencySystem.m_currencyAmount += m_DropMony;
         currencySystem.UpdateCurrencyText();
         // アイテムをドロップ
         DropItems();
@@ -403,20 +465,20 @@ public class EnemySystem : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player")&&myType==EnemyType.Animal)
+        if (collision.gameObject.CompareTag("Player") && myType == EnemyType.Animal)
         {
             isHit = true;
             m_MaxSpeed = 0;
             isMoving = false;
-        UpdateAnimation();
+            UpdateAnimation();
         }
     }
     private void OnCollisionExit(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player")&&myType==EnemyType.Animal)
+        if (collision.gameObject.CompareTag("Player") && myType == EnemyType.Animal)
         {
             isHit = false;
-            m_MaxSpeed=m_CurrentSpeed;
+            m_MaxSpeed = m_CurrentSpeed;
             UpdateAnimation();
         }
     }
