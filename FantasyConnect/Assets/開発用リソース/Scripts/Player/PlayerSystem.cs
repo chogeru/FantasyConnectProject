@@ -47,6 +47,10 @@ public class PlayerSystem : MonoBehaviour
     private Camera mainCamera;
     [SerializeField]
     PlayerIconAnime playerIconAnime;
+    [SerializeField]
+    private AnimalRideSystem animalRideSystem;
+    [SerializeField]
+    PlayerCameraController playerCameraController;
     [Foldout("HPCanvas")]
     [SerializeField, Header("HP表示用スライダー")]
     private Slider m_HpSlider;
@@ -126,6 +130,7 @@ public class PlayerSystem : MonoBehaviour
     #endregion
     void Start()
     {
+        playerCameraController.enabled = true;
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
         SetHp();
@@ -135,6 +140,10 @@ public class PlayerSystem : MonoBehaviour
 
     void Update()
     {
+        if (animalRideSystem.isRide)
+        {
+            return;
+        }
         if (isStop)
         {
             m_PlayerAnimator.SetBool("Idle", true);
@@ -288,7 +297,7 @@ public class PlayerSystem : MonoBehaviour
 
             // プレイヤーをローカル座標で移動
             rb.velocity = moveVelocity;
-
+            
             // カメラの方向を取得してプレイヤーオブジェクトを回転させる
             RotatePlayerWithCamera();
             Run();

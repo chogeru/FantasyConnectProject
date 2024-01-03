@@ -8,7 +8,7 @@ public class AnimalRideSystem : MonoBehaviour
     public float m_MaxDistance = 3f; // 3mの距離
     public Transform m_PlayerObject; // プレイヤーオブジェクト
     private Transform m_RidePos; // RidePosオブジェクトのTransform
-    private bool isRide = false; // ライド状態のフラグ
+    public bool isRide = false; // ライド状態のフラグ
     [SerializeField]
     PlayerSystem playerSystem;
     [SerializeField]

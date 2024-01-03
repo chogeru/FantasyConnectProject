@@ -108,6 +108,8 @@ public class EnemySystem : MonoBehaviour
     private AudioClip m_HitSEClip;
     [SerializeField, Header("死亡SE")]
     private AudioClip m_DieSEClip;
+    [SerializeField,Header("足音")]
+    private AudioClip m_FootStepClip;
     [Foldout("オーディオソース")]
     [SerializeField, Header("ボイス")]
     private AudioSource m_ViceSE;
@@ -200,9 +202,15 @@ public class EnemySystem : MonoBehaviour
         {
             // カメラの方向を取得してプレイヤーオブジェクトを回転させる
             RotatePlayerWithCamera();
+            if (!m_SE.isPlaying) // 再生中でない場合のみ再生
+            {
+                m_SE.clip = m_FootStepClip;
+                m_SE.Play();
+            }
         }
         else
         {
+            m_SE.Stop();
             m_Animator.SetBool("Ride", false);
         }
     

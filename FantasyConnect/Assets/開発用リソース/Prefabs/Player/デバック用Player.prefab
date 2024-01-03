@@ -2663,7 +2663,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933393725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -11834,6 +11834,7 @@ GameObject:
   - component: {fileID: 1605743396}
   - component: {fileID: 1043378860}
   - component: {fileID: 1043378861}
+  - component: {fileID: 886341302}
   m_Layer: 8
   m_Name: "\u30C7\u30D0\u30C3\u30AF\u7528Player"
   m_TagString: Player
@@ -11884,7 +11885,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!136 &9126141871417367004
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11909,7 +11910,7 @@ Animator:
   m_GameObject: {fileID: 8775794892995199873}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: efc7b3be2d8d02a4b82113218d82049a, type: 3}
-  m_Controller: {fileID: 22100000, guid: a9f500ab83ee1854c85896879ebee489, type: 2}
+  m_Controller: {fileID: 9100000, guid: 22e3e8851bb700245b93552e2f67ca76, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11939,6 +11940,8 @@ MonoBehaviour:
   m_PlayerAnimator: {fileID: 9126141871417367003}
   mainCamera: {fileID: 0}
   playerIconAnime: {fileID: 1293236233}
+  animalRideSystem: {fileID: 886341302}
+  playerCameraController: {fileID: 9126141871003576019}
   m_HpSlider: {fileID: 1931549646}
   m_HpText: {fileID: 1573043767}
   m_MaxHp: 500
@@ -12497,6 +12500,23 @@ MonoBehaviour:
     spineStiffness: 0.5
     pullBodyVertical: 0.5
     pullBodyHorizontal: 0
+--- !u!114 &886341302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775794892995199873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc52296bb72d8e459be8ca766c5ac19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxDistance: 3
+  m_PlayerObject: {fileID: 0}
+  isRide: 0
+  playerSystem: {fileID: 9126141871417367006}
+  grounderFBBIK: {fileID: 1043378860}
 --- !u!1 &8841831213057298207
 GameObject:
   m_ObjectHideFlags: 0
@@ -13128,7 +13148,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9126141871003576023}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fee6f4768d9f4c409ff081ae6d66aeb, type: 3}
   m_Name: 
