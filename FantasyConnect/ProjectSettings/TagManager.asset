@@ -4,12 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Fly
   - Undefined
   - Door
   - Item
   - Ground
   - Enemy
   - CheckPoint
+  - Animal
+  - Water
+  - Stair
+  - Climb
+  - WallRun
   layers:
   - Default
   - TransparentFX
@@ -26,22 +32,22 @@ TagManager:
   - 
   - 
   - 
+  - BodyPart
+  - 
+  - 
+  - 
+  - 
+  - Animal
+  - 
+  - 
+  - Enemy
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Item
   - 
   m_SortingLayers:
   - name: Default
