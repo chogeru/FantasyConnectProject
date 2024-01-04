@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class MoviWolfMove : MonoBehaviour
 {
-    public float speed = 15f;
-    private bool shouldMove = false;
+    public float m_Speed = 10f;
+    private bool isShouldMove = false;
    
     void Update()
     {
-        // 移動フラグが立っていれば移動処理を実行
-        if (shouldMove)
+        if (isShouldMove)
         {
-            // 前方向に速度15で移動
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * m_Speed * Time.deltaTime);
         }
     }
     public void isMove()
     {
-        shouldMove=true;
+        isShouldMove=true;
     }
 }
