@@ -83,43 +83,51 @@ public class MagicWepon : MonoBehaviour
         float closestDistance = Mathf.Infinity;
         Transform closestEnemy = null;
 
-        foreach (var collider in hitColliders)
+        if (playerSystem.m_MP >= 5)
         {
-            if (collider.CompareTag("Enemy"))
+            foreach (var collider in hitColliders)
             {
-                AttckSound();
-                float distance = Vector3.Distance(transform.position, collider.transform.position);
-                if (distance < closestDistance)
+                if (collider.CompareTag("Enemy"))
                 {
-                    closestDistance = distance;
-                    closestEnemy = collider.transform;
+                    AttckSound();
+                    float distance = Vector3.Distance(transform.position, collider.transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        closestEnemy = collider.transform;
+                    }
+                }
+            }
+
+            if (closestEnemy != null)
+            {
+                Vector3 direction = closestEnemy.position + Vector3.up * 1f - bulletSpawnPoint.position; // ’e‚Ì”­ŽËŒû‚©‚ç‚Ì•ûŒü‚ðŽæ“¾
+                GameObject bullet = Instantiate(m_MagicBullet, bulletSpawnPoint.position, Quaternion.LookRotation(direction));
+                Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+
+                if (bulletRigidbody != null)
+                {
+                    bulletRigidbody.AddForce(direction.normalized * bulletForce, ForceMode.Impulse);
+                    playerSystem.m_MP -= 5;
                 }
             }
         }
-
-        if (closestEnemy != null)
-        {
-            Vector3 direction = closestEnemy.position + Vector3.up * 1f - bulletSpawnPoint.position; // ’e‚Ì”­ŽËŒû‚©‚ç‚Ì•ûŒü‚ðŽæ“¾
-            GameObject bullet = Instantiate(m_MagicBullet, bulletSpawnPoint.position, Quaternion.LookRotation(direction));
-            Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
-
-            if (bulletRigidbody != null)
-            {
-                bulletRigidbody.AddForce(direction.normalized * bulletForce, ForceMode.Impulse);
-            }
-        }
-
     }
     private void MagicRangeAttack()
     {
-        StopMoveAnime();
-        isRangeAttck = true;
-        AttckSound();
-        m_RangeAttckCol.SetActive(true);
-        if (isCoolDown)
+        PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
+        if (playerSystem.m_MP >= 10)
         {
-            Instantiate(m_RangeMagic, transform.position, Quaternion.identity);
-            isCoolDown = false;
+            StopMoveAnime();
+            isRangeAttck = true;
+            AttckSound();
+            m_RangeAttckCol.SetActive(true);
+            if (isCoolDown)
+            {
+                playerSystem.m_MP -= 10;
+                Instantiate(m_RangeMagic, transform.position, Quaternion.identity);
+                isCoolDown = false;
+            }
         }
     }
 

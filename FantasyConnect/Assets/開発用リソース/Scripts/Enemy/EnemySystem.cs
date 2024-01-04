@@ -160,7 +160,7 @@ public class EnemySystem : MonoBehaviour
         }
         else
         {
-
+            RideEnd();
             if (isHit)
                 return;
             if (isDie)
@@ -207,13 +207,22 @@ public class EnemySystem : MonoBehaviour
                 m_SE.clip = m_FootStepClip;
                 m_SE.Play();
             }
+            if(!m_ViceSE.isPlaying)
+            {
+                m_ViceSE.Play();
+            }
         }
         else
         {
-            m_SE.Stop();
-            m_Animator.SetBool("Ride", false);
+         RideEnd();
         }
     
+    }
+    private void RideEnd()
+    {
+        m_SE.Stop();
+        m_ViceSE.Stop();
+        m_Animator.SetBool("Ride", false);
     }
     void RotatePlayerWithCamera()
     {

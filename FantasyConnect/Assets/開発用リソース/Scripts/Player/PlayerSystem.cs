@@ -78,7 +78,11 @@ public class PlayerSystem : MonoBehaviour
     private float m_JumpForce = 10f;
     [SerializeField, Header("重力")]
     private float m_Gravity = 9.81f;
-    private int m_AttackCount = 0;
+    [SerializeField, Header("MP")]
+    public int m_MP=100;
+    private int max_MP = 100;
+    float mpRecoveryTimer = 0f; // MP回復用のタイマー
+    float mpRecoveryInterval = 1f; // MP回復間隔（秒）
     [EndFoldout]
     #endregion
     #region　トリガー
@@ -162,6 +166,7 @@ public class PlayerSystem : MonoBehaviour
             rb.velocity = Vector3.zero;
             return;
         }
+        RecoverMP();
         MovePlayer();
         ApplyGravity();
         WeponTypeChange();
@@ -171,7 +176,7 @@ public class PlayerSystem : MonoBehaviour
         {
             SceneController.SceneConinstance.isHitCol = true;
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0)&&m_MP>=5)
         {
             m_MaxSpeed = 0;
             isWeponChange = false;
@@ -199,6 +204,20 @@ public class PlayerSystem : MonoBehaviour
         m_CurrentHp = m_MaxHp;
         // m_HpText の初期化
         m_HpText.text = m_CurrentHp + "/" + m_MaxHp;
+    }
+    void RecoverMP()
+    {
+        if (m_MP < 100)
+        {
+            mpRecoveryTimer += Time.deltaTime;
+            if (mpRecoveryTimer >= mpRecoveryInterval)
+            {
+                mpRecoveryTimer -= mpRecoveryInterval;
+                m_MP += 1;
+                int increasedMP = m_MP + 1;
+                m_MP = Mathf.Min(increasedMP, max_MP);
+            }
+        }
     }
     void PlayerTypeChange()
     {

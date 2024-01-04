@@ -82,13 +82,13 @@ public class AnimalRideSystem : MonoBehaviour
                 else
                 {
                     // EnemySystemコンポーネントが見つからなかった場合の処理
-                    Debug.LogError("EnemySystemコンポーネントが見つかりませんでした。");
+                    Debug.LogError("EnemySystemコンポーネントが見つからない。");
                 }
             }
             else
             {
                 // 親オブジェクトが見つからなかった場合の処理
-                Debug.LogError("RidePosの親オブジェクトが見つかりませんでした。");
+                Debug.LogError("RidePosの親オブジェクトが見つからない。");
             }
         }
     }
@@ -121,12 +121,42 @@ public class AnimalRideSystem : MonoBehaviour
             }
             else
             {
-                Debug.LogError("EnemySystemコンポーネントが見つかりませんでした。");
+                Debug.LogError("EnemySystemコンポーネントが見つからない");
             }
         }
         else
         {
-            Debug.LogError("RidePosの親オブジェクトが見つかりませんでした。");
+            Debug.LogError("RidePosの親オブジェクトが見つからない");
         }
+        RaycastHit hitLeft, hitRight;
+        float raycastDistance = 2f; // レイキャストの距離
+
+        bool obstacleToLeft = Physics.Raycast(m_RidePos.position, -m_RidePos.right, out hitLeft, raycastDistance);
+        bool obstacleToRight = Physics.Raycast(m_RidePos.position, m_RidePos.right, out hitRight, raycastDistance);
+
+        if (obstacleToLeft && obstacleToRight)
+        {
+            Debug.Log("左右に障害物があるよ");
+            isRide=true;
+            return; // 左右に障害物がある場合は降りられない
+        }
+        else if (obstacleToLeft)
+        {
+            MovePlayerSideways(1.5f); // 右に移動
+        }
+        else if (obstacleToRight)
+        {
+            MovePlayerSideways(-1.5f); // 左に移動
+        }
+        else
+        {
+            MovePlayerSideways(-1.5f); // 左に移動（障害物がない場合は左を優先）
+        }
+    }
+    // 指定した方向にプレイヤーを移動する関数
+    void MovePlayerSideways(float distance)
+    {
+        Vector3 targetPosition = m_RidePos.position + m_RidePos.right * distance;
+        m_PlayerObject.position = targetPosition;
     }
 }
