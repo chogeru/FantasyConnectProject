@@ -98,8 +98,134 @@ MonoBehaviour:
         - iColor: 0
           icon: StandaloneInputModule Icon
       goDatasByInstanceId:
-        keys: a8d80800d0f20800ecf7080072ea0800b2eb080012f008000ed70800c8e20800b8d80800ccf1080010e608002ed7080046d10800b0e908000ce608004aea0800fce9080018e40800dce30800a8ed080080e80800
+        keys: 8c5b0700b4750700d07a0700566d0700966e0700f6720700f2590700ac6507009c5b0700b0740700f4680700125a07002a540700946c0700f06807002e6d0700e06c0700fc660700c06607008c700700646b0700661408008e2e0800aa3308003026080070270800d02b0800cc120800861e0800761408008a2d0800ce210800ec120800040d08006e250800ca21080008260800ba250800d61f08009a1f0800662908003e240800465708006e7108008a76080010690800506a0800b06e0800ac55080066610800565708006a700800ae640800cc550800e44f08004e680800aa640800e86808009a680800b66208007a620800466c08001e670800d26e0f00fa880f00168e0f009c800f00dc810f003c860f00366d0f00f2780f00e26e0f00f6870f003a7c0f00566d0f0070670f00da7f0f00367c0f0074800f0026800f00427a0f00067a0f00d2830f00aa7e0f00
         values:
+        - iColor: 0
+          icon: DirectionalLight Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: TrailRenderer Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: DirectionalLight Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: TrailRenderer Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: DirectionalLight Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Light Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: TrailRenderer Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: ParticleSystem Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: PreMatCube
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
         - iColor: 0
           icon: DirectionalLight Icon
         - iColor: 0
@@ -242,104 +368,8 @@ MonoBehaviour:
         - iColor: 0
           icon: 
       goDatasByInstanceId:
-        keys: 82500700cc4d070078500700b04d070010520700b64e0700a84f0700b45107001c4e0700384e07007a4f07004e4d070030520700e851070048500700824d070062320900b82f0900583209009c2f0900f0330900a03009008e310900923309000830090022300900603109003a2f09000e340900c83309002a3209006e2f0900263809007c3509001c38090060350900b4390900643609005237090056390900cc350900e635090024370900fe340900d23909008c390900ee37090032350900
-        values:
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: Light Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: TrailRenderer Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: Light Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: TrailRenderer Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: Light Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: TrailRenderer Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: 
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-936f3d3ce1512f640a6a4a932f7f92c6-757614805-0
@@ -383,62 +413,8 @@ MonoBehaviour:
         - iColor: 0
           icon: 
       goDatasByInstanceId:
-        keys: 304b09001e4009007c4c09006a58090056590900d25c0900ba4f0900d65a0900ae5309006a480900c44b090030440900005b09004c711800781a1800967b180044ea18002ef418003c171900ec991800080219005abf1800105b1800fa75180072371800d80319000a1b1900
-        values:
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: TrailRenderer Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: Light Icon
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: TrailRenderer Icon
-        - iColor: 0
-          icon: PreMatCube
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: Light Icon
-        - iColor: 0
-          icon: ParticleSystem Icon
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: 
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-a1baa7c758bf70b46a015e1f967c014f-474771601-0
@@ -565,15 +541,24 @@ MonoBehaviour:
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-3a5c7d723a39d154ebe19cfa1cc56797-1942782518-0
-        - GlobalObjectId_V1-2-3a5c7d723a39d154ebe19cfa1cc56797-1164532156-0
-        - GlobalObjectId_V1-2-3a5c7d723a39d154ebe19cfa1cc56797-160508241-0
+        - GlobalObjectId_V1-2-3a5c7d723a39d154ebe19cfa1cc56797-1428986913-0
         values:
         - iColor: 0
           icon: Terrain Icon
         - iColor: 0
           icon: Light Icon
-        - iColor: 0
-          icon: Camera Icon
       goDatasByInstanceId:
-        keys: 
-        values: []
+        keys: 5ede070024360d0076480d0056171200a829120030251200
+        values:
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: Light Icon
