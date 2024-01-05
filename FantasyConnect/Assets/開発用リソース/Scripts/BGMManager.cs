@@ -120,6 +120,9 @@ public class BGMManager : MonoBehaviour
                 m_AudioSouce.clip = m_SecondCityBGM;
                 m_AudioSouce.Play();
                 break;
+            case "TutorialScene":
+                m_AudioSouce.Stop();
+                break;
             default:
                 break;
         }

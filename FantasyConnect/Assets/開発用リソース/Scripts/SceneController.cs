@@ -26,7 +26,7 @@ public class SceneController : MonoBehaviour
             case "Title":
                 if (Input.anyKeyDown)
                 {
-                    SceneManager.LoadSceneAsync("MyHouse", LoadSceneMode.Single);
+                    SceneManager.LoadSceneAsync("TutorialScene", LoadSceneMode.Single);
                 }
                 break;
             case "MyHouse":
@@ -92,7 +92,13 @@ public class SceneController : MonoBehaviour
                     SceneManager.LoadScene("WastelandBossArea", LoadSceneMode.Single);
                 }
                 break;
-
+            case "TutorialScene":
+                if(isHitCol)
+                {
+                    isHitCol = false;
+                    SceneManager.LoadScene("MyHouse", LoadSceneMode.Single);
+                }
+                break;
             default:
                 break;
         }

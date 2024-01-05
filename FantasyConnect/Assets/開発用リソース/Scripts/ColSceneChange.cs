@@ -16,4 +16,11 @@ public class ColSceneChange : MonoBehaviour
             sceneController.isHitCol = true;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            sceneController.isHitCol = true;
+        }
+    }
 }
