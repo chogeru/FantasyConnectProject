@@ -132,10 +132,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: "EN01_\u661F\u6708\u591C\u306E\u96C6\u3044"
   - m_Version: 1
-    m_Start: 2.19809523809524
-    m_ClipIn: 0.19809523809523988
+    m_Start: 2.2
+    m_ClipIn: 0.20000000000000018
     m_Asset: {fileID: 9008190883557837208}
-    m_Duration: 1.0557823129251682
+    m_Duration: 1.053877551020408
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6407793257946201355}
     m_EaseInDuration: 0
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 1
+    volume: 0.5
 --- !u!114 &9008190883557837208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1768,4 +1768,4 @@ MonoBehaviour:
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
-    volume: 0.5
+    volume: 0.4
