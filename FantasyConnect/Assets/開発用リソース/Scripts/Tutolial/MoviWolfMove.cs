@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoviWolfMove : MonoBehaviour
 {
     public float m_Speed = 10f;
+    [SerializeField]
     private bool isShouldMove = false;
    
     void Update()
