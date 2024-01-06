@@ -164,7 +164,9 @@ public class EnemySystem : MonoBehaviour
             if (isHit)
                 return;
             if (isDie)
+            {
                 return;
+            }
             m_MaxSpeed = m_CurrentSpeed;
             Search();
             UpdateAnimation();
@@ -179,6 +181,7 @@ public class EnemySystem : MonoBehaviour
             }
             Die();
         }
+     
     }
     /// <summary>
     /// ライド中の処理
@@ -430,21 +433,22 @@ public class EnemySystem : MonoBehaviour
         if (m_CurrentHp > 0)
         {
             m_CurrentHp -= damage;
-            m_Animator.SetBool("Hit", true);
-            m_MaxSpeed = 0;
-            isHit = true;
-            m_ViceSE.clip = m_HitVoiceClip;
-            m_ViceSE.Play();
-            m_SE.clip = m_HitSEClip;
-            m_SE.Play();
+            if (m_CurrentHp > 0)
+            {
+                m_Animator.SetBool("Hit", true);
+                m_MaxSpeed = 0;
+                isHit = true;
+                m_ViceSE.clip = m_HitVoiceClip;
+                m_ViceSE.Play();
+                m_SE.clip = m_HitSEClip;
+                m_SE.Play();
 
-            // 攻撃を受けたらプレイヤーの方向を向く
-            Vector3 lookDirection = player.position - transform.position;
-            lookDirection.y = 0f; // y軸方向は無視して水平に向くようにする
-            Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
-            transform.rotation = targetRotation;
-
-
+                // 攻撃を受けたらプレイヤーの方向を向く
+                Vector3 lookDirection = player.position - transform.position;
+                lookDirection.y = 0f; // y軸方向は無視して水平に向くようにする
+                Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+                transform.rotation = targetRotation;
+            }
         }
     }
     private void EndHit()

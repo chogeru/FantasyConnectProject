@@ -12004,6 +12004,7 @@ MonoBehaviour:
   m_MoveSpeed: 10
   m_MaxDistance: 500
   m_MoveEffect: {fileID: 3775273307930507393, guid: b8cbf0802f081c245853f60240f107cc, type: 3}
+  animalRideSystem: {fileID: 886341302}
 --- !u!114 &1043378860
 MonoBehaviour:
   m_ObjectHideFlags: 0
