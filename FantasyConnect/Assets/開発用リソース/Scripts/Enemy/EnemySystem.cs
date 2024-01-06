@@ -97,7 +97,8 @@ public class EnemySystem : MonoBehaviour
     private Vector3 m_HpBerscale;
     private Vector3 currentVelocity;
     public LayerMask obstacleMask;
-    EnemyStatus enemyStatus;
+    [SerializeField]
+    EnemyData enemyData;
     #region サウンド
     [Foldout("音声クリップ"), Tab("音声クリップ")]
     [SerializeField, Header("ヒットボイスクリップ")]
