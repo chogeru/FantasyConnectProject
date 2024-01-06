@@ -10,14 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a27dfbbbeaf8814e834d71261372248, type: 3}
-  m_Name: EnemyData
+  m_Name: WolfData
   m_EditorClassIdentifier: 
-  raycastDistance: 10
-  raycastAngle: 90
+  m_RaycastDistance: 10
+  m_Angle: 90
   rayCount: 180
-  targetTag: Player
-  maxSpeed: 5
-  acceleration: 2
+  m_TargetTag: Player
+  m_MaxSpeed: 3
+  m_Acceleration: 2
   attackDistance: 5
-  hitVoiceClip: {fileID: 0}
-  dieVoiceClip: {fileID: 0}
+  m_RotationSpeed: 5
+  m_MaxHp: 10000000
+  m_DropMony: 500
+  m_HitVoiceClip: {fileID: 0}
+  m_DieVoiceClip: {fileID: 0}
+  m_HitSEClip: {fileID: 0}
+  m_DieSEClip: {fileID: 0}
+  m_FootStepClip: {fileID: 8300000, guid: 303586abe2e02544aa79043ca67516ed, type: 3}

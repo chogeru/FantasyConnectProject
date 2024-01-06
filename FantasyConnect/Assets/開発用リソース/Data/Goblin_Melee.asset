@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a27dfbbbeaf8814e834d71261372248, type: 3}
+  m_Name: Goblin_Melee
+  m_EditorClassIdentifier: 
+  m_RaycastDistance: 20
+  m_Angle: 180
+  rayCount: 180
+  m_TargetTag: Player
+  m_MaxSpeed: 4
+  m_Acceleration: 2
+  attackDistance: 1
+  m_RotationSpeed: 5
+  m_MaxHp: 150
+  m_DropMony: 500
+  m_HitVoiceClip: {fileID: 8300000, guid: 6639256930d308d4e8723f38516fc704, type: 3}
+  m_DieVoiceClip: {fileID: 8300000, guid: f17e27417d9654840994066b4b397129, type: 3}
+  m_HitSEClip: {fileID: 8300000, guid: 194e8b908a1197a4ea948a64a0d9982e, type: 3}
+  m_DieSEClip: {fileID: 8300000, guid: 9c737a7f8daae6c47bcc99bc2a44a020, type: 3}
+  m_FootStepClip: {fileID: 0}

@@ -138,6 +138,10 @@ public class EnemySystem : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
+        if (enemyData == null)
+        {
+            enemyData = ScriptableObject.CreateInstance<EnemyData>();
+        }
         currencySystem = FindObjectOfType<CurrencySystem>();
         // プレイヤーオブジェクトのTransformを取得
         player = GameObject.FindGameObjectWithTag(m_TargetTag).transform;
