@@ -47,6 +47,9 @@ public class AnimalRideSystem : MonoBehaviour
                     // プレイヤーオブジェクトの位置と回転をRidePosに合わせる
                     m_PlayerObject.position = m_RidePos.position;
                     m_PlayerObject.rotation = m_RidePos.rotation;
+                    playerSystem.m_PlayerAnimator.SetBool("NormalAttack", false);
+                    playerSystem.m_PlayerAnimator.SetBool("StrongAttack", false);
+
                     if (myCollider != null)
                     {
                         myCollider.isTrigger = true;

@@ -11,23 +11,27 @@ public class TeleportBehindEnemy : MonoBehaviour
     [SerializeField,Header("ワープエフェクト")]
     private GameObject m_MoveEffect;
     private Transform targetEnemy;
-
+    [SerializeField]
+    AnimalRideSystem animalRideSystem;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (!animalRideSystem.isRide)
         {
-            FindNearestEnemy();
-            if (targetEnemy != null)
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                float distanceToEnemy = Vector3.Distance(transform.position, targetEnemy.position);
-                if (distanceToEnemy <= m_MaxDistance)
+                FindNearestEnemy();
+                if (targetEnemy != null)
                 {
-                    Instantiate(m_MoveEffect, transform.position, Quaternion.identity);
-                    MoveBehindEnemy(); // 敵の後ろに移動
-                }
-                else
-                {
-                    Debug.Log("敵が範囲外です。ワープできません。");
+                    float distanceToEnemy = Vector3.Distance(transform.position, targetEnemy.position);
+                    if (distanceToEnemy <= m_MaxDistance)
+                    {
+                        Instantiate(m_MoveEffect, transform.position, Quaternion.identity);
+                        MoveBehindEnemy(); // 敵の後ろに移動
+                    }
+                    else
+                    {
+                        Debug.Log("敵が範囲外です。ワープできません。");
+                    }
                 }
             }
         }
