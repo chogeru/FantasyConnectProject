@@ -1631,20 +1631,11 @@ MonoBehaviour:
   VInspectorData: {fileID: 0}
   myButtleType: 0
   myType: 2
-  m_RaycastDistance: 10
-  m_Angle: 90
-  rayCount: 180
-  m_TargetTag: Player
   m_MaxSpeed: 3
   m_CurrentSpeed: 5
-  m_Acceleration: 2
-  attackDistance: 5
-  m_RotationSpeed: 5
   m_MagicAttckCoolTime: 0
   m_MeleeCoolTime: 0
-  m_MaxHp: 10000000
   m_CurrentHp: 50
-  m_DropMony: 500
   m_Animator: {fileID: 1368394625215557425}
   isAttacking: 0
   m_DieEffect: {fileID: 0}
@@ -1655,11 +1646,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 256
-  m_HitVoiceClip: {fileID: 0}
-  m_DieVoiceClip: {fileID: 0}
-  m_HitSEClip: {fileID: 0}
-  m_DieSEClip: {fileID: 0}
-  m_FootStepClip: {fileID: 8300000, guid: 303586abe2e02544aa79043ca67516ed, type: 3}
+  enemyData: {fileID: 11400000, guid: e148ebe58a01636408911690ed058584, type: 2}
   m_ViceSE: {fileID: 1941423658}
   m_SE: {fileID: 1159860018}
   dropItemsInfo: []

@@ -9,10 +9,12 @@ public class EnemyCanvasLooKAt : MonoBehaviour
     private Slider m_HpSlider;
     [SerializeField, Header("HP表示用テキスト")]
     private TextMeshProUGUI m_HpText;
+    EnemyData enemyData;
     void Start()
     {
         m_Player = GameObject.FindGameObjectWithTag("Player").transform;
         enemySystem=GetComponentInParent<EnemySystem>();
+        enemyData = enemySystem.EnemyData;
         SetHp();
     }
     void SetHp()
@@ -20,9 +22,9 @@ public class EnemyCanvasLooKAt : MonoBehaviour
         //Sliderを満タンにする。
         m_HpSlider.value = 1;
         //現在のHPを最大HPと同じに。
-        enemySystem.m_CurrentHp = enemySystem.m_MaxHp;
+        enemySystem.m_CurrentHp = enemySystem.EnemyData.MaxHp;
         // m_HpText の初期化
-        m_HpText.text = enemySystem.m_CurrentHp + "/" + enemySystem.m_MaxHp;
+        m_HpText.text = enemySystem.m_CurrentHp + "/" + enemySystem.EnemyData.MaxHp;
     }
 
     // Update is called once per frame
@@ -37,9 +39,9 @@ public class EnemyCanvasLooKAt : MonoBehaviour
         enemySystem.m_CurrentHp = Mathf.Max(0, enemySystem.m_CurrentHp);
 
         // HPバーの更新
-        m_HpSlider.value = (float)enemySystem.m_CurrentHp / (float)enemySystem.m_MaxHp;
+        m_HpSlider.value = (float)enemySystem.m_CurrentHp / (float)enemySystem.EnemyData.MaxHp;
 
         // HPテキストの更新
-        m_HpText.text = enemySystem.m_CurrentHp + "/" + enemySystem.m_MaxHp;
+        m_HpText.text = enemySystem.m_CurrentHp + "/" + enemySystem.EnemyData.MaxHp;
     }
 }

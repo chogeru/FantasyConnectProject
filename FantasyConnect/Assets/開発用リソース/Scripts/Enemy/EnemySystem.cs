@@ -31,40 +31,24 @@ public class EnemySystem : MonoBehaviour
     [SerializeField, Header("タイプ")]
     private EnemyType myType;
     #endregion
-    [Foldout("レイキャスト"), Tab("レイキャスト")]
-    #region レイキャスト
-    [SerializeField, Header("レイキャスト距離")]
-    private float m_RaycastDistance = 10f;
-    [SerializeField, Header("レイキャスト角度")]
-    private float m_Angle = 90f;
-    [SerializeField, Header("レイの数")]
-    private int rayCount = 180;
 
-    #endregion
     [Foldout("パラメータ"), Tab("パラメータ")]
     #region 行動パラメーター
-    [SerializeField, Header("追跡対象のタグ")]
-    private string m_TargetTag = "Player";
+    
     [SerializeField, Header("最大速度")]
     private float m_MaxSpeed = 5f;
     [SerializeField, Header("現在の速度")]
     private float m_CurrentSpeed = 5f;
-    [SerializeField, Header("加速値")]
-    private float m_Acceleration = 2f;
-    [SerializeField, Header("攻撃距離")]
-    private float attackDistance = 5f;
-    [SerializeField, Header("回転速度")]
-    private float m_RotationSpeed = 5f;
+
     [SerializeField, Header("魔法攻撃クールタイム")]
     public float m_MagicAttckCoolTime;
     [SerializeField, Header("近接アタッククールタイム")]
     private float m_MeleeCoolTime;
-    [SerializeField]
-    public int m_MaxHp;
+ 
+
     [SerializeField]
     public int m_CurrentHp;
-    [SerializeField, Header("ドロップする金額")]
-    private int m_DropMony = 500;
+
     #endregion
 
     private Transform player;
@@ -97,20 +81,16 @@ public class EnemySystem : MonoBehaviour
     private Vector3 m_HpBerscale;
     private Vector3 currentVelocity;
     public LayerMask obstacleMask;
+
+    [Foldout("ステータスデータ"),Tab("ステータスデータ")]
     [SerializeField]
-    EnemyData enemyData;
+    private EnemyData enemyData;
+    public EnemyData EnemyData
+    {
+        get { return enemyData; }
+    }
     #region サウンド
-    [Foldout("音声クリップ"), Tab("音声クリップ")]
-    [SerializeField, Header("ヒットボイスクリップ")]
-    private AudioClip m_HitVoiceClip;
-    [SerializeField, Header("死亡時ボイスクリップ")]
-    private AudioClip m_DieVoiceClip;
-    [SerializeField, Header("被弾SE")]
-    private AudioClip m_HitSEClip;
-    [SerializeField, Header("死亡SE")]
-    private AudioClip m_DieSEClip;
-    [SerializeField,Header("足音")]
-    private AudioClip m_FootStepClip;
+    [Tab("サウンド")]
     [Foldout("オーディオソース")]
     [SerializeField, Header("ボイス")]
     private AudioSource m_ViceSE;
@@ -144,14 +124,14 @@ public class EnemySystem : MonoBehaviour
         }
         currencySystem = FindObjectOfType<CurrencySystem>();
         // プレイヤーオブジェクトのTransformを取得
-        player = GameObject.FindGameObjectWithTag(m_TargetTag).transform;
+        player = GameObject.FindGameObjectWithTag(enemyData.TargetTag).transform;
         rb = GetComponent<Rigidbody>();
         m_Animator = GetComponent<Animator>();
         SetHpBer();
     }
     void SetHpBer()
     {
-        m_CurrentHp = m_MaxHp;
+        m_CurrentHp = enemyData.MaxHp;
         GameObject cildrenHpBer = Instantiate(m_HpBer, transform);
         cildrenHpBer.transform.localPosition = m_HpBerPos;
         cildrenHpBer.transform.localScale = m_HpBerscale;
@@ -212,7 +192,7 @@ public class EnemySystem : MonoBehaviour
             RotatePlayerWithCamera();
             if (!m_SE.isPlaying) // 再生中でない場合のみ再生
             {
-                m_SE.clip = m_FootStepClip;
+                m_SE.clip = enemyData.FootStepClip;
                 m_SE.Play();
             }
             if(!m_ViceSE.isPlaying)
@@ -257,7 +237,7 @@ public class EnemySystem : MonoBehaviour
     void Search()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer <= m_RaycastDistance)
+        if (distanceToPlayer <= enemyData.RaycastDistance)
         {
             Vector3 directionToPlayer = player.position - transform.position;
             float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
@@ -266,10 +246,10 @@ public class EnemySystem : MonoBehaviour
             {
 
                 RaycastHit hit;
-                if (Physics.Raycast(raycastOrigin, directionToPlayer, out hit, m_RaycastDistance, obstacleMask))
+                if (Physics.Raycast(raycastOrigin, directionToPlayer, out hit, enemyData.RaycastDistance, obstacleMask))
                 {
                     // ターゲットに当たった場合
-                    if (hit.collider.CompareTag(m_TargetTag))
+                    if (hit.collider.CompareTag(enemyData.TargetTag))
                     {
                         PlayerTracking();
                         if (myType == EnemyType.Enemy)
@@ -291,7 +271,7 @@ public class EnemySystem : MonoBehaviour
                 else
                 {
                     //ヒットしてなければ青色にする
-                    Debug.DrawRay(raycastOrigin, directionToPlayer * m_RaycastDistance, Color.blue);
+                    Debug.DrawRay(raycastOrigin, directionToPlayer * enemyData.RaycastDistance, Color.blue);
                 }
             }
         }
@@ -303,7 +283,7 @@ public class EnemySystem : MonoBehaviour
         Vector3 lookDirection = player.position - transform.position;
         lookDirection.y = 0f; // y軸方向は無視して水平に向くようにする
         Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * m_RotationSpeed);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * enemyData.RotationSpeed);
 
         // プレイヤーオブジェクトに向かって一定の速度で加速
         Vector3 direction = (player.position - transform.position).normalized;
@@ -319,7 +299,7 @@ public class EnemySystem : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         // 攻撃距離内に入ったら攻撃準備
-        if (distanceToPlayer <= attackDistance)
+        if (distanceToPlayer <= enemyData.AttackDistance)
         {
             m_MagicAttckCoolTime += Time.deltaTime;
             if (m_MagicAttckCoolTime > 5)
@@ -361,7 +341,7 @@ public class EnemySystem : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
         // 攻撃距離内に入ったら攻撃準備
-        if (distanceToPlayer <= attackDistance)
+        if (distanceToPlayer <=  enemyData.AttackDistance)
         {
             inAttackRange = true;
             if (!isAttacking)
@@ -443,9 +423,9 @@ public class EnemySystem : MonoBehaviour
                 m_Animator.SetBool("Hit", true);
                 m_MaxSpeed = 0;
                 isHit = true;
-                m_ViceSE.clip = m_HitVoiceClip;
+                m_ViceSE.clip = enemyData.HitVoiceClip;
                 m_ViceSE.Play();
-                m_SE.clip = m_HitSEClip;
+                m_SE.clip = enemyData.HitSEClip;
                 m_SE.Play();
 
                 // 攻撃を受けたらプレイヤーの方向を向く
@@ -468,9 +448,9 @@ public class EnemySystem : MonoBehaviour
         {
 
             m_Animator.SetBool("Die", true);
-            m_ViceSE.clip = m_DieVoiceClip;
+            m_ViceSE.clip = enemyData.DieVoiceClip;
             m_ViceSE.Play();
-            m_SE.clip = m_DieSEClip;
+            m_SE.clip = enemyData.DieSEClip;
             m_SE.Play();
             m_MaxSpeed = 0;
             isDie = true;
@@ -482,7 +462,8 @@ public class EnemySystem : MonoBehaviour
     }
     void DieEnd()
     {
-        currencySystem.m_currencyAmount += m_DropMony;
+        
+        currencySystem.m_currencyAmount += enemyData.DropMony;
         currencySystem.UpdateCurrencyText();
         // アイテムをドロップ
         DropItems();

@@ -18,7 +18,7 @@ MonoBehaviour:
   m_TargetTag: Player
   m_MaxSpeed: 0
   m_Acceleration: 0
-  m_AttackDistance: 5
+  m_AttackDistance: 80
   m_RotationSpeed: 5
   m_MaxHp: 2000
   m_DropMony: 2000

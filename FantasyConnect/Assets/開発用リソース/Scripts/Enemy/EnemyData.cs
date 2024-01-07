@@ -74,7 +74,7 @@ public class EnemyData : ScriptableObject
     }
 
     [SerializeField, Header("Å‘å‘Ì—Í")]
-    public int m_MaxHp;
+    private int m_MaxHp;
     public int MaxHp
     {
         get { return m_MaxHp; }

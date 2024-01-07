@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RaycastDistance: 80
   m_Angle: 360
-  rayCount: 180
+  m_RayCount: 180
   m_TargetTag: Player
   m_MaxSpeed: 8
   m_Acceleration: 2
-  attackDistance: 4.5
+  m_AttackDistance: 4.5
   m_RotationSpeed: 5
   m_MaxHp: 3500
   m_DropMony: 2000
