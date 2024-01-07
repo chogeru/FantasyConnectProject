@@ -363,7 +363,6 @@ public class PlayerSystem : MonoBehaviour
     }
     void ApplyGravity()
     {
-        // åªç›ÇÃë¨ìxÇ…èdóÕÇâ¡Ç¶ÇÈ
         rb.AddForce(Vector3.down * m_Gravity, ForceMode.Acceleration);
     }
     void Run()

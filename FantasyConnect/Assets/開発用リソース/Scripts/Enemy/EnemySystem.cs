@@ -3,6 +3,7 @@ using UnityEngine;
 using VInspector;
 using TMPro;
 using System.Collections.Generic;
+using MalbersAnimations;
 
 [System.Serializable]
 public class DropItemInfo
@@ -155,7 +156,6 @@ public class EnemySystem : MonoBehaviour
             m_MaxSpeed = m_CurrentSpeed;
             Search();
             UpdateAnimation();
-
             if (rb.velocity.magnitude > 0.1f)
             {
                 isMoving = true;
@@ -166,7 +166,8 @@ public class EnemySystem : MonoBehaviour
             }
             Die();
         }
-     
+        ApplyGravity();
+
     }
     /// <summary>
     /// ÉâÉCÉhíÜÇÃèàóù
@@ -334,6 +335,10 @@ public class EnemySystem : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
+    }
+    void ApplyGravity()
+    {
+        rb.AddForce(Vector3.down * enemyData.Gravity, ForceMode.Acceleration);
     }
     void PlayerAttckDictance()
     {

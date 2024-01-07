@@ -80,6 +80,13 @@ public class EnemyData : ScriptableObject
         get { return m_MaxHp; }
         set { m_MaxHp = value; }
     }
+    [SerializeField, Header("重力")]
+    private float m_Gravity = 9.81f;
+    public float Gravity
+    {
+        get { return m_Gravity; }
+        set { m_Gravity = value; }
+    }
 
     [SerializeField, Header("ドロップする金額")]
     private int m_DropMony = 500;

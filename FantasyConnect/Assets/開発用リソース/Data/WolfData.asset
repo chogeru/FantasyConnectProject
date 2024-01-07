@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RaycastDistance: 10
   m_Angle: 90
-  rayCount: 180
+  m_RayCount: 180
   m_TargetTag: Player
-  m_MaxSpeed: 3
+  m_MaxSpeed: 5
   m_Acceleration: 2
-  attackDistance: 5
+  m_AttackDistance: 5
   m_RotationSpeed: 5
   m_MaxHp: 10000000
+  m_Gravity: 55
   m_DropMony: 500
   m_HitVoiceClip: {fileID: 0}
   m_DieVoiceClip: {fileID: 0}
