@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.UI;
 public class SceneController : MonoBehaviour
 {
-    //シングルトンパターン
     public static SceneController SceneConinstance;
-    public bool isHitCol=false;
+    public bool isHitCol = false;
+
+    public GameObject loadingCanvas;
+
     private void Awake()
     {
         if (SceneConinstance == null)
         {
             SceneConinstance = this;
-            //オブジェクトを残すように
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -18,89 +21,123 @@ public class SceneController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     void Update()
     {
-        string currntScene=SceneManager.GetActiveScene().name;
+        string currntScene = SceneManager.GetActiveScene().name;
         switch (currntScene)
         {
             case "Title":
                 if (Input.anyKeyDown)
                 {
-                    SceneManager.LoadSceneAsync("TutorialScene", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("TutorialScene");
                 }
                 break;
             case "MyHouse":
-             if(isHitCol)
+                if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("FirstCity", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("FirstCity");
                 }
                 break;
             case "FirstCity":
-                if(isHitCol)
+                if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("GrassIandArea1", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("GrassIandArea1");
                 }
                 break;
             case "GrassIandArea1":
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("GrassIandBossArea", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("GrassIandBossArea");
                 }
                 break;
             case "GrassIandBossArea":
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("AutumnArea1", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("AutumnArea1");
                 }
                 break;
             case "AutumnArea1":
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("AutumnBossArea", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("AutumnBossArea");
                 }
                 break;
             case "AutumnBossArea":
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("SnowArea1", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("SnowArea1");
                 }
                 break;
             case "SnowArea1":
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("SnowBossArea", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("SnowBossArea");
                 }
                 break;
             case "SnowBossArea":
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("WastelandArea1", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("WastelandArea1");
                 }
                 break;
             case "WastelandArea1":
                 if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("WastelandBossArea", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("WastelandBossArea");
                 }
                 break;
             case "TutorialScene":
-                if(isHitCol)
+                if (isHitCol)
                 {
                     isHitCol = false;
-                    SceneManager.LoadScene("MyHouse", LoadSceneMode.Single);
+                    LoadSceneWithLoadingScreen("MyHouse");
                 }
                 break;
             default:
                 break;
+        }
+    }
+
+    void LoadSceneWithLoadingScreen(string sceneName)
+    {
+        if (loadingCanvas != null)
+        {
+            loadingCanvas.SetActive(true);
+            Slider loadingSlider = loadingCanvas.GetComponentInChildren<Slider>();
+
+            if (loadingSlider != null)
+            {
+                StartCoroutine(LoadSceneAsync(sceneName, loadingSlider));
+            }
+        }
+    }
+
+    IEnumerator LoadSceneAsync(string sceneName, Slider loadingSlider)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+
+        while (!asyncLoad.isDone)
+        {
+            
+            float progress = Mathf.Clamp01(asyncLoad.progress / 0.9f); 
+            loadingSlider.value = progress;
+
+            yield return null;
+        }
+
+        if (loadingCanvas != null)
+        {
+            loadingCanvas.SetActive(false);
         }
     }
 }
