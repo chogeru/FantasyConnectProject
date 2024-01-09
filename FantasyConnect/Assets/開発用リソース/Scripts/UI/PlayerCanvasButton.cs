@@ -7,6 +7,8 @@ public class PlayerCanvasButton : MonoBehaviour
     [SerializeField]
     private GameObject m_InventoryCanvas;
     [SerializeField]
+    private GameObject m_SettingCanvas;
+    [SerializeField]
     PlayerSystem playerSystem;
     [SerializeField]
     PlayerCameraController playerCameraController;
@@ -15,6 +17,10 @@ public class PlayerCanvasButton : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             ActiveInventory();
+        }
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            ActiveSettingScreen();
         }
     }
     public void ActiveInventory()
@@ -31,5 +37,19 @@ public class PlayerCanvasButton : MonoBehaviour
         playerCameraController.isStop = false;
         playerSystem.isStop = false;
         m_InventoryCanvas.SetActive(false);
+    }
+    public void ActiveSettingScreen()
+    {
+        Cursor.visible = true;
+        playerCameraController.isStop = true;
+        playerSystem.isStop = true;
+        m_SettingCanvas.SetActive(true);
+    }
+    public void CloseSettingScreen()
+    {
+        Cursor.visible = false;
+        playerCameraController.isStop = false;
+        playerSystem.isStop = false;
+        m_SettingCanvas.SetActive(false);
     }
 }
