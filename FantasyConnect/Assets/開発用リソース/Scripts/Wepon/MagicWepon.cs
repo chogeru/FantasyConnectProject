@@ -108,8 +108,9 @@ public class MagicWepon : MonoBehaviour
                 if (bulletRigidbody != null)
                 {
                     bulletRigidbody.AddForce(direction.normalized * bulletForce, ForceMode.Impulse);
-                    playerSystem.m_MP -= 5;
                 }
+                playerSystem.m_MP -= 5;
+                playerSystem.MpUpdate();
             }
         }
     }
@@ -124,7 +125,6 @@ public class MagicWepon : MonoBehaviour
             m_RangeAttckCol.SetActive(true);
             if (isCoolDown)
             {
-                playerSystem.m_MP -= 10;
                 Instantiate(m_RangeMagic, transform.position, Quaternion.identity);
                 isCoolDown = false;
             }

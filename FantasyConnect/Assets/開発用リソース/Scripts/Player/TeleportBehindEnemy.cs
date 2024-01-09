@@ -11,13 +11,17 @@ public class TeleportBehindEnemy : MonoBehaviour
     [SerializeField,Header("ワープエフェクト")]
     private GameObject m_MoveEffect;
     private Transform targetEnemy;
+    [SerializeField,Header("消費MP")]
+    private int m_MPConsumption;
     [SerializeField]
     AnimalRideSystem animalRideSystem;
+    [SerializeField]
+    PlayerSystem playerSystem;
     void Update()
     {
         if (!animalRideSystem.isRide)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q)&&playerSystem.m_MP>=m_MPConsumption)
             {
                 FindNearestEnemy();
                 if (targetEnemy != null)
@@ -27,6 +31,8 @@ public class TeleportBehindEnemy : MonoBehaviour
                     {
                         Instantiate(m_MoveEffect, transform.position, Quaternion.identity);
                         MoveBehindEnemy(); // 敵の後ろに移動
+                        playerSystem.m_MP-=m_MPConsumption;
+                        playerSystem.MpUpdate();
                     }
                     else
                     {

@@ -1,3 +1,4 @@
+using MalbersAnimations;
 using TMPro;
 using Unity.Jobs;
 using Unity.VisualScripting;
@@ -51,11 +52,18 @@ public class PlayerSystem : MonoBehaviour
     private AnimalRideSystem animalRideSystem;
     [SerializeField]
     PlayerCameraController playerCameraController;
-    [Foldout("HPCanvas")]
+    [SerializeField]
+    InventorySystem inventorySystem;
+    [Foldout("パラメータCanvas")]
     [SerializeField, Header("HP表示用スライダー")]
     private Slider m_HpSlider;
     [SerializeField, Header("HP表示用テキスト")]
     private TextMeshProUGUI m_HpText;
+    [SerializeField,Header("MP表示用スライダー")]
+    private Slider m_MpSlider;
+    [SerializeField, Header("MP表示用テキスト")]
+    private TextMeshProUGUI m_MpText;
+
     #region パラメータ
     [Foldout("パラメータ"), Tab("パラメータ")]
     [SerializeField, Header("最大Hp")]
@@ -80,7 +88,7 @@ public class PlayerSystem : MonoBehaviour
     private float m_Gravity = 9.81f;
     [SerializeField, Header("MP")]
     public int m_MP=100;
-    private int max_MP = 100;
+    public int m_MaxMP = 100;
     float mpRecoveryTimer = 0f; // MP回復用のタイマー
     float mpRecoveryInterval = 1f; // MP回復間隔（秒）
     [EndFoldout]
@@ -137,7 +145,7 @@ public class PlayerSystem : MonoBehaviour
         playerCameraController.enabled = true;
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
-        SetHp();
+        SetParametar();
         SwitchAnimator();
     }
 
@@ -176,19 +184,39 @@ public class PlayerSystem : MonoBehaviour
         {
             SceneController.SceneConinstance.isHitCol = true;
         }
-        if (Input.GetMouseButton(0)&&m_MP>=5)
+        if (Input.GetMouseButton(0))
         {
             m_MaxSpeed = 0;
             isWeponChange = false;
             switch (attckType)
             {
                 case eAttckType.NomalAttck:
+                    if (playerType == PlayerType.Magic && m_MP >= 5||
+                        playerType==PlayerType.Melee||
+                        playerType==PlayerType.Bow&&inventorySystem.inventory.ContainsKey("Arrow"))
+                    {
+                        m_PlayerAnimator.SetBool("NormalAttack", true);
+                    }
 
-                    m_PlayerAnimator.SetBool("NormalAttack", true);
+                    if(playerType==PlayerType.Magic && m_MP <= 5||
+                         playerType == PlayerType.Bow && !inventorySystem.inventory.ContainsKey("Arrow"))
+                    {
+                        m_PlayerAnimator.SetBool("NormalAttack", false);
+                    }
 
                     break;
                 case eAttckType.StrongAttack:
-                    m_PlayerAnimator.SetBool("StrongAttack", true);
+                    if (playerType == PlayerType.Magic && m_MP >= 10 ||
+                        playerType == PlayerType.Melee ||
+                        playerType == PlayerType.Bow && inventorySystem.inventory["Arrow"].amount>=3)
+                    {
+                        m_PlayerAnimator.SetBool("StrongAttack", true);
+                    }
+                    if (playerType == PlayerType.Magic && m_MP <= 10||
+                        playerType == PlayerType.Bow && inventorySystem.inventory["Arrow"].amount < 3)
+                    {
+                        m_PlayerAnimator.SetBool("StrongAttack", false);
+                    }
                     break;
                 default:
 
@@ -196,14 +224,14 @@ public class PlayerSystem : MonoBehaviour
             }
         }
     }
-    void SetHp()
+    void SetParametar()
     {
-        //Sliderを満タンにする。
-        m_HpSlider.value = 1;
-        //現在のHPを最大HPと同じに。
         m_CurrentHp = m_MaxHp;
-        // m_HpText の初期化
-        m_HpText.text = m_CurrentHp + "/" + m_MaxHp;
+        m_MP = m_MaxMP;
+        HpUpdate();
+        MpUpdate();
+        m_CurrentHp = Mathf.Min(m_MP, m_MaxMP);
+
     }
     void RecoverMP()
     {
@@ -214,8 +242,7 @@ public class PlayerSystem : MonoBehaviour
             {
                 mpRecoveryTimer -= mpRecoveryInterval;
                 m_MP += 1;
-                int increasedMP = m_MP + 1;
-                m_MP = Mathf.Min(increasedMP, max_MP);
+                MpUpdate();
             }
         }
     }
@@ -415,11 +442,16 @@ public class PlayerSystem : MonoBehaviour
             HitSound();
         }
     }
-    public void Recovery(int recovery)
+    public void HpRecovery(int hpRecovery)
     {
-        m_CurrentHp += recovery;
+        m_CurrentHp += hpRecovery;
         m_CurrentHp = Mathf.Min(m_CurrentHp, m_MaxHp);
         HpUpdate();
+    }
+    public void MPRecovery(int mpRecovery)
+    {
+        m_MP += mpRecovery;
+        MpUpdate();
     }
     private void Die()
     {
@@ -432,11 +464,15 @@ public class PlayerSystem : MonoBehaviour
     }
     public void HpUpdate()
     {
-        //HPバーの更新
         m_HpSlider.value = (float)m_CurrentHp / (float)m_MaxHp;
-        //HPテキストの更新
         m_HpText.text = m_CurrentHp + "/" + m_MaxHp;
     }
+    public void MpUpdate()
+    {
+        m_MpSlider.value = (float)m_MP / (float)m_MaxMP;
+        m_MpText.text = m_MP + "/" + m_MaxMP;
+    }
+  
     private void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;

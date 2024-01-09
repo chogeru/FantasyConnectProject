@@ -15,7 +15,7 @@ public class RecoveryItem : MonoBehaviour
         {
             PlayerSystem playerSystem=other.GetComponent<PlayerSystem>();
             Instantiate(m_HitEffect,transform.position,Quaternion.identity);
-            playerSystem.Recovery(m_Recover);
+            playerSystem.HpRecovery(m_Recover);
             Destroy(gameObject);
         }
     }

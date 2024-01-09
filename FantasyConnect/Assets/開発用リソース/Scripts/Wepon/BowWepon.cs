@@ -17,13 +17,18 @@ public class BowWepon : MonoBehaviour
     [SerializeField, Header("攻撃範囲")]
     private float m_AttckRange = 10;
     [SerializeField]
+    private int m_BowAmount;
+    [SerializeField]
+    private int m_StrongBowAmount;
+    [SerializeField]
     private Transform m_NomalBulletSpawnPoint;
     [SerializeField]
     private Transform m_StrongBulletSpawnPoint;
     [SerializeField]
     private float bulletForce;
     private bool isAttck = false;
-
+    [SerializeField]
+    InventorySystem inventorySystem;
 
     [SerializeField, Header("攻撃ボイス")]
     private List<AudioClip> m_ATVoices; [SerializeField, Header("ボイス")]
@@ -74,7 +79,7 @@ public class BowWepon : MonoBehaviour
         {
             bulletRigidbody.AddForce(direction * bulletForce, ForceMode.Impulse);
         }
-
+       InventorySystem.inventorySystem.UseItem("Arrow",1);
     }
 
     void StrongAttack()
@@ -102,9 +107,11 @@ public class BowWepon : MonoBehaviour
                 bulletRigidbody.AddForce(horizontalDirection * bulletForce, ForceMode.Impulse);
             }
         }
+        InventorySystem.inventorySystem.UseItem("Arrow", 3);
+
     }
 
-        private void StopMoveAnime()
+    private void StopMoveAnime()
     {
         m_PlayerAnimator.SetBool("Idle", false);
         m_PlayerAnimator.SetBool("Walk", false);

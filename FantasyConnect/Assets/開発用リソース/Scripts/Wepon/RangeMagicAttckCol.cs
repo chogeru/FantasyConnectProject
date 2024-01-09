@@ -9,6 +9,8 @@ public class RangeMagicAttckCol : MonoBehaviour
     private float m_CoolTime;
     private bool isAttck=false;
     private List<EnemySystem> enemysInRange=new List<EnemySystem>();
+    [SerializeField]
+     PlayerSystem playerSystem;
     private void Update()
     {
         m_CoolTime += Time.deltaTime;
@@ -30,15 +32,18 @@ public class RangeMagicAttckCol : MonoBehaviour
     {
         if(isAttck) 
         {
-            if(other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Enemy"))
             {
                 EnemySystem enemySystem = other.GetComponent<EnemySystem>();
                 if (enemySystem != null && !enemysInRange.Contains(enemySystem))
                 {
                     enemysInRange.Add(enemySystem);
                     enemySystem.TakeDamage(Damage);
+                    playerSystem.m_MP -= 10;
+                    playerSystem.MpUpdate();
                 }
             }
+
         }
     }
     private void OnTriggerExit(Collider other)

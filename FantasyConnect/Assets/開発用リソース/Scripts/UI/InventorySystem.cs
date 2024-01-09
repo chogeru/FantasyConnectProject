@@ -30,7 +30,9 @@ public class InventorySystem : MonoBehaviour
     private TextMeshProUGUI m_MpItemCountText;
     [SerializeField]
     private TextMeshProUGUI m_ArrowItemCountText;
-    private Dictionary<string, Item> inventory = new Dictionary<string, Item>();
+    [SerializeField, Header("Arrow表示テキスト")]
+    private TextMeshProUGUI m_ArrowText;
+    public Dictionary<string, Item> inventory = new Dictionary<string, Item>();
     public static InventorySystem inventorySystem;
     public CurrencySystem currencySystem; // お金のシステムへの参照
     [SerializeField]
@@ -69,7 +71,7 @@ public class InventorySystem : MonoBehaviour
     }
 
     // アイテムを使用するメソッド
-    public void UseItem(string itemName)
+    public void UseItem(string itemName,int quantity)
     {
         if (inventory.ContainsKey(itemName))
         {
@@ -78,30 +80,28 @@ public class InventorySystem : MonoBehaviour
             switch (item.type)
             {
                 case ItemType.Healing:
-                    playerSystem.Recovery(500);
+                    playerSystem.HpRecovery(500);
+                    item.amount-=quantity;
                     Debug.Log("HPを回復します");
                     UpdateUI(inventory[itemName].type);
-
-                    // 体力を回復する処理を記述すること
                     break;
                 case ItemType.MP:
-                    // ここにMPアイテムの処理を記述する
-                    // 例えば、MPを回復する処理
-                    // この例では単に個数を減らすだけになります
                     Debug.Log("MPを回復します");
+                    playerSystem.MPRecovery(100);
+                    item.amount -= quantity;
                     UpdateUI(inventory[itemName].type);
-                    // MPを回復する処理を記述すること
+
                     break;
                 case ItemType.Arrow:
                     Debug.Log("弓の本数");
                     UpdateUI(inventory[itemName].type);
+                    item.amount-=quantity;
                     break;
                 default:
-                    Debug.Log("そのアイテムの種類は未定義です");
+                    Debug.Log("そのアイテムの種類は未定義");
                     break;
             }
 
-            item.amount--;
             UpdateUI(inventory[itemName].type);
             // もし個数が0になったら、アイテムをインベントリから削除する
             if (item.amount <= 0)
@@ -159,6 +159,14 @@ public class InventorySystem : MonoBehaviour
                 else if(m_ArrowItemCountText != null)
                 {
                     m_ArrowItemCountText.text = "0";
+                }
+                if(m_ArrowText != null&&inventory.ContainsKey("Arrow"))
+                {
+                    m_ArrowText.text = ""+inventory["Arrow"].amount.ToString();
+                }
+                else if(m_ArrowText != null)
+                {
+                    m_ArrowText.text = "X 0";
                 }
                 break;
             default:
