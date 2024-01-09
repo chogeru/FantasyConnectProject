@@ -16,10 +16,12 @@ public class PlayerCanvasButton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
+            CloseSettingScreen();
             ActiveInventory();
         }
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.U))
         {
+            CloseInventory();
             ActiveSettingScreen();
         }
     }
