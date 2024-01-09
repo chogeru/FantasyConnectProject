@@ -500,6 +500,10 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -3628478260529633311, guid: 075b44c2a6d18c54db8b3bcd96514ebd, type: 2}
     value: {fileID: 2450840067600276598}
+  - key: {fileID: -3868123824731462604, guid: 075b44c2a6d18c54db8b3bcd96514ebd, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7959620893771422132, guid: 075b44c2a6d18c54db8b3bcd96514ebd, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &2450840067600276599
@@ -516,6 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TimelineObj: {fileID: 2450840067600276595}
   m_AnimationEnemy: {fileID: 7602305761922956654}
+  m_BossCountUI: {fileID: 0}
 --- !u!114 &2450840067600276598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2920,7 +2925,7 @@ AudioSource:
   m_GameObject: {fileID: 7602305761263336824}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 366406605568144891, guid: 44becd69d60f10d47aec71b593bec75f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 194e8b908a1197a4ea948a64a0d9982e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -4643,7 +4648,7 @@ AudioSource:
   m_GameObject: {fileID: 7602305761738780718}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 366406605568144891, guid: 44becd69d60f10d47aec71b593bec75f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6639256930d308d4e8723f38516fc704, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5

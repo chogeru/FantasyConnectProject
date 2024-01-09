@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class SceneController : MonoBehaviour
 {
     public static SceneController SceneConinstance;
+    public static SceneController sceneController
+    { get { return SceneConinstance; } }
     public bool isHitCol = false;
 
     public GameObject loadingCanvas;
@@ -108,7 +110,7 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    void LoadSceneWithLoadingScreen(string sceneName)
+    public void LoadSceneWithLoadingScreen(string sceneName)
     {
         if (loadingCanvas != null)
         {

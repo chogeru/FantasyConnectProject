@@ -10,6 +10,8 @@ public class PlayerCameraController : MonoBehaviour
     public LayerMask obstacleMask; // áŠQ•¨‚Æ‚µ‚Äˆµ‚¤ƒŒƒCƒ„[
 
     private Vector3 offset;
+    [SerializeField]
+    private Vector3 position;
     public bool isStop=false;
 
     void Start()
@@ -20,6 +22,7 @@ public class PlayerCameraController : MonoBehaviour
 
     void Update()
     {
+
         if (!isStop) // “–‚½‚è”»’è’†‚Å‚È‚¯‚ê‚ÎƒJƒƒ‰‚ğ“®‚©‚·
         {
             Cursor.visible = false;

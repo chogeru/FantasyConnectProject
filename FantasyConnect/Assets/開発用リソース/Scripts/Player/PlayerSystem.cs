@@ -230,7 +230,7 @@ public class PlayerSystem : MonoBehaviour
         m_MP = m_MaxMP;
         HpUpdate();
         MpUpdate();
-        m_CurrentHp = Mathf.Min(m_MP, m_MaxMP);
+        m_MP = Mathf.Min(m_MP, m_MaxMP);
 
     }
     void RecoverMP()
