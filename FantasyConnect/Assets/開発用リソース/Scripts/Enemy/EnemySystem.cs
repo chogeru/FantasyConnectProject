@@ -470,8 +470,12 @@ public class EnemySystem : MonoBehaviour
         currencySystem.UpdateCurrencyText();
         // アイテムをドロップ
         DropItems();
-        Instantiate(m_DieEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        GameObject effect = EffectObjectPool.Instance.GetPooledObject();
+        effect.transform.position = transform.position;
+        effect.transform.rotation = Quaternion.identity;
+        effect.SetActive(true);
+        //EffectObjectPool.Instance.ReturnPooledObject(effect);
+        gameObject.SetActive(false);
     }
     private void OnCollisionStay(Collision collision)
     {

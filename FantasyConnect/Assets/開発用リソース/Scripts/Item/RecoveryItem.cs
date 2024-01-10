@@ -18,6 +18,14 @@ public class RecoveryItem : MonoBehaviour
     [SerializeField, Header("接触時のエフェクト")]
     private GameObject m_HitEffect;
 
+    // オブジェクトプールマネージャへの参照
+    private ItemEffectRecoveryObjctPool effectObjectPool;
+    private void Start()
+    {
+        // ItemEffectObjctPool のシングルトンインスタンスを取得
+        effectObjectPool = ItemEffectRecoveryObjctPool.Instance;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -25,17 +33,26 @@ public class RecoveryItem : MonoBehaviour
             if (m_itemType == ItemType.HP)
             {
                 PlayerSystem playerSystem = other.GetComponent<PlayerSystem>();
-                Instantiate(m_HitEffect, transform.position, Quaternion.identity);
+
+                // オブジェクトプールからエフェクトを取得
+                GameObject hitEffect = effectObjectPool.GetPooledObject();
+                hitEffect.transform.position = transform.position;
+                hitEffect.SetActive(true);
+
                 playerSystem.HpRecovery(m_HPRecover);
                 Destroy(gameObject);
             }
-            if(m_itemType == ItemType.MP)
+            else if (m_itemType == ItemType.MP)
             {
                 PlayerSystem playerSystem = other.GetComponent<PlayerSystem>();
-                Instantiate(m_HitEffect, transform.position, Quaternion.identity);
+
+                // オブジェクトプールからエフェクトを取得
+                GameObject hitEffect = effectObjectPool.GetPooledObject();
+                hitEffect.transform.position = transform.position;
+                hitEffect.SetActive(true);
+
                 playerSystem.MPRecovery(m_MPRecover);
                 Destroy(gameObject);
-
             }
         }
     }
