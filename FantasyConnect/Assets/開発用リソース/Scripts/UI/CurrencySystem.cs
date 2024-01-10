@@ -1,8 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
-
+[System.Serializable]
+public class CurrencyCounts
+{
+    public int CurrencyCount;
+}
 public class CurrencySystem : MonoBehaviour
 {
     CurrencySystem currencySystem;
@@ -10,8 +16,10 @@ public class CurrencySystem : MonoBehaviour
     public TextMeshProUGUI currencyText;
     private void Start()
     {
+        LoadCurrencyFromJson();
         UpdateCurrencyText();
     }
+
     public bool CheckCurrency(int requiredAmount)
     {
         return m_currencyAmount >= requiredAmount;
@@ -21,12 +29,12 @@ public class CurrencySystem : MonoBehaviour
         if(m_currencyAmount>=amount)
         {
             m_currencyAmount -= amount;
-
-            Debug.Log(amount + " のお金を減らしました。残高: " + m_currencyAmount);
+            SaveCurrencyToJson();
+            Debug.Log(amount + " のお金を減らした。残高: " + m_currencyAmount);
         }
         else
         {
-            Debug.Log("お金が足りません！");
+            Debug.Log("お金が足りません");
         }
     }
     public void UpdateCurrencyText()
@@ -35,5 +43,34 @@ public class CurrencySystem : MonoBehaviour
         {
             currencyText.text = m_currencyAmount.ToString();
         }
+    }
+    public void SaveCurrencyToJson()
+    {
+        CurrencyCounts currencyCounts= new CurrencyCounts();
+        currencyCounts.CurrencyCount = m_currencyAmount;
+        string json = JsonUtility.ToJson(currencyCounts);
+        string filePath = Path.Combine(Application.persistentDataPath, "currencyAmount.json");
+        File.WriteAllText(filePath, json);
+    }
+    public void LoadCurrencyFromJson()
+    {
+        string filePath = Path.Combine(Application.persistentDataPath, "currencyAmount.json");
+
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            CurrencyCounts currencyCounts = JsonUtility.FromJson<CurrencyCounts>(json);
+            if (currencyCounts != null)
+            {
+                m_currencyAmount = currencyCounts.CurrencyCount;
+                UpdateCurrencyText();
+            }
+            else
+            {
+                Debug.Log("お金がほぞんされていない");
+            }
+          
+        }
+      
     }
 }

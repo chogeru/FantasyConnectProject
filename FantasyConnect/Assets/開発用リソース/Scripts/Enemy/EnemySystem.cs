@@ -398,7 +398,6 @@ public class EnemySystem : MonoBehaviour
     #endregion
     void UpdateAnimation()
     {
-        // isMoving の状態に基づいてアニメーションを変更
         m_Animator.SetBool("IsMoving", isMoving);
     }
     private void DropItems()
@@ -407,8 +406,7 @@ public class EnemySystem : MonoBehaviour
         {
             if (Random.value <= itemInfo.dropChance)
             {
-                // アイテムをドロップする回数を決定（ここでは最大3回まで）
-                int dropCount = Random.Range(0, 6);
+                int dropCount = Random.Range(0, 8);
 
                 for (int i = 0; i < dropCount; i++)
                 {

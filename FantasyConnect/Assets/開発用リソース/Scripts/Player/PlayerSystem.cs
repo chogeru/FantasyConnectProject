@@ -451,6 +451,7 @@ public class PlayerSystem : MonoBehaviour
     public void MPRecovery(int mpRecovery)
     {
         m_MP += mpRecovery;
+        m_MP = Mathf.Min(m_MP, m_MaxMP);
         MpUpdate();
     }
     private void Die()

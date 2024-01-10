@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public enum ItemType
 {
     Healing,
     MP,
     Arrow
+}
+[System.Serializable]
+public class ItemCounts
+{
+    public int ArrowCount;
+    public int MPCount;
+    public int HealingCount;
 }
 public class Item
 {
@@ -68,6 +75,8 @@ public class InventorySystem : MonoBehaviour
         {
             Debug.Log(itemName + " を購入するのに十分なお金がありません");
         }
+        SaveItemCountsOnChange();
+
     }
 
     // アイテムを使用するメソッド
@@ -114,6 +123,7 @@ public class InventorySystem : MonoBehaviour
         {
             Debug.Log("そのアイテムはインベントリにありません");
         }
+        SaveItemCountsOnChange();
 
     }
     public int GetItemCount(string itemName)
@@ -172,5 +182,84 @@ public class InventorySystem : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void SaveItemCountsToJson()
+    {
+        ItemCounts counts = new ItemCounts();
+
+        // インベントリから各アイテムの数を取得
+        if (inventory.ContainsKey("Arrow"))
+            counts.ArrowCount = inventory["Arrow"].amount;
+        if (inventory.ContainsKey("MP"))
+            counts.MPCount = inventory["MP"].amount;
+        if (inventory.ContainsKey("Healing"))
+            counts.HealingCount = inventory["Healing"].amount;
+
+        // 数をJSONに変換
+        string json = JsonUtility.ToJson(counts);
+
+        // ファイルに保存（ファイルパスは必要に応じて変更してください）
+        string filePath = Path.Combine(Application.persistentDataPath, "itemCounts.json");
+        File.WriteAllText(filePath, json);
+    }
+
+    // JSONファイルからアイテムの数を読み込むメソッド
+    public void LoadItemCountsFromJson()
+    {
+        string filePath = Path.Combine(Application.persistentDataPath, "itemCounts.json");
+
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+
+            // JSONをItemCountsオブジェクトにデシリアライズ
+            ItemCounts counts = JsonUtility.FromJson<ItemCounts>(json);
+
+            // countsがnullでないことを確認し、インベントリの数を更新
+            if (counts != null)
+            {
+                // インベントリにキーが存在するかチェックし、存在する場合は数を更新
+                if (inventory.ContainsKey("Arrow"))
+                    inventory["Arrow"].amount = counts.ArrowCount;
+                else
+                    inventory.Add("Arrow", new Item(ItemType.Arrow, counts.ArrowCount));
+
+                if (inventory.ContainsKey("MP"))
+                    inventory["MP"].amount = counts.MPCount;
+                else
+                    inventory.Add("MP", new Item(ItemType.MP, counts.MPCount));
+
+                if (inventory.ContainsKey("Healing"))
+                    inventory["Healing"].amount = counts.HealingCount;
+                else
+                    inventory.Add("Healing", new Item(ItemType.Healing, counts.HealingCount));
+
+                // ロード後にUIを更新する
+                UpdateUI(ItemType.Arrow);
+                UpdateUI(ItemType.MP);
+                UpdateUI(ItemType.Healing);
+            }
+            else
+            {
+                Debug.LogError("Failed to deserialize ItemCounts from JSON.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Item counts file does not exist.");
+        }
+    }
+
+
+    // アイテムの数が変更された時に呼び出すメソッド
+    public void SaveItemCountsOnChange()
+    {
+        SaveItemCountsToJson();
+    }
+
+    // ゲーム開始時に保存されたアイテムの数を読み込む
+    void Start()
+    {
+        LoadItemCountsFromJson();
     }
 }

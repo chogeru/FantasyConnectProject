@@ -47,18 +47,18 @@ v2f vert(appdata_t v)
 fixed4 frag(v2f i) : SV_Target
 {
     // 時間とスクロールの速さからオフセットを計算する
-    float yOffset = _Time.y * _ScrollSpeed;
+    float xOffset = _Time.x * _ScrollSpeed;
 
     // オフセットの整数部と小数部を計算する
     float intPart;
-    float fracPart = modf(yOffset, intPart);
+    float fracPart = modf(xOffset, intPart);
 
     // テクスチャにスクロールを適用する（ループするように）
     float2 wrappedUV = i.uv;
-    wrappedUV.y += fracPart;
-    if (wrappedUV.y > 1.0)
+    wrappedUV.x += fracPart;
+    if (wrappedUV.x > 1.0)
     {
-        wrappedUV.y -= 1.0;
+        wrappedUV.x -= 1.0;
     }
 
     // テクスチャをサンプリングする
