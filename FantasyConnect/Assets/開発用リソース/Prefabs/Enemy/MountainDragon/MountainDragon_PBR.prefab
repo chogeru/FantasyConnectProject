@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43efbfe617732849bf168d3d27a4711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 250
+  Damage: 70
   isAttack: 0
   m_HitEffect: {fileID: 879681129677348344, guid: bb7c04ee23d5c584c99ac06601febe0c, type: 3}
 --- !u!135 &1334491584911689402
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43efbfe617732849bf168d3d27a4711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 250
+  Damage: 70
   isAttack: 0
   m_HitEffect: {fileID: 879681129677348344, guid: bb7c04ee23d5c584c99ac06601febe0c, type: 3}
 --- !u!135 &2133267819772328113
@@ -2966,6 +2966,10 @@ GameObject:
   - component: {fileID: 1136420029269397627}
   - component: {fileID: 6001945638347888163}
   - component: {fileID: 2061931344717738755}
+  - component: {fileID: 4564391231498382347}
+  - component: {fileID: 694243963951264254}
+  - component: {fileID: 6404781063105367035}
+  - component: {fileID: 3409801829306206476}
   m_Layer: 7
   m_Name: MountainDragon_PBR
   m_TagString: Enemy
@@ -3077,8 +3081,64 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 5, z: 7}
-  m_Center: {x: 0, y: 2.5, z: 0}
+  m_Size: {x: 2, y: 2, z: 10}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!136 &4564391231498382347
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778034857689625960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.9, y: 1, z: -1.8}
+--- !u!136 &694243963951264254
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778034857689625960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 1, y: 1, z: 1.4}
+--- !u!136 &6404781063105367035
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778034857689625960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: -0.9, y: 1, z: -1.8}
+--- !u!136 &3409801829306206476
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778034857689625960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: -1, y: 1, z: 1.4}
 --- !u!1 &3778034857689625962
 GameObject:
   m_ObjectHideFlags: 0

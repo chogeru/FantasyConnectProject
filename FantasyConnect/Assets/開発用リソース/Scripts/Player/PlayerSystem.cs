@@ -224,7 +224,7 @@ public class PlayerSystem : MonoBehaviour
             }
         }
     }
-    void SetParametar()
+    public void SetParametar()
     {
         m_CurrentHp = m_MaxHp;
         m_MP = m_MaxMP;

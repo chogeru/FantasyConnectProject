@@ -2605,8 +2605,8 @@ GameObject:
   - component: {fileID: 2730412527607000361}
   - component: {fileID: 2730412527616541545}
   - component: {fileID: 3379159831127500733}
-  - component: {fileID: 9147019949305496770}
   - component: {fileID: 1403529712438767314}
+  - component: {fileID: 5123276958799126822}
   m_Layer: 7
   m_Name: Kobold_PBR
   m_TagString: Enemy
@@ -2677,19 +2677,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &9147019949305496770
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2730412527607165257}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.47, z: 0}
 --- !u!114 &1403529712438767314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2728,6 +2715,20 @@ MonoBehaviour:
     dropChance: 50
   - itemPrefab: {fileID: 2796556744000761754, guid: b46fe269cb56f5a48a51a9eb0871fc00, type: 3}
     dropChance: 50
+--- !u!136 &5123276958799126822
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730412527607165257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2730412527607165259
 GameObject:
   m_ObjectHideFlags: 0

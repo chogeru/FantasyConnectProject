@@ -26,7 +26,7 @@ public class ReSpown : MonoBehaviour
             isReSpown=false;
             if(playerSystem != null)
             {
-                playerSystem.m_CurrentHp = playerSystem.m_MaxHp;
+                playerSystem.SetParametar();
                 playerSystem.HpUpdate();
                 playerSystem.isDie = false;
             }

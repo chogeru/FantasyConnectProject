@@ -840,6 +840,10 @@ GameObject:
   - component: {fileID: 5019332860203173490}
   - component: {fileID: 7000547970025648573}
   - component: {fileID: 5665568283371063446}
+  - component: {fileID: 9000209966170137744}
+  - component: {fileID: 24703821181426307}
+  - component: {fileID: 6284569155025170117}
+  - component: {fileID: 3687343438568343276}
   m_Layer: 7
   m_Name: Manticora_PBR
   m_TagString: Enemy
@@ -913,8 +917,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 4}
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 1.6, z: 1}
 --- !u!114 &5665568283371063446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,6 +955,62 @@ MonoBehaviour:
   dropItemsInfo:
   - itemPrefab: {fileID: 2796556744000761754, guid: b46fe269cb56f5a48a51a9eb0871fc00, type: 3}
     dropChance: 50
+--- !u!136 &9000209966170137744
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156476279680201384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.4, y: 1, z: 1}
+--- !u!136 &24703821181426307
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156476279680201384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.4, y: 1, z: 1}
+--- !u!136 &6284569155025170117
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156476279680201384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.4, y: 1, z: -0.8}
+--- !u!136 &3687343438568343276
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156476279680201384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: -0.4, y: 1, z: -0.8}
 --- !u!1 &8156476279680201386
 GameObject:
   m_ObjectHideFlags: 0
