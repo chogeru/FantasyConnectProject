@@ -34,14 +34,18 @@ public class DataController : MonoBehaviour
         string commentText = commentField.text;
 
         //値が空の場合は処理を中断
-        if (string.IsNullOrEmpty(nameText) || string.IsNullOrEmpty(commentText))
+        if (string.IsNullOrEmpty(nameText) 
+            //|| string.IsNullOrEmpty(commentText)
+            )
         {
-            Debug.Log("empty!");
+            Debug.Log("入力がない");
             yield break;
         }
 
         //それぞれの値をカンマ区切りでcombinedText変数に代入
-        string combinedText = string.Join(",", nameText, commentText);
+        string combinedText = string.Join(",", nameText
+            //, commentText
+            );
 
         //formにPostする情報をvalというキー、値はcombinedTextで追加する
         form.AddField("val", combinedText);
