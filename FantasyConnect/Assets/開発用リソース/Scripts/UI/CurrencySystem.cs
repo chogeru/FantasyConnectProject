@@ -7,6 +7,9 @@ using UnityEngine;
 [System.Serializable]
 public class CurrencyCounts
 {
+    /// <summary>
+    /// Json•Û‘¶—p•Ï”
+    /// </summary>
     public int CurrencyCount;
 }
 public class CurrencySystem : MonoBehaviour
