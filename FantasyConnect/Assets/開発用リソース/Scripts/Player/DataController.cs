@@ -8,11 +8,11 @@ public class DataController : MonoBehaviour
     [SerializeField,Header("ランキング表示用のText")]
     Text viewText;
     [SerializeField] 
-    Button dataButton;　//追加
+    Button dataButton;　
     [SerializeField] 
-    InputField nameField, commentField; //追加                     //スプレットシートID URL　　　　　　　　　　　　　　　                    //シート名(画面右下参照)
+    InputField nameField, commentField;                   //スプレットシートID URL　　　　　　　　　　　　　　　                    //シート名(画面右下参照)
     string url = "https://docs.google.com/spreadsheets/d/1ETYf6iIiRoeGH4gqHe6vv5UjS2563xMhhNoO5BspwY0/gviz/tq?tqx=out:csv&sheet=RankData";
-                    //AppsScriptのデプロイURL
+                     //AppsScriptのデプロイURL
     string gasUrl = "https://script.google.com/macros/s/AKfycbx1-Slce8jqs9cv39lEK0w1ykyrVQKGeWyaSbTBh4N5oFIY_vgmfMB0Qoc6PDasfoLW/exec";
     //文字列のリスト
     List<string> datas = new List<string>();

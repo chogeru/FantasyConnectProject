@@ -52,7 +52,8 @@ public class EffectFootStepObjctPool : MonoBehaviour
         // プール内でアクティブなオブジェクトがない場合、新たに生成して返す
         GameObject newObj = Instantiate(effectPrefab);
         newObj.SetActive(true);
-        newObj.transform.parent = transform; // 新しく生成したエフェクトオブジェクトをこのスクリプトの子に設定する
+        // 新しく生成したエフェクトオブジェクトをこのスクリプトの子に設定する
+        newObj.transform.parent = transform;
         pooledObjects.Add(newObj);
         return newObj;
     }

@@ -29,7 +29,7 @@ public class CurrencySystem : MonoBehaviour
     }
     public void DeductCurrency(int amount)
     {
-        if(m_currencyAmount>=amount)
+        if (m_currencyAmount >= amount)
         {
             m_currencyAmount -= amount;
             SaveCurrencyToJson();
@@ -49,7 +49,7 @@ public class CurrencySystem : MonoBehaviour
     }
     public void SaveCurrencyToJson()
     {
-        CurrencyCounts currencyCounts= new CurrencyCounts();
+        CurrencyCounts currencyCounts = new CurrencyCounts();
         currencyCounts.CurrencyCount = m_currencyAmount;
         string json = JsonUtility.ToJson(currencyCounts);
         string filePath = Path.Combine(Application.persistentDataPath, "currencyAmount.json");
@@ -72,8 +72,13 @@ public class CurrencySystem : MonoBehaviour
             {
                 Debug.Log("‚¨‹à‚ª‚Ù‚¼‚ñ‚³‚ê‚Ä‚¢‚È‚¢");
             }
-          
+
         }
-      
+    }
+
+    public void ResetCurrency()
+    {
+        m_currencyAmount = 0;
+        SaveCurrencyToJson();
     }
 }

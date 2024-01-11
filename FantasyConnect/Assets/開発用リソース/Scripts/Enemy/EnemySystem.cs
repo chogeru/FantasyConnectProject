@@ -468,6 +468,7 @@ public class EnemySystem : MonoBehaviour
         
         currencySystem.m_currencyAmount += enemyData.DropMony;
         currencySystem.UpdateCurrencyText();
+        currencySystem.SaveCurrencyToJson();
         // アイテムをドロップ
         DropItems();
         GameObject effect = EffectObjectPool.Instance.GetPooledObject();

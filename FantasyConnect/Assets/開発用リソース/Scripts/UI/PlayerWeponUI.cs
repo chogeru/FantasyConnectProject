@@ -12,10 +12,6 @@ public class PlayerWeponUI : MonoBehaviour
     private GameObject m_MeleeWeponUI;
     [SerializeField, Header("魔法武器のUI")]
     private GameObject m_MagicWeponUI;
-    [SerializeField, Header("魔法武器のスライダーUI")]
-    private GameObject m_MagicTypeSliderUI;
-    [SerializeField, Header("矢の本数表示テキスト")]
-    private GameObject m_ArrowText;
     [SerializeField]
     private RectTransform m_ArrowImage;
 
@@ -41,8 +37,6 @@ public class PlayerWeponUI : MonoBehaviour
                 m_MeleeWeponUI.SetActive(false);
                 m_BowWeponUI.SetActive(false);
                 m_MagicWeponUI.SetActive(true);
-                m_MagicTypeSliderUI.SetActive(true);
-                m_ArrowText.SetActive(false);
                 break;
             case PlayerSystem.PlayerType.Bow:
                 animator.SetBool("BowActive", true);
@@ -51,8 +45,6 @@ public class PlayerWeponUI : MonoBehaviour
                 m_BowWeponUI.SetActive(true);
                 m_MagicWeponUI.SetActive(false);
                 m_MeleeWeponUI.SetActive(false);
-                m_MagicTypeSliderUI.SetActive(false); 
-                m_ArrowText.SetActive(true);
                 break;
             case PlayerSystem.PlayerType.Melee:
                 animator.SetBool("MeleeActive", true);
@@ -61,11 +53,6 @@ public class PlayerWeponUI : MonoBehaviour
                 m_BowWeponUI.SetActive(false);
                 m_MagicWeponUI.SetActive(false);
                 m_MeleeWeponUI.SetActive(true);
-                m_MagicTypeSliderUI.SetActive(false);
-                m_ArrowText.SetActive(false);
-
-
-
                 break;
             default:
                 break;

@@ -249,7 +249,11 @@ public class InventorySystem : MonoBehaviour
             Debug.LogWarning("Item counts file does not exist.");
         }
     }
-
+    public void ResetItem()
+    {
+        inventory.Clear();
+        SaveItemCountsToJson();
+    }
 
     // アイテムの数が変更された時に呼び出すメソッド
     public void SaveItemCountsOnChange()
