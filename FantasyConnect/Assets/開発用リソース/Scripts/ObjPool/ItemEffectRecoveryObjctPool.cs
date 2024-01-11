@@ -21,6 +21,10 @@ public class ItemEffectRecoveryObjctPool : MonoBehaviour
 
         InitializePool();
     }
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void InitializePool()
     {

@@ -19,11 +19,13 @@ public class RecoveryItem : MonoBehaviour
     private GameObject m_HitEffect;
 
     // オブジェクトプールマネージャへの参照
-    private ItemEffectRecoveryObjctPool effectObjectPool;
+    private ItemEffectRecoveryObjctPool m_RecoveryEffectObjPool;
+    private ItemEffectMPObjctPool m_MpEffectObjctPool;
     private void Start()
     {
         // ItemEffectObjctPool のシングルトンインスタンスを取得
-        effectObjectPool = ItemEffectRecoveryObjctPool.Instance;
+        m_RecoveryEffectObjPool = ItemEffectRecoveryObjctPool.Instance;
+        m_MpEffectObjctPool = ItemEffectMPObjctPool.Instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +37,7 @@ public class RecoveryItem : MonoBehaviour
                 PlayerSystem playerSystem = other.GetComponent<PlayerSystem>();
 
                 // オブジェクトプールからエフェクトを取得
-                GameObject hitEffect = effectObjectPool.GetPooledObject();
+                GameObject hitEffect = m_RecoveryEffectObjPool.GetPooledObject();
                 hitEffect.transform.position = transform.position;
                 hitEffect.SetActive(true);
 
@@ -47,7 +49,7 @@ public class RecoveryItem : MonoBehaviour
                 PlayerSystem playerSystem = other.GetComponent<PlayerSystem>();
 
                 // オブジェクトプールからエフェクトを取得
-                GameObject hitEffect = effectObjectPool.GetPooledObject();
+                GameObject hitEffect = m_MpEffectObjctPool.GetPooledObject();
                 hitEffect.transform.position = transform.position;
                 hitEffect.SetActive(true);
 

@@ -21,7 +21,10 @@ public class EffectObjectPool : MonoBehaviour
 
         InitializePool();
     }
-
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void InitializePool()
     {
         for (int i = 0; i < poolSize; i++)

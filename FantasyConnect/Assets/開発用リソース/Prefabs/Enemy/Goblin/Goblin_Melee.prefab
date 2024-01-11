@@ -1812,7 +1812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   isAttack: 0
-  m_HitEffect: {fileID: 879681129677348344, guid: bb7c04ee23d5c584c99ac06601febe0c, type: 3}
+  m_HitEffect: {fileID: 0}
 --- !u!1 &6125185222264446583
 GameObject:
   m_ObjectHideFlags: 0
