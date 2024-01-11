@@ -7,6 +7,8 @@ public class SettingCanvasButton : MonoBehaviour
     CurrencySystem currencySystem;
     [SerializeField,Header("インベントリシステム")]
     InventorySystem inventorySystem;
+    [SerializeField, Header("シーンデータ")]
+    private SceneSave sceneSave;
     public void LoadFirstCity()
     {
         SceneController.SceneConinstance.LoadSceneWithLoadingScreen("FirstCity");
@@ -23,13 +25,15 @@ public class SettingCanvasButton : MonoBehaviour
 
     public void GameReset()
     {
-       currencySystem.ResetCurrency();
+        currencySystem.ResetCurrency();
         inventorySystem.ResetItem();
+        sceneSave.ResetSceneData();
         SceneManager.LoadSceneAsync("Title",LoadSceneMode.Single);
     }
     public void GameSave()
     {
         currencySystem.SaveCurrencyToJson();
         inventorySystem.SaveItemCountsToJson();
+        sceneSave.SaveSceneName();
     }
 }

@@ -29,12 +29,6 @@ public class SceneController : MonoBehaviour
         string currntScene = SceneManager.GetActiveScene().name;
         switch (currntScene)
         {
-            case "Title":
-                if (Input.anyKeyDown)
-                {
-                    LoadSceneWithLoadingScreen("TutorialScene");
-                }
-                break;
             case "MyHouse":
                 if (isHitCol)
                 {
@@ -130,8 +124,8 @@ public class SceneController : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
-            
-            float progress = Mathf.Clamp01(asyncLoad.progress / 0.9f); 
+
+            float progress = Mathf.Clamp01(asyncLoad.progress / 0.9f);
             loadingSlider.value = progress;
 
             yield return null;

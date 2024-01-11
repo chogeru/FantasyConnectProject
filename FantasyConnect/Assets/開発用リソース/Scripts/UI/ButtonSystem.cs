@@ -13,5 +13,6 @@ public class ButtonSystem : MonoBehaviour
     }
     public void CloseCanvas()
     {
+        m_Canvas.SetActive(false);
     }
 }

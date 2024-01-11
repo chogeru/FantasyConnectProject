@@ -2195,6 +2195,50 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &292801163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292801164}
+  - component: {fileID: 292801165}
+  m_Layer: 8
+  m_Name: "\u30C7\u30FC\u30BF"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292801164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292801163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8251212825534060859}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &292801165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292801163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e657566eb0370484ebaf9685ba7c8037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &343689682
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,7 +5420,7 @@ AudioSource:
   m_GameObject: {fileID: 1046895952}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 366406605568144891, guid: 44becd69d60f10d47aec71b593bec75f, type: 2}
   m_audioClip: {fileID: 8300000, guid: f290051f770c7eb4480b94e38f2a93fb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.6
@@ -6034,6 +6078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencySystem: {fileID: 1285231558}
   inventorySystem: {fileID: 1285231557}
+  sceneSave: {fileID: 292801165}
 --- !u!1 &1175468508
 GameObject:
   m_ObjectHideFlags: 0
@@ -17206,6 +17251,7 @@ Transform:
   - {fileID: 8359297706105059272}
   - {fileID: 393249612}
   - {fileID: 3070518329038970285}
+  - {fileID: 292801164}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -77.955, z: 0}
@@ -18896,6 +18942,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8006751498617574435, guid: a92ebdf897fa283428c50a41fe4411a5, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 366406605568144891, guid: 44becd69d60f10d47aec71b593bec75f, type: 2}
     - target: {fileID: 8099074118825668027, guid: a92ebdf897fa283428c50a41fe4411a5, type: 3}
       propertyPath: m_Name
       value: VFX_Trail_Sound
