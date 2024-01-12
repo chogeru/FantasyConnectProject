@@ -55,7 +55,7 @@ public class SceneSave : MonoBehaviour
             SceneData sceneData = JsonUtility.FromJson<SceneData>(json);
 
             // 指定されたシーンをロード
-            SceneManager.LoadScene(sceneData.sceneName);
+            SceneController.sceneController.LoadSceneWithLoadingScreen(sceneData.sceneName);
         }
     }
     public void ResetSceneData()

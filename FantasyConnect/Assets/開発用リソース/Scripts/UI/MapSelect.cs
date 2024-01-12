@@ -69,31 +69,31 @@ public class MapSelect : MonoBehaviour
     }
     public void LoadGrassIandArea()
     {
-        SceneManager.LoadScene("GrassIandArea1", LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("GrassIandArea1");
     }
     public void LoadAutumnArea()
     {
-        SceneManager.LoadScene("AutumnArea1", LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("AutumnArea1");
     }
     public void LoadSnowArea()
     {
-        SceneManager.LoadScene("SnowArea1", LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("SnowArea1");
     }
     public void LoadWastelandArea()
     {
-        SceneManager.LoadScene("WastelandArea1", LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("WastelandArea1");
     }
     public void LoadMyHouce()
     {
-        SceneManager.LoadSceneAsync("MyHouse", LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("MyHouse");
     }
     public void LoadSecondCity()
     {
-        SceneManager.LoadScene("SecondCity",LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("SecondCity");
     }
     public void LoadFirstCity()
     {
-        SceneManager.LoadScene("FirstCity", LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("FirstCity");
     }
 
 }

@@ -7,6 +7,7 @@ public class SceneController : MonoBehaviour
     public static SceneController SceneConinstance;
     public static SceneController sceneController
     { get { return SceneConinstance; } }
+
     public bool isHitCol = false;
 
     public GameObject loadingCanvas;

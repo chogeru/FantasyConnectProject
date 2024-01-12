@@ -28,7 +28,7 @@ public class SettingCanvasButton : MonoBehaviour
         currencySystem.ResetCurrency();
         inventorySystem.ResetItem();
         sceneSave.ResetSceneData();
-        SceneManager.LoadSceneAsync("Title",LoadSceneMode.Single);
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("Title");
     }
     public void GameSave()
     {
