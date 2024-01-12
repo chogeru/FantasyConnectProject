@@ -187,6 +187,8 @@ public class PlayerSystem : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             m_MaxSpeed = 0;
+            m_PlayerAnimator.SetBool("Walk", false);
+            m_PlayerAnimator.SetBool("Run", false);
             isWeponChange = false;
             switch (attckType)
             {

@@ -17,6 +17,7 @@ TagManager:
   - Climb
   - WallRun
   - RidePos
+  - Interactive
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - Creature
   - Player
   - Bullet
-  - 
+  - DeadlyObject
   - 
   - 
   - 

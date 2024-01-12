@@ -95,5 +95,8 @@ public class MapSelect : MonoBehaviour
     {
         SceneController.SceneConinstance.LoadSceneWithLoadingScreen("FirstCity");
     }
-
+    public void LoadChallengeArea()
+    {
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen("ChallengeArea");
+    }
 }
