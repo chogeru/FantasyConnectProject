@@ -12,11 +12,13 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField,Header("最小スポーン間隔")]
     private float m_MinSpawnTime=10;
     private int m_SpawnCount;
-
+    [SerializeField, Header("最大のEnemyのスポーン数")]
+    private int m_MaxEnemyCount=10;
     [SerializeField]
     private AudioSource m_AudioSource;
     [SerializeField,Header("スポーン時の音声")]
     private AudioClip m_SpownClip;
+
 
     void Start()
     {
@@ -25,6 +27,10 @@ public class EnemySpawn : MonoBehaviour
 
     void Update()
     {
+        if (CountEnemyObjects() >= m_MaxEnemyCount)
+        {
+            return;
+        }
         m_Timer += Time.deltaTime;
         if (m_Timer >= m_SpawnInterval)
         {
@@ -34,15 +40,30 @@ public class EnemySpawn : MonoBehaviour
             m_AudioSource.Play();
         }
     }
-
+    int CountEnemyObjects()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        return enemies.Length;
+    }
     void SpawnEnemy()
     {
         float weight = Mathf.Clamp01((float)m_SpawnCount / 10f);
         int selectedIndex = GetWeightedRandomIndex(weight);
         GameObject selectedPrefab = m_EnemyPrefabs[selectedIndex];
-        Instantiate(selectedPrefab, transform.position, Quaternion.identity);
 
-        m_SpawnCount++;
+        // 周囲10メートルの半径内でランダムな2D位置を生成し、それを3D座標に変換
+        Vector2 randomPoint = Random.insideUnitCircle * 10f;
+        Vector3 spawnPosition = new Vector3(randomPoint.x, 0f, randomPoint.y) + transform.position;
+
+        // スポーン位置に床があるか確認
+        RaycastHit hit;
+        if (Physics.Raycast(spawnPosition + Vector3.up * 10f, Vector3.down, out hit, 20f, LayerMask.GetMask("Default")))
+        {
+            // 床がある場合は、敵を生成
+            Instantiate(selectedPrefab, hit.point, Quaternion.identity);
+
+            m_SpawnCount++;
+        }
     }
 
     void ResetTimer()

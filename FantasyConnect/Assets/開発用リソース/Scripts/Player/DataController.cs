@@ -87,6 +87,7 @@ public class DataController : MonoBehaviour
             {
                 //所得出来なかった場合
                 Debug.Log("データ所得に失敗");
+                viewText.text="日付不明";
             }
         }
     }
