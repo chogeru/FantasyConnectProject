@@ -11,7 +11,12 @@ public class EnemySpawn : MonoBehaviour
     private float m_MaxSpawnTime=20;
     [SerializeField,Header("最小スポーン間隔")]
     private float m_MinSpawnTime=10;
-    private int m_SpawnCount; 
+    private int m_SpawnCount;
+
+    [SerializeField]
+    private AudioSource m_AudioSource;
+    [SerializeField,Header("スポーン時の音声")]
+    private AudioClip m_SpownClip;
 
     void Start()
     {
@@ -25,6 +30,8 @@ public class EnemySpawn : MonoBehaviour
         {
             SpawnEnemy();
             ResetTimer();
+            m_AudioSource.clip= m_SpownClip;
+            m_AudioSource.Play();
         }
     }
 

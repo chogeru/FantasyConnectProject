@@ -35,6 +35,8 @@ public class BGMManager : MonoBehaviour
     private AudioClip m_WastelandBossAreaBGM;
     [SerializeField, Header("SecondCity‚ÌBGM")]
     private AudioClip m_SecondCityBGM;
+    [SerializeField, Header("ChallengeArea‚ÌBGM")]
+    private AudioClip m_ChallengeAreaBGM;
     #endregion
     private void Awake()
     {
@@ -122,6 +124,10 @@ public class BGMManager : MonoBehaviour
                 break;
             case "TutorialScene":
                 m_AudioSouce.Stop();
+                break;
+            case "ChallengeArea":
+                m_AudioSouce.clip = m_ChallengeAreaBGM;
+                m_AudioSouce.Play();
                 break;
             default:
                 break;
