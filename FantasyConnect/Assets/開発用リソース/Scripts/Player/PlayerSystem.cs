@@ -193,9 +193,9 @@ public class PlayerSystem : MonoBehaviour
             switch (attckType)
             {
                 case eAttckType.NomalAttck:
-                    if (playerType == PlayerType.Magic && m_MP >= 5||
-                        playerType==PlayerType.Melee||
-                        playerType==PlayerType.Bow&&inventorySystem.inventory.ContainsKey("Arrow"))
+                    if (playerType == PlayerType.Magic && m_MP >= 5 ||
+                  playerType == PlayerType.Melee ||
+                  (playerType == PlayerType.Bow && (inventorySystem.inventory.ContainsKey("Arrow") && inventorySystem.inventory["Arrow"].amount > 0)))
                     {
                         m_PlayerAnimator.SetBool("NormalAttack", true);
                     }

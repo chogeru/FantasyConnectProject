@@ -11,6 +11,13 @@ public class PlayerBullet : MonoBehaviour
 
     // プレイヤーレイヤーのマスク
     public LayerMask playerLayerMask;
+    private GameObject m_ShotSE;
+    private void Start()
+    {
+        GameObject hitEffect =  PlayerBulletSEPool.Instance.GetPooledObject();
+        hitEffect.transform.position = transform.position;
+        hitEffect.SetActive(true);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         // プレイヤーレイヤーに属するオブジェクトを無視する

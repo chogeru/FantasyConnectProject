@@ -12,8 +12,14 @@ public class BossEnemyManager : MonoBehaviour
     [SerializeField,Header("敵撃破後タイムライン")]
     private GameObject m_BossDestroyTimeline;
 
+    [SerializeField]
+    private GameObject m_ResultTimeline;
     [SerializeField, Header("残り敵の数表示UI")]
     private TextMeshProUGUI m_EnemyCountText;
+    [SerializeField]
+    private TextMeshProUGUI m_TimeCountText;
+    private float m_Time;
+    private bool isCount=true;
     private int m_EnemyCount;
     void Start()
     {
@@ -26,7 +32,20 @@ public class BossEnemyManager : MonoBehaviour
         UpdateEnemyCountUI();
     }
 
-
+    private void Update()
+    {
+        if(isCount)
+        {
+            m_Time += Time.deltaTime;
+            if (m_TimeCountText != null)
+            {
+                string formattedTime = string.Format("{0:00}:{1:00}", Mathf.Floor(m_Time / 60), Mathf.Floor(m_Time % 60));
+                m_TimeCountText.text = "タイム: " + formattedTime;
+            }
+        }
+        
+    }
+    
     public void DestroyBossEnemy(GameObject boss)
     {
         if(m_BossEnemys.Contains(boss))
@@ -35,13 +54,19 @@ public class BossEnemyManager : MonoBehaviour
             UpdateEnemyCountUI();
             if(m_BossEnemys.Count==0)
             {
+                isCount = false;
                 m_BossDestroyTimeline.SetActive(true);
             }
         }
     }
-    public void TimelineSceneChange()
+    public void SetResultTimeline()
     {
-        SceneManager.LoadScene(m_SceneName, LoadSceneMode.Single);
+        m_ResultTimeline.SetActive(true);
+        Cursor.visible = true;
+    }
+    public void LoadCity()
+    {
+        SceneController.SceneConinstance.LoadSceneWithLoadingScreen(m_SceneName);
     }
     private void UpdateEnemyCountUI()
     {

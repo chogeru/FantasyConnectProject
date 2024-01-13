@@ -475,7 +475,7 @@ public class EnemySystem : MonoBehaviour
         effect.transform.position = transform.position;
         effect.transform.rotation = Quaternion.identity;
         effect.SetActive(true);
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
     private void OnCollisionStay(Collision collision)
     {

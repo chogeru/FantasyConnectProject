@@ -49,6 +49,7 @@ public class EffectObjectPool : MonoBehaviour
 
         // プール内でアクティブなオブジェクトがない場合、新たに生成して返す
         GameObject newObj = Instantiate(effectPrefab);
+        newObj.transform.parent = transform;
         newObj.SetActive(true);
         pooledObjects.Add(newObj);
         return newObj;
