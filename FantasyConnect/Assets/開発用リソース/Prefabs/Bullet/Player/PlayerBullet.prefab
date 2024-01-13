@@ -80,7 +80,7 @@ MonoBehaviour:
   m_HitEffect: {fileID: 2730053630047889979, guid: d088cef704d3e33409f2417ab70e48c6, type: 3}
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 264
 --- !u!1001 &7784738910169842332
 PrefabInstance:
   m_ObjectHideFlags: 0
