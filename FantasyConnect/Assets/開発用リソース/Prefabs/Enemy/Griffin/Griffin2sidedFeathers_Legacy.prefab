@@ -99,7 +99,7 @@ Transform:
   m_GameObject: {fileID: 2388253008053653637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2388253008053685475}
@@ -3545,7 +3545,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 130
   isAttack: 0
-  m_HitEffect: {fileID: 0}
 --- !u!135 &6282968404840094584
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -260,6 +260,8 @@ public class PlayerSystem : MonoBehaviour
             {
                 magicWepon.AttackEnd();
             }
+            m_PlayerAnimator.SetBool("NormalAttack", false);
+            m_PlayerAnimator.SetBool("StrongAttack", false);
             switch (playerType)
             {
                 case PlayerType.Magic:

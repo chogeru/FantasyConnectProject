@@ -18,7 +18,7 @@ public class FootStep : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (m_CoolTime > 0.5)
+        if (m_CoolTime > 0.05)
         {
             GenerateFootstep();
             m_CoolTime = 0;

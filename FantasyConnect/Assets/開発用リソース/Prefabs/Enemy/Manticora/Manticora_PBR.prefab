@@ -175,7 +175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 50
   isAttack: 0
-  m_HitEffect: {fileID: 0}
 --- !u!135 &6917541374273341627
 SphereCollider:
   m_ObjectHideFlags: 0

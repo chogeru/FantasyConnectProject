@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 565128284888373684}
   - component: {fileID: 565128284888373685}
   - component: {fileID: 565128284888373690}
+  - component: {fileID: 8421035614044472425}
   m_Layer: 0
   m_Name: "\u30DE\u30C3\u30D7\u58C1"
   m_TagString: Untagged
@@ -83,6 +84,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &8421035614044472425
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565128284888373688}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.25087857
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 565128284888373690}
+  m_Enabled: 1
 --- !u!1 &805702755753231880
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +247,7 @@ GameObject:
   - component: {fileID: 6387648571378691856}
   - component: {fileID: 7427661850715015830}
   - component: {fileID: 8693256046496096315}
+  - component: {fileID: 1261821910191482975}
   m_Layer: 0
   m_Name: "\u30DE\u30C3\u30D7\u58C1 (2)"
   m_TagString: Untagged
@@ -299,6 +320,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &1261821910191482975
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7316580724737442718}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.25087857
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8693256046496096315}
+  m_Enabled: 1
 --- !u!1 &7638709878157444163
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +350,7 @@ GameObject:
   - component: {fileID: 3732511250907276538}
   - component: {fileID: 374474361604022027}
   - component: {fileID: 8332984807819973362}
+  - component: {fileID: 3601043933347543216}
   m_Layer: 0
   m_Name: "\u30DE\u30C3\u30D7\u58C1 (1)"
   m_TagString: Untagged
@@ -382,6 +423,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &3601043933347543216
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638709878157444163}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.25465673
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8332984807819973362}
+  m_Enabled: 1
 --- !u!1 &8130971360179472600
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +453,7 @@ GameObject:
   - component: {fileID: 359020191193129360}
   - component: {fileID: 8919187046157176692}
   - component: {fileID: 875131140280396247}
+  - component: {fileID: 6458818725869088290}
   m_Layer: 0
   m_Name: "\u30DE\u30C3\u30D7\u58C1 (3)"
   m_TagString: Untagged
@@ -465,3 +526,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &6458818725869088290
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8130971360179472600}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.25087857
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 875131140280396247}
+  m_Enabled: 1
