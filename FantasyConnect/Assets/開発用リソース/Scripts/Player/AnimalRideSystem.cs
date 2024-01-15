@@ -8,6 +8,8 @@ public class AnimalRideSystem : MonoBehaviour
     public float m_MaxDistance = 3f; // 3mの距離
     public Transform m_PlayerObject; // プレイヤーオブジェクト
     private Transform m_RidePos; // RidePosオブジェクトのTransform
+    [SerializeField, Header("ライド確認用UI")]
+    private GameObject m_RideUI;
     public bool isRide = false; // ライド状態のフラグ
     [SerializeField]
     PlayerSystem playerSystem;
@@ -33,6 +35,14 @@ public class AnimalRideSystem : MonoBehaviour
 
     void Update()
     {
+        if (m_RidePos != null && Vector3.Distance(m_PlayerObject.position, m_RidePos.position) <= m_MaxDistance)
+        {
+            m_RideUI.SetActive(true);
+        }
+        else
+        {
+            m_RideUI.SetActive(false);
+        }
         // Rキーが押されたとき
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -75,7 +85,7 @@ public class AnimalRideSystem : MonoBehaviour
             if (parentObject != null)
             {
                 // EnemySystemコンポーネントを取得
-                 enemySystem = parentObject.GetComponent<EnemySystem>();
+                enemySystem = parentObject.GetComponent<EnemySystem>();
 
                 if (enemySystem != null)
                 {
@@ -140,7 +150,7 @@ public class AnimalRideSystem : MonoBehaviour
         if (obstacleToLeft && obstacleToRight)
         {
             Debug.Log("左右に障害物があるよ");
-            isRide=true;
+            isRide = true;
             return; // 左右に障害物がある場合は降りられない
         }
         else if (obstacleToLeft)
