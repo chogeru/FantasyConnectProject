@@ -94,10 +94,8 @@ GameObject:
   - component: {fileID: 2935991743666717563}
   - component: {fileID: 6996232581118543828}
   - component: {fileID: 2461732371642867870}
-  - component: {fileID: 6834959137741391306}
   - component: {fileID: 1278180973029575106}
   - component: {fileID: 315168747521535239}
-  - component: {fileID: 6398752880285776826}
   m_Layer: 6
   m_Name: Chest_Lid
   m_TagString: Interactive
@@ -172,20 +170,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6834959137741391306
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4543558454323484168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6268082664166146166, guid: 4e1c279d02be63f44978d9ac167bf612, type: 3}
 --- !u!95 &1278180973029575106
 Animator:
   serializedVersion: 4
@@ -215,9 +199,9 @@ AudioSource:
   m_GameObject: {fileID: 4543558454323484168}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: 366406605568144891, guid: 44becd69d60f10d47aec71b593bec75f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8eef4cc43e8c54246b05291ddf2f44fa, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -302,24 +286,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6398752880285776826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4543558454323484168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 032afca5781ebbf4297689acad0dc1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openSound: {fileID: 8300000, guid: 8eef4cc43e8c54246b05291ddf2f44fa, type: 3}
-  closeSound: {fileID: 8300000, guid: 1ffea811e36ff49419cfa21ab5dbab61, type: 3}
-  openAnimationName: chestOpen
-  closeAnimationName: chestClose
-  interactiveObjectDelayTime: 0
-  interactiveObjectOpen: 0
 --- !u!1 &6553696554980012359
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +547,7 @@ GameObject:
   - component: {fileID: 5904838824605004401}
   - component: {fileID: 8509205054703847099}
   - component: {fileID: 2308085584130050725}
-  - component: {fileID: 919132149313254576}
+  - component: {fileID: 1126137226444023054}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -687,8 +653,8 @@ LODGroup:
     - renderer: {fileID: 2058513377142499533}
     - renderer: {fileID: 5560629972471980591}
   m_Enabled: 1
---- !u!64 &919132149313254576
-MeshCollider:
+--- !u!65 &1126137226444023054
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -697,7 +663,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3699203645411342285, guid: 4e1c279d02be63f44978d9ac167bf612, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.1131884, y: 0.48385182, z: 0.82446444}
+  m_Center: {x: 0, y: 0.25467223, z: 0.0035360605}
