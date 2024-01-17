@@ -20,7 +20,7 @@ MonoBehaviour:
   m_Acceleration: 2
   m_AttackDistance: 4.5
   m_RotationSpeed: 5
-  m_MaxHp: 3000
+  m_MaxHp: 2200
   m_Gravity: 9.81
   m_DropMony: 2000
   m_HitVoiceClip: {fileID: 8300000, guid: 6639256930d308d4e8723f38516fc704, type: 3}

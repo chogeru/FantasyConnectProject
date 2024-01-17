@@ -29,7 +29,7 @@ public class EnemyMagicWeapon : MonoBehaviour
         if (isMagicAttck && player != null)
         {
             // プレイヤーの方向を計算
-            Vector3 direction = (player.position - firePoint.position).normalized;
+            Vector3 direction = (player.position+Vector3.up*0.5f - firePoint.position).normalized;
 
             // 魔法弾を生成してプレイヤーの方向に発射
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);

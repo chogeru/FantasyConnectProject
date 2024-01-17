@@ -303,7 +303,7 @@ public class EnemySystem : MonoBehaviour
         if (distanceToPlayer <= enemyData.AttackDistance)
         {
             m_MagicAttckCoolTime += Time.deltaTime;
-            if (m_MagicAttckCoolTime > 5)
+            if (m_MagicAttckCoolTime > 2)
             {
                 inAttackRange = true;
                 if (!isAttacking)

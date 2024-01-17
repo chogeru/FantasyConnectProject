@@ -34,6 +34,8 @@ public class TextManager : MonoBehaviour
     {
         if (textWindowUI != null)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerSystem = player.GetComponent<PlayerSystem>();
             isTextEnd = false;
             textWindowUI.SetActive(true); 
             playerSystem.isStop = true;
@@ -56,7 +58,9 @@ public class TextManager : MonoBehaviour
     {
         if (textWindowUI != null)
         {
-            isTextEnd=true;
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerSystem = player.GetComponent<PlayerSystem>();
+            isTextEnd =true;
             playerSystem.isStop = false;
             textWindowUI.SetActive(false);
         }
