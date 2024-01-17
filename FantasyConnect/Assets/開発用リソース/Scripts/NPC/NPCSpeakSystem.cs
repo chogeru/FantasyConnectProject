@@ -62,7 +62,8 @@ public class NPCSpeakSystem : MonoBehaviour
         {
             // プレイヤーが指定の距離外にいる場合、UIを非表示にする
             m_SpeakUI.SetActive(false);
-            textTrigger.ResetTextIndex(); // プレイヤーが離れたらテキストのインデックスをリセット
+            textTrigger.ResetTextIndex(); // プレイヤーが離れたらテキストのインデックスをリセット7
+            TextManager.Instance.isTextEnd = false;
         }
 
     }

@@ -189,6 +189,8 @@ public class PlayerSystem : MonoBehaviour
             m_MaxSpeed = 0;
             m_PlayerAnimator.SetBool("Walk", false);
             m_PlayerAnimator.SetBool("Run", false);
+            m_PlayerAnimator.SetBool("Hit", false);
+
             isWeponChange = false;
             switch (attckType)
             {
@@ -224,6 +226,10 @@ public class PlayerSystem : MonoBehaviour
 
                     break;
             }
+        }
+        if(m_PlayerAnimator.GetBool("Hit"))
+        {
+            m_MaxSpeed = 0;
         }
     }
     public void SetParametar()
@@ -437,6 +443,8 @@ public class PlayerSystem : MonoBehaviour
         {
             m_CurrentHp -= damage;
             playerIconAnime.isHit = true;
+            m_PlayerAnimator.SetBool("Hit", true);
+
             if (m_CurrentHp < 0)
             {
                 m_CurrentHp = 0;
@@ -458,12 +466,17 @@ public class PlayerSystem : MonoBehaviour
         m_MP = Mathf.Min(m_MP, m_MaxMP);
         MpUpdate();
     }
+    private void EndHit()
+    {
+        m_PlayerAnimator.SetBool("Hit", false);
+    }
     private void Die()
     {
         if (m_CurrentHp <= 0)
         {
             DieSound();
             m_PlayerAnimator.SetBool("Die", true);
+            m_PlayerAnimator.SetBool("Hit", false);
             isDie = true;
         }
     }

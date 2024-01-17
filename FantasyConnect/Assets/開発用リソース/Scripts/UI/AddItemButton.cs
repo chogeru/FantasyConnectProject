@@ -29,7 +29,7 @@ public class AddItemButton : MonoBehaviour
         if (InventorySystem.inventorySystem != null)
         {
             // 必要なお金の量を指定して新しいメソッドを使用する
-            InventorySystem.inventorySystem.AddItemWithCurrencyCheck("Arrow", ItemType.Arrow, 5, 350);
+            InventorySystem.inventorySystem.AddItemWithCurrencyCheck("Arrow", ItemType.Arrow, 5, 250);
         }
     }
 }
