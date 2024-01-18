@@ -1,4 +1,4 @@
-// Made with Amplify Shader Editor v1.9.2
+// Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "Polyart/Dreamscape Water River"
 {
@@ -233,7 +233,8 @@ Shader "Polyart/Dreamscape Water River"
 	}
 }
 /*ASEBEGIN
-Version=19200
+Version=18800
+882;203;2845;1556;4022.826;1417.126;1;True;True
 Node;AmplifyShaderEditor.CommentaryNode;131;-2199.885,1676.364;Inherit;False;2331.656;642.8052;;13;64;66;65;67;68;87;69;73;71;74;77;79;86;Reclection Distortion;0.6179246,0.6739129,1,1;0;0
 Node;AmplifyShaderEditor.RangedFloatNode;64;-2067.551,2016.169;Inherit;False;Property;_TurbulenceTiling;Turbulence Tiling;22;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;65;-1832.837,2115.939;Float;False;Property;_TurbulenceScale;TurbulenceScale;21;0;Create;True;0;0;0;False;0;False;1;10;0;0;0;1;FLOAT;0
@@ -294,7 +295,7 @@ Node;AmplifyShaderEditor.FunctionNode;29;-1270.5,-1087.091;Inherit;False;DepthMa
 Node;AmplifyShaderEditor.SaturateNode;11;-2447.805,-1094.444;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.CommentaryNode;135;-1522.758,988.5527;Inherit;False;1647.683;631.2351;;14;62;24;28;27;25;32;54;58;26;85;50;133;84;49;Color Blending;1,0.3537736,0.3968199,1;0;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;12;-2285.805,-1093.444;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.ScreenColorNode;36;-785.8376,-1090.775;Inherit;False;Global;_GrabScreen0;Grab Screen 0;4;0;Create;True;0;0;0;False;0;False;Object;-1;False;False;False;False;2;0;FLOAT2;0,0;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ScreenColorNode;36;-785.8376,-1090.775;Inherit;False;Global;_GrabScreen0;Grab Screen 0;4;0;Create;True;0;0;0;False;0;False;Object;-1;False;False;1;0;FLOAT2;0,0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.RegisterLocalVarNode;132;-2487.359,1726.491;Inherit;False;vReflection;-1;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.RegisterLocalVarNode;122;-1863.157,172.0844;Inherit;False;vColorWaves;-1;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.GetLocalVarNode;84;-1472.758,1121.829;Inherit;False;122;vColorWaves;1;0;OBJECT;;False;1;COLOR;0
@@ -320,7 +321,7 @@ Node;AmplifyShaderEditor.SimpleMultiplyOpNode;28;-325.2072,1457.519;Inherit;Fals
 Node;AmplifyShaderEditor.GetLocalVarNode;126;-1182.946,495.5646;Inherit;False;123;vDisplacement;1;0;OBJECT;;False;1;FLOAT;0
 Node;AmplifyShaderEditor.TransformPositionNode;100;-782.9399,457.4792;Inherit;False;World;Object;False;Fast;True;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.LerpOp;24;-271.7448,1239.201;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.UnpackScaleNormalNode;94;-2531.212,1026.203;Inherit;False;Tangent;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.UnpackScaleNormalNode;94;-2531.212,1026.203;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.RegisterLocalVarNode;62;-94.07522,1234.259;Inherit;False;vFinalColor;-1;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.DynamicAppendNode;101;-512.5461,490.1832;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.RegisterLocalVarNode;90;-2195.747,1025.366;Inherit;False;vNormal;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
@@ -330,12 +331,12 @@ Node;AmplifyShaderEditor.RangedFloatNode;6;-3236.248,-703.126;Inherit;False;Prop
 Node;AmplifyShaderEditor.RangedFloatNode;61;-214.6348,187.9828;Inherit;False;Property;_Smoothness;Smoothness;3;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.GetLocalVarNode;73;-883.9799,1726.364;Inherit;False;31;vRefractionNormal;1;0;OBJECT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.GetLocalVarNode;39;-215.1826,32.32179;Inherit;False;90;vNormal;1;0;OBJECT;;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.StaticSwitch;138;-357.2596,486.1949;Inherit;False;Property;_WorldtoObjectPosition;World to Object Position?;14;0;Create;True;0;0;0;False;0;False;0;0;0;True;;Toggle;2;Key0;Key1;Create;False;True;All;9;1;FLOAT3;0,0,0;False;0;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;5;FLOAT3;0,0,0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.StaticSwitch;138;-357.2596,486.1949;Inherit;False;Property;_WorldtoObjectPosition;World to Object Position?;14;0;Create;True;0;0;0;False;0;False;0;0;0;True;;Toggle;2;Key0;Key1;Create;False;True;9;1;FLOAT3;0,0,0;False;0;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT3;0,0,0;False;4;FLOAT3;0,0,0;False;5;FLOAT3;0,0,0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;79;-432.2787,1772.364;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.RangedFloatNode;69;-923.9795,1850.365;Float;False;Property;_WaveDistortionIntensity;Wave Distortion Intensity;24;0;Create;True;0;0;0;False;0;False;0.6;4;0;4;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;136;-314.0891,264.4019;Inherit;False;Property;_Opacity;Opacity;4;0;Create;True;0;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;74;-607.9788,1773.364;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;32,0;Float;False;True;-1;2;;0;0;Standard;Polyart/Dreamscape Water River;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Off;0;False;;0;False;;False;0;False;;0;False;;False;0;Transparent;0.5;True;False;0;False;Transparent;;Transparent;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;False;2;5;False;;10;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;32,0;Float;False;True;-1;2;;0;0;Standard;Polyart/Dreamscape Water River;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Off;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Transparent;0.5;True;False;0;False;Transparent;;Transparent;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;False;2;5;False;-1;10;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;66;0;64;0
 WireConnection;67;0;66;0
 WireConnection;67;1;65;0
@@ -429,4 +430,4 @@ WireConnection;0;4;61;0
 WireConnection;0;9;136;0
 WireConnection;0;11;138;0
 ASEEND*/
-//CHKSM=F1E340741F3CB2E0CB2BB78F5C99252DE0533DD3
+//CHKSM=E12EA3D00B60DD77B09615D4186FB2C52FD3A629

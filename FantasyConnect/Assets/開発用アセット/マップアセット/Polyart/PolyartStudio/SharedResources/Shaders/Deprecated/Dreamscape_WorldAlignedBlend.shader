@@ -1,4 +1,4 @@
-// Made with Amplify Shader Editor v1.9.2
+// Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "Dreamscape_WorldAlignedBlend"
 {
@@ -172,7 +172,8 @@ Shader "Dreamscape_WorldAlignedBlend"
 	Fallback "Diffuse"
 }
 /*ASEBEGIN
-Version=19200
+Version=18800
+882;203;2845;1556;2968.116;302.2629;1;True;True
 Node;AmplifyShaderEditor.RangedFloatNode;29;-2227.72,25.63428;Inherit;False;Property;_StoneDirtSharpness;Stone Dirt Sharpness;3;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;30;-2182.728,101.5227;Inherit;False;Property;_StoneDirtBias;Stone Dirt Bias;4;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.TexturePropertyNode;41;-1779.408,776.223;Inherit;True;Property;_SmoothnessTexture;Smoothness Texture;9;0;Create;True;0;0;0;False;0;False;None;None;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
@@ -189,10 +190,10 @@ Node;AmplifyShaderEditor.LerpOp;13;-1443.355,-109.5932;Inherit;False;3;0;COLOR;0
 Node;AmplifyShaderEditor.RangedFloatNode;40;-1757.244,682.2127;Inherit;False;Property;_Normal;Normal;8;0;Create;True;0;0;0;False;0;False;1;0;0;1;0;1;FLOAT;0
 Node;AmplifyShaderEditor.FunctionNode;33;-1579.572,321.9863;Inherit;False;PolyartWorldAlignedBlend;-1;;4;2c0b2e018c1710b44867976bd3691e95;0;3;1;FLOAT3;0,0,1;False;67;FLOAT;1;False;68;FLOAT;-1;False;2;FLOAT;25;FLOAT;55
 Node;AmplifyShaderEditor.OneMinusNode;45;-1214.953,784.6169;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.UnpackScaleNormalNode;39;-1386.544,499.4127;Inherit;False;Tangent;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.UnpackScaleNormalNode;39;-1386.544,499.4127;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;44;-1045.009,785.7229;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.LerpOp;34;-928.192,113.4975;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;-631.3055,115.9967;Float;False;True;-1;2;;0;0;Standard;Dreamscape_WorldAlignedBlend;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;True;0;0;False;;0;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;-631.3055,115.9967;Float;False;True;-1;2;;0;0;Standard;Dreamscape_WorldAlignedBlend;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;31;67;29;0
 WireConnection;31;68;30;0
 WireConnection;42;0;41;0
@@ -213,4 +214,4 @@ WireConnection;0;0;34;0
 WireConnection;0;1;39;0
 WireConnection;0;4;44;0
 ASEEND*/
-//CHKSM=C09682359693B70C07340402D96C1C3261F64E97
+//CHKSM=D625EF07F1CE50521FDD7186682F2576DED667BE

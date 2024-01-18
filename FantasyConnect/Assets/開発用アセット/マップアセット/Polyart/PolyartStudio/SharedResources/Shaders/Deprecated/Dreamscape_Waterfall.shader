@@ -1,4 +1,4 @@
-// Made with Amplify Shader Editor v1.9.2
+// Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "Polyart/Dreamscape Waterfall"
 {
@@ -124,7 +124,8 @@ Shader "Polyart/Dreamscape Waterfall"
 	}
 }
 /*ASEBEGIN
-Version=19200
+Version=18800
+882;203;2845;1556;2159.865;613.5785;1;True;True
 Node;AmplifyShaderEditor.CommentaryNode;103;-5925.46,-1196.435;Inherit;False;947.9863;506.6378;Comment;7;112;19;17;26;21;20;18;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.RangedFloatNode;18;-5854.262,-1146.435;Inherit;False;Property;_LineScaleWidth;Line Scale Width;0;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;21;-5855.265,-880.6656;Inherit;False;Property;_LineAcceleration;Line Acceleration;4;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
@@ -206,7 +207,7 @@ Node;AmplifyShaderEditor.LerpOp;140;-4387.247,-1338.484;Inherit;False;3;0;COLOR;
 Node;AmplifyShaderEditor.FloorOpNode;68;-2769.319,-357.8803;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.RegisterLocalVarNode;122;-2621.859,-362.7851;Inherit;False;vLinesCombined;-1;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.RegisterLocalVarNode;110;-4097.877,-1305.844;Inherit;False;vDepthColor;-1;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.UnpackScaleNormalNode;89;-1423.586,1368.068;Inherit;False;Tangent;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.UnpackScaleNormalNode;89;-1423.586,1368.068;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;1;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.ColorNode;127;-1279.859,-203.0497;Inherit;False;Property;_LineColor;Line Color;20;0;Create;True;0;0;0;False;0;False;1,1,1,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.GetLocalVarNode;126;-1282.402,-36.06396;Inherit;False;110;vDepthColor;1;0;OBJECT;;False;1;COLOR;0
 Node;AmplifyShaderEditor.RegisterLocalVarNode;91;-1023.159,1362.758;Inherit;False;vNormal;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
@@ -215,7 +216,7 @@ Node;AmplifyShaderEditor.RangedFloatNode;128;-772.2092,217.5058;Inherit;False;Pr
 Node;AmplifyShaderEditor.LerpOp;124;-890.6232,-26.58241;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.GetLocalVarNode;93;-779.139,141.6138;Inherit;False;91;vNormal;1;0;OBJECT;;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.GetLocalVarNode;137;-816.5879,293.8264;Inherit;False;136;vDisplacement;1;0;OBJECT;;False;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;-491.0047,124.6019;Float;False;True;-1;2;;0;0;Standard;Polyart/Dreamscape Waterfall;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;0;False;;0;False;;False;0;False;;0;False;;False;0;Opaque;0.5;True;False;0;False;Opaque;;Geometry;All;12;all;True;True;True;True;0;False;;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;2;15;10;25;False;0.5;False;2;5;False;;10;False;;0;0;False;;0;False;;0;False;;0;False;;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;True;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;;-1;0;False;;0;0;0;False;0.1;False;;0;False;;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;-491.0047,124.6019;Float;False;True;-1;2;;0;0;Standard;Polyart/Dreamscape Waterfall;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;False;0;False;Opaque;;Geometry;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;False;2;5;False;-1;10;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;19;0;18;0
 WireConnection;19;1;17;1
 WireConnection;20;0;17;2
@@ -298,4 +299,4 @@ WireConnection;0;1;93;0
 WireConnection;0;4;128;0
 WireConnection;0;11;137;0
 ASEEND*/
-//CHKSM=ECED60148BA9ADEDA5A2A5AA31C4B1B16EC98E8F
+//CHKSM=63AA1A3B14FA683E964B5001F41CCFD43DACE730
