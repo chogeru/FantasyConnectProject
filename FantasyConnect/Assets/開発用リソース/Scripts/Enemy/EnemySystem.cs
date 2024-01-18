@@ -144,7 +144,7 @@ public class EnemySystem : MonoBehaviour
         {
             HandleWASDMovement();
         }
-        else
+        if (!isRide)
         {
             RideEnd();
             if (isHit)
@@ -168,6 +168,16 @@ public class EnemySystem : MonoBehaviour
         }
         ApplyGravity();
 
+    }
+    private void LateUpdate()
+    {
+        if (isRide)
+        {
+            if (isMoving)
+            {
+                RotatePlayerWithCamera();
+            }
+        }
     }
     /// <summary>
     /// ƒ‰ƒCƒh’†‚Ìˆ—

@@ -303,7 +303,7 @@ MonoBehaviour:
   m_ItemPrefab:
   - {fileID: 2796556744000761754, guid: 67781261c36067f479b859d6b814f612, type: 3}
   m_ItemSpawnNunber: 5
-  m_SpqwnRadius: 0.18
+  m_SpqwnRadius: 1
   m_SpawnHeight: 0
   m_Distance: 2
   m_DestroyTime: 0
@@ -557,7 +557,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5496954792396063563}
-  m_LocalRotation: {x: -0, y: -0.5042981, z: -0, w: 0.8635296}
+  m_LocalRotation: {x: 0, y: -0.50430155, z: 0, w: 0.86352766}
   m_LocalPosition: {x: 28.411, y: -0.0000076293945, z: 989.626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
