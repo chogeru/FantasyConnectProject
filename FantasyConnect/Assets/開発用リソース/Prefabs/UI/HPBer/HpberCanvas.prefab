@@ -140,7 +140,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6600094929985450706}
-  m_LocalRotation: {x: 0.00916908, y: 0.6432503, z: -0.008880128, w: 0.76554954}
+  m_LocalRotation: {x: 0.009169582, y: 0.64325196, z: -0.008878443, w: 0.7655482}
   m_LocalPosition: {x: 0, y: 0, z: -2.19}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -149,7 +149,7 @@ RectTransform:
   - {fileID: 6600094930682784114}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.459, y: 80.076, z: -0.103}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -243.27, y: 201.13}
@@ -174,7 +174,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &6600094929985450708
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6600094929985450709
 MonoBehaviour:
   m_ObjectHideFlags: 0

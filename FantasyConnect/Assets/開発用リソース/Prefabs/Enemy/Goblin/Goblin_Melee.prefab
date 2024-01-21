@@ -1812,7 +1812,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   isAttack: 0
-  m_HitEffect: {fileID: 0}
 --- !u!1 &6125185222264446583
 GameObject:
   m_ObjectHideFlags: 0
