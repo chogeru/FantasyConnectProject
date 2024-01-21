@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Distance: 2
   m_DestroyTime: 0
   m_SpawnEffect: {fileID: 31835927839385643, guid: 82430a8cbe341974ca88fc0319c48f72, type: 3}
+  m_SpawnEffect2: {fileID: 8685162138139692958, guid: 4bd478362f68efb408a451724241045e, type: 3}
   m_SpawnSE: {fileID: 2666297648885926178}
   m_Animator: {fileID: 3522414181951876583}
 --- !u!1 &2404680153634453170
@@ -362,6 +363,7 @@ MonoBehaviour:
   m_Distance: 3.5
   m_DestroyTime: 0
   m_SpawnEffect: {fileID: 31835927839385643, guid: 82430a8cbe341974ca88fc0319c48f72, type: 3}
+  m_SpawnEffect2: {fileID: 0}
   m_SpawnSE: {fileID: 2666297648885926178}
   m_Animator: {fileID: 3522414181951876583}
 --- !u!1 &4676831009177061396

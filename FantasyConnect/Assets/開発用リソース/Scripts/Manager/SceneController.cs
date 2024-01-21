@@ -99,7 +99,13 @@ public class SceneController : MonoBehaviour
                     isHitCol = false;
                     LoadSceneWithLoadingScreen("MyHouse");
                 }
-
+                break;
+            case "ForestArea1":
+                if (isHitCol)
+                {
+                    isHitCol = false;
+                    LoadSceneWithLoadingScreen("SecondCity");
+                }
                 break;
             default:
                 break;
