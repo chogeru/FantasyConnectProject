@@ -14,9 +14,9 @@ public class PlayerBullet : MonoBehaviour
     private GameObject m_ShotSE;
     private void Start()
     {
-        GameObject hitEffect =  PlayerBulletSEPool.Instance.GetPooledObject();
-        hitEffect.transform.position = transform.position;
-        hitEffect.SetActive(true);
+        GameObject hitSE =  PlayerBulletSEPool.Instance.GetPooledObject();
+        hitSE.transform.position = transform.position;
+        hitSE.SetActive(true);
     }
     private void OnCollisionEnter(Collision collision)
     {

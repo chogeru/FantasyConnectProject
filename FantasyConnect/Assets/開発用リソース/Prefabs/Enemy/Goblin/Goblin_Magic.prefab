@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 366406605568144891, guid: 44becd69d60f10d47aec71b593bec75f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 194e8b908a1197a4ea948a64a0d9982e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9c737a7f8daae6c47bcc99bc2a44a020, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -3218,7 +3218,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 366406605568144891, guid: 44becd69d60f10d47aec71b593bec75f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 6639256930d308d4e8723f38516fc704, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f17e27417d9654840994066b4b397129, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -3421,7 +3421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySystem: {fileID: 1681258337801209102}
   bulletPrefab: {fileID: 3998282939349492992, guid: c4023465796180a4fa7d55508ac1ad3b, type: 3}
-  firePoint: {fileID: 7412095948179910388}
+  firePoints:
+  - {fileID: 7412095948179910388}
   isMagicAttck: 0
   bulletSpeed: 80
   animator: {fileID: 6420927823857255880}

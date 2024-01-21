@@ -7,8 +7,9 @@ public class EnemyMagicWeapon : MonoBehaviour
 {
     [SerializeField]
     EnemySystem enemySystem;
+
     public GameObject bulletPrefab; // プレハブとして使用する魔法弾のオブジェクト
-    public Transform firePoint; // 銃口として使用するオブジェクト
+    public Transform[] firePoints; // 銃口として使用するオブジェクトの配列
     public bool isMagicAttck = false;
     public float bulletSpeed = 100f; // 魔法弾の速度
     [SerializeField]
@@ -20,28 +21,37 @@ public class EnemyMagicWeapon : MonoBehaviour
         // プレイヤーのTransformを取得
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
+
     private void Update()
     {
-        ActivateMagicAttack();
-    }
-    public void ActivateMagicAttack()
-    {
-        if (isMagicAttck && player != null)
+        if (isMagicAttck)
         {
-            // プレイヤーの方向を計算
-            Vector3 direction = (player.position+Vector3.up*0.5f - firePoint.position).normalized;
 
-            // 魔法弾を生成してプレイヤーの方向に発射
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-            if (bulletRb != null)
-            {
-                bulletRb.velocity = direction * bulletSpeed;
-            }
-            animator.SetBool("MagicAttack", false);
-            enemySystem.m_MagicAttckCoolTime = 0;
-            enemySystem.isAttacking = false;
-            isMagicAttck = false;
+            NormalAttack();
         }
+    }
+
+    private void NormalAttack()
+    {
+        if (player != null)
+        {
+            foreach (Transform firePoint in firePoints)
+            {
+                // プレイヤーの方向を計算
+                Vector3 direction = (player.position + Vector3.up * 1f - firePoint.position).normalized;
+
+                // 魔法弾を生成してプレイヤーの方向に発射
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+                Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+                if (bulletRb != null)
+                {
+                    bulletRb.velocity = direction * bulletSpeed;
+                }
+            }
+        }
+
+        enemySystem.m_MagicAttckCoolTime = 0;
+        enemySystem.isAttacking = false;
+        isMagicAttck = false;
     }
 }

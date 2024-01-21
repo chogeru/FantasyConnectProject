@@ -51,7 +51,7 @@ public class DissolveWall : MonoBehaviour
         isDissolving = true;
 
         float startTime = Time.time;
-        float duration = 4.0f;
+        float duration = 5.0f;
 
         while (Time.time - startTime < duration)
         {

@@ -346,6 +346,10 @@ public class EnemySystem : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
     }
+    public void MagicAttckAnimeEnd()
+    {
+        m_Animator.SetBool("MagicAttack", false);
+    }
     void ApplyGravity()
     {
         rb.AddForce(Vector3.down * enemyData.Gravity, ForceMode.Acceleration);

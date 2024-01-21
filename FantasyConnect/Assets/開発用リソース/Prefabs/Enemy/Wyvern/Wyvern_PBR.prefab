@@ -1503,10 +1503,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySystem: {fileID: -2077296387664578359}
   bulletPrefab: {fileID: 8780727661788297695, guid: d21e5b00fdb343444a500464d07897b8, type: 3}
-  firePoint: {fileID: 2223929466898510058}
+  firePoints:
+  - {fileID: 2223929466898510058}
   isMagicAttck: 0
   bulletSpeed: 100
   animator: {fileID: 6282899875363271368}
+  attackType: 0
 --- !u!135 &4068004478004752753
 SphereCollider:
   m_ObjectHideFlags: 0

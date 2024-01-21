@@ -18,6 +18,9 @@ public class EnemyBullet : MonoBehaviour
                 playerSystem.TakeDamage(Damage);
             }
         }
+        GameObject hitSE = EnemyBulletSEPool.Instance.GetPooledObject();
+        hitSE.transform.position = transform.position;
+        hitSE.SetActive(true);
         Instantiate(m_HitEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
