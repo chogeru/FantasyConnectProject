@@ -99,6 +99,7 @@ public class SceneController : MonoBehaviour
                     isHitCol = false;
                     LoadSceneWithLoadingScreen("MyHouse");
                 }
+
                 break;
             default:
                 break;

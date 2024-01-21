@@ -45,7 +45,7 @@ Material:
     - _FogHeightEnd: 200
     - _FogHeightFalloff: 1
     - _FogHeightStart: 0
-    - _FogIntensity: 0.712
+    - _FogIntensity: 1
     - _FogLayersMode: 1
     - _IsHeightFogPreset: 1
     - _IsHeightFogShader: 1
@@ -65,16 +65,16 @@ Material:
     - _SkyboxFogBottom: 0
     - _SkyboxFogFalloff: 1
     - _SkyboxFogFill: 0
-    - _SkyboxFogHeight: 2
-    - _SkyboxFogIntensity: 1
+    - _SkyboxFogHeight: 8
+    - _SkyboxFogIntensity: 0.831
     - _SkyboxFogOffset: 0
     - _TITLE: 1
     m_Colors:
-    - _DirectionalColor: {r: 0.3735632, g: 0.5, b: 0.3333333, a: 1}
+    - _DirectionalColor: {r: 0.53444904, g: 0.6320754, b: 0.5048652, a: 1}
     - _DirectionalCustomDir: {r: 0, g: 0, b: 0, a: 0}
     - _DirectionalDir: {r: 0, g: 0, b: 0, a: 0}
     - _FogAxisOption: {r: 0, g: 1, b: 0, a: 0}
-    - _FogColorEnd: {r: 0.8716043, g: 0.9339623, b: 0.83410466, a: 1}
-    - _FogColorStart: {r: 0.8277723, g: 0.9150943, b: 0.7999881, a: 1}
+    - _FogColorEnd: {r: 0.53910047, g: 0.7264151, b: 0.5539385, a: 1}
+    - _FogColorStart: {r: 0.85466355, g: 0.9150943, b: 0.8345199, a: 1}
     - _NoiseSpeed: {r: 0.5, g: 0, b: 0.5, a: 0}
   m_BuildTextureStacks: []
