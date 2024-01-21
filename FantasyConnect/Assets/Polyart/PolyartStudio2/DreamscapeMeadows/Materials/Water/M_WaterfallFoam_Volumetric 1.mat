@@ -30,9 +30,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Acceleration: 1.27
+    - _Acceleration: 1.5
     - _Cutoff: 0.1
-    - _Height: 10
+    - _Height: 15
     - _HorizontalSpeed: 0
     - _ScaleWidth: -0.29
     - _ScaleX: 1
