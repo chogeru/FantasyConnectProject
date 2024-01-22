@@ -33,11 +33,11 @@ public class CurrencySystem : MonoBehaviour
         {
             m_currencyAmount -= amount;
             SaveCurrencyToJson();
-            Debug.Log(amount + " のお金を減らした。残高: " + m_currencyAmount);
+        //    Debug.Log(amount + " のお金を減らした。残高: " + m_currencyAmount);
         }
         else
         {
-            Debug.Log("お金が足りません");
+            Debug.Log("お金が足りない");
         }
     }
     public void UpdateCurrencyText()

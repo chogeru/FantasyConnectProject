@@ -73,7 +73,7 @@ public class InventorySystem : MonoBehaviour
         }
         else
         {
-            Debug.Log(itemName + " を購入するのに十分なお金がありません");
+            Debug.Log(itemName + " を購入するのに十分なお金がないよ");
         }
         SaveItemCountsOnChange();
 
@@ -121,7 +121,7 @@ public class InventorySystem : MonoBehaviour
         }
         else
         {
-            Debug.Log("そのアイテムはインベントリにありません");
+            Debug.Log("そのアイテムはインベントリにない");
         }
         SaveItemCountsOnChange();
 

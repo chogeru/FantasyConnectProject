@@ -29,7 +29,7 @@ public class AnimalRideSystem : MonoBehaviour
         }
         else
         {
-            Debug.Log("RidePosオブジェクトが見つかりませんでした。");
+            Debug.Log("RidePosオブジェクトが見つかってない");
         }
     }
 

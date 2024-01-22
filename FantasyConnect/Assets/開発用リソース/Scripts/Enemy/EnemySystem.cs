@@ -167,7 +167,6 @@ public class EnemySystem : MonoBehaviour
             Die();
         }
         ApplyGravity();
-
     }
     private void LateUpdate()
     {
@@ -262,7 +261,10 @@ public class EnemySystem : MonoBehaviour
                     // ターゲットに当たった場合
                     if (hit.collider.CompareTag(enemyData.TargetTag))
                     {
-                        PlayerTracking();
+                        if (!m_Animator.GetBool("MagicAttack"))
+                        {
+                            PlayerTracking();
+                        }
                         if (myType == EnemyType.Enemy)
                         {
                             if (myButtleType == ButtleType.Melee)

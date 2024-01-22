@@ -23,7 +23,7 @@ public class PlayerSystem : MonoBehaviour
         Bow,
         Melee,
     }
-     public enum eAttckType
+    public enum eAttckType
     {
         NomalAttck,
         StrongAttack,
@@ -59,7 +59,7 @@ public class PlayerSystem : MonoBehaviour
     private Slider m_HpSlider;
     [SerializeField, Header("HP表示用テキスト")]
     private TextMeshProUGUI m_HpText;
-    [SerializeField,Header("MP表示用スライダー")]
+    [SerializeField, Header("MP表示用スライダー")]
     private Slider m_MpSlider;
     [SerializeField, Header("MP表示用テキスト")]
     private TextMeshProUGUI m_MpText;
@@ -87,7 +87,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField, Header("重力")]
     private float m_Gravity = 9.81f;
     [SerializeField, Header("MP")]
-    public int m_MP=100;
+    public int m_MP = 100;
     public int m_MaxMP = 100;
     float mpRecoveryTimer = 0f; // MP回復用のタイマー
     float mpRecoveryInterval = 1f; // MP回復間隔（秒）
@@ -115,7 +115,7 @@ public class PlayerSystem : MonoBehaviour
     private AudioClip m_HitSEClip;
     [SerializeField, Header("死亡SE")]
     private AudioClip m_DieSEClip;
-    [SerializeField,Header("武器チェンジSE")]
+    [SerializeField, Header("武器チェンジSE")]
     private AudioClip m_AttackChangeSE;
     [Foldout("オーディオソース")]
     [SerializeField, Header("オーディオボイス")]
@@ -202,7 +202,7 @@ public class PlayerSystem : MonoBehaviour
                         m_PlayerAnimator.SetBool("NormalAttack", true);
                     }
 
-                    if(playerType==PlayerType.Magic && m_MP <= 5||
+                    if (playerType == PlayerType.Magic && m_MP <= 5 ||
                          playerType == PlayerType.Bow && !inventorySystem.inventory.ContainsKey("Arrow"))
                     {
                         m_PlayerAnimator.SetBool("NormalAttack", false);
@@ -212,11 +212,11 @@ public class PlayerSystem : MonoBehaviour
                 case eAttckType.StrongAttack:
                     if (playerType == PlayerType.Magic && m_MP >= 10 ||
                         playerType == PlayerType.Melee ||
-                        playerType == PlayerType.Bow && inventorySystem.inventory["Arrow"].amount>=3)
+                        playerType == PlayerType.Bow && inventorySystem.inventory["Arrow"].amount >= 3)
                     {
                         m_PlayerAnimator.SetBool("StrongAttack", true);
                     }
-                    if (playerType == PlayerType.Magic && m_MP <= 10||
+                    if (playerType == PlayerType.Magic && m_MP <= 10 ||
                         playerType == PlayerType.Bow && inventorySystem.inventory["Arrow"].amount < 3)
                     {
                         m_PlayerAnimator.SetBool("StrongAttack", false);
@@ -227,9 +227,16 @@ public class PlayerSystem : MonoBehaviour
                     break;
             }
         }
-        if(m_PlayerAnimator.GetBool("Hit"))
+        if (m_PlayerAnimator.GetBool("Hit"))
         {
             m_MaxSpeed = 0;
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (isMoving && isGrounded)
+        {
+            RotatePlayerWithCamera();
         }
     }
     public void SetParametar()
@@ -261,7 +268,7 @@ public class PlayerSystem : MonoBehaviour
             m_TypeChangeEffect.Play();
             m_SE.clip = m_AttackChangeSE;
             m_SE.Play();
-            MagicWepon magicWepon =GetComponentInChildren<MagicWepon>();
+            MagicWepon magicWepon = GetComponentInChildren<MagicWepon>();
             if (magicWepon != null)
             {
                 magicWepon.AttackEnd();
@@ -353,9 +360,9 @@ public class PlayerSystem : MonoBehaviour
 
             // プレイヤーをローカル座標で移動
             rb.velocity = moveVelocity;
-            
+
             // カメラの方向を取得してプレイヤーオブジェクトを回転させる
-            RotatePlayerWithCamera();
+           
             Run();
 
         }
@@ -490,7 +497,7 @@ public class PlayerSystem : MonoBehaviour
         m_MpSlider.value = (float)m_MP / (float)m_MaxMP;
         m_MpText.text = m_MP + "/" + m_MaxMP;
     }
-  
+
     private void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;
