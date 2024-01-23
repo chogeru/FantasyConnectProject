@@ -184,7 +184,7 @@ public class PlayerSystem : MonoBehaviour
         {
             SceneController.SceneConinstance.isHitCol = true;
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0)||Input.GetMouseButton(1))
         {
             m_MaxSpeed = 0;
             m_PlayerAnimator.SetBool("Walk", false);
@@ -381,11 +381,11 @@ public class PlayerSystem : MonoBehaviour
     {
         if (isWeponChange)
         {
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetMouseButtonDown(0))
             {
                 attckType = eAttckType.NomalAttck;
             }
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetMouseButtonDown(1))
             {
                 attckType = eAttckType.StrongAttack;
             }

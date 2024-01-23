@@ -12,7 +12,7 @@ public class EnemyCanvasLooKAt : MonoBehaviour
     EnemyData enemyData;
     void Start()
     {
-        m_Player = GameObject.FindGameObjectWithTag("Player").transform;
+        m_Player = GameObject.FindGameObjectWithTag("MainCamera").transform;
         enemySystem=GetComponentInParent<EnemySystem>();
         enemyData = enemySystem.EnemyData;
         SetHp();
