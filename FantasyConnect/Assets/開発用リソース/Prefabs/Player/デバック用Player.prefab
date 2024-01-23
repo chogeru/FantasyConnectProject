@@ -19106,9 +19106,11 @@ MonoBehaviour:
   player: {fileID: 267646852606323845}
   sensitivity: 2
   minDistance: 0.1
+  maxEnemyDistance: 15
   obstacleMask:
     serializedVersion: 2
     m_Bits: 65
+  sphereCastRadius: 0.5
   position: {x: 0, y: 0, z: 0}
   isStop: 0
 --- !u!114 &9126141871003576018

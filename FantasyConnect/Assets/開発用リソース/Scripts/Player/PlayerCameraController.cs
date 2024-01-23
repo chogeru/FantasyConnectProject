@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class PlayerCameraController : MonoBehaviour
 {
-    public Transform player; // プレイヤーのTransform
-    public float sensitivity = 2.0f; // カメラの感度
-    public float minDistance = 1.0f; // カメラとプレイヤーの最小距離
-    public LayerMask obstacleMask; // 障害物として扱うレイヤー
+    [SerializeField]
+    private Transform player;
+    [SerializeField,Header("カメラ感度")]
+    private float sensitivity = 2.0f; 
+    [SerializeField,Header("カメラとプレイヤーの最小距離")]
+    private float minDistance = 1.0f;
+    [SerializeField]
+    public float maxEnemyDistance = 15.0f; 
+    [SerializeField,Header("障害物として扱うレイヤー")]
+    public LayerMask obstacleMask;
+    [SerializeField]
+    private float sphereCastRadius = 0.5f;
 
     private Vector3 offset;
     [SerializeField]
     private Vector3 position;
-    public bool isStop=false;
+    public bool isStop = false;
 
     void Start()
     {
-        offset = transform.position - player.position; // カメラの位置とプレイヤーの位置の差分を取得
+        offset = transform.position - player.position; 
         Cursor.visible = false;
     }
 
     void Update()
     {
-
-        if (!isStop) // 当たり判定中でなければカメラを動かす
+        // 当たり判定中でなければカメラを動かす
+        if (!isStop) 
         {
             Cursor.visible = false;
 
@@ -49,7 +57,37 @@ public class PlayerCameraController : MonoBehaviour
                 transform.position = hit.point - offset.normalized * minDistance;
             }
 
+            // 敵との距離が指定範囲以内の場合、カメラを移動
+            if (CheckEnemyDistance())
+            {
+            
+                RaycastHit sphereHit;
+                if (Physics.SphereCast(player.position, sphereCastRadius, offset.normalized, out sphereHit, maxEnemyDistance, obstacleMask))
+                {
+                    transform.position = sphereHit.point - offset.normalized * minDistance;
+                }
+                else
+                {
+            
+                    transform.position += offset.normalized * 1f;
+                }
+            }
+
             transform.LookAt(player.position); // プレイヤーを見るようにカメラの向きを設定
         }
+    }
+
+    bool CheckEnemyDistance()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var enemy in enemies)
+        {
+            float distance = Vector3.Distance(player.position, enemy.transform.position);
+            if (distance < maxEnemyDistance)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

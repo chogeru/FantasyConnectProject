@@ -1206,6 +1206,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u30C7\u30D0\u30C3\u30AF\u7528Player"
       objectReference: {fileID: 0}
+    - target: {fileID: 9126141871003576019, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
+      propertyPath: maxEnemyDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126141871003576019, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
+      propertyPath: sphereCastRadius
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a84f0301a26bba40bad250f8c2a09b0, type: 3}
 --- !u!4 &38333543 stripped
