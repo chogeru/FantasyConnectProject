@@ -117,6 +117,8 @@ public class PlayerSystem : MonoBehaviour
     private AudioClip m_DieSEClip;
     [SerializeField, Header("武器チェンジSE")]
     private AudioClip m_AttackChangeSE;
+    [SerializeField, Header("アイテム所得時のSE")]
+    private AudioClip m_ItemHitSE;
     [Foldout("オーディオソース")]
     [SerializeField, Header("オーディオボイス")]
     private AudioSource m_Voice;
@@ -465,13 +467,20 @@ public class PlayerSystem : MonoBehaviour
     {
         m_CurrentHp += hpRecovery;
         m_CurrentHp = Mathf.Min(m_CurrentHp, m_MaxHp);
+        ItemHitSound();
         HpUpdate();
     }
     public void MPRecovery(int mpRecovery)
     {
         m_MP += mpRecovery;
         m_MP = Mathf.Min(m_MP, m_MaxMP);
+        ItemHitSound();
         MpUpdate();
+    }
+    public void ItemHitSound()
+    {
+        m_SE.clip = m_ItemHitSE;
+        m_SE.Play();
     }
     private void EndHit()
     {

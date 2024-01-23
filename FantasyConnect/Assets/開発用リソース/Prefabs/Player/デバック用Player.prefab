@@ -2307,15 +2307,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: -R-
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4ea0f678f566d054da0299731af107dd, type: 2}
-  m_sharedMaterial: {fileID: -8044224907855987171, guid: 4ea0f678f566d054da0299731af107dd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255373
-  m_fontColor: {r: 0.05172944, g: 1, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4948,7 +4948,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!95 &904483981
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4965,7 +4965,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &909485880
 GameObject:
   m_ObjectHideFlags: 0
@@ -5111,7 +5111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57f1e3b46a70cc548abf54c6752e2cfc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2b5b74e034bb4321ba792a6e4f81e27, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5120,7 +5120,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 10
+  m_PixelsPerUnitMultiplier: 3
 --- !u!1 &933393725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5816,7 +5816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7609,7 +7609,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!95 &1293236232
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7626,7 +7626,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1293236233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12518,7 +12518,7 @@ MonoBehaviour:
   playerSystem: {fileID: 9126141871417367006}
 --- !u!95 &3070515687829298911
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12535,7 +12535,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2069438007
 GameObject:
   m_ObjectHideFlags: 0
@@ -17828,7 +17828,7 @@ CapsuleCollider:
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &9126141871417367003
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17845,7 +17845,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &9126141871417367006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17896,6 +17896,7 @@ MonoBehaviour:
   m_HitSEClip: {fileID: 8300000, guid: 9c737a7f8daae6c47bcc99bc2a44a020, type: 3}
   m_DieSEClip: {fileID: 8300000, guid: 9c737a7f8daae6c47bcc99bc2a44a020, type: 3}
   m_AttackChangeSE: {fileID: 8300000, guid: 4e7232a4e8ffa2c48857893078a3b468, type: 3}
+  m_ItemHitSE: {fileID: 8300000, guid: dba6f4a803d923d4cb12a608681962e2, type: 3}
   m_Voice: {fileID: 2004300511}
   m_SE: {fileID: 413687937}
   bowAnimatorController: {fileID: 22100000, guid: a9f500ab83ee1854c85896879ebee489, type: 2}
