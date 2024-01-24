@@ -6,9 +6,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using VInspector;
+using UnityEngine.InputSystem;
+using static RootMotion.FinalIK.RagdollUtility;
 public class PlayerSystem : MonoBehaviour
 {
     public VInspectorData vInspector;
+    //InputSystem
+    public MainController mainController;
+    [SerializeField]
+    private InputActionReference LeftHold;
+    [SerializeField]
+    private InputActionReference RightHold;
+    [SerializeField]
+    private InputActionReference RunHold;
+    public bool isAttacking = false;
     enum eState
     {
         Idle,
@@ -97,6 +108,7 @@ public class PlayerSystem : MonoBehaviour
     [Foldout("ÉgÉäÉKÅ[")]
     private bool isGrounded = true;
     private bool isMoving;
+    private bool isRun=false;
     public bool isAttck = false;
     public bool isStrongAttck = false;
     public bool isWeponChange = true;
@@ -144,6 +156,9 @@ public class PlayerSystem : MonoBehaviour
     #endregion
     void Start()
     {
+        SetInput();
+        mainController = new MainController();
+        mainController.Enable();
         playerCameraController.enabled = true;
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
@@ -176,6 +191,7 @@ public class PlayerSystem : MonoBehaviour
             rb.velocity = Vector3.zero;
             return;
         }
+        Debug.Log(isAttacking);
         RecoverMP();
         MovePlayer();
         ApplyGravity();
@@ -186,7 +202,8 @@ public class PlayerSystem : MonoBehaviour
         {
             SceneController.SceneConinstance.isHitCol = true;
         }
-        if (Input.GetMouseButton(0)||Input.GetMouseButton(1))
+        
+        if (Input.GetMouseButton(0)||Input.GetMouseButton(1)||isAttacking)
         {
             m_MaxSpeed = 0;
             m_PlayerAnimator.SetBool("Walk", false);
@@ -234,6 +251,26 @@ public class PlayerSystem : MonoBehaviour
             m_MaxSpeed = 0;
         }
     }
+    private void SetInput()
+    {
+        if (LeftHold != null)
+        {
+            LeftHold.action.performed += OnAttckHold;
+            LeftHold.action.started += SetLeftWepon;
+            LeftHold.action.canceled += OnAttckHoldEnd;
+        }
+        if (RightHold != null)
+        {
+            RightHold.action.performed += OnAttckHold;
+            RightHold.action.started += SetRightWepon;
+            RightHold.action.canceled += OnAttckHoldEnd;
+        }
+        if(RunHold!= null)
+        {
+            RunHold.action.performed += OnRunHold;
+            RunHold.action.canceled += OnRunHoldEnd;
+        }
+    }
     private void FixedUpdate()
     {
         if (isMoving && isGrounded)
@@ -265,7 +302,7 @@ public class PlayerSystem : MonoBehaviour
     }
     void PlayerTypeChange()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T)||mainController.Player.WeponChange.triggered)
         {
             m_TypeChangeEffect.Play();
             m_SE.clip = m_AttackChangeSE;
@@ -413,7 +450,8 @@ public class PlayerSystem : MonoBehaviour
     }
     void Run()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && isMoving && isGrounded)
+
+        if (isRun && isMoving && isGrounded)
         {
             m_PlayerAnimator.SetBool("Idle", false);
             m_PlayerAnimator.SetBool("Walk", false);
@@ -527,5 +565,31 @@ public class PlayerSystem : MonoBehaviour
         m_Voice.Play();
         m_SE.clip = m_DieSEClip;
         m_SE.Play();
+    }
+
+  
+    private void OnAttckHold(InputAction.CallbackContext context)
+    {
+        isAttacking = true;
+    }
+    private void OnAttckHoldEnd(InputAction.CallbackContext context)
+    {
+        isAttacking = false;
+    }
+    private void SetLeftWepon(InputAction.CallbackContext context)
+    {
+        attckType = eAttckType.NomalAttck;
+    }
+    private void SetRightWepon(InputAction.CallbackContext context)
+    {
+        attckType = eAttckType.StrongAttack;
+    }
+    private void OnRunHold(InputAction.CallbackContext context)
+    {
+        isRun = true;
+    }
+    private void OnRunHoldEnd(InputAction.CallbackContext context)
+    {
+        isRun = false;
     }
 }

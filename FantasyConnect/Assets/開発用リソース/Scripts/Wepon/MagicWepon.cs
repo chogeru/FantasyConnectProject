@@ -1,3 +1,4 @@
+using RootMotion.FinalIK;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,7 +43,7 @@ public class MagicWepon : MonoBehaviour
         {
             MagicRangeAttack();
         }
-        if(Input.GetMouseButtonUp(0)||Input.GetMouseButtonUp(1))
+        if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) || !playerSystem.isAttacking)
         {
 
             playerSystem.isWeponChange = true;

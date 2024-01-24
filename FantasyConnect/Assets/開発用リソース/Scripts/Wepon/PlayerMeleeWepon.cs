@@ -34,7 +34,7 @@ public class PlayerMeleeWepon : MonoBehaviour
         {
             MelleAttck();
         }
-        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1)||!playerSystem.isAttacking)
         {
             MeleeAttckEnd();
             playerSystem.isAttck = false;

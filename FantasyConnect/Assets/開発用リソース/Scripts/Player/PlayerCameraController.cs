@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCameraController : MonoBehaviour
 {
@@ -37,7 +38,9 @@ public class PlayerCameraController : MonoBehaviour
 
             float mouseX = Input.GetAxis("Mouse X") * sensitivity; // マウスのX軸の移動量
             float mouseY = Input.GetAxis("Mouse Y") * sensitivity; // マウスのY軸の移動量
-
+            Vector2 rightStickInput = Gamepad.current != null ? Gamepad.current.rightStick.ReadValue() : Vector2.zero;
+            mouseX += rightStickInput.x * sensitivity;
+            mouseY += rightStickInput.y * sensitivity;
             // プレイヤーを中心にカメラを回転させる
             offset = Quaternion.AngleAxis(mouseX, Vector3.up) * Quaternion.AngleAxis(-mouseY, transform.right) * offset;
             transform.position = player.position + offset;
