@@ -19,6 +19,7 @@ public class PlayerSystem : MonoBehaviour
     private InputActionReference RightHold;
     [SerializeField]
     private InputActionReference RunHold;
+
     public bool isAttacking = false;
     enum eState
     {

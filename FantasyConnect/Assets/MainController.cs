@@ -89,6 +89,24 @@ public partial class @MainController: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Hold"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Setting"",
+                    ""type"": ""Button"",
+                    ""id"": ""dd3f0b36-a976-4f73-ad88-1a5991c4a6ea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": "" Teleport"",
+                    ""type"": ""Button"",
+                    ""id"": ""6855f849-860f-4eb9-8729-c3552fa8946c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -397,6 +415,28 @@ public partial class @MainController: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df27f3d5-0649-4f37-b1ac-c44bec2eba91"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Setting"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""396c685c-b612-453f-bbd2-9a4a633c6750"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": "" Teleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -991,6 +1031,8 @@ public partial class @MainController: IInputActionCollection2, IDisposable
         m_Player_StrongAttack = m_Player.FindAction("StrongAttack", throwIfNotFound: true);
         m_Player_WeponChange = m_Player.FindAction("WeponChange", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
+        m_Player_Setting = m_Player.FindAction("Setting", throwIfNotFound: true);
+        m_Player_Teleport = m_Player.FindAction(" Teleport", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1071,6 +1113,8 @@ public partial class @MainController: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_StrongAttack;
     private readonly InputAction m_Player_WeponChange;
     private readonly InputAction m_Player_Run;
+    private readonly InputAction m_Player_Setting;
+    private readonly InputAction m_Player_Teleport;
     public struct PlayerActions
     {
         private @MainController m_Wrapper;
@@ -1082,6 +1126,8 @@ public partial class @MainController: IInputActionCollection2, IDisposable
         public InputAction @StrongAttack => m_Wrapper.m_Player_StrongAttack;
         public InputAction @WeponChange => m_Wrapper.m_Player_WeponChange;
         public InputAction @Run => m_Wrapper.m_Player_Run;
+        public InputAction @Setting => m_Wrapper.m_Player_Setting;
+        public InputAction @Teleport => m_Wrapper.m_Player_Teleport;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1112,6 +1158,12 @@ public partial class @MainController: IInputActionCollection2, IDisposable
             @Run.started += instance.OnRun;
             @Run.performed += instance.OnRun;
             @Run.canceled += instance.OnRun;
+            @Setting.started += instance.OnSetting;
+            @Setting.performed += instance.OnSetting;
+            @Setting.canceled += instance.OnSetting;
+            @Teleport.started += instance.OnTeleport;
+            @Teleport.performed += instance.OnTeleport;
+            @Teleport.canceled += instance.OnTeleport;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1137,6 +1189,12 @@ public partial class @MainController: IInputActionCollection2, IDisposable
             @Run.started -= instance.OnRun;
             @Run.performed -= instance.OnRun;
             @Run.canceled -= instance.OnRun;
+            @Setting.started -= instance.OnSetting;
+            @Setting.performed -= instance.OnSetting;
+            @Setting.canceled -= instance.OnSetting;
+            @Teleport.started -= instance.OnTeleport;
+            @Teleport.performed -= instance.OnTeleport;
+            @Teleport.canceled -= instance.OnTeleport;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1326,6 +1384,8 @@ public partial class @MainController: IInputActionCollection2, IDisposable
         void OnStrongAttack(InputAction.CallbackContext context);
         void OnWeponChange(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
+        void OnSetting(InputAction.CallbackContext context);
+        void OnTeleport(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
