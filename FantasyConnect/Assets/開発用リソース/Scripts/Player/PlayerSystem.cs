@@ -171,9 +171,16 @@ public class PlayerSystem : MonoBehaviour
         SwitchAnimator();
     }
 
-
     void Update()
     {
+        if(PlayerCanvasButton.isPaused)
+        {
+            m_PlayerAnimator.speed = 0;
+        }
+        else
+        {
+            m_PlayerAnimator.speed = 1;
+        }
         if (animalRideSystem.isRide)
         {
             return;

@@ -7,6 +7,7 @@ public class PlayerCameraController : MonoBehaviour
 {
     [SerializeField]
     private Transform player;
+    private Camera mainCamera;
     [SerializeField,Header("カメラ感度")]
     private float sensitivity = 2.0f; 
     [SerializeField,Header("カメラとプレイヤーの最小距離")]
@@ -25,12 +26,21 @@ public class PlayerCameraController : MonoBehaviour
 
     void Start()
     {
+        mainCamera = GetComponent<Camera>();
         offset = transform.position - player.position; 
         Cursor.visible = false;
     }
 
     void Update()
     {
+        if(PlayerCanvasButton.isPaused)
+        {
+            mainCamera.enabled = false;
+        }
+        else
+        {
+            mainCamera.enabled = true;
+        }
         // 当たり判定中でなければカメラを動かす
         if (!isStop) 
         {

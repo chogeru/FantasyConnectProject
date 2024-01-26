@@ -19,19 +19,21 @@ public class PlayerCanvasButton : MonoBehaviour
     [SerializeField]
     PlayerCameraController playerCameraController;
 
+    public static bool isPaused = false;
     private void Start()
     {
+        isPaused = false;
         mainController = new MainController();
         mainController.Enable();
         SetInput();
     }
     private void SetInput()
     {
-        if(InventoryButton != null)
+        if (InventoryButton != null)
         {
             InventoryButton.action.started += SetInventoryScreen;
         }
-        if(SettingButton != null)
+        if (SettingButton != null)
         {
             SettingButton.action.started += SetSettingScreen;
         }
@@ -43,7 +45,7 @@ public class PlayerCanvasButton : MonoBehaviour
             CloseSettingScreen();
             ActiveInventory();
         }
-        if(Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             CloseInventory();
             ActiveSettingScreen();
@@ -51,6 +53,7 @@ public class PlayerCanvasButton : MonoBehaviour
     }
     public void ActiveInventory()
     {
+        isPaused = true;
         Cursor.visible = true;
         playerCameraController.isStop = true;
         playerSystem.isStop = true;
@@ -59,6 +62,7 @@ public class PlayerCanvasButton : MonoBehaviour
 
     public void CloseInventory()
     {
+        isPaused = false;
         Cursor.visible = false;
         playerCameraController.isStop = false;
         playerSystem.isStop = false;
@@ -66,6 +70,7 @@ public class PlayerCanvasButton : MonoBehaviour
     }
     public void ActiveSettingScreen()
     {
+        isPaused = true;
         Cursor.visible = true;
         playerCameraController.isStop = true;
         playerSystem.isStop = true;
@@ -73,6 +78,7 @@ public class PlayerCanvasButton : MonoBehaviour
     }
     public void CloseSettingScreen()
     {
+        isPaused = false;
         Cursor.visible = false;
         playerCameraController.isStop = false;
         playerSystem.isStop = false;

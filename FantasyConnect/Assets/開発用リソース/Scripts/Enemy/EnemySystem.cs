@@ -140,6 +140,13 @@ public class EnemySystem : MonoBehaviour
 
     void Update()
     {
+        if (PlayerCanvasButton.isPaused)
+        {
+            m_Animator.speed = 0;
+            return;
+        }
+        else
+        { m_Animator.speed = 1;}
         if (isRide)
         {
             HandleWASDMovement();
