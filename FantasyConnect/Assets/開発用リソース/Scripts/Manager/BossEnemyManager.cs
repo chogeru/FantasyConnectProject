@@ -4,12 +4,12 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class BossEnemyManager : MonoBehaviour
 {
-    [SerializeField,Header("偏移するシーン名")]
+    [SerializeField, Header("偏移するシーン名")]
     private string m_SceneName;
-    [SerializeField,Header("シーン上の敵のリスト")]
+    [SerializeField, Header("シーン上の敵のリスト")]
     private List<GameObject> m_BossEnemys = new List<GameObject>();
 
-    [SerializeField,Header("敵撃破後タイムライン")]
+    [SerializeField, Header("敵撃破後タイムライン")]
     private GameObject m_BossDestroyTimeline;
 
     [SerializeField]
@@ -19,22 +19,22 @@ public class BossEnemyManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI m_TimeCountText;
     private float m_Time;
-    private bool isCount=true;
+    private bool isCount = true;
     private int m_EnemyCount;
     void Start()
     {
         GameObject[] bossEnemyObj = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach(GameObject boss in bossEnemyObj)
+        foreach (GameObject boss in bossEnemyObj)
         {
             m_BossEnemys.Add(boss);
         }
-        m_EnemyCount=m_BossEnemys.Count;
+        m_EnemyCount = m_BossEnemys.Count;
         UpdateEnemyCountUI();
     }
 
     private void Update()
     {
-        if(isCount)
+        if (isCount)
         {
             m_Time += Time.deltaTime;
             if (m_TimeCountText != null)
@@ -43,16 +43,16 @@ public class BossEnemyManager : MonoBehaviour
                 m_TimeCountText.text = "タイム: " + formattedTime;
             }
         }
-        
+
     }
-    
+
     public void DestroyBossEnemy(GameObject boss)
     {
-        if(m_BossEnemys.Contains(boss))
+        if (boss != null && m_BossEnemys.Contains(boss))
         {
             m_BossEnemys.Remove(boss);
             UpdateEnemyCountUI();
-            if(m_BossEnemys.Count==0)
+            if (m_BossEnemys.Count == 0)
             {
                 isCount = false;
                 m_BossDestroyTimeline.SetActive(true);

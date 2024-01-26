@@ -37,9 +37,12 @@ public class ItemSpowner : MonoBehaviour
             Invoke("StopAllProcesses", 3f);
             for (int i = 0; i < spawnedItems.Count; i++)
             {
-                Vector3 newPosition = spawnedItems[i].transform.position;
-                newPosition.y -= 0.11f * Time.deltaTime;
-                spawnedItems[i].transform.position = newPosition;
+                if (spawnedItems[i] != null)
+                {
+                    Vector3 newPosition = spawnedItems[i].transform.position;
+                    newPosition.y -= 0.11f * Time.deltaTime;
+                    spawnedItems[i].transform.position = newPosition;
+                }
             }
             return;
         }

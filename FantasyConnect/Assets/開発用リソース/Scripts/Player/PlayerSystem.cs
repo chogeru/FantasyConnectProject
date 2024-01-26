@@ -214,7 +214,7 @@ public class PlayerSystem : MonoBehaviour
             rb.velocity = Vector3.zero;
             return;
         }
-        Debug.Log(isAttacking);
+       
         RecoverMP();
         MovePlayer();
         ApplyGravity();
@@ -226,7 +226,10 @@ public class PlayerSystem : MonoBehaviour
         {
             SceneController.SceneConinstance.isHitCol = true;
         }
-
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isRun = true;
+        }
         if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || isAttacking)
         {
             m_MaxSpeed = 0;

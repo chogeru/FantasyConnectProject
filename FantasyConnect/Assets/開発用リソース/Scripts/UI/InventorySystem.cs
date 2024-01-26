@@ -73,7 +73,9 @@ public class InventorySystem : MonoBehaviour
         }
         else
         {
+#if UNITY_EDITOR
             Debug.Log(itemName + " を購入するのに十分なお金がないよ");
+#endif
         }
         SaveItemCountsOnChange();
 
@@ -91,18 +93,24 @@ public class InventorySystem : MonoBehaviour
                 case ItemType.Healing:
                     playerSystem.HpRecovery(500);
                     item.amount-=quantity;
+#if UNITY_EDITOR
                     Debug.Log("HPを回復します");
+#endif
                     UpdateUI(inventory[itemName].type);
                     break;
                 case ItemType.MP:
+#if UNITY_EDITOR
                     Debug.Log("MPを回復します");
+#endif
                     playerSystem.MPRecovery(100);
                     item.amount -= quantity;
                     UpdateUI(inventory[itemName].type);
 
                     break;
                 case ItemType.Arrow:
+#if UNITY_EDITOR
                     Debug.Log("弓の本数");
+#endif
                     UpdateUI(inventory[itemName].type);
                     item.amount-=quantity;
                     break;
@@ -121,7 +129,9 @@ public class InventorySystem : MonoBehaviour
         }
         else
         {
+#if UNITY_EDITOR
             Debug.Log("そのアイテムはインベントリにない");
+#endif
         }
         SaveItemCountsOnChange();
 
@@ -239,14 +249,6 @@ public class InventorySystem : MonoBehaviour
                 UpdateUI(ItemType.MP);
                 UpdateUI(ItemType.Healing);
             }
-            else
-            {
-                Debug.LogError("Failed to deserialize ItemCounts from JSON.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Item counts file does not exist.");
         }
     }
     public void ResetItem()

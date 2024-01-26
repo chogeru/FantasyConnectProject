@@ -26,10 +26,7 @@ public class ItemMove : MonoBehaviour
             target = targetObj.transform;
             canMove = true;
         }
-        else
-        {
-            Debug.Log("ターゲットが居ない!!??");
-        }
+
     }
     void Update()
     {

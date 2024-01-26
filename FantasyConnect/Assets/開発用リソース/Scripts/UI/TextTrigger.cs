@@ -29,20 +29,26 @@ public class TextTrigger : MonoBehaviour
                 if (currentIndex < textsToDisplay.Length)
                 {
                     TextManager.Instance.ShowText(textsToDisplay[currentIndex]);
+#if UNITY_EDITOR
                     Debug.Log(textsToDisplay[currentIndex]);
+#endif
                     currentIndex++;
                     PlaySE();
                 }
                 else
                 {
+#if UNITY_EDITOR
                     Debug.Log("テキストがない");
+#endif
                     TextManager.Instance.HideText();
 
                 }
             }
             else
             {
+#if UNITY_EDITOR
                 Debug.LogError("テキストの要素がない");
+#endif
                 TextManager.Instance.HideText(); 
             }
         }

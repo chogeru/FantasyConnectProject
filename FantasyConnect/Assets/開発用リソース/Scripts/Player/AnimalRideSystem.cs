@@ -29,7 +29,9 @@ public class AnimalRideSystem : MonoBehaviour
         }
         else
         {
+#if UNITY_EDITOR
             Debug.Log("RidePosオブジェクトが見つかってない");
+#endif
         }
     }
 
