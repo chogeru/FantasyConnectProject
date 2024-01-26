@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using VInspector;
 using UnityEngine.InputSystem;
+using System.Collections;
 using static RootMotion.FinalIK.RagdollUtility;
 using MagicaCloth2;
 public class PlayerSystem : MonoBehaviour
@@ -104,7 +105,9 @@ public class PlayerSystem : MonoBehaviour
     public int m_MP = 100;
     public int m_MaxMP = 100;
     float mpRecoveryTimer = 0f; // MP回復用のタイマー
-    float mpRecoveryInterval = 1f; // MP回復間隔（秒）
+    float mpRecoveryInterval = 1f; // MP回復間隔
+    [SerializeField, Header("ヒットストップの時間")]
+    public float m_HitStopTime=0f;
     [EndFoldout]
     #endregion
     #region　トリガー
@@ -119,6 +122,7 @@ public class PlayerSystem : MonoBehaviour
     public bool isEndAttck = false;
     public bool isStop = false;
     public bool isDie = false;
+    public static bool isHitStop = false;
     [EndFoldout]
     #endregion
     #region サウンド
@@ -173,9 +177,15 @@ public class PlayerSystem : MonoBehaviour
 
     void Update()
     {
-        if(PlayerCanvasButton.isPaused)
+        if (PlayerCanvasButton.isPaused||isHitStop)
         {
             m_PlayerAnimator.speed = 0;
+            rb.velocity = Vector3.zero;
+            if (isHitStop)
+            {
+                StartCoroutine(SetHitStop(m_HitStopTime));
+            }
+            return;
         }
         else
         {
@@ -289,7 +299,7 @@ public class PlayerSystem : MonoBehaviour
     {
         if (m_PlayerAnimator.GetBool("NormalAttack") || m_PlayerAnimator.GetBool("StrongAttack"))
         {
-            if(windController != null)
+            if (windController != null)
             {
                 windController.AddWindPower();
             }
@@ -377,12 +387,16 @@ public class PlayerSystem : MonoBehaviour
     {
         isMeleeAttckColEnd = false;
         isAttck = true;
+        //ヒットストップ時間(数値は初代ストリートファイター参考)
+        m_HitStopTime = 0.075f;
     }
 
     void StrongAttack()
     {
         isMeleeAttckColEnd = false;
         isStrongAttck = true;
+        //ヒットストップ時間(数値は初代ストリートファイター参考)
+        m_HitStopTime = 0.417f;
     }
     void MeleeAttckColEnd()
     {
@@ -605,7 +619,11 @@ public class PlayerSystem : MonoBehaviour
         m_SE.clip = m_DieSEClip;
         m_SE.Play();
     }
-
+    IEnumerator SetHitStop(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isHitStop = false;
+    }
     private void OnAttckHold(InputAction.CallbackContext context)
     {
         isAttacking = true;

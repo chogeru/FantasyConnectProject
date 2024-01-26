@@ -40,6 +40,8 @@ public class PlayerCanvasButton : MonoBehaviour
     }
     private void Update()
     {
+        if (PlayerSystem.isHitStop)
+            return;
         if (Input.GetKeyDown(KeyCode.I))
         {
             CloseSettingScreen();

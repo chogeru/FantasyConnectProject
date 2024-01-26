@@ -20,7 +20,7 @@ public class MeleeWeponAttckCol : MonoBehaviour
             Instantiate(m_HitEffect, transform.position, Quaternion.identity);
             AttckSE();
             enemySystem.TakeDamage(Damage);
-
+            PlayerSystem.isHitStop = true;
         }
     }
     private void AttckSE()

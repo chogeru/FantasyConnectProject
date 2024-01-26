@@ -140,7 +140,7 @@ public class EnemySystem : MonoBehaviour
 
     void Update()
     {
-        if (PlayerCanvasButton.isPaused)
+        if (PlayerCanvasButton.isPaused||PlayerSystem.isHitStop)
         {
             m_Animator.speed = 0;
             return;
