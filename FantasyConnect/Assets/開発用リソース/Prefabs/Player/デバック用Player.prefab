@@ -7109,6 +7109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf2cf65b05e5a34fb24b64d9452550f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SettingButton: {fileID: 0}
+  InventoryButton: {fileID: 0}
   m_InventoryCanvas: {fileID: 1503527611}
   m_SettingCanvas: {fileID: 1168718668}
   playerSystem: {fileID: 9126141871417367006}
@@ -17953,6 +17955,7 @@ GameObject:
   - component: {fileID: 886341302}
   - component: {fileID: 1219436068349755290}
   - component: {fileID: -8215157065132022066}
+  - component: {fileID: 3217745280008880261}
   m_Layer: 8
   m_Name: "\u30C7\u30D0\u30C3\u30AF\u7528Player"
   m_TagString: Player
@@ -18084,6 +18087,7 @@ MonoBehaviour:
   m_MaxMP: 100
   isAttck: 0
   isStrongAttck: 0
+  isMeleeAttckColEnd: 0
   isWeponChange: 1
   isEndAttck: 0
   isStop: 0
@@ -18752,6 +18756,20 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3217745280008880261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775794892995199873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2511545cd3019a14fa1ae10e277ca24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicaWindZone: {fileID: 0}
+  m_SetWindPower: 6
 --- !u!1 &8841831213057298207
 GameObject:
   m_ObjectHideFlags: 0

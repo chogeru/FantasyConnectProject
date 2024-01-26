@@ -26,17 +26,17 @@ public class PlayerMeleeWepon : MonoBehaviour
     {
         PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
 
-        if (playerSystem.isAttck)
+        if (playerSystem.isAttck||playerSystem.isStrongAttck)
         {
             MelleAttck();
         }
-        if (playerSystem.isStrongAttck)
+        if(playerSystem.isMeleeAttckColEnd)
         {
-            MelleAttck();
+            MeleeAttckEnd();
         }
         if (Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1)||!playerSystem.isAttacking)
         {
-            MeleeAttckEnd();
+            EndAttckAnimation();
             playerSystem.isAttck = false;
             playerSystem.isStrongAttck = false;
             playerSystem.isWeponChange = true;
@@ -69,7 +69,6 @@ public class PlayerMeleeWepon : MonoBehaviour
         m_AttckCol.SetActive(false);
         m_AttackTrail.SetActive(false);
         m_PWAtackTrail.SetActive(false);
-        EndAttckAnimation();
         PlayerSystem playerSystem = GetComponentInParent<PlayerSystem>();
         playerSystem.isAttck = false;
         playerSystem.isStrongAttck = false;
@@ -79,8 +78,6 @@ public class PlayerMeleeWepon : MonoBehaviour
     {
         m_PlayerAnimator.SetBool("NormalAttack", false);
         m_PlayerAnimator.SetBool("StrongAttack", false);
-        m_PlayerAnimator.SetBool("SecondNomalAttck", false);
-        m_PlayerAnimator.SetBool("ThirdNomalAttck", false);
     }
     private void AttckSound()
     {

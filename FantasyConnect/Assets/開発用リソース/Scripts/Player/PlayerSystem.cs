@@ -8,9 +8,11 @@ using UnityEngine.UI;
 using VInspector;
 using UnityEngine.InputSystem;
 using static RootMotion.FinalIK.RagdollUtility;
+using MagicaCloth2;
 public class PlayerSystem : MonoBehaviour
 {
     public VInspectorData vInspector;
+    WindController windController;
     //InputSystem
     public MainController mainController;
     [SerializeField]
@@ -109,9 +111,10 @@ public class PlayerSystem : MonoBehaviour
     [Foldout("トリガー")]
     private bool isGrounded = true;
     private bool isMoving;
-    private bool isRun=false;
+    private bool isRun = false;
     public bool isAttck = false;
     public bool isStrongAttck = false;
+    public bool isMeleeAttckColEnd = false;
     public bool isWeponChange = true;
     public bool isEndAttck = false;
     public bool isStop = false;
@@ -162,6 +165,7 @@ public class PlayerSystem : MonoBehaviour
         mainController.Enable();
         playerCameraController.enabled = true;
         rb = GetComponent<Rigidbody>();
+        windController = GetComponent<WindController>();
         mainCamera = Camera.main;
         SetParametar();
         SwitchAnimator();
@@ -189,6 +193,7 @@ public class PlayerSystem : MonoBehaviour
         }
         if (isDie)
         {
+            isMeleeAttckColEnd = true;
             rb.velocity = Vector3.zero;
             return;
         }
@@ -197,14 +202,15 @@ public class PlayerSystem : MonoBehaviour
         MovePlayer();
         ApplyGravity();
         WeponTypeChange();
+        WindPowerSet();
         PlayerTypeChange();
         Die();
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             SceneController.SceneConinstance.isHitCol = true;
         }
-        
-        if (Input.GetMouseButton(0)||Input.GetMouseButton(1)||isAttacking)
+
+        if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || isAttacking)
         {
             m_MaxSpeed = 0;
             m_PlayerAnimator.SetBool("Walk", false);
@@ -266,10 +272,28 @@ public class PlayerSystem : MonoBehaviour
             RightHold.action.started += SetRightWepon;
             RightHold.action.canceled += OnAttckHoldEnd;
         }
-        if(RunHold!= null)
+        if (RunHold != null)
         {
             RunHold.action.performed += OnRunHold;
             RunHold.action.canceled += OnRunHoldEnd;
+        }
+    }
+    private void WindPowerSet()
+    {
+        if (m_PlayerAnimator.GetBool("NormalAttack") || m_PlayerAnimator.GetBool("StrongAttack"))
+        {
+            if(windController != null)
+            {
+                windController.AddWindPower();
+            }
+        }
+
+        else
+        {
+            if (windController != null)
+            {
+                windController.ResetWindPower();
+            }
         }
     }
     private void FixedUpdate()
@@ -303,7 +327,7 @@ public class PlayerSystem : MonoBehaviour
     }
     void PlayerTypeChange()
     {
-        if (Input.GetKeyDown(KeyCode.T)||mainController.Player.WeponChange.triggered)
+        if (Input.GetKeyDown(KeyCode.T) || mainController.Player.WeponChange.triggered)
         {
             m_TypeChangeEffect.Play();
             m_SE.clip = m_AttackChangeSE;
@@ -344,11 +368,18 @@ public class PlayerSystem : MonoBehaviour
 
     void NomalAttck()
     {
+        isMeleeAttckColEnd = false;
         isAttck = true;
     }
+
     void StrongAttack()
     {
+        isMeleeAttckColEnd = false;
         isStrongAttck = true;
+    }
+    void MeleeAttckColEnd()
+    {
+        isMeleeAttckColEnd = true;
     }
     void EndAttck()
     {
@@ -402,7 +433,7 @@ public class PlayerSystem : MonoBehaviour
             rb.velocity = moveVelocity;
 
             // カメラの方向を取得してプレイヤーオブジェクトを回転させる
-           
+
             Run();
 
         }
@@ -568,7 +599,6 @@ public class PlayerSystem : MonoBehaviour
         m_SE.Play();
     }
 
-  
     private void OnAttckHold(InputAction.CallbackContext context)
     {
         isAttacking = true;

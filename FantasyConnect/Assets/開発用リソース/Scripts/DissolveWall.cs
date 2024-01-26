@@ -63,7 +63,7 @@ public class DissolveWall : MonoBehaviour
 
         m_CurrentDissolveMaterial.SetFloat("_DissolveAmount", 1.0f);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
         Destroy(gameObject);
     }

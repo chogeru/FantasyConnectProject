@@ -21,7 +21,7 @@ public class TeleportBehindEnemy : MonoBehaviour
     {
         if (!animalRideSystem.isRide)
         {
-            if (Input.GetKeyDown(KeyCode.Q)&&playerSystem.m_MP>=m_MPConsumption)
+            if (playerSystem.mainController.Player.Teleport.triggered&&playerSystem.m_MP>=m_MPConsumption)
             {
                 FindNearestEnemy();
                 if (targetEnemy != null)
