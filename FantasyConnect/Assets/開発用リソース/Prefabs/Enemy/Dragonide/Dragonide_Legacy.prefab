@@ -2075,7 +2075,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1199365600419531626
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2092,7 +2092,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &-787777547314365605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,7 +2263,7 @@ GameObject:
   - component: {fileID: 1199365600412411488}
   - component: {fileID: 6509397023148095688}
   - component: {fileID: 9110878505678267084}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SM_Warhammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2362,7 +2362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 50
   isAttack: 0
-  m_HitEffect: {fileID: 879681129677348344, guid: bb7c04ee23d5c584c99ac06601febe0c, type: 3}
 --- !u!1 &1199365600410155306
 GameObject:
   m_ObjectHideFlags: 0

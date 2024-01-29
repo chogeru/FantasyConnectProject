@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6772018638267905108}
   - component: {fileID: 469606046442516123}
   - component: {fileID: 6702468399295893362}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1512,7 +1512,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4647756248677067048
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1529,7 +1529,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!54 &7106946371707587571
 Rigidbody:
   m_ObjectHideFlags: 0

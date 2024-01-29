@@ -3688,7 +3688,7 @@ GameObject:
   - component: {fileID: 6670773599449518403}
   - component: {fileID: 2417124305862290676}
   - component: {fileID: 3098057627795335914}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3792,6 +3792,10 @@ PrefabInstance:
     - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
       propertyPath: m_Name
       value: Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
       propertyPath: m_IsActive

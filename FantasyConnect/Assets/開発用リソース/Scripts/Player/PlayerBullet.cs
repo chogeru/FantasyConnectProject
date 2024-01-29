@@ -20,12 +20,11 @@ public class PlayerBullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        // プレイヤーレイヤーに属するオブジェクトを無視する
-        if ((playerLayerMask.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer)
+
+        if (((playerLayerMask.value | (1 << LayerMask.NameToLayer("AttackCol"))) & (1 << collision.gameObject.layer)) == (1 << collision.gameObject.layer))
         {
             return;
         }
-
         if (collision.gameObject.CompareTag("Enemy"))
         {
             EnemySystem enemySystem = collision.gameObject.GetComponent<EnemySystem>();
@@ -39,8 +38,7 @@ public class PlayerBullet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        // プレイヤーレイヤーに属するオブジェクトを無視する
-        if ((playerLayerMask.value & 1 << other.gameObject.layer) == 1 << other.gameObject.layer)
+        if (((playerLayerMask.value | (1 << LayerMask.NameToLayer("AttackCol"))) & (1 << other.gameObject.layer)) == (1 << other.gameObject.layer))
         {
             return;
         }

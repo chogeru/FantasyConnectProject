@@ -1910,7 +1910,7 @@ GameObject:
   - component: {fileID: 5134878664518340219}
   - component: {fileID: 591320079738289397}
   - component: {fileID: 6085174882514833284}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: MORGENSTERN_TRUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2009,7 +2009,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 100
   isAttack: 0
-  m_HitEffect: {fileID: 879681129677348344, guid: bb7c04ee23d5c584c99ac06601febe0c, type: 3}
 --- !u!1 &5134878664520601867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,7 +2081,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5134878664527897467
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2099,7 +2098,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &3758971684829987863
 MonoBehaviour:
   m_ObjectHideFlags: 0

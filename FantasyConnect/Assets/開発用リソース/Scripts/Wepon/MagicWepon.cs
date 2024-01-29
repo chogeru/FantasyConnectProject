@@ -84,7 +84,7 @@ public class MagicWepon : MonoBehaviour
         float closestDistance = Mathf.Infinity;
         Transform closestEnemy = null;
 
-        if (playerSystem.m_MP >= 5)
+        if (playerSystem.m_MP >= 10)
         {
             foreach (var collider in hitColliders)
             {
@@ -110,7 +110,7 @@ public class MagicWepon : MonoBehaviour
                 {
                     bulletRigidbody.AddForce(direction.normalized * bulletForce, ForceMode.Impulse);
                 }
-                playerSystem.m_MP -= 5;
+                playerSystem.m_MP -= 10;
                 playerSystem.MpUpdate();
             }
         }

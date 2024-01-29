@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 6125185222266438069}
   - component: {fileID: 7861964012368720291}
   - component: {fileID: 6558411635190038278}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SM_Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3356,6 +3356,10 @@ PrefabInstance:
     - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
       propertyPath: m_Name
       value: Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
       propertyPath: m_IsActive

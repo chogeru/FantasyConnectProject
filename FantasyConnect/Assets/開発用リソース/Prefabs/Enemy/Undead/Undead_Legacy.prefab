@@ -1656,7 +1656,7 @@ GameObject:
   - component: {fileID: 3086308640955142444}
   - component: {fileID: 4585783443681543223}
   - component: {fileID: 2367839762901689886}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Weapons_Mount_Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1711,7 +1711,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 80
   isAttack: 0
-  m_HitEffect: {fileID: 255788326938483169, guid: 09eaf0dd98afc4049ade8c1ae00073ad, type: 3}
 --- !u!1 &3086308640955436304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,7 +3089,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3086308640962871046
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3107,7 +3106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1114266661676765390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4266,7 +4265,7 @@ GameObject:
   - component: {fileID: 3086308640955142408}
   - component: {fileID: 3086308640956469456}
   - component: {fileID: 3086308640957436432}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SM_BattleAxeRusty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4628,7 +4627,7 @@ GameObject:
   - component: {fileID: 3086308640955142416}
   - component: {fileID: 3086308640956469464}
   - component: {fileID: 3086308640957436440}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SM_MaceARusty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4960,7 +4959,7 @@ GameObject:
   - component: {fileID: 3086308640955142424}
   - component: {fileID: 3086308640956469410}
   - component: {fileID: 3086308640957436642}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SM_WarhammerRusty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5043,7 +5042,7 @@ GameObject:
   - component: {fileID: 3086308640955142428}
   - component: {fileID: 3086308640956469412}
   - component: {fileID: 3086308640957436644}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SM_SwordRusty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5126,7 +5125,7 @@ GameObject:
   - component: {fileID: 3086308640955142430}
   - component: {fileID: 3086308640956469414}
   - component: {fileID: 3086308640957436646}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SM_MaceBRusty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5383,7 +5382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7111057681933021423, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8081282979741058816, guid: f907c643394352445b5d4a3e3bdc4918, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
