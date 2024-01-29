@@ -44,7 +44,7 @@ public class NPCSpeakSystem : MonoBehaviour
             Vector3 UIPos = transform.position;
             UIPos.y += 2;
             m_SpeakUI.transform.position = UIPos;
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 // Tキーが押されたらTextTriggerのメソッドを呼び出してテキストを表示する
                 textTrigger.TriggerTextDisplay();
