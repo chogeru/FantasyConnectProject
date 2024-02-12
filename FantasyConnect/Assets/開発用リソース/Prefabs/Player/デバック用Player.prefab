@@ -14112,7 +14112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {x: 0, y: -0.1, z: 0}
-  size: {x: 0.1, y: 0.001, z: 0.413}
+  size: {x: 0.05, y: 0.001, z: 0.33}
   direction: 1
   radiusSeparation: 0
 --- !u!1 &1667101791886758666
@@ -19032,7 +19032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {x: 0, y: -0.1, z: 0}
-  size: {x: 0.1, y: 0.001, z: 0.413}
+  size: {x: 0.05, y: 0.001, z: 0.33}
   direction: 1
   radiusSeparation: 0
 --- !u!1 &8967134456135914861
