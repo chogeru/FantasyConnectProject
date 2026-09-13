@@ -454,7 +454,7 @@ public class PlayerSystem : MonoBehaviour
             Vector3 moveVelocity = moveDirection * Mathf.Lerp(m_MinSpeed, m_MaxSpeed, Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
 
             // プレイヤーをローカル座標で移動
-            rb.velocity = moveVelocity;
+            rb.velocity = GroundAlignedVelocity(moveVelocity);
 
             // カメラの方向を取得してプレイヤーオブジェクトを回転させる
 
@@ -500,6 +500,17 @@ public class PlayerSystem : MonoBehaviour
             }
         }
     }
+    // Follow the ground slope so moving downhill does not float off the terrain
+    Vector3 GroundAlignedVelocity(Vector3 velocity)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 1.5f, ~0, QueryTriggerInteraction.Ignore))
+        {
+            return Vector3.ProjectOnPlane(velocity, hit.normal);
+        }
+        return new Vector3(velocity.x, rb.velocity.y, velocity.z);
+    }
+
     void ApplyGravity()
     {
         rb.AddForce(Vector3.down * m_Gravity, ForceMode.Acceleration);

@@ -163,7 +163,7 @@ public class EnemySystem : MonoBehaviour
             m_MaxSpeed = m_CurrentSpeed;
             Search();
             UpdateAnimation();
-            if (rb.velocity.magnitude > 0.1f)
+            if (new Vector3(rb.velocity.x, 0f, rb.velocity.z).magnitude > 0.1f)
             {
                 isMoving = true;
             }
@@ -202,7 +202,7 @@ public class EnemySystem : MonoBehaviour
         Vector3 moveVelocity = moveDirection * Mathf.Lerp(0, 15, Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
         m_Animator.SetBool("Ride", true);
         // プレイヤーをローカル座標で移動
-        rb.velocity = moveVelocity;
+        rb.velocity = GroundAlignedVelocity(moveVelocity);
         if (isMoving)
         {
             // カメラの方向を取得してプレイヤーオブジェクトを回転させる
@@ -307,10 +307,16 @@ public class EnemySystem : MonoBehaviour
 
         // プレイヤーオブジェクトに向かって一定の速度で加速
         Vector3 direction = (player.position - transform.position).normalized;
+        if (rb.useGravity)
+        {
+            // walkers chase along the ground instead of steering toward the player's height
+            direction.y = 0f;
+            direction.Normalize();
+        }
         Vector3 desiredVelocity = direction * m_MaxSpeed;
 
         // 一定の速度で移動するために、速度を直接設定する
-        rb.velocity = desiredVelocity;
+        rb.velocity = rb.useGravity ? GroundAlignedVelocity(desiredVelocity) : desiredVelocity;
     }
     #endregion
     #region プレイヤー攻撃処理
@@ -346,19 +352,30 @@ public class EnemySystem : MonoBehaviour
 
 
         // 移動中かつ攻撃距離外にいる場合に移動を行う
-        if (!isAttacking && rb.velocity.magnitude > 0.1f && !inAttackRange)
+        if (!isAttacking && new Vector3(rb.velocity.x, 0f, rb.velocity.z).magnitude > 0.1f && !inAttackRange)
         {
             PlayerTracking();
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = rb.useGravity ? new Vector3(0f, rb.velocity.y, 0f) : Vector3.zero;
         }
     }
     public void MagicAttckAnimeEnd()
     {
         m_Animator.SetBool("MagicAttack", false);
     }
+    // Follow the ground slope so moving downhill does not float off the terrain
+    Vector3 GroundAlignedVelocity(Vector3 velocity)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.down, out hit, 1.5f, ~0, QueryTriggerInteraction.Ignore))
+        {
+            return Vector3.ProjectOnPlane(velocity, hit.normal);
+        }
+        return new Vector3(velocity.x, rb.velocity.y, velocity.z);
+    }
+
     void ApplyGravity()
     {
         rb.AddForce(Vector3.down * enemyData.Gravity, ForceMode.Acceleration);
@@ -385,13 +402,13 @@ public class EnemySystem : MonoBehaviour
 
 
         // 移動中かつ攻撃距離外にいる場合に移動を行う
-        if (!isAttacking && rb.velocity.magnitude > 0.1f && !inAttackRange)
+        if (!isAttacking && new Vector3(rb.velocity.x, 0f, rb.velocity.z).magnitude > 0.1f && !inAttackRange)
         {
             PlayerTracking();
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = rb.useGravity ? new Vector3(0f, rb.velocity.y, 0f) : Vector3.zero;
         }
     }
 
