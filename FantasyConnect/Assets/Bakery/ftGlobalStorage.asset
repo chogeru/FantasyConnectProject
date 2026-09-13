@@ -2763,7 +2763,1171 @@ MonoBehaviour:
   - Assets/Unluck Software/Demo Character/Animations (Mechanim Tutorial)/Idles.fbx
   - Assets/Unluck Software/Demo Character/Models/Demo Character MDL.fbx
   - Assets/Unluck Software/Stylized Weather/Demo/Stylized Nature CC0/Meshes/Rock_Medium_1.fbx
-  uvOverlapAssetList: 00000000ffffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000000000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000ffffffff00000000000000000000000000000000010100000000000000000000000000000000000001010000000000000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000010100000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000000000000101000001010000000000000101000001010000010100000000000001010000010100000101000000000000010100000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000000000000101000001010000000000000000000001010000000000000101000001010000010100000101000000000000010100000101000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000000000000000000000101000000000000000000000000000001010000010100000000000001010000010100000000000001010000010100000101000001010000000000000101000000000000000000000101000000000000000000000000000000000000010100000101000000000000000000000101000000000000000000000101000000000000000000000101000001010000010100000000000001010000000000000101000000000000000000000000000001010000000000000101000000000000000000000101000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000010100000101000001010000000000000101000000000000010100000000000000000000010100000000000000000000010100000000000001010000010100000101000001010000000000000000000000000000010100000101000000000000000000000101000000000000010100000000000000000000000000000101000000000000010100000101000000000000000000000000000001010000010100000000000001010000000000000101000000000000010100000101000000000000000000000000000001010000010100000101000001010000000000000101000001010000000000000000000001010000000000000101000000000000010100000000000001010000010100000000000000000000000000000101000000000000010100000000000000000000010100000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000000000000101000001010000010100000000000001010000000000000000000000000000010100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000010100000101000000000000000000000000000000000000010100000000000000000000010100000101000001010000010100000000000000000000000000000000000000000000000000000101000001010000010100000000000001010000010100000101000001010000010100000000000000000000000000000000000001010000010100000000000000000000010100000101000001010000000000000101000001010000010100000101000001010000010100000000000000000000010100000000000001010000000000000000000001010000010100000101000001010000010100000000000001010000000000000000000000000000000000000000000001010000000000000101000000000000000000000000000000000000000000000000000001010000000000000000000000000000000000000000000001010000000000000000000000000000010100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff010100000000000000000000ffffffff01010000000000000101000001010000000000000101000000000000000000000101000000000000000000000101000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000001010000ffffffff0101000000000000ffffffff01010000000000000101000000000000000000000000000000000000000000000101000000000000000000000000000001010000ffffffffffffffffffffffff0000000001010000ffffffff000000000000000000000000ffffffff010100000101000000000000000000000101000000000000ffffffff00000000000000000101000000000000010100000000000000000000000000000101000000000000ffffffff0000000000000000ffffffffffffffff00000000ffffffff010100000101000000000000ffffffff00000000ffffffff0000000001010000ffffffff00000000010100000000000001010000010100000000000001010000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000010100000101000001010000000000000101000001010000010100000000000000000000
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_17A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bottle_03B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_12A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_10A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Railing_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Curved_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_Ornament_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Stairs_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_04B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Statue_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Pole_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Medium_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Tray_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Leaf_Patch_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_01A_Module_1.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Torii_Gate_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_07A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Brass_Bell_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Plant_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_Spigot_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_05A_Module_2.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Background_Cliff_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Pillar_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Fish_01.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Platform_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Broadleaf_Shrub_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Small_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_BG_Hill_01.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Cart_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_Edge_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Beam_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_Ornament_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_06A_Module_1.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Lamp_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Plant_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Statue_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Lamp_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Waterfall_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wooden_Tub_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Background_Cliff_07A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Terrace_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bowl_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Floor_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cup_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Pot_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_03B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Large_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Platform_01A_Module_2.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Broadleaf_Tree_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Grass_Patch_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Basin_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Pot_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_10A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Pillar_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Stairs_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Disk_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Small_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Amberleaf_Tree_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Straight_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Floor_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Pillar_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Petals_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rose_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_Edge_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Bench_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_18A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_23A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_Ornament_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Floor_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stepping_Stone_Top_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Large_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Scaffold_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_BG_Mountain_02.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_16A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_River_Rock_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Bench_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Waterfall_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Signboard_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Lantern_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Broadleaf_Tree_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Platform_Curved_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Paper_Wall_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stepping_Stone_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Terrace_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Paper_Lamp_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gong_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stepping_Stone_Top_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Waterfall_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Grass_Patch_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Large_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Bridge_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_Rope_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wooden_Tub_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Crate_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Platform_Curved_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Grass_Patch_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_17A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wheat_Patch_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stepping_Stone_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Springleaf_Shrub_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Platform_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_Rope_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Lantern_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_06A_Module_2.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_09A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rose_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Curved_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cup_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Raked_Sand_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_21C.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Fence_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_14A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Railing_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Curved_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Lamp_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Tree_Branch_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_Edge_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_07A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Lantern_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Patch_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Paper_Lamp_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Sign_Post_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_18A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Curved_01A_Ivy.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_River_Rock_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_Stem_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_05B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Plank_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Large_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Leaf_Patch_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Lantern_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_16A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Ivy_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Plank_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Cabinet_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_02A_Module_2.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_04B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Ripples_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_River_Rock_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Lantern_01A_Rope.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rose_01C.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Raked_Sand_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Bush_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Bridge_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_BG_Mountain_01.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bush_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Terrace_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Small_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_Rope_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Raked_Sand_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Platform_02A_Ivy.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Arch_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Broadleaf_Tree_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_13A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Patch_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_Ladder_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Ivy_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_BG_Mountain_03.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bottle_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Amberleaf_Tree_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Lamp_Arch_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Small_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Ripples_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_01A_Module_2.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_Ornament_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Round_Stone_Floor_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bowl_Stand_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Amberleaf_Tree_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Signboard_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Amberleaf_Bush_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bowl_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Curved_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_08A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_09A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Curved_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Springleaf_Tree_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Platform_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Large_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Signboard_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_07A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_07A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_Flower_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Board_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Bush_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Springleaf_Tree_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_19A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bottle_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_19A_Ivy.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_Edge_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Straight_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_05A_Module_1.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_15A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Bridge_01A_Ivy.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Ladle_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_20A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Blossom_Tree_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stair_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_11A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_12A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Paper_Lamp_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Small_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Background_Cliff_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_04B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_20A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stepping_Stone_Top_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Crate_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Leaf_Patch_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rose_02C.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_08A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Medium_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Amberleaf_Shrub_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_14A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Torii_Gate_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Pole_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Leaf_Patch_03B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Totem_Stand_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_13A_Module_3.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Medium_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Support_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Raked_Sand_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Raked_Sand_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_13A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_13A_Module_1.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Paper_Lamp_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Bench_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Tea_Whisk_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Terrace_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_Edge_04B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Bush_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Ivy_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bottle_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bush_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Paper_Lamp_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Broadleaf_Tree_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Patch_03B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_19A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Patch_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rose_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Blossom_Shrub_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Fence_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Torii_Gate_Pole_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Bench_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bush_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Petals_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Stairs_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cliff_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_03B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bucket_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_05B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Statue_03A_Rope.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Ladle_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Broadleaf_Tree_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Table_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Sign_Post_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Bridge_Railing_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_21A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_10B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_Rope_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_07A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Torii_Gate_Pole_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Broadleaf_Tree_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_07B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Torii_Gate_Pole_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_06B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Background_Cliff_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_Rope_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Leaf_Patch_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_13A_Module_2.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_08A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Table_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_10A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Button_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_04B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Roof_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Bush_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_06A_Module_3.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_05B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bush_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_22A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cliff_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rose_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_05B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Blossom_Bush_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Grass_Patch_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_11A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_04B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Terrace_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Blossom_Tree_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cup_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Platform_01A_Module_1.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Straight_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_11A_Module_2.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Pillar_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_BG_Hill_02.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_BG_Cliff_01.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Lamp_Post_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Background_Cliff_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Step_09A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Statue_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_08A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Stool_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Leaf_Patch_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Petals_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_11A_Module_1.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Ladle_02B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Patch_01B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_02A_Module_1.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cliff_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Small_07A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bottle_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Pole_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_15A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Raked_Sand_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stepping_Stone_Top_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rope_Ornament_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Particle_Quad_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bamboo_03B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bell_Rope_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cliff_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Stairs_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bucket_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_Patch_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Wall_Curved_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Plank_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Pillar_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bottle_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Springleaf_Tree_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Wheel_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Pavement_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Blossom_Tree_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_03B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Rock_Small_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Pillar_05A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Lily_Flower_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Platform_01A_Module_3.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Ivy_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Paper_Lamp_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Railing_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wooden_Floor_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_21B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Cliff_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_09A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Flower_06A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Ivy_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Block_11A_Module_3.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Background_Cliff_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Gazebo_Railing_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Plant_09B.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Springleaf_Tree_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Plank_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Bowl_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Stone_Stairs_04A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Crate_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Background_Cliff_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Plant_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Water_Plant_03A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Ladder_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Lamp_Rope_01A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Wood_Fence_02A.fbx
+  - Assets/ToonScapes/Spring Isles/Models/TSI_Waterfall_03A.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree09.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece18.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_KnotwoodDead01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA04.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_Bamboo1.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_Pine02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PineDead02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece09.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_WaterfallSplit2.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSapling3.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_BoulderClumpClassic2.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks09.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirFallen2.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall2.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree03.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchTreeB2.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus03.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock11.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo13.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_RedFern01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertBulb04.fbx
+  - Assets/SoStylized/Environment/Rocks/Mountains/Meshes/SM_Mountain01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf07.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMapleSapling01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Sunflower2.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertCoconutPalm02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece17.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff13.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic06.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PineSnowCover02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree11.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalCurved01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock14.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalmB03.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf09.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakSapling1.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock14.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptSapling02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB08.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock19.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine02.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_YuccaTree05.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineFallen1_SnowCover.FBX
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB06.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMapleSapling02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece03.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf06.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree01.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirTree5.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchSapling2.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted05.fbx
+  - Assets/SoStylized/Environment/Rocks/Mountains/Meshes/SM_Mountain04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf01.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakStump1.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire06.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_Bamboo4.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindswept03.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakBranch2.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindswept01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo08.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_BirchTreeB1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmFallen02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptB01.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalm01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree01.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece05.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Beach_Conch.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus06.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DaffodilsPink.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff12.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSaplingClump2.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_BoulderCubic05.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Platform02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff11.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DaffodilsYellow.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic4.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Platform03.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_ShelfClassic6.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakTree2.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_YuccaTree03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertWeed01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump04.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf07.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_8x8x3.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Sandfall03.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPineC02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff05.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock17.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Marshtail04.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks04.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchStump.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece18.fbx
+  - Assets/SoStylized/Environment/Sky/Meshes/SM_SunAndMoonPlane.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall3.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB10.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo06.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece13.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptB04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered05.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff07.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump10.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf04.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic04.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchTreeB3.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf08.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock06.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchTree2.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic6.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf05.fbx
+  - Assets/SoStylized/Environment/Rocks/Mountains/Meshes/SM_Mountain03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Tumbleweed01.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirBranch1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushLeafy02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakStump1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_TreeWindsweptSapling_01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertBushB02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmTree02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic03.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakFallen1_SnowCover.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted10.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineSnowCover02.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPineC01.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirTree1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalm04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine01.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooStump1.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall7.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic11.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertPink03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalCurved02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_2x2x4.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic2.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock01.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalm05.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMaple03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine07.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_BoulderClassic4.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalmC02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB05.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMapleRoots02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff08.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted09.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire07.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff09.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmSapling01.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf08.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic5.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush3_Snowy.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_ShelfClassic2.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirFallen2_SnowCover.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock06.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMaple01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalmC01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB01.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_ShelfClassic4.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertTwigRoots01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus01.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic14.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakSapling2.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushLeafy01_Desert.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree14.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_KnotwoodTree02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakFallen1.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock12.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo07.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree11.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece14.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PineDead03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPina02.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Beach_Scallop.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine06.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered03.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece12.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMapleRoots01.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_RedMaple03.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock07.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowersIce03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_Bamboo3.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus04.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSaplingClump1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Fern2.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineDead03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirTree1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowersIce01.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall8.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_SnowDrift04.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineLeafySnow01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertBush02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_CactusPricklyPear04.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic1.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirFallen3.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_2x2x1.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf07.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakTree4.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Rice01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree13.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff01.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_BoulderClassic5.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump03.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmFallen01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus07.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo14.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic9.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakTreeLarge3.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic13.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerCrocus02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertCoconutPalm06.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindswept04.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece13.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirFallen3.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushChina01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump05.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock03.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Beach_BandedTulip.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineFallen2_SnowCover.FBX
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_CactusBulb01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump09.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Rainbow.FBX
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock13.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_SnowDrift01.fbx
+  - Assets/SoStylized/Environment/Sky/Meshes/SM_StylizedSkyDome_Clouds.FBX
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus08.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertCoconutPalm01.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Spire03.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks07.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Grass2.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks08.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalmC03.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirSapling1.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmTree05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_LilyPad3.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Fern3_Yellow.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakTreeLarge2.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Platform01.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Platform03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerBush02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptSapling01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_KnotwoodDead02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump07.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece05.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff14.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic8.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushLeafy01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_KnotwoodTree04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Sunflower3.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertCoconutPalm04.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_CliffClassic3.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff09.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump02.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineSnowCover01.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmTree01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_BirchTree1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_YuccaTree05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastal02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_TulipsOrange.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted06.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastal04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertBush04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB07.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic07.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClump01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf05.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece08.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMapleRoots03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPina03.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_WaterfallSplit1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_BirchStump.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmSapling03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_TreeWindsweptSapling_02.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic12.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock11.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock12.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo09.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_CactusPricklyPear03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalm05.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmFallen03.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchTree3.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPineB02.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic10.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_CactusBulb02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_Bamboo2.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_BananaTree01.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB12.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_CactusPricklyPear02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks01.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Sandfall02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush2.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushTropical03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirFallen2.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic5.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock18.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece06.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_TulipsPink.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock08.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic10.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush3_Dry.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB04.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_CliffClassic2.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall5.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_CliffClassic6.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece11.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB03.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic13.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered07.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_PlatformClassic1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertTwigRoots02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_TulipsYellow.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastal05.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_KnotwoodTree02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock09.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Beach_Starfish.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirTree3.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertBulb01.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_SnowDrift05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus02.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_KnotwoodTreeB01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_RedFern02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_ElephantEars01_Desert.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush3.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree10.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Spire04.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic3.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock07.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_CliffClassic4.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine08.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock05.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall4.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece04.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_KnotwoodTree03.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_BoulderClumpClassic1.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchSapling1.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_ElephantEars01.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPine03.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_SnowDrift02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmTree03.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalmB01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo05.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_YuccaTree02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece11.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece10.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic6.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock20.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_4x4x2.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_YuccaTree01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo03.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock09.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_BirchTree2.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertWeed03.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire05.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_SnowDrift03.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPinaC01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA07.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock10.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalmC02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Allium.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Sunflower1.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree12.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_Pine03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalmB02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB06.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff06.fbx
+  - Assets/SoStylized/Environment/Sky/Meshes/SM_StylizedSkyDome_NearClouds.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakStump1_SnowCover.fbx
+  - Assets/SoStylized/Environment/Sky/Meshes/SM_StylizedSkyDome_FullSphere.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpC03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertBushB01.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSapling1.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMaple02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock08.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush2_Snowy.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff16.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpC02.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB11.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo15.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree15.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineLeafySnow02.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_TheGreetingPine.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirTree2.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece17.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo10.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece15.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Foxtails1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_TulipsRed.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Daisies.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff02.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree03.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmFallen02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece12.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSapling4.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_Pine03.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptSaplingB01.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Spire02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree06.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertBulb03.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_KnotwoodTree01.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire08.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertTwigRoots03.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic9.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA05.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic12.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff04.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted01.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_RainbowDouble.FBX
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastal03.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirTree3.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineStump1_SnowCover.FBX
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertBush01.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic8.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree09.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Seaweed1.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted08.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_CliffClassic5.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushChina02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmTree04.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Platform04.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic10.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_KnotwoodTree04.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece15.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_8x8x2.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmStump01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree05.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_BoulderCubic03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Fern1_Yellow.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Spire06.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirTree5.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic3.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BambooBush01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush2_Dry.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump08.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPinaB01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertBush03.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSapling2.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic4.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooFallen.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakTree4.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerBush01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic11.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Sandfall01.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic15.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_ElephantEars02_Desert.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic09.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks03.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertCoconutPalm03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Grass3.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock16.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirTree4.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PineLeafySnow02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DesertWeed02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece14.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_ShelfClassic1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo12.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff06.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PineSnowCover01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock01.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_BananaTree04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_RedMaple01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_RedMaple04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushLeafy02_Desert.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalmB03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakStump1_SnowCover.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPineB01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff03.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakTree2.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertPalmSapling02.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooStump2.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_BananaTree02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered06.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_PlatformClassic2.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush1_Dry.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree02.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_BananaTree03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastal01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered08.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Grass1.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_BoulderCubic04.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Spire05.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakTreeLarge1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_KnotwoodTree03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_YuccaTree04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushChina03.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalm03.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptB02.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_ElephantEars03.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA08.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece06.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakTreeLarge3.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPineB03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_Pine02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff07.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakTree1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_DaffodilsOrange.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmFallen01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_TreeWindswept_03.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalmB02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_LilyPad1.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff08.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSprout1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushTropical02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine03.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakRoots1.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf06.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_BirchTreeB2.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_YuccaTree04.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree07.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSaplingClump3.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_RainbowThin.FBX
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire03.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece08.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalmB01.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece19.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalmC01.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchTree1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Cactus05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerCrocus01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC07.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_Bamboo2.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPina01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA03.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_Bamboo3.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree08.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_2x2.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo11.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_DesertCoconutPalm05.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf03.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalm02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece07.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff15.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB01.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic08.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_RedMaple02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf02.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB08.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertPink01.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB09.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Sandfall04.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic7.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakTreeLarge1.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_BoulderCubic02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPinaB02.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic2.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_CactusPricklyPear01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalm03.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_ShelfClassic3.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Layered04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_ElephantEars02.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_BoulderClassic2.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire02.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_LilyPadCluster1.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClumpClassic7.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree07.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_1x1x2.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakTree3.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClump05.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_BoulderClassic3.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush1.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClump02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Fern1.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree06.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Platform04.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Marshtail01.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks06.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock16.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic_Metric_1x1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_BirchTreeB3.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffHalf01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_TreeWindswept_04.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall6.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Rocks10.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush1_Snowy.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC08.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece03.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Spire04.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_Bamboo4.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree12.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertPink02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Spire01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffB03.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirBranch2.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree14.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf08.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf06.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_LilyPadCluster2.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted04.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece16.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushTropical01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_ElephantEars03_Desert.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_KnotwoodTreeB01.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_RainbowThick.FBX
+  - Assets/SoStylized/Environment/Rocks/Mountains/Meshes/SM_Mountain02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff01.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree10.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPine01.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakRoots2.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakFallen2.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakTree3.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_BananaTree05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertBulb02.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_Bamboo1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmStump01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowersIce02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Shelf10.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Beach_SandDollar.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FlowerDesertBulb05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Rice02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindswept02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_TreeWindswept_02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Fern2_Yellow.fbx
+  - Assets/SoStylized/Environment/Trees/Bamboo/Meshes/SM_BambooSapling5.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece07.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Rice03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PineLeafySnow01.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic05.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_ShelfClassic5.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakBranch1.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Clump06.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_RockSlanted07.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalCurved03.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece09.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Marshtail03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Fern3.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_Pine01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushSnowDead02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff05.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_BushSnowDead01.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalm01.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree13.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirTree4.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Rock15.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirTree2.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClump04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PineDead01.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_WaterfallSplit3.fbx
+  - Assets/SoStylized/Environment/Misc/Meshes/SM_Sandfall05.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirFallen1.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece16.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff10.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineDead01.fbx
+  - Assets/SoStylized/Environment/Trees/Birch/Meshes/SM_BirchTreeB1.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_CliffClassic1.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_PalmTree04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPinaC02.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Platform01.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpC01.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Piece02.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_PlatformClassic3.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliffPiece10.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakFallen2_SnowCover.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakTreeLarge2.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_ChinaPinaB03.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_Hoodoo01.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmFallen03.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakFallen1.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock10.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpB07.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock13.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_BoulderCubic01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Marshtail02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_FirFallen1.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_RedMaple04.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirSapling2.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_TreeWindswept_01.fbx
+  - Assets/SoStylized/Environment/Trees/Pine/Meshes/SM_PineDead02.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_IvyCoastalVine05.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_Pine01.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClumpC04.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC06.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_RockClump03.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_FoxtailsLight1.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree15.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffA06.fbx
+  - Assets/SoStylized/Environment/Trees/Fir/Meshes/SM_FirStump1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_LilyPad2.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_CubicCliff03.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Rock15.fbx
+  - Assets/SoStylized/Environment/Trees/Oak/Meshes/SM_OakTree1.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic1.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush2_Light.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_KnotwoodDead02.fbx
+  - Assets/SoStylized/Environment/Rocks/Cubic/Meshes/SM_RockCubic02.fbx
+  - Assets/SoStylized/Environment/Rocks/Spire/Meshes/SM_RockSpire_Shelf03.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptB03.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_BoulderClassic1.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_RockClassic16.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_ShelfClassic7.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush1_Light.fbx
+  - Assets/SoStylized/Environment/Rocks/Hexic/Meshes/SM_RockHexic_Platform02.fbx
+  - Assets/SoStylized/Environment/Trees/Desert/Meshes/SM_TreeWindsweptSaplingB02.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_CliffC01.fbx
+  - Assets/SoStylized/Environment/Foliage/Meshes/SM_Bush3_Light.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalmC03.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_OakFallen2.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_CoconutPalm02.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_TheGreetingPine.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_CoconutPalm04.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_KnotwoodTree01.fbx
+  - Assets/SoStylized/Environment/Rocks/Classic/Meshes/SM_PlatformClassic4.fbx
+  - Assets/SoStylized/Environment/Trees/Collision/SM_Collision_BirchTree3.fbx
+  - Assets/SoStylized/Environment/Trees/Coastal/Meshes/SM_PalmTree08.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_ChinaPine02.fbx
+  - Assets/SoStylized/Environment/Trees/Asia/Meshes/SM_KnotwoodDead01.fbx
+  - Assets/SoStylized/Environment/Rocks/Desert/Meshes/SM_RockDesert_HoodooCliff04.fbx
+  - Assets/SoStylized/Environment/Water/Meshes/SM_Waterfall1.fbx
+  uvOverlapAssetList: 00000000ffffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000000000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000ffffffff00000000000000000000000000000000010100000000000000000000000000000000000001010000000000000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000010100000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000000000000101000001010000000000000101000001010000010100000000000001010000010100000101000000000000010100000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000000000000101000001010000000000000000000001010000000000000101000001010000010100000101000000000000010100000101000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000000000000000000000101000000000000000000000000000001010000010100000000000001010000010100000000000001010000010100000101000001010000000000000101000000000000000000000101000000000000000000000000000000000000010100000101000000000000000000000101000000000000000000000101000000000000000000000101000001010000010100000000000001010000000000000101000000000000000000000000000001010000000000000101000000000000000000000101000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000010100000101000001010000000000000101000000000000010100000000000000000000010100000000000000000000010100000000000001010000010100000101000001010000000000000000000000000000010100000101000000000000000000000101000000000000010100000000000000000000000000000101000000000000010100000101000000000000000000000000000001010000010100000000000001010000000000000101000000000000010100000101000000000000000000000000000001010000010100000101000001010000000000000101000001010000000000000000000001010000000000000101000000000000010100000000000001010000010100000000000000000000000000000101000000000000010100000000000000000000010100000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000000000000101000001010000010100000000000001010000000000000000000000000000010100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000010100000101000000000000000000000000000000000000010100000000000000000000010100000101000001010000010100000000000000000000000000000000000000000000000000000101000001010000010100000000000001010000010100000101000001010000010100000000000000000000000000000000000001010000010100000000000000000000010100000101000001010000000000000101000001010000010100000101000001010000010100000000000000000000010100000000000001010000000000000000000001010000010100000101000001010000010100000000000001010000000000000000000000000000000000000000000001010000000000000101000000000000000000000000000000000000000000000000000001010000000000000000000000000000000000000000000001010000000000000000000000000000010100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff010100000000000000000000ffffffff01010000000000000101000001010000000000000101000000000000000000000101000000000000000000000101000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000001010000ffffffff0101000000000000ffffffff01010000000000000101000000000000000000000000000000000000000000000101000000000000000000000000000001010000ffffffffffffffffffffffff0000000001010000ffffffff000000000000000000000000ffffffff010100000101000000000000000000000101000000000000ffffffff00000000000000000101000000000000010100000000000000000000000000000101000000000000ffffffff0000000000000000ffffffffffffffff00000000ffffffff010100000101000000000000ffffffff00000000ffffffff0000000001010000ffffffff000000000101000000000000010100000101000000000000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000000000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000000000000010100000101000001010000010100000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000000000000101000000000000010100000101000000000000010100000101000001010000000000000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000000000000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000000000000101000001010000000000000101000000000000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000000000000101000001010000010100000000000001010000000000000000000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000000000000000000000000000001010000010100000000000000000000010100000000000000000000010100000101000000000000000000000000000001010000000000000101000001010000000000000000000001010000000000000101000001010000000000000101000001010000010100000000000001010000000000000000000001010000000000000101000001010000010100000101000000000000000000000101000000000000010100000000000000000000000000000101000001010000000000000000000001010000000000000101000001010000010100000101000000000000010100000101000001010000000000000000000001010000010100000101000000000000000000000000000001010000010100000000000000000000000000000101000001010000000000000101000000000000010100000101000000000000010100000101000001010000000000000000000001010000010100000101000001010000000000000000000001010000010100000000000000000000000000000000000000000000000000000101000000000000000000000000000001010000010100000101000000000000010100000000000001010000000000000101000001010000010100000000000000000000010100000101000001010000010100000101000000000000000000000101000000000000010100000000000001010000010100000101000001010000010100000000000001010000000000000101000001010000000000000101000000000000010100000101000001010000000000000101000001010000000000000000000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000001010000000000000000000000000000000000000101000000000000010100000101000000000000000000000101000001010000000000000000000001010000000000000000000000000000010100000101000001010000000000000000000000000000000000000000000001010000000000000000000001010000010100000000000001010000000000000000000001010000ffffffff00000000010100000101000001010000010100000000000001010000000000000101000000000000010100000000000000000000010100000101000000000000010100000101000000000000010100000101000001010000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000001010000ffffffff00000000010100000101000000000000000000000101000000000000010100000101000001010000010100000000000001010000010100000000000001010000010100000000000001010000000000000000000001010000010100000000000001010000010100000000000001010000000000000101000001010000000000000000000001010000010100000000000001010000000000000101000000000000000000000000000000000000000000000101000000000000010100000101000001010000000000000000000001010000000000000000000001010000010100000101000001010000010100000101000000000000000000000000000001010000010100000000000000000000010100000101000000000000000000000000000000000000010100000000000000000000010100000101000000000000010100000000000000000000000000000000000001010000000000000000000001010000010100000000000000000000010100000000000001010000ffffffff0101000001010000010100000101000001010000000000000000000000000000000000000000000001010000000000000101000000000000010100000000000001010000000000000101000001010000ffffffff01010000010100000000000001010000000000000000000000000000010100000000000001010000010100000000000000000000000000000101000000000000ffffffff000000000000000000000000000000000101000001010000010100000101000000000000000000000101000000000000010100000000000001010000010100000000000000000000010100000101000001010000000000000101000001010000000000000101000000000000000000000101000001010000000000000000000000000000000000000000000001010000010100000101000001010000010100000101000000000000010100000101000001010000000000000000000001010000010100000000000001010000010100000000000001010000000000000101000000000000000000000000000001010000010100000101000001010000000000000101000001010000000000000000000001010000010100000101000000000000000000000101000000000000000000000101000001010000000000000000000000000000000000000000000000000000010100000101000001010000010100000000000001010000010100000000000001010000010100000101000000000000000000000000000000000000010100000000000000000000010100000101000000000000000000000000000000000000010100000000000000000000010100000000000001010000000000000101000001010000000000000000000001010000010100000101000001010000000000000101000001010000000000000101000000000000000000000000000001010000010100000101000001010000010100000101000001010000000000000000000000000000010100000000000000000000010100000101000001010000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000010100000000000001010000010100000101000000000000010100000101000000000000000000000101000001010000010100000000000001010000000000000101000000000000010100000101000001010000010100000000000001010000000000000000000001010000000000000000000000000000010100000101000001010000000000000000000000000000000000000000000000000000010100000101000000000000000000000000000000000000000000000101000000000000000000000000000000000000010100000101000000000000000000000101000000000000000000000101000001010000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000001010000010100000000000000000000000000000000000000000000010100000000000001010000000000000000000001010000000000000000000000000000010100000000000001010000000000000000000001010000010100000000000000000000010100000000000000000000010100000101000000000000000000000101000000000000010100000101000001010000000000000101000001010000010100000101000000000000000000000000000000000000010100000101000001010000010100000000000000000000010100000000000001010000000000000000000000000000010100000000000000000000010100000000000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000000000000101000000000000000000000000000001010000010100000101000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000001010000010100000000000000000000000000000000000000000000000000000101000001010000000000000101000001010000000000000000000001010000000000000101000001010000000000000101000000000000000000000000000001010000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000001010000010100000101000001010000000000000101000000000000010100000000000000000000000000000101000001010000010100000101000001010000
   xatlasWarningShown: 0
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce RTX 4060 Laptop GPU

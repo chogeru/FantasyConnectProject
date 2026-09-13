@@ -50,7 +50,8 @@ public static class VegetationScatter {
             bossArenaRadius = arenaRadius,
             detailDistance = town ? 40f : 45f,
             details = new[] {
-                new DetailDef(AZ + "AN_Grass_1 2.prefab", town ? 2 : 3, 0.1f, 0.015f, 11),
+                // base grass has no noise cut-off so meadows have no bald circles; accents below stay patchy
+                new DetailDef(AZ + "AN_Grass_1 2.prefab", town ? 2 : 3, 0f, 0.015f, 11),
                 new DetailDef(ST + "Grass_1.prefab", town ? 1 : 2, 0.3f, 0.025f, 23),
                 new DetailDef(HL + "Clovers.prefab", 1, 0.6f, 0.05f, 37),
                 new DetailDef(ST + "Flowers_Yellow.prefab", 1, 0.74f, 0.04f, 41),
@@ -203,7 +204,14 @@ public static class VegetationScatter {
                 float wx = origin.x + (x + 0.5f) * cell, wz = origin.z + (z + 0.5f) * cell;
                 float wy = terrain.SampleHeight(new Vector3(wx, 0, wz)) + origin.y;
                 int n = Physics.OverlapBoxNonAlloc(new Vector3(wx, wy + 1.5f, wz), new Vector3(cell * 0.5f, 1.4f, cell * 0.5f), hits, Quaternion.identity, ~0, QueryTriggerInteraction.Ignore);
-                for (int h = 0; h < n; h++) if (!(hits[h] is TerrainCollider)) { blocked[z, x] = true; break; }
+                for (int h = 0; h < n; h++) {
+                    if (hits[h] is TerrainCollider) continue;
+                    // post-process volume boxes and other huge area colliders are not obstacles
+                    if (hits[h].GetComponent<UnityEngine.Rendering.Volume>() != null) continue;
+                    var hb = hits[h].bounds.size;
+                    if (hb.x > 150f && hb.z > 150f) continue;
+                    blocked[z, x] = true; break;
+                }
             }
         Vector3 arenaCenter = origin + new Vector3(size.x * 0.5f, 0, size.z * 0.5f);
         System.Func<float, float, bool> IsBlocked = (u, v) => {
@@ -307,6 +315,61 @@ public static class VegetationScatter {
         EditorUtility.SetDirty(td);
         EditorUtility.SetDirty(terrain);
         return $"{terrain.name}: removed {removed} grass-trees, details {detailTotal} ({detailProtos.Count} kinds, res {dRes}), scattered {added}, trees now {kept.Count}";
+    }
+
+    // Adds ground cover to wherever a specific terrain texture is painted, keeping the terrain's other detail layers.
+    // Useful when a biome's ground layer is not named "Grass" (autumn leaf litter, recoloured meadow textures).
+    public static string AddDetailsForTexture (Terrain terrain, string diffuseTextureName, params DetailDef[] defs) {
+        var td = terrain.terrainData;
+        Undo.RegisterCompleteObjectUndo(td, "Texture Details");
+        var layers = td.terrainLayers;
+        var match = new bool[layers.Length];
+        bool any = false;
+        for (int i = 0; i < layers.Length; i++)
+            if (layers[i] != null && layers[i].diffuseTexture != null && layers[i].diffuseTexture.name == diffuseTextureName) { match[i] = true; any = true; }
+        if (!any) return $"{terrain.name}: no layer uses {diffuseTextureName}";
+
+        int aRes = td.alphamapResolution;
+        var alpha = td.GetAlphamaps(0, 0, aRes, aRes);
+        int dRes = td.detailResolution;
+        if (dRes < 256) { dRes = Mathf.Clamp(Mathf.NextPowerOfTwo(Mathf.RoundToInt(td.size.x)), 256, 1024); td.SetDetailResolution(dRes, 32); }
+        var rng = new System.Random(terrain.name.GetHashCode() ^ diffuseTextureName.GetHashCode());
+        var protos = new List<DetailPrototype>(td.detailPrototypes);
+        long total = 0;
+        foreach (var d in defs) {
+            var wrapper = GetDetailWrapper(d.prefab);
+            if (wrapper == null) continue;
+            int index = protos.FindIndex(p => p.prototype == wrapper);
+            if (index < 0) {
+                protos.Add(new DetailPrototype {
+                    usePrototypeMesh = true, prototype = wrapper, renderMode = DetailRenderMode.VertexLit, useInstancing = true,
+                    minWidth = d.minScale, maxWidth = d.maxScale, minHeight = d.minScale, maxHeight = d.maxScale,
+                    noiseSpread = 0.4f, healthyColor = Color.white, dryColor = Color.white
+                });
+                td.detailPrototypes = protos.ToArray();
+                index = protos.Count - 1;
+            }
+            var map = td.GetDetailLayer(0, 0, dRes, dRes, index);
+            for (int y = 0; y < dRes; y++)
+                for (int x = 0; x < dRes; x++) {
+                    float u = (x + 0.5f) / dRes, v = (y + 0.5f) / dRes;
+                    int ax = Mathf.Clamp((int)(u * (aRes - 1)), 0, aRes - 1), ay = Mathf.Clamp((int)(v * (aRes - 1)), 0, aRes - 1);
+                    float w = 0f;
+                    for (int l = 0; l < match.Length; l++) if (match[l]) w += alpha[ay, ax, l];
+                    if (w < 0.5f || td.GetSteepness(u, v) > 35f) continue;
+                    float n = Mathf.PerlinNoise(x * d.noiseScale + d.seed * 13.7f, y * d.noiseScale + d.seed * 7.3f);
+                    if (n < d.noiseMin) continue;
+                    // at least one blade per covered cell so the ground layer never shows bald spots
+                    int count = Mathf.Max(1, Mathf.RoundToInt(d.maxPerCell * w * Mathf.Lerp(0.5f, 1f, Mathf.InverseLerp(d.noiseMin, 1f, n)) + (float)rng.NextDouble() * 0.6f - 0.3f));
+                    if (count <= map[y, x]) continue;
+                    total += count - map[y, x];
+                    map[y, x] = count;
+                }
+            td.SetDetailLayer(0, 0, index, map);
+        }
+        terrain.detailObjectDistance = Mathf.Max(terrain.detailObjectDistance, 45f);
+        EditorUtility.SetDirty(td);
+        return $"{terrain.name}: +{total} details on {diffuseTextureName}";
     }
 
     static GameObject GetDetailWrapper (string prefabPath) {

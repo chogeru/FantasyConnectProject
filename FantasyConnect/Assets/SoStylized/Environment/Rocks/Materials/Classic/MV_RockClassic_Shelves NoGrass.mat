@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MV_RockClassic_Shelves NoGrass
+  m_Shader: {fileID: -6465566751694194690, guid: a6fcfd526cd108942a6a8db5ebeda498, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Grass_Texture:
+        m_Texture: {fileID: 2800000, guid: bc291e6fdaa04a44e9d2d1c76f0e6285, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MossTexture:
+        m_Texture: {fileID: 2800000, guid: af27d632f75721640aa8499b2c88b4b5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rock_Normal_Texture:
+        m_Texture: {fileID: 2800000, guid: f12f14374cf697e41a47b0f18408c7fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rock_Striping_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rock_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Sand_Normal_Texture:
+        m_Texture: {fileID: 2800000, guid: 92453152f36b0334f8aace475deabd7c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Sand_Texture:
+        m_Texture: {fileID: 2800000, guid: 14a55b017bd374246bf73cae6b1a46c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Smoothness_Texture:
+        m_Texture: {fileID: 2800000, guid: 8bafcf46694e63d4984bbada353cf434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Snow_Texture:
+        m_Texture: {fileID: 2800000, guid: 0e55b1b50afba794e9e4c2c0cb16bd4b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stylized_Normal_Map:
+        m_Texture: {fileID: 2800000, guid: adcf8972a41c87b4f98d7303d3994816, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Top_Layer_Mask:
+        m_Texture: {fileID: 2800000, guid: 1cdf3d48f23eed340820fa40bbfd7f4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Close_Tint_Blend_Distance: 500
+    - _Contrast: 0.75
+    - _Distant_Rock_Normal_Flatten: 1
+    - _Distant_Tint_Blend_Lerp_Alpha_Mix: 0.5
+    - _Emissive_Strength: 0.12
+    - _Far_Tint_Blend_Distance: 15000
+    - _Grass_Emission: 0
+    - _Grass_Saturation: 1
+    - _Grass_Scale: 10
+    - _MaskTopLayer: 1
+    - _Moss: 0
+    - _Moss_Multiply: 1.94
+    - _Moss_Offset: -0.15
+    - _Moss_Sharpness: 1.92
+    - _Moss_Size: 25
+    - _Moss_Smoothness: 1.3
+    - _Moss_Specular: 0.5
+    - _Projection_Contrast: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _RockMetallic: 0.2
+    - _RockStriping: 0
+    - _Rock_Brightness: 0.05
+    - _Rock_Normal_Distance: 20000
+    - _Rock_Normal_Flatten: 0.1
+    - _Rock_Scale: 1
+    - _Rock_Striping_Contrast: 0.25
+    - _Rock_Strping_Scale: 2500
+    - _Sand_Blend_Offset: 0.74
+    - _Sand_Contrast: 2.34
+    - _Sand_Emission: 0.1
+    - _Sand_Normal_Scale: 20
+    - _Sand_Normal_Strength: 0.5
+    - _Sand_Saturation: 1
+    - _Sand_Scale: 5
+    - _Sand_Smoothness: 0
+    - _Saturation: 1
+    - _Side_Project_Only: 0
+    - _Smoothness: 0.2
+    - _Smoothness_Contrast: 0.5
+    - _Smoothness_Texture_1: 1
+    - _Snow_Emission: 0.03
+    - _Snow_Scale: 11.51
+    - _Snow_Smoothness: 0
+    - _TopGrass: 0
+    - _TopLayer_Blend_Offset: -1.07
+    - _TopLayer_Blend_Sharpness: 2.3
+    - _TopSand: 0
+    - _TopSnow: 0
+    - _UseSmoothedNormalMap: 1
+    m_Colors:
+    - _Distant_Tint_Blend: {r: 0.7882354, g: 0.7882354, b: 0.7882354, a: 1}
+    - _Grass_Tint: {r: 0.76666665, g: 0.9019608, b: 0.8075695, a: 0}
+    - _Moss_Color: {r: 0.47058824, g: 0.6509804, b: 0.2627451, a: 1}
+    - _Moss_Color_2: {r: 0.3019608, g: 0.48235294, b: 0.11764706, a: 1}
+    - _Rock_Striping_Overlay_Color: {r: 1, g: 0, b: 1, a: 1}
+    - _Rock_Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Sand_Tint: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 0}
+    - _Snow_Tint: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &8028354124705380750
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

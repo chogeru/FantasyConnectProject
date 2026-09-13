@@ -34,6 +34,8 @@ public static class TerrainSculpt {
         public string[] rockKeywords = { "Rock", "Stone" };
         public string[] extraTrees, extraBushes, extraRocks;
         public int seed = 1;
+        // optional per-location multiplier for the inner relief (world x, z) -> scale, e.g. calmer near the start of a flight
+        public System.Func<float, float, float> innerAmplitudeScale;
     }
 
     const string WallName = "マップ壁";
@@ -133,7 +135,8 @@ public static class TerrainSculpt {
                 var existing = go.GetComponent<TerrainGroundFollow>();
                 bool eligible = animator.runtimeAnimatorController != null && go.GetComponent<Rigidbody>() == null && go.GetComponent<CharacterController>() == null
                     && go.GetComponentInParent<Canvas>() == null && go.GetComponentInChildren<Camera>(true) == null && !go.name.Contains("Player")
-                    && !timelineBound.Contains(go) && go.GetComponentInChildren<SkinnedMeshRenderer>(true) != null;
+                    // some creatures (e.g. split rock golems) are built from rigid mesh pieces rather than a skinned mesh
+                    && !timelineBound.Contains(go) && (go.GetComponentInChildren<SkinnedMeshRenderer>(true) != null || go.GetComponentInChildren<MeshRenderer>(true) != null);
                 if (!eligible) {
                     if (existing != null) { Undo.DestroyObjectImmediate(existing); removed++; }
                     continue;
@@ -157,7 +160,9 @@ public static class TerrainSculpt {
     }
 
     // Restores a scene and its terrain data from git (HEAD) so the pipeline can be re-run from the original state.
-    public static string ResetFromGit (string sceneName) {
+    public static string ResetFromGit (string sceneName) { return ResetFromGit(sceneName, "HEAD"); }
+
+    public static string ResetFromGit (string sceneName, string revision) {
         string scenePath = "Assets/シーン/" + sceneName + ".unity";
         var paths = new List<string> { scenePath };
         foreach (var dep in AssetDatabase.GetDependencies(scenePath, false))
@@ -173,7 +178,7 @@ public static class TerrainSculpt {
             RedirectStandardError = true, RedirectStandardOutput = true,
             StandardOutputEncoding = System.Text.Encoding.UTF8, StandardErrorEncoding = System.Text.Encoding.UTF8
         };
-        psi.Arguments = "-c core.quotepath=false checkout HEAD -- " + string.Join(" ", paths.ConvertAll(p => "\"" + p + "\"").ToArray());
+        psi.Arguments = "-c core.quotepath=false checkout " + revision + " -- " + string.Join(" ", paths.ConvertAll(p => "\"" + p + "\"").ToArray());
         string err;
         using (var proc = System.Diagnostics.Process.Start(psi)) { err = proc.StandardError.ReadToEnd(); proc.WaitForExit(); }
         foreach (var p in paths) AssetDatabase.ImportAsset(p, ImportAssetOptions.ForceUpdate);
@@ -573,6 +578,8 @@ public static class TerrainSculpt {
         for (int i = 0; i < prototypes.Count; i++) {
             var pf = prototypes[i].prefab;
             if (pf == null || !MatchesAny(pf.name, include)) continue;
+            // HIGHLANDS bushes were retired (teal palette clashes with the AZURE terrains) and get stripped by VegetationScatter
+            if (AssetDatabase.GetAssetPath(pf).Contains("HIGHLANDS") && pf.name.StartsWith("Bush_")) continue;
             if (exclude != null && MatchesAny(pf.name, exclude)) continue;
             bool rockName = pf.name.Contains("Rock") || pf.name.Contains("Stone");
             if (!rockName && (pf.name.Contains("Grass") || pf.name.Contains("Flower"))) continue;
@@ -592,7 +599,8 @@ public static class TerrainSculpt {
         // fBm values cluster tightly around 0.5 (std ~0.1), so stretch them to use the full amplitude with a soft limit
         float k = Mathf.Clamp((n - 0.5f) / 0.16f, -1.6f, 1.6f);
         k = k * (1f - 0.22f * Mathf.Abs(k));
-        float disp = canDig ? s.innerAmplitude * k : s.innerAmplitude * Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(-0.6f, 1f, k));
+        float amplitude = s.innerAmplitude * (s.innerAmplitudeScale != null ? s.innerAmplitudeScale(wx0, wz0) : 1f);
+        float disp = canDig ? amplitude * k : amplitude * Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(-0.6f, 1f, k));
         if (boundary == null) return disp;
 
         float sd = boundary.Sd(wx0, wz0);
@@ -821,6 +829,26 @@ public static class TerrainSculpt {
 
     // corridor-style maps (a walled path through decoration) legitimately cover only a small share of the terrain
     public static float MinRegionRatio = 0.05f;
+    // Playable region for the active scene; falls back to the extent of solid colliders (towns without walls).
+    public static Playable ComputePlayable (out string source) {
+        var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+        var terrains = Object.FindObjectsOfType<Terrain>();
+        var p = BuildPlayable(scene, terrains, out source);
+        if (p != null) return p;
+        bool any = false; var b = new Bounds();
+        foreach (var root in scene.GetRootGameObjects())
+            foreach (var c in root.GetComponentsInChildren<Collider>(true)) {
+                if (c is TerrainCollider || c.isTrigger || c.name.StartsWith(WallName)) continue;
+                var s = c.bounds.size;
+                if (Mathf.Max(s.x, s.z) > 250f || Mathf.Max(s.x, s.z) < 2f) continue;
+                if (!any) { b = c.bounds; any = true; } else b.Encapsulate(c.bounds);
+            }
+        if (!any) return null;
+        b.Expand(new Vector3(60f, 0, 60f));
+        source = "structures";
+        return Playable.FromRect(b, terrains);
+    }
+
     static Playable lastPlayable, lastDebug;
     static bool[] lastBlocked;
 
