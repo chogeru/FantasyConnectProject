@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7411251702791146233}
   - component: {fileID: 7411251702791146232}
-  - component: {fileID: 7411251702791146235}
+  - component: {fileID: 4061897875249399296}
   m_Layer: 3
   m_Name: "FirstCity\u30DD\u30B9\u30C8\u30A8\u30D5\u30A7\u30AF\u30C8"
   m_TagString: Untagged
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7411251702791146235
+--- !u!114 &4061897875249399296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,11 +55,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7411251702791146234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: ef985d9221301e140b912789fd772517, type: 2}
-  isGlobal: 1
+  m_IsGlobal: 1
+  priority: 0
   blendDistance: 0
   weight: 1
-  priority: 0
+  sharedProfile: {fileID: 11400000, guid: ced00231e6cba7040800c3627a3cf9f3, type: 2}

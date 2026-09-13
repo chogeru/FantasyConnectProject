@@ -1,11 +1,14 @@
-/* Add the following directive
+/*
+
+// Add the following directives to your shader for directional and noise support
 
 		#include "Assets/BOXOPHOBIC/Atmospheric Height Fog/Core/Library/AtmosphericHeightFog.cginc"
+
 
 // Apply Atmospheric Height Fog to transparent shaders like this
 // Where finalColor is the shader output color, fogParams.rgb is the fog color and fogParams.a is the fog mask
 
-		float4 fogParams = GetAtmosphericHeightFog(i.worldPos);
+		float4 fogParams = GetAtmosphericHeightFog(IN.worldPos);
 		return ApplyAtmosphericHeightFog(finalColor, fogParams);
 
 */
@@ -13,39 +16,30 @@
 #ifndef ATMOSPHERIC_HEIGHT_FOG_INCLUDED
 #define ATMOSPHERIC_HEIGHT_FOG_INCLUDED
 
-//UnityCG is causing issues in shader graph
-//#include "UnityCG.cginc"
-#include "UnityShaderVariables.cginc"
-
-uniform half _FogCat;
-uniform half _SkyboxCat;
-uniform half _AdvancedCat;
-uniform half _NoiseCat;
-uniform half _DirectionalCat;
-uniform half4 AHF_FogColorStart;
-uniform half4 AHF_FogColorEnd;
-uniform half AHF_FogDistanceStart;
-uniform half AHF_FogDistanceEnd;
-uniform half AHF_FogDistanceFalloff;
-uniform half AHF_FogColorDuo;
-uniform half4 AHF_DirectionalColor;
-uniform half3 AHF_DirectionalDir;
-uniform half AHF_DirectionalIntensity;
-uniform half AHF_DirectionalFalloff;
-uniform half3 AHF_FogAxisOption;
-uniform half AHF_FogHeightEnd;
-uniform half AHF_FarDistanceHeight;
-uniform float AHF_FarDistanceOffset;
-uniform half AHF_FogHeightStart;
-uniform half AHF_FogHeightFalloff;
-uniform half AHF_FogLayersMode;
-uniform half AHF_NoiseScale;
-uniform half3 AHF_NoiseSpeed;
-uniform half AHF_NoiseMin;
-uniform half AHF_NoiseMax;
-uniform half AHF_NoiseDistanceEnd;
-uniform half AHF_NoiseIntensity;
-uniform half AHF_FogIntensity;
+half4 AHF_FogColorStart;
+half4 AHF_FogColorEnd;
+half AHF_FogDistanceStart;
+half AHF_FogDistanceEnd;
+half AHF_FogDistanceFalloff;
+half AHF_FogColorDuo;
+half4 AHF_DirectionalColor;
+half3 AHF_DirectionalDir;
+half AHF_DirectionalIntensity;
+half AHF_DirectionalFalloff;
+half3 AHF_FogAxisOption;
+half AHF_FogHeightEnd;
+half AHF_FarDistanceHeight;
+half AHF_FarDistanceOffset;
+half AHF_FogHeightStart;
+half AHF_FogHeightFalloff;
+half AHF_FogLayersMode;
+half AHF_NoiseScale;
+half3 AHF_NoiseSpeed;
+half AHF_NoiseMin;
+half AHF_NoiseMax;
+half AHF_NoiseDistanceEnd;
+half AHF_NoiseIntensity;
+half AHF_FogIntensity;
 
 float4 mod289(float4 x)
 {
@@ -82,80 +76,82 @@ float4 GetAtmosphericHeightFog(float3 positionWS)
 
 	float3 WorldPosition = positionWS;
 
-	float3 WorldPosition2_g1 = WorldPosition;
-	float temp_output_7_0_g1022 = AHF_FogDistanceStart;
-	float temp_output_155_0_g1 = saturate(((distance(WorldPosition2_g1, _WorldSpaceCameraPos) - temp_output_7_0_g1022) / (AHF_FogDistanceEnd - temp_output_7_0_g1022)));
+	float3 WorldPosition2_g1032 = WorldPosition;
+	float temp_output_7_0_g1035 = AHF_FogDistanceStart;
+	float temp_output_155_0_g1032 = saturate(((distance(WorldPosition2_g1032, _WorldSpaceCameraPos) - temp_output_7_0_g1035) / (AHF_FogDistanceEnd - temp_output_7_0_g1035)));
 #ifdef AHF_DISABLE_FALLOFF
-	float staticSwitch467_g1 = temp_output_155_0_g1;
+	float staticSwitch467_g1032 = temp_output_155_0_g1032;
 #else
-	float staticSwitch467_g1 = (1.0 - pow((1.0 - abs(temp_output_155_0_g1)), AHF_FogDistanceFalloff));
+	float staticSwitch467_g1032 = (1.0 - pow((1.0 - abs(temp_output_155_0_g1032)), AHF_FogDistanceFalloff));
 #endif
-	half FogDistanceMask12_g1 = staticSwitch467_g1;
-	float3 lerpResult258_g1 = lerp((AHF_FogColorStart).rgb, (AHF_FogColorEnd).rgb, ((FogDistanceMask12_g1 * FogDistanceMask12_g1 * FogDistanceMask12_g1) * AHF_FogColorDuo));
-	float3 normalizeResult318_g1 = normalize((WorldPosition2_g1 - _WorldSpaceCameraPos));
-	float dotResult145_g1 = dot(normalizeResult318_g1, AHF_DirectionalDir);
-	half Jitter502_g1 = 0.0;
-	float temp_output_140_0_g1 = (saturate(((dotResult145_g1 + Jitter502_g1) * 0.5 + 0.5)) * AHF_DirectionalIntensity);
+	half FogDistanceMask12_g1032 = staticSwitch467_g1032;
+	float3 lerpResult258_g1032 = lerp((AHF_FogColorStart).rgb, (AHF_FogColorEnd).rgb, ((FogDistanceMask12_g1032 * FogDistanceMask12_g1032 * FogDistanceMask12_g1032) * AHF_FogColorDuo));
+	float3 normalizeResult318_g1032 = normalize((WorldPosition2_g1032 - _WorldSpaceCameraPos));
+	float dotResult145_g1032 = dot(normalizeResult318_g1032, AHF_DirectionalDir);
+	half Jitter502_g1032 = 0.0;
+	float temp_output_140_0_g1032 = (saturate(((dotResult145_g1032 + Jitter502_g1032) * 0.5 + 0.5)) * AHF_DirectionalIntensity);
 #ifdef AHF_DISABLE_FALLOFF
-	float staticSwitch470_g1 = temp_output_140_0_g1;
+	float staticSwitch470_g1032 = temp_output_140_0_g1032;
 #else
-	float staticSwitch470_g1 = pow(abs(temp_output_140_0_g1), AHF_DirectionalFalloff);
+	float staticSwitch470_g1032 = pow(abs(temp_output_140_0_g1032), AHF_DirectionalFalloff);
 #endif
-	float DirectionalMask30_g1 = staticSwitch470_g1;
-	float3 lerpResult40_g1 = lerp(lerpResult258_g1, (AHF_DirectionalColor).rgb, DirectionalMask30_g1);
+	float DirectionalMask30_g1032 = staticSwitch470_g1032;
+	float3 lerpResult40_g1032 = lerp(lerpResult258_g1032, (AHF_DirectionalColor).rgb, DirectionalMask30_g1032);
 #ifdef AHF_DISABLE_DIRECTIONAL
-	float3 staticSwitch442_g1 = lerpResult258_g1;
+	float3 staticSwitch442_g1032 = lerpResult258_g1032;
 #else
-	float3 staticSwitch442_g1 = lerpResult40_g1;
+	float3 staticSwitch442_g1032 = lerpResult40_g1032;
 #endif
-	half3 Input_Color6_g1012 = staticSwitch442_g1;
+	half3 Input_Color6_g1033 = staticSwitch442_g1032;
 #ifdef UNITY_COLORSPACE_GAMMA
-	float3 staticSwitch1_g1012 = Input_Color6_g1012;
+	float3 staticSwitch1_g1033 = Input_Color6_g1033;
 #else
-	float3 staticSwitch1_g1012 = (Input_Color6_g1012 * ((Input_Color6_g1012 * ((Input_Color6_g1012 * 0.305306) + 0.6821711)) + 0.01252288));
+	float3 staticSwitch1_g1033 = (Input_Color6_g1033 * ((Input_Color6_g1033 * ((Input_Color6_g1033 * 0.305306) + 0.6821711)) + 0.01252288));
 #endif
-	half3 Final_Color462_g1 = staticSwitch1_g1012;
-	half3 AHF_FogAxisOption181_g1 = AHF_FogAxisOption;
-	float3 break159_g1 = (WorldPosition2_g1 * AHF_FogAxisOption181_g1);
-	float temp_output_7_0_g1024 = AHF_FogDistanceEnd;
-	float temp_output_643_0_g1 = saturate(((distance(WorldPosition2_g1, _WorldSpaceCameraPos) - temp_output_7_0_g1024) / ((AHF_FogDistanceEnd + AHF_FarDistanceOffset) - temp_output_7_0_g1024)));
-	half FogDistanceMaskFar645_g1 = (temp_output_643_0_g1 * temp_output_643_0_g1);
-	float lerpResult690_g1 = lerp(AHF_FogHeightEnd, (AHF_FogHeightEnd + AHF_FarDistanceHeight), FogDistanceMaskFar645_g1);
-	float temp_output_7_0_g1025 = lerpResult690_g1;
-	float temp_output_167_0_g1 = saturate((((break159_g1.x + break159_g1.y + break159_g1.z) - temp_output_7_0_g1025) / (AHF_FogHeightStart - temp_output_7_0_g1025)));
+	half3 Final_Color462_g1032 = staticSwitch1_g1033;
+	half3 AHF_FogAxisOption181_g1032 = AHF_FogAxisOption;
+	float3 break159_g1032 = (WorldPosition2_g1032 * AHF_FogAxisOption181_g1032);
+	float temp_output_7_0_g1036 = AHF_FogDistanceEnd;
+	float temp_output_643_0_g1032 = saturate(((distance(WorldPosition2_g1032, _WorldSpaceCameraPos) - temp_output_7_0_g1036) / ((AHF_FogDistanceEnd + AHF_FarDistanceOffset) - temp_output_7_0_g1036)));
+	half FogDistanceMaskFar645_g1032 = (temp_output_643_0_g1032 * temp_output_643_0_g1032);
+	float lerpResult690_g1032 = lerp(AHF_FogHeightEnd, (AHF_FogHeightEnd + AHF_FarDistanceHeight), FogDistanceMaskFar645_g1032);
+	float temp_output_7_0_g1037 = lerpResult690_g1032;
+	float temp_output_167_0_g1032 = saturate((((break159_g1032.x + break159_g1032.y + break159_g1032.z) - temp_output_7_0_g1037) / (AHF_FogHeightStart - temp_output_7_0_g1037)));
 #ifdef AHF_DISABLE_FALLOFF
-	float staticSwitch468_g1 = temp_output_167_0_g1;
+	float staticSwitch468_g1032 = temp_output_167_0_g1032;
 #else
-	float staticSwitch468_g1 = pow(abs(temp_output_167_0_g1), AHF_FogHeightFalloff);
+	float staticSwitch468_g1032 = pow(abs(temp_output_167_0_g1032), AHF_FogHeightFalloff);
 #endif
-	half FogHeightMask16_g1 = staticSwitch468_g1;
-	float lerpResult328_g1 = lerp((FogDistanceMask12_g1 * FogHeightMask16_g1), saturate((FogDistanceMask12_g1 + FogHeightMask16_g1)), AHF_FogLayersMode);
-	float mulTime204_g1 = _Time.y * 2.0;
-	float3 temp_output_197_0_g1 = ((WorldPosition2_g1 * (1.0 / AHF_NoiseScale)) + (-AHF_NoiseSpeed * mulTime204_g1));
-	float3 p1_g1029 = temp_output_197_0_g1;
-	float localSimpleNoise3D1_g1029 = SimpleNoise3D(p1_g1029);
-	float temp_output_7_0_g1028 = AHF_NoiseMin;
-	float temp_output_7_0_g1027 = AHF_NoiseDistanceEnd;
-	half NoiseDistanceMask7_g1 = saturate(((distance(WorldPosition2_g1, _WorldSpaceCameraPos) - temp_output_7_0_g1027) / (0.0 - temp_output_7_0_g1027)));
-	float lerpResult198_g1 = lerp(1.0, saturate(((localSimpleNoise3D1_g1029 - temp_output_7_0_g1028) / (AHF_NoiseMax - temp_output_7_0_g1028))), (NoiseDistanceMask7_g1 * AHF_NoiseIntensity));
-	half NoiseSimplex3D24_g1 = lerpResult198_g1;
+	half FogHeightMask16_g1032 = staticSwitch468_g1032;
+	float lerpResult328_g1032 = lerp((FogDistanceMask12_g1032 * FogHeightMask16_g1032), saturate((FogDistanceMask12_g1032 + FogHeightMask16_g1032)), AHF_FogLayersMode);
+	float mulTime204_g1032 = _TimeParameters.x * 2.0;
+	float3 temp_output_197_0_g1032 = ((WorldPosition2_g1032 * (1.0 / AHF_NoiseScale)) + (-AHF_NoiseSpeed * mulTime204_g1032));
+	float3 p1_g1041 = temp_output_197_0_g1032;
+	float localSimpleNoise3D1_g1041 = SimpleNoise3D(p1_g1041);
+	float temp_output_7_0_g1040 = AHF_NoiseMin;
+	float temp_output_7_0_g1039 = AHF_NoiseDistanceEnd;
+	half NoiseDistanceMask7_g1032 = saturate(((distance(WorldPosition2_g1032, _WorldSpaceCameraPos) - temp_output_7_0_g1039) / (0.0 - temp_output_7_0_g1039)));
+	float lerpResult198_g1032 = lerp(1.0, saturate(((localSimpleNoise3D1_g1041 - temp_output_7_0_g1040) / (AHF_NoiseMax - temp_output_7_0_g1040))), (NoiseDistanceMask7_g1032 * AHF_NoiseIntensity));
+	half NoiseSimplex3D24_g1032 = lerpResult198_g1032;
 #ifdef AHF_DISABLE_NOISE3D
-	float staticSwitch42_g1 = lerpResult328_g1;
+	float staticSwitch42_g1032 = lerpResult328_g1032;
 #else
-	float staticSwitch42_g1 = (lerpResult328_g1 * NoiseSimplex3D24_g1);
+	float staticSwitch42_g1032 = (lerpResult328_g1032 * NoiseSimplex3D24_g1032);
 #endif
-	float temp_output_454_0_g1 = (staticSwitch42_g1 * AHF_FogIntensity);
-	half Final_Alpha463_g1 = temp_output_454_0_g1;
-	float4 appendResult114_g1 = (float4(Final_Color462_g1, Final_Alpha463_g1));
-	float4 appendResult457_g1 = (float4(WorldPosition2_g1, 1.0));
+	float temp_output_454_0_g1032 = (staticSwitch42_g1032 * AHF_FogIntensity);
+	half Final_Alpha463_g1032 = temp_output_454_0_g1032;
+	float4 appendResult114_g1032 = (float4(Final_Color462_g1032, Final_Alpha463_g1032));
+	float4 appendResult457_g1032 = (float4(WorldPosition2_g1032, 1.0));
 #ifdef AHF_DEBUG_WORLDPOS
-	float4 staticSwitch456_g1 = appendResult457_g1;
+	float4 staticSwitch456_g1032 = appendResult457_g1032;
 #else
-	float4 staticSwitch456_g1 = appendResult114_g1;
+	float4 staticSwitch456_g1032 = appendResult114_g1032;
 #endif
 
+	float3 Color = (staticSwitch456_g1032).xyz;
+	float Alpha = (staticSwitch456_g1032).w;
 
-	finalColor = staticSwitch456_g1;
+	finalColor = float4(Color, Alpha);
 	return finalColor;
 }
 
@@ -177,6 +173,11 @@ void GetAtmosphericHeightFog_half(float3 positionWS, out float4 Out)
 }
 
 void ApplyAtmosphericHeightFog_half(float3 color, float4 fog, out float3 Out)
+{
+	Out = ApplyAtmosphericHeightFog(color, fog);
+}
+
+void ApplyAtmosphericHeightFog_float(float4 color, float4 fog, out float4 Out)
 {
 	Out = ApplyAtmosphericHeightFog(color, fog);
 }

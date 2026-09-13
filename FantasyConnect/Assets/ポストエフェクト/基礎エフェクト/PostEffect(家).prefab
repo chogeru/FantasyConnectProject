@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6803338471806581752}
-  - component: {fileID: 6803338471806581703}
+  - component: {fileID: 7989850986525409899}
   m_Layer: 3
   m_Name: "PostEffect(\u5BB6)"
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6803338471806581703
+--- !u!114 &7989850986525409899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6803338471806581753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 0750a72c5464bf249b3d308d500c009f, type: 2}
-  isGlobal: 1
+  m_IsGlobal: 1
+  priority: 1
   blendDistance: 0.25
   weight: 1
-  priority: 1
+  sharedProfile: {fileID: 11400000, guid: 8144ae6ab872e3e41b6f3c41cb2018af, type: 2}
